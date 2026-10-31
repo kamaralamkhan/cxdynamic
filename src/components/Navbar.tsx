@@ -37,6 +37,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
   const [mobileAccordion, setMobileAccordion] = useState<string | null>("products");
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,6 +51,10 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+          timeoutRef.current = null;
+        }
         setOpenDropdown(null);
       }
     };
@@ -57,7 +62,38 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleMouseEnter = (name: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setOpenDropdown(name);
+  };
+
+  const handleMouseLeave = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    // 250ms buffer allows effortless diagonal mouse movement from button to mega menu
+    timeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 250);
+  };
+
   const toggleDropdown = (name: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
     setOpenDropdown(openDropdown === name ? null : name);
   };
 
@@ -66,6 +102,10 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
   };
 
   const closeAll = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
     setOpenDropdown(null);
     setMobileOpen(false);
   };
@@ -111,7 +151,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center h-full gap-1">
             
             {/* Level 1: Home */}
             <Link 
@@ -131,9 +171,9 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
 
             {/* Level 2: Our Products Mega Menu (Aircall & Convin Inspired Layout) */}
             <div 
-              className="group"
-              onMouseEnter={() => setOpenDropdown("products")}
-              onMouseLeave={() => setOpenDropdown(null)}
+              className="group h-full flex items-center"
+              onMouseEnter={() => handleMouseEnter("products")}
+              onMouseLeave={handleMouseLeave}
             >
               <button 
                 type="button"
@@ -151,9 +191,11 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                 }`} />
               </button>
 
-              {/* Mega Menu Dropdown: Centered to Container */}
+              {/* Mega Menu Dropdown: Centered to Container with Invisible Hit Bridge & Timeout Buffer */}
               <div 
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-2 z-50 transition-all duration-200 ${
+                onMouseEnter={() => handleMouseEnter("products")}
+                onMouseLeave={handleMouseLeave}
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
                   openDropdown === "products"
                     ? "opacity-100 visible pointer-events-auto translate-y-0"
                     : "opacity-0 invisible pointer-events-none -translate-y-2 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0"
@@ -344,9 +386,9 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
 
             {/* Level 2: Why CXDYNAMIQ Mega Menu (Aircall Integrations Inspired Layout) */}
             <div 
-              className="group"
-              onMouseEnter={() => setOpenDropdown("why")}
-              onMouseLeave={() => setOpenDropdown(null)}
+              className="group h-full flex items-center"
+              onMouseEnter={() => handleMouseEnter("why")}
+              onMouseLeave={handleMouseLeave}
             >
               <button 
                 type="button"
@@ -364,9 +406,11 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                 }`} />
               </button>
 
-              {/* Mega Menu Dropdown: Centered to Container */}
+              {/* Mega Menu Dropdown: Centered to Container with Invisible Hit Bridge & Timeout Buffer */}
               <div 
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-2 z-50 transition-all duration-200 ${
+                onMouseEnter={() => handleMouseEnter("why")}
+                onMouseLeave={handleMouseLeave}
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
                   openDropdown === "why"
                     ? "opacity-100 visible pointer-events-auto translate-y-0"
                     : "opacity-0 invisible pointer-events-none -translate-y-2 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0"
