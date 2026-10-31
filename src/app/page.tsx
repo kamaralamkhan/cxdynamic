@@ -8,6 +8,7 @@ import BusinessChallengesSection from "@/components/BusinessChallengesSection";
 import AboutSection from "@/components/AboutSection";
 import ProductsBento from "@/components/ProductsBento";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import PlatformModesSection from "@/components/PlatformModesSection";
 import KnowledgeCentre from "@/components/KnowledgeCentre";
 import CallbackSection from "@/components/CallbackSection";
 import CalmFooter from "@/components/CalmFooter";
@@ -75,10 +76,13 @@ export default function Home() {
       {/* 5. Products Bento Grid */}
       <ProductsBento />
 
-      {/* 6. Why Choose Us & How It Works */}
+      {/* 6. Why Choose CXDYNAMIQ */}
       <WhyChooseUs />
 
-      {/* 7. Knowledge Centre / Real Blog Guides */}
+      {/* 7. Platform Operating Modes: Scroll-Based Progress Tabs (Aircall Inspired) */}
+      <PlatformModesSection />
+
+      {/* 8. Knowledge Centre / Real Blog Guides */}
       <KnowledgeCentre />
 
       {/* 8. Callback & Request a Quote Form */}
