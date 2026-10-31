@@ -181,8 +181,8 @@ function InboundCallingExplainer() {
                   <PhoneCall className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-slate-800">Incoming Call: +91 98450 12345</div>
-                  <div className="text-[11px] text-slate-500">Caller: Rahul S. • Bangalore (Account: Acme Corp)</div>
+                  <div className="text-xs font-bold text-slate-800">Incoming Call: +63 906 098 6036</div>
+                  <div className="text-[11px] text-slate-500">Caller: Enterprise Partner • Ortigas (Account: Acme Corp)</div>
                 </div>
               </div>
 
@@ -387,7 +387,7 @@ function CtiIntegrationsExplainer({ brand }: { brand: string }) {
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
               <div>
-                <span className="text-xs font-bold text-slate-900">Incoming Call: +91 98450 12345</span>
+                <span className="text-xs font-bold text-slate-900">Incoming Call: +63 906 098 6036</span>
                 <span className="text-[11px] text-slate-500 block">Hover to test {brand} CTI Screen-Pop</span>
               </div>
             </div>
@@ -480,9 +480,9 @@ function AutoAttendantExplainer() {
 function ContactManagerExplainer() {
   const [query, setQuery] = useState("");
   const contacts = [
-    { name: "Rahul Sharma", company: "Acme Corp", phone: "+91 98450 12345", tags: "Enterprise, VIP" },
-    { name: "Ananya Patel", company: "Finserve Ltd", phone: "+91 99120 44556", tags: "Renewal, Inbound" },
-    { name: "David Chen", company: "Apex Global", phone: "+63 906 1234567", tags: "BPO Closer" },
+    { name: "Carlos Mendoza", company: "Acme Corp", phone: "+63 906 098 6036", tags: "Enterprise, VIP" },
+    { name: "Sarah Jenkins", company: "Finserve Ltd", phone: "+1 415 555 0192", tags: "Renewal, Inbound" },
+    { name: "David Chen", company: "Apex Global", phone: "+63 906 123 4567", tags: "BPO Closer" },
   ];
 
   const filtered = contacts.filter((c) =>
@@ -873,7 +873,7 @@ function OmnichannelRoutingExplainer() {
             <div className="font-bold text-slate-800">Active Channel Stream: {activeChannel.toUpperCase()}</div>
             <div className="p-3 rounded-lg bg-white border border-slate-200 text-slate-600">
               {activeChannel === "whatsapp" && "Customer on WhatsApp: 'Can you confirm my tracking ID for order #8921?' → Bot verified → Handed to agent."}
-              {activeChannel === "voice" && "Incoming SIP Call from +91 98450: 'I need to upgrade our contact center seats.'"}
+              {activeChannel === "voice" && "Incoming SIP Call from +63 906 098 6036: 'I need to upgrade our contact center seats.'"}
               {activeChannel === "email" && "Email from support@acme.com: 'Requesting SLA addendum review.'"}
             </div>
           </div>
@@ -1123,7 +1123,7 @@ function BpoExplainer() {
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
             <div className="font-bold text-slate-800">
-              Dedicated Outbound CLI: <span className="text-cyan-700 font-mono">{campaign === "clientA" ? "+91 80 4455 1200" : "+91 80 6677 3400"}</span>
+              Dedicated Outbound CLI: <span className="text-cyan-700 font-mono">{campaign === "clientA" ? "+63 2 8846 1200" : "+63 2 8877 3400"}</span>
             </div>
             <div className="p-3 rounded-lg bg-white border border-slate-200 text-slate-600">
               Script: {campaign === "clientA" ? '"Thank you for calling FinTech Alpha Support. Have your account ID ready."' : '"Welcome to Healthcare Beta. Discover personalized care plans."'}

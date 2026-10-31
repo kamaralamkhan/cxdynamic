@@ -150,7 +150,7 @@ export default function CallbackSection() {
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 / +63 / +1 ..."
+                        placeholder="+63 / +1 / +44 ..."
                         className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-slate-50 text-xs text-slate-900 placeholder:text-slate-500 focus:bg-white focus:border-[#069bd8] transition-colors"
                       />
                     </div>

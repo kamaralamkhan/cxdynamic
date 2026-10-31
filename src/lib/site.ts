@@ -8,11 +8,11 @@ export const siteConfig = {
 
   // Canonical contact information
   phones: {
-    primary: "+91 88464 68095",
-    primaryRaw: "+918846468095",
+    primary: "+63 906 098 6036",
+    primaryRaw: "+639060986036",
     philippines: "+63 906 098 6036",
     philippinesRaw: "+639060986036",
-    label: "+91 88464 68095 / +63 906 098 6036",
+    label: "+63 906 098 6036",
   },
   emails: {
     info: "info@cxdynamiq.com",
@@ -29,6 +29,6 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/cxdynamiq/",
     instagram: "https://www.instagram.com/cxdynamiq/",
     linkedin: "https://www.linkedin.com/company/cxdynamiq-inc/about/",
-    whatsapp: "https://wa.me/918846468095",
+    whatsapp: "https://api.whatsapp.com/send?phone=639060986036",
   },
 };

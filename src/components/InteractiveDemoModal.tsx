@@ -30,11 +30,11 @@ const steps = [
     title: "Customer Inbound Call Initiated",
     badge: "Voice / PSTN Trunk",
     time: "00:01",
-    desc: "Caller +91 98450 12345 connects to CXDYNAMIQ cloud carrier trunk with sub-second latency.",
+    desc: "Caller connects to CXDYNAMIQ carrier trunk with sub-second latency.",
     visual: {
       type: "incoming",
       status: "Ringing (0.8s latency)",
-      caller: "Rahul Sharma (Bangalore, India)",
+      caller: "Enterprise Client (Manila / Global)",
       channel: "SIP Inbound • Priority Routing",
     },
   },
@@ -128,7 +128,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
         role="dialog"
         aria-modal="true"
         aria-labelledby="demo-title"
-        className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-2xl shadow-2xl p-6 sm:p-8 space-y-6 text-slate-900"
+        className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-2xl shadow-2xl p-5 sm:p-8 space-y-5 sm:space-y-6 text-slate-900 max-h-[90vh] overflow-y-auto"
       >
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-100">

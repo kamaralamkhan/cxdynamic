@@ -308,7 +308,7 @@ export default function PlatformModesSection() {
       {/* ==================================================================== */}
       {/* STICKY VIEWPORT CONTAINER: Stays pinned while scrolling through tiers */}
       {/* ==================================================================== */}
-      <div className="lg:sticky lg:top-20 xl:top-24 lg:h-[calc(100vh-5rem)] flex flex-col justify-center py-10 lg:py-0 overflow-hidden">
+      <div className="lg:sticky lg:top-20 xl:top-24 lg:h-[calc(100vh-5rem)] flex flex-col justify-center py-10 lg:py-0 lg:overflow-hidden">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           
@@ -339,7 +339,7 @@ export default function PlatformModesSection() {
                     <button
                       key={mode.id}
                       onClick={() => handleTabClick(idx)}
-                      className={`group w-full text-left p-3 sm:p-3.5 rounded-2xl transition-all cursor-pointer border shrink-0 min-w-[200px] lg:min-w-0 ${
+                      className={`group w-full text-left p-3 sm:p-3.5 rounded-2xl transition-all cursor-pointer border shrink-0 min-w-[160px] sm:min-w-[180px] lg:min-w-0 ${
                         isCurrent
                           ? "bg-slate-900 text-white border-slate-900 shadow-md"
                           : "bg-slate-50 text-slate-600 border-slate-200/80 hover:bg-slate-100/80 hover:text-slate-900"

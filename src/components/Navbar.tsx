@@ -130,8 +130,8 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             <span className="flex items-center gap-2 text-slate-300">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
               <span>VIP support · </span>
-              <a href="tel:+918846468095" className="hover:text-white transition-colors font-medium">
-                +91 88464 68095
+              <a href="tel:+639060986036" className="hover:text-white transition-colors font-medium">
+                +63 906 098 6036
               </a>
             </span>
           </div>
@@ -966,7 +966,26 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
 
         </div>
 
-        <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <div className="pt-3 border-t border-slate-100 flex flex-col gap-2.5">
+          <div className="grid grid-cols-2 gap-2 text-xs">
+            <a
+              href="tel:+639060986036"
+              className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 font-semibold hover:bg-slate-100 transition-colors"
+            >
+              <PhoneCall className="w-3.5 h-3.5 text-sky-600" />
+              <span>Call Us</span>
+            </a>
+            <a
+              href="https://api.whatsapp.com/send?phone=639060986036"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg border border-emerald-200 bg-emerald-50 text-emerald-800 font-semibold hover:bg-emerald-100 transition-colors"
+            >
+              <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+              <span>WhatsApp</span>
+            </a>
+          </div>
+
           <Link
             href="/contact-us"
             onClick={closeAll}

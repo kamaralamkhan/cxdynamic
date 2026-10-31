@@ -44,7 +44,7 @@ const FLOW_DATA: Record<TabType, { label: string; tag: string; steps: FlowStep[]
       {
         stepNum: "01",
         badge: "Inbound Call",
-        title: "Customer Calls +91 88464 68095",
+        title: "Customer Calls +63 906 098 6036",
         desc: "Carrier-grade SIP trunk ingests call with zero hold-time queue.",
         icon: PhoneCall,
       },

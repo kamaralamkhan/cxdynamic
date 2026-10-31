@@ -162,14 +162,9 @@ export default function CalmFooter() {
                   </div>
                   
                   <div className="space-y-1.5">
-                    <a href="tel:+918846468095" className="flex items-center gap-2 text-slate-200 hover:text-white transition-colors">
-                      <Phone className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-                      <span>{siteConfig.phones.primary} <span className="text-[10px] text-cyan-300 font-mono font-medium">(24/7 VIP Support)</span></span>
-                    </a>
-
                     <a href="tel:+639060986036" className="flex items-center gap-2 text-slate-200 hover:text-white transition-colors">
                       <Phone className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-                      <span>{siteConfig.phones.philippines} <span className="text-[10px] text-slate-400 font-mono">(Mon-Fri 9am-6pm)</span></span>
+                      <span>{siteConfig.phones.primary} <span className="text-[10px] text-cyan-300 font-mono font-medium">(24/7 VIP Support)</span></span>
                     </a>
 
                     <a href={`mailto:${siteConfig.emails.sales}`} className="flex items-center gap-2 text-slate-200 hover:text-white transition-colors">

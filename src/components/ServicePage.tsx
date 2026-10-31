@@ -558,7 +558,7 @@ export default function ServicePage({ page }: ServicePageProps) {
                         <input
                           type="tel"
                           required
-                          placeholder="+91 98450 12345"
+                          placeholder="+63 906 098 6036"
                           value={formData.mobile}
                           onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
                           className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs bg-slate-50 focus:bg-white focus:outline-none focus:border-[#069bd8]"
@@ -613,7 +613,7 @@ export default function ServicePage({ page }: ServicePageProps) {
                         <label className="block text-xs font-bold text-slate-700 mb-1">WhatsApp No.</label>
                         <input
                           type="tel"
-                          placeholder="+91 98450 12345"
+                          placeholder="+63 906 098 6036"
                           value={formData.whatsapp}
                           onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
                           className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs bg-slate-50 focus:bg-white focus:outline-none focus:border-[#069bd8]"
