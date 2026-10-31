@@ -670,7 +670,7 @@ export default function PlatformModesSection() {
 
                           <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-2 text-left">
                             <div className="flex justify-between items-center text-[11px]">
-                              <span className="font-bold text-slate-900">Caller: Sarah Jenkins (Acme Corp)</span>
+                              <span className="font-bold text-slate-900">Caller: Sarah Jenkins (Apex Global)</span>
                               <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded">VIP Client</span>
                             </div>
                             <div className="text-xs text-slate-600">

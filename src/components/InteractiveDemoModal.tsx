@@ -71,7 +71,7 @@ const steps = [
     desc: "Before Priya says 'Hello', her browser screen pops the full customer profile, past support tickets, and open deals.",
     visual: {
       type: "crm",
-      account: "Acme Enterprises • Tier 1 VIP",
+      account: "Apex Global Enterprises • Tier 1 VIP",
       activeDeals: "50 Seats Cloud Contact Center Renewal",
       tickets: "0 Open Escalations • CSAT History 5/5",
     },

@@ -182,7 +182,7 @@ function InboundCallingExplainer() {
                 </div>
                 <div>
                   <div className="text-xs font-bold text-slate-800">Incoming Call: +63 906 098 6036</div>
-                  <div className="text-[11px] text-slate-500">Caller: Enterprise Partner • Ortigas (Account: Acme Corp)</div>
+                  <div className="text-[11px] text-slate-500">Caller: Enterprise Partner • Ortigas (Account: Apex Global)</div>
                 </div>
               </div>
 
@@ -228,7 +228,7 @@ function InboundCallingExplainer() {
                   <span>CTI Screen-Pop Triggered</span>
                 </div>
                 <div className="text-[11px] text-emerald-800">
-                  Acme Corp • 3 Open Support Tickets • CSAT History 5/5 • Record #SF-8921
+                  Apex Global • 3 Open Support Tickets • CSAT History 5/5 • Record #SF-8921
                 </div>
               </div>
             </div>
@@ -406,11 +406,11 @@ function CtiIntegrationsExplainer({ brand }: { brand: string }) {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-3 text-xs">
               <div>
                 <span className="text-[10px] text-slate-400 block uppercase">Client Name</span>
-                <span className="font-bold text-slate-900">Rahul Sharma</span>
+                <span className="font-bold text-slate-900">Carlos Mendoza</span>
               </div>
               <div>
                 <span className="text-[10px] text-slate-400 block uppercase">Account</span>
-                <span className="font-bold text-slate-900">Acme Enterprise</span>
+                <span className="font-bold text-slate-900">Apex Global</span>
               </div>
               <div>
                 <span className="text-[10px] text-slate-400 block uppercase">Open Deal</span>
@@ -480,9 +480,9 @@ function AutoAttendantExplainer() {
 function ContactManagerExplainer() {
   const [query, setQuery] = useState("");
   const contacts = [
-    { name: "Carlos Mendoza", company: "Acme Corp", phone: "+63 906 098 6036", tags: "Enterprise, VIP" },
+    { name: "Carlos Mendoza", company: "Apex Global", phone: "+63 906 098 6036", tags: "Enterprise, VIP" },
     { name: "Sarah Jenkins", company: "Finserve Ltd", phone: "+1 415 555 0192", tags: "Renewal, Inbound" },
-    { name: "David Chen", company: "Apex Global", phone: "+63 906 123 4567", tags: "BPO Closer" },
+    { name: "David Chen", company: "Metro Telecom", phone: "+63 906 123 4567", tags: "BPO Closer" },
   ];
 
   const filtered = contacts.filter((c) =>
@@ -494,7 +494,7 @@ function ContactManagerExplainer() {
       title="Unified Contact Directory & History"
       caption="Type a name or company in the search box to find customer records and launch a call with full context."
       takeaway="Centralize millions of customer touchpoints with instant search."
-      textAlternative="Searching for Rahul filters the contact database to show Acme Corp with full calling history and tags."
+      textAlternative="Searching for Carlos filters the contact database to show Apex Global with full calling history and tags."
     >
       {() => (
         <div className="space-y-4">
@@ -874,7 +874,7 @@ function OmnichannelRoutingExplainer() {
             <div className="p-3 rounded-lg bg-white border border-slate-200 text-slate-600">
               {activeChannel === "whatsapp" && "Customer on WhatsApp: 'Can you confirm my tracking ID for order #8921?' → Bot verified → Handed to agent."}
               {activeChannel === "voice" && "Incoming SIP Call from +63 906 098 6036: 'I need to upgrade our contact center seats.'"}
-              {activeChannel === "email" && "Email from support@acme.com: 'Requesting SLA addendum review.'"}
+              {activeChannel === "email" && "Email from support@apexglobal.com: 'Requesting SLA addendum review.'"}
             </div>
           </div>
         </div>

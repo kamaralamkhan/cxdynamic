@@ -572,7 +572,7 @@ export default function ServicePage({ page }: ServicePageProps) {
                         <input
                           type="email"
                           required
-                          placeholder="rahul@acme.com"
+                          placeholder="name@company.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-xs bg-slate-50 focus:bg-white focus:outline-none focus:border-[#069bd8]"

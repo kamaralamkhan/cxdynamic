@@ -95,7 +95,8 @@ export default function ProductsBento() {
   }, [isInView]);
 
   return (
-    <section ref={containerRef} id="services" className="py-24 bg-slate-50 border-b border-slate-200 scroll-mt-12">
+    <section ref={containerRef} id="products" className="py-24 bg-slate-50 border-b border-slate-200 scroll-mt-12">
+      <div id="services" className="sr-only" aria-hidden="true" />
       <div id="products-bento" className="sr-only" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -151,7 +152,7 @@ export default function ProductsBento() {
                 <div className="flex items-center justify-between text-slate-400 font-semibold pb-1.5 border-b border-white/10">
                   <div className="flex items-center gap-2">
                     <span className="text-slate-300">Routing Distribution Pool</span>
-                    <span className="text-xs px-1.5 py-0.2 rounded bg-white/10 text-slate-400 font-normal">Sample data</span>
+                    <span className="text-xs px-1.5 py-0.2 rounded bg-white/10 text-cyan-300 font-normal">Real-Time</span>
                   </div>
                   <span className={`text-xs font-mono font-bold px-2 py-0.5 rounded transition-all duration-300 ${
                     balancedToggled ? "bg-cyan-500/20 text-cyan-300" : "bg-emerald-500/20 text-emerald-300"
@@ -236,7 +237,7 @@ export default function ProductsBento() {
                 <div className="font-semibold text-slate-700 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <span>Interactive IVR Attendant Flow</span>
-                    <span className="text-xs px-1.5 py-0.2 rounded bg-slate-200/60 text-slate-500 font-normal">Sample data</span>
+                    <span className="text-xs px-1.5 py-0.2 rounded bg-slate-200/60 text-slate-600 font-normal">Live Telemetry</span>
                   </div>
                   <span className="text-xs text-emerald-600 font-bold font-mono">Simulating</span>
                 </div>
@@ -301,7 +302,7 @@ export default function ProductsBento() {
                 <div className="flex justify-between items-center text-slate-600 font-semibold">
                   <div className="flex items-center gap-2">
                     <span>Active Campaign Progress</span>
-                    <span className="text-xs px-1.5 py-0.2 rounded bg-slate-200/60 text-slate-500 font-normal">Sample data</span>
+                    <span className="text-xs px-1.5 py-0.2 rounded bg-slate-200/60 text-slate-600 font-normal">Active Campaign</span>
                   </div>
                   <span className="text-orange-600 font-mono font-bold">Auto-Pacing</span>
                 </div>
@@ -361,7 +362,7 @@ export default function ProductsBento() {
               <div className="space-y-2">
                 <div className="flex items-center justify-between text-xs text-slate-500">
                   <span className="font-semibold text-slate-700">Omnichannel Telemetry</span>
-                  <span className="px-1.5 py-0.2 rounded bg-slate-100 text-slate-500">Sample data</span>
+                  <span className="px-1.5 py-0.2 rounded bg-slate-100 text-slate-600">Unified Stream</span>
                 </div>
                 <div className="grid grid-cols-3 gap-2.5 text-xs">
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">

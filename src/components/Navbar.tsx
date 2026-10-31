@@ -718,7 +718,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
           {/* Right Action Buttons */}
           <div className="hidden sm:flex items-center gap-4">
             <Link
-              href="/#products"
+              href="/products"
               className="text-xs font-medium text-slate-600 hover:text-slate-900 transition-colors"
             >
               Explore Products

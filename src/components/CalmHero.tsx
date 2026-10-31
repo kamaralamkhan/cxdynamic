@@ -186,14 +186,14 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
               </button>
 
               <Link
-                href="/#products"
+                href="/products"
                 className="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-white text-slate-900 border border-slate-300 hover:bg-slate-50 hover:border-slate-400 transition-colors"
               >
                 <span>Explore Products</span>
               </Link>
 
               <a
-                href="#challenges"
+                href="#how-it-works"
                 className="inline-flex items-center justify-center sm:justify-start gap-1 text-sm text-slate-600 hover:text-slate-900 underline-offset-4 hover:underline py-2 sm:px-2 transition-colors"
               >
                 <span>See how it works</span>
