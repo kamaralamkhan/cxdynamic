@@ -32,9 +32,23 @@ export async function generateMetadata({
     openGraph: {
       title: seo.title,
       description: seo.description,
-      url: `https://www.cxdynamiq.com/page/${slug}`,
+      url: `https://chocolate-frog-774793.hostingersite.com/page/${slug}`,
       siteName: "CXDYNAMIQ",
       type: "website",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 512,
+          height: 512,
+          alt: "CXDYNAMIQ",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary",
+      title: seo.title,
+      description: seo.description,
+      images: ["/og-image.png"],
     },
   };
 }

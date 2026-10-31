@@ -38,14 +38,23 @@ export async function generateMetadata({
     openGraph: {
       title: cleanTitle,
       description: desc,
-      url: `https://www.cxdynamiq.com/blog/${slug}`,
+      url: `https://chocolate-frog-774793.hostingersite.com/blog/${slug}`,
       siteName: "CXDYNAMIQ",
       type: "article",
+      images: [
+        {
+          url: "/og-image.png",
+          width: 512,
+          height: 512,
+          alt: "CXDYNAMIQ",
+        },
+      ],
     },
     twitter: {
       card: "summary",
       title: cleanTitle,
       description: desc,
+      images: ["/og-image.png"],
     },
   };
 }

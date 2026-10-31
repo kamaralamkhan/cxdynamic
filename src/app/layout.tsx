@@ -16,11 +16,13 @@ const inter = Inter({
   weight: ["400", "500", "600"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://chocolate-frog-774793.hostingersite.com";
+
 export const metadata: Metadata = {
   title: "CXDYNAMIQ — Cloud Contact Center & AI Customer Experience Platform",
   description:
     "Stress-free contact center solutions. Deploy a cloud contact center in a day and automate customer engagement in minutes with omnichannel routing, CTI integrations, and conversational AI.",
-  metadataBase: new URL("https://www.cxdynamiq.com"),
+  metadataBase: new URL(siteUrl),
   keywords: [
     "Cloud Contact Center",
     "Call Centre Solutions",
@@ -45,10 +47,25 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CXDYNAMIQ — Cloud Contact Center Solutions",
     description: "Deploy a Cloud Contact Center in a day and automate it in minutes with VIP support.",
-    url: "https://www.cxdynamiq.com",
+    url: siteUrl,
     siteName: "CXDYNAMIQ",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 512,
+        height: 512,
+        alt: "CXDYNAMIQ — Redefining Customer Experiences",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "CXDYNAMIQ — Cloud Contact Center Solutions",
+    description: "Deploy a Cloud Contact Center in a day and automate it in minutes with VIP support.",
+    images: ["/og-image.png"],
   },
 };
 
