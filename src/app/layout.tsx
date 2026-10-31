@@ -34,15 +34,18 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/cxdynamiq-favicon.png", sizes: "512x512", type: "image/png" },
+      { url: "/cxdynamiq-favicon.ico", type: "image/x-icon" },
+      { url: "/favicon-32x32.png?v=cxdynamiq", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png?v=cxdynamiq", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.png?v=cxdynamiq", type: "image/png" },
+      { url: "/favicon.ico?v=cxdynamiq", type: "image/x-icon" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/cxdynamiq-favicon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png?v=cxdynamiq", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/cxdynamiq-favicon.ico",
   },
   openGraph: {
     title: "CXDYNAMIQ — Cloud Contact Center Solutions",
@@ -53,7 +56,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/cxdynamiq-og.png",
         width: 512,
         height: 512,
         alt: "CXDYNAMIQ — Redefining Customer Experiences",
@@ -65,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "CXDYNAMIQ — Cloud Contact Center Solutions",
     description: "Deploy a Cloud Contact Center in a day and automate it in minutes with VIP support.",
-    images: ["/og-image.png"],
+    images: ["/cxdynamiq-og.png"],
   },
 };
 

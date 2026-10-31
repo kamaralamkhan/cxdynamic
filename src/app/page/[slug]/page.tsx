@@ -37,7 +37,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "/og-image.png",
+          url: "/cxdynamiq-og.png",
           width: 512,
           height: 512,
           alt: "CXDYNAMIQ",
@@ -48,7 +48,7 @@ export async function generateMetadata({
       card: "summary",
       title: seo.title,
       description: seo.description,
-      images: ["/og-image.png"],
+      images: ["/cxdynamiq-og.png"],
     },
   };
 }
