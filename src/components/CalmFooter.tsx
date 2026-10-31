@@ -66,38 +66,36 @@ export default function CalmFooter() {
 
   return (
     <>
-      {/* Outer Wrapper with soft padding to showcase the curved card */}
-      <div className="bg-slate-100/70 pt-8 sm:pt-12 pb-6 px-3 sm:px-6 lg:px-8">
+      {/* Full-width Footer spanning 100% viewport width */}
+      <footer className="w-full bg-[#031b26] text-slate-300 border-t border-slate-800/80 rounded-t-[32px] sm:rounded-t-[44px] lg:rounded-t-[52px] pt-14 sm:pt-16 pb-12 relative overflow-hidden">
         
-        {/* Sleek Rounded Card (Aircall & Convin Inspired Layout) */}
-        <footer className="max-w-7xl mx-auto rounded-[28px] sm:rounded-[36px] lg:rounded-[44px] bg-[#031b26] text-slate-300 shadow-2xl border border-slate-800/80 p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-          
-          {/* Subtle cyan ambient glow */}
-          <div 
-            aria-hidden="true" 
-            className="pointer-events-none absolute -top-24 -right-24 w-[500px] h-[500px] bg-gradient-to-bl from-cyan-600/15 via-sky-600/10 to-transparent rounded-full blur-3xl -z-0" 
-          />
+        {/* Subtle cyan ambient glow */}
+        <div 
+          aria-hidden="true" 
+          className="pointer-events-none absolute -top-24 -right-24 w-[600px] h-[600px] bg-gradient-to-bl from-cyan-600/15 via-sky-600/10 to-transparent rounded-full blur-3xl -z-0" 
+        />
 
-          <div className="relative z-10 space-y-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+          
+          {/* Top Grid: Brand & Contact Info (Left 4 cols) + 6 Navigation Columns (Right 8 cols) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
             
-            {/* Top Grid: Brand & Contact Info (Left 4 cols) + 6 Navigation Columns (Right 8 cols) */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+            {/* ======================================================== */}
+            {/* LEFT COLUMN: Brand Identity, Corporate Heritage & Contact */}
+            {/* ======================================================== */}
+            <div className="lg:col-span-4 space-y-6 text-left">
               
-              {/* ======================================================== */}
-              {/* LEFT COLUMN: Brand Identity, Corporate Heritage & Contact */}
-              {/* ======================================================== */}
-              <div className="lg:col-span-4 space-y-6 text-left">
-                
-                {/* Authentic Logo */}
-                <Link href="/" className="inline-block">
-                  <Image
-                    src="/images/white-logo.png"
-                    alt="CXDYNAMIQ Cloud Contact Center"
-                    width={190}
-                    height={40}
-                    className="h-8 sm:h-9 w-auto object-contain"
-                  />
-                </Link>
+              {/* Authentic Logo with White Invert Filter */}
+              <Link href="/" className="inline-block">
+                <Image
+                  src="/images/logo.png"
+                  alt="CXDYNAMIQ Cloud Contact Center"
+                  width={190}
+                  height={40}
+                  className="h-8 sm:h-9 w-auto object-contain brightness-0 invert filter"
+                  style={{ filter: "brightness(0) invert(1)" }}
+                />
+              </Link>
 
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-sm">
                   {siteConfig.tagline}. Delivering carrier-grade voice infrastructure, intelligent IVR, and native CRM integrations.
@@ -318,9 +316,7 @@ export default function CalmFooter() {
 
           </div>
 
-        </footer>
-
-      </div>
+      </footer>
 
       {/* Floating Official WhatsApp Action Button */}
       {!hideFloatingChat && (
