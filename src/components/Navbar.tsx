@@ -20,7 +20,11 @@ import {
   MessageSquare,
   Compass,
   CheckCircle2,
-  ShieldCheck
+  ShieldCheck,
+  Headphones,
+  Bot,
+  Zap,
+  Globe2
 } from "lucide-react";
 
 interface NavbarProps {
@@ -67,14 +71,14 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
   };
 
   return (
-    <header ref={navRef} className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-xs transition-shadow">
+    <header ref={navRef} className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs transition-shadow">
       {/* Top Utility Bar */}
       <div className="bg-slate-900 text-slate-300 px-4 py-1.5 text-xs border-b border-slate-800">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5 text-slate-300">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              VIP 24/7 Telephony Support
+              Carrier-Grade 99.99% SLA • VIP Telephony Support
             </span>
             <a href="tel:+918846468095" className="hidden sm:inline-flex items-center gap-1 text-slate-300 hover:text-white transition-colors">
               <Phone className="w-3 h-3 text-[#069bd8]" /> +91 88464 68095
@@ -123,7 +127,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               About Us
             </Link>
 
-            {/* Level 2: Our Products Mega Menu */}
+            {/* Level 2: Our Products Mega Menu (Aircall & Convin Inspired Layout) */}
             <div 
               className="group"
               onMouseEnter={() => setOpenDropdown("products")}
@@ -153,192 +157,181 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                     : "opacity-0 invisible pointer-events-none -translate-y-2 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0"
                 }`}
               >
-                <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden">
+                <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden">
                   
-                  {/* 5 Column Grid */}
-                  <div className="p-6 grid grid-cols-5 gap-4">
+                  {/* Grid Layout: Left Spotlight Card (4 cols) + Right 4 Product Columns (8 cols) */}
+                  <div className="p-6 grid grid-cols-12 gap-5">
                     
-                    {/* Col 1: Industry Solution */}
-                    <div className="space-y-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-700 pb-1.5 border-b border-slate-100 flex items-center gap-1.5">
-                        <Building2 className="w-3.5 h-3.5 text-[#069bd8]" />
-                        <span>Industry Solution</span>
-                      </div>
-                      <div className="space-y-1">
-                        <Link href="/enterprise" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Enterprise
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                    {/* Left Spotlight: AI Voice & CX Platform (Like Aircall's AI Voice Agents card) */}
+                    <div className="col-span-4 bg-gradient-to-br from-cyan-50/70 via-sky-50/40 to-slate-50 p-4 rounded-xl border border-cyan-100/90 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center justify-between pb-2 border-b border-cyan-100 mb-3">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-900 flex items-center gap-1.5">
+                            <Sparkles className="w-3.5 h-3.5 text-[#069bd8]" />
+                            AI Voice &amp; CX Platform
                           </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">High-volume multi-channel</span>
-                        </Link>
-                        <Link href="/bpo" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            BPO Solutions
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                          <span className="text-[9px] font-bold uppercase tracking-wider text-cyan-700 bg-cyan-100/80 px-2 py-0.5 rounded-md">
+                            GenAI
                           </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Multi-tenant agent tracking</span>
-                        </Link>
-                        <Link href="/education" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Education
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Admissions &amp; student reach</span>
-                        </Link>
-                        <Link href="/small-business" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Small Business
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Cost-effective virtual setup</span>
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Col 2: Call Centre Solution */}
-                    <div className="space-y-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-700 pb-1.5 border-b border-slate-100 flex items-center gap-1.5">
-                        <PhoneCall className="w-3.5 h-3.5 text-[#069bd8]" />
-                        <span>Call Centre</span>
-                      </div>
-                      <div className="space-y-1">
-                        <Link href="/inbound-calling" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Inbound Calling
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Intelligent ACD routing</span>
-                        </Link>
-                        <Link href="/outbound-calling" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Outbound Calling
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">High-velocity campaigns</span>
-                        </Link>
-                        <Link href="/blended-call-centre" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Blended Call Centre
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Unified 2-way handling</span>
-                        </Link>
-                        <Link href="/cti-integrations" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            CTI Integrations
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">CRM screen popups</span>
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Col 3: Business Phone System */}
-                    <div className="space-y-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-700 pb-1.5 border-b border-slate-100 flex items-center gap-1.5">
-                        <Phone className="w-3.5 h-3.5 text-[#069bd8]" />
-                        <span>Phone System</span>
-                      </div>
-                      <div className="space-y-1">
-                        <Link href="/auto-attendant" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Auto Attendant
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">24/7 Smart IVR receptionist</span>
-                        </Link>
-                        <Link href="/contact-manager" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Contact Manager
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Unified customer histories</span>
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Col 4: Sales Dialer Solution */}
-                    <div className="space-y-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-700 pb-1.5 border-b border-slate-100 flex items-center gap-1.5">
-                        <Flame className="w-3.5 h-3.5 text-[#069bd8]" />
-                        <span>Sales Dialers</span>
-                      </div>
-                      <div className="space-y-1">
-                        <Link href="/click-to-call" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Click to Call
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">1-click browser dialing</span>
-                        </Link>
-                        <Link href="/auto-dialer" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Auto Dialer
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Smart pacing &amp; retry logic</span>
-                        </Link>
-                        <Link href="/crm-integrations" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            CRM Integrations
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">HubSpot, Zoho, Salesforce</span>
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Col 5: CX Hub & AI (Featured Spotlight) */}
-                    <div className="space-y-2.5 bg-gradient-to-br from-cyan-50/70 via-slate-50/60 to-white p-3.5 rounded-xl border border-cyan-100/80">
-                      <div className="flex items-center justify-between pb-1.5 border-b border-cyan-100">
-                        <div className="text-[11px] font-bold uppercase tracking-wider text-[#069bd8] flex items-center gap-1.5">
-                          <Sparkles className="w-3.5 h-3.5 text-[#069bd8]" />
-                          <span>CX Hub &amp; AI</span>
                         </div>
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-cyan-700 bg-cyan-100/70 px-1.5 py-0.5 rounded-md">
-                          GenAI
-                        </span>
+                        
+                        <div className="space-y-1">
+                          <Link 
+                            href="/conversational-ai" 
+                            onClick={closeAll} 
+                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                          >
+                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                              Conversational AI
+                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                            </span>
+                            <span className="text-[11px] text-slate-600 mt-0.5">Autonomous speech &amp; chat voicebots</span>
+                          </Link>
+
+                          <Link 
+                            href="/omnichannel-routing" 
+                            onClick={closeAll} 
+                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                          >
+                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                              Omnichannel Routing
+                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                            </span>
+                            <span className="text-[11px] text-slate-600 mt-0.5">Unified voice, SMS &amp; WhatsApp queue</span>
+                          </Link>
+
+                          <Link 
+                            href="/speech-analytics" 
+                            onClick={closeAll} 
+                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                          >
+                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                              Speech Analytics
+                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                            </span>
+                            <span className="text-[11px] text-slate-600 mt-0.5">Real-time sentiment &amp; QA audits</span>
+                          </Link>
+                        </div>
                       </div>
-                      <div className="space-y-1">
-                        <Link href="/omnichannel-routing" onClick={closeAll} className="group/item flex flex-col p-2 rounded-lg hover:bg-white transition-colors shadow-2xs">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Omnichannel
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Voice, SMS, chat queue</span>
-                        </Link>
-                        <Link href="/conversational-ai" onClick={closeAll} className="group/item flex flex-col p-2 rounded-lg hover:bg-white transition-colors shadow-2xs">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Conversational AI
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">GenAI voice agents</span>
-                        </Link>
-                        <Link href="/speech-analytics" onClick={closeAll} className="group/item flex flex-col p-2 rounded-lg hover:bg-white transition-colors shadow-2xs">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Speech Analytics
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Sentiment &amp; QA audits</span>
+
+                      <div className="pt-3 border-t border-cyan-100/80 mt-3">
+                        <Link 
+                          href="/conversational-ai" 
+                          onClick={closeAll} 
+                          className="text-xs font-bold text-[#069bd8] hover:text-cyan-700 hover:underline flex items-center gap-1"
+                        >
+                          Explore AI Platform Suite <ArrowRight className="w-3.5 h-3.5" />
                         </Link>
                       </div>
+                    </div>
+
+                    {/* Right Columns: 4 Clean Columns (spans 8 cols) with vertical accent line */}
+                    <div className="col-span-8 grid grid-cols-4 gap-4 pl-1">
+                      
+                      {/* Col 1: Industry Solution */}
+                      <div className="space-y-2">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
+                          <span>Industry</span>
+                        </div>
+                        <div className="space-y-0.5">
+                          <Link href="/enterprise" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Enterprise</span>
+                            <span className="text-[11px] text-slate-500 block">High-volume ops</span>
+                          </Link>
+                          <Link href="/bpo" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">BPO Solutions</span>
+                            <span className="text-[11px] text-slate-500 block">Multi-tenant pacing</span>
+                          </Link>
+                          <Link href="/education" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Education</span>
+                            <span className="text-[11px] text-slate-500 block">Admissions outreach</span>
+                          </Link>
+                          <Link href="/small-business" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Small Business</span>
+                            <span className="text-[11px] text-slate-500 block">Virtual phone setup</span>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Col 2: Call Centre Solution */}
+                      <div className="space-y-2">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
+                          <span>Call Centre</span>
+                        </div>
+                        <div className="space-y-0.5">
+                          <Link href="/inbound-calling" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Inbound Calling</span>
+                            <span className="text-[11px] text-slate-500 block">Intelligent ACD</span>
+                          </Link>
+                          <Link href="/outbound-calling" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Outbound Calling</span>
+                            <span className="text-[11px] text-slate-500 block">High connect rates</span>
+                          </Link>
+                          <Link href="/blended-call-centre" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Blended Centre</span>
+                            <span className="text-[11px] text-slate-500 block">Unified 2-way handling</span>
+                          </Link>
+                          <Link href="/cti-integrations" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">CTI Integrations</span>
+                            <span className="text-[11px] text-slate-500 block">CRM screen pops</span>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Col 3: Business Phone System */}
+                      <div className="space-y-2">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
+                          <span>Phone System</span>
+                        </div>
+                        <div className="space-y-0.5">
+                          <Link href="/auto-attendant" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Auto Attendant</span>
+                            <span className="text-[11px] text-slate-500 block">24/7 Smart IVR</span>
+                          </Link>
+                          <Link href="/contact-manager" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Contact Manager</span>
+                            <span className="text-[11px] text-slate-500 block">Unified caller logs</span>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Col 4: Sales Dialer Solution */}
+                      <div className="space-y-2">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
+                          <span>Sales Dialers</span>
+                        </div>
+                        <div className="space-y-0.5">
+                          <Link href="/click-to-call" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Click to Call</span>
+                            <span className="text-[11px] text-slate-500 block">1-click web dialing</span>
+                          </Link>
+                          <Link href="/auto-dialer" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Auto Dialer</span>
+                            <span className="text-[11px] text-slate-500 block">Smart list pacing</span>
+                          </Link>
+                          <Link href="/crm-integrations" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">CRM Integrations</span>
+                            <span className="text-[11px] text-slate-500 block">Salesforce, Zoho, Hub</span>
+                          </Link>
+                        </div>
+                      </div>
+
                     </div>
 
                   </div>
 
-                  {/* Mega Menu Footer Strip */}
-                  <div className="bg-slate-50/90 border-t border-slate-100 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-600">
+                  {/* Mega Menu Footer Strip (Like Aircall's TRY FOR FREE Banner) */}
+                  <div className="bg-slate-50/90 border-t border-slate-100 px-6 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-600">
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                      <span className="font-medium text-slate-700">Deploy in 1 Day • 100% Native CRM Compatibility • Zero Hardware</span>
+                      <span className="font-semibold text-slate-800">TRY CXDYNAMIQ RISK-FREE</span>
+                      <span className="hidden md:inline text-slate-400">•</span>
+                      <span className="hidden md:inline text-slate-600">1-Day Deployment • 100% CRM Compatibility • 24/7 VIP Support</span>
                     </div>
                     <div className="flex items-center gap-4">
-                      <Link href="/about-us" onClick={closeAll} className="hover:text-[#069bd8] font-medium transition-colors">
-                        Platform Architecture →
-                      </Link>
-                      <Link href="/contact-us" onClick={closeAll} className="font-bold text-[#069bd8] hover:underline flex items-center gap-1">
-                        Request Custom Pricing →
+                      <Link href="/contact-us" onClick={closeAll} className="font-bold text-[#069bd8] hover:text-cyan-700 flex items-center gap-1 group/btn">
+                        <span>REQUEST A QUOTE</span>
+                        <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
                       </Link>
                     </div>
                   </div>
@@ -347,7 +340,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               </div>
             </div>
 
-            {/* Level 2: Why CXDYNAMIQ Mega Menu */}
+            {/* Level 2: Why CXDYNAMIQ Mega Menu (Aircall Integrations Inspired Layout) */}
             <div 
               className="group"
               onMouseEnter={() => setOpenDropdown("why")}
@@ -377,157 +370,150 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                     : "opacity-0 invisible pointer-events-none -translate-y-2 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0"
                 }`}
               >
-                <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.15),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden">
+                <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden">
                   
-                  {/* 4 Column Grid */}
-                  <div className="p-6 grid grid-cols-4 gap-6">
+                  {/* Grid Layout: Left 3 Columns (8 cols) + Right Spotlight Card (4 cols) */}
+                  <div className="p-6 grid grid-cols-12 gap-5">
                     
-                    {/* Col 1: CTI Integrations */}
-                    <div className="space-y-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-700 pb-1.5 border-b border-slate-100 flex items-center gap-1.5">
-                        <Cpu className="w-3.5 h-3.5 text-[#069bd8]" />
-                        <span>CTI Integrations</span>
-                      </div>
-                      <div className="space-y-1">
-                        <Link href="/zoho" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Zoho
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">PhoneBridge 1-click CTI</span>
-                        </Link>
-                        <Link href="/zendesk" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Zendesk
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Live ticket sync &amp; popups</span>
-                        </Link>
-                        <Link href="/salesforce" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Salesforce
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Omni-channel softphone</span>
-                        </Link>
-                        <Link href="/freshdesk" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Freshdesk
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Instant agent call logging</span>
-                        </Link>
-                        <Link href="/hubspot" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            HubSpot
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Auto timeline call records</span>
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Col 2: Digital Channels */}
-                    <div className="space-y-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-700 pb-1.5 border-b border-slate-100 flex items-center gap-1.5">
-                        <MessageSquare className="w-3.5 h-3.5 text-[#069bd8]" />
-                        <span>Digital Channels</span>
-                      </div>
-                      <div className="space-y-1">
-                        <Link href="/whatsapp-business" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            WhatsApp Business
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Official Meta messaging API</span>
-                        </Link>
-                        <Link href="/intercom-integration" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Intercom Integration
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Live customer chat &amp; routing</span>
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Col 3: Core Features */}
-                    <div className="space-y-2.5">
-                      <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-700 pb-1.5 border-b border-slate-100 flex items-center gap-1.5">
-                        <Layers className="w-3.5 h-3.5 text-[#069bd8]" />
-                        <span>Core Features</span>
-                      </div>
-                      <div className="space-y-1">
-                        <Link href="/auto-dialer" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Auto Dialer
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Speed up agent dialing</span>
-                        </Link>
-                        <Link href="/power-dialer" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Power Dialer
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Sequential agent outreach</span>
-                        </Link>
-                        <Link href="/predictive-dialer" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Predictive Dialer
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Zero idle pacing algorithm</span>
-                        </Link>
-                        <Link href="/ivr" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            IVR (Voice Menus)
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Multi-level self-service</span>
-                        </Link>
-                        <Link href="/acd" onClick={closeAll} className="group/item flex flex-col p-2 rounded-xl hover:bg-slate-50 transition-colors">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            ACD (Distribution)
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Skill-based queue routing</span>
-                        </Link>
-                      </div>
-                    </div>
-
-                    {/* Col 4: Company & Platform (Featured Spotlight) */}
-                    <div className="space-y-2.5 bg-gradient-to-br from-cyan-50/70 via-slate-50/60 to-white p-3.5 rounded-xl border border-cyan-100/80">
-                      <div className="flex items-center justify-between pb-1.5 border-b border-cyan-100">
-                        <div className="text-[11px] font-bold uppercase tracking-wider text-[#069bd8] flex items-center gap-1.5">
-                          <Compass className="w-3.5 h-3.5 text-[#069bd8]" />
-                          <span>Company</span>
+                    {/* Left Columns: 3 Organized Columns (spans 8 cols) */}
+                    <div className="col-span-8 grid grid-cols-3 gap-5 pr-2">
+                      
+                      {/* Col 1: CTI Integrations */}
+                      <div className="space-y-2">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
+                          <span>CRM &amp; CTI</span>
                         </div>
-                        <span className="text-[9px] font-bold uppercase tracking-wider text-cyan-700 bg-cyan-100/70 px-1.5 py-0.5 rounded-md">
-                          Trust
-                        </span>
+                        <div className="space-y-0.5">
+                          <Link href="/zoho" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Zoho CRM</span>
+                            <span className="text-[11px] text-slate-500 block">PhoneBridge 1-click CTI</span>
+                          </Link>
+                          <Link href="/zendesk" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Zendesk</span>
+                            <span className="text-[11px] text-slate-500 block">Live ticket sync &amp; pop</span>
+                          </Link>
+                          <Link href="/salesforce" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Salesforce</span>
+                            <span className="text-[11px] text-slate-500 block">Omni-channel softphone</span>
+                          </Link>
+                          <Link href="/freshdesk" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Freshdesk</span>
+                            <span className="text-[11px] text-slate-500 block">Instant call logging</span>
+                          </Link>
+                          <Link href="/hubspot" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">HubSpot</span>
+                            <span className="text-[11px] text-slate-500 block">Auto contact timeline</span>
+                          </Link>
+                        </div>
                       </div>
-                      <div className="space-y-1">
-                        <Link href="/who-we-are" onClick={closeAll} className="group/item flex flex-col p-2 rounded-lg hover:bg-white transition-colors shadow-2xs">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Who We Are
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+
+                      {/* Col 2: Digital Channels */}
+                      <div className="space-y-2">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
+                          <span>Digital Channels</span>
+                        </div>
+                        <div className="space-y-0.5">
+                          <Link href="/whatsapp-business" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">WhatsApp Business</span>
+                            <span className="text-[11px] text-slate-500 block">Official Meta messaging</span>
+                          </Link>
+                          <Link href="/intercom-integration" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Intercom</span>
+                            <span className="text-[11px] text-slate-500 block">Live chat &amp; agent routing</span>
+                          </Link>
+                        </div>
+                      </div>
+
+                      {/* Col 3: Core Features */}
+                      <div className="space-y-2">
+                        <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
+                          <span>Core Telephony</span>
+                        </div>
+                        <div className="space-y-0.5">
+                          <Link href="/auto-dialer" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Auto Dialer</span>
+                            <span className="text-[11px] text-slate-500 block">Paced agent outreach</span>
+                          </Link>
+                          <Link href="/power-dialer" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Power Dialer</span>
+                            <span className="text-[11px] text-slate-500 block">Sequential campaign list</span>
+                          </Link>
+                          <Link href="/predictive-dialer" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Predictive Dialer</span>
+                            <span className="text-[11px] text-slate-500 block">Zero idle algorithm</span>
+                          </Link>
+                          <Link href="/ivr" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">IVR (Voice Menus)</span>
+                            <span className="text-[11px] text-slate-500 block">Multi-tier self-service</span>
+                          </Link>
+                          <Link href="/acd" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">ACD (Distribution)</span>
+                            <span className="text-[11px] text-slate-500 block">Skill &amp; queue routing</span>
+                          </Link>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    {/* Right Spotlight: Enterprise Reliability & Heritage (spans 4 cols) */}
+                    <div className="col-span-4 bg-gradient-to-br from-slate-50 via-cyan-50/30 to-slate-100/60 p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center justify-between pb-2 border-b border-slate-200 mb-3">
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
+                            <Compass className="w-3.5 h-3.5 text-[#069bd8]" />
+                            Enterprise Platform
                           </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Telephony mission &amp; story</span>
-                        </Link>
-                        <Link href="/about-us" onClick={closeAll} className="group/item flex flex-col p-2 rounded-lg hover:bg-white transition-colors shadow-2xs">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            About Us
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                          <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-md">
+                            99.99% SLA
                           </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Carrier infrastructure &amp; SLA</span>
-                        </Link>
-                        <Link href="/page/Customer Experience management" onClick={closeAll} className="group/item flex flex-col p-2 rounded-lg hover:bg-white transition-colors shadow-2xs">
-                          <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                            Collection Management
-                            <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                          </span>
-                          <span className="text-[11px] text-slate-500 line-clamp-1">Debt recovery &amp; fintech</span>
+                        </div>
+                        
+                        <div className="space-y-1">
+                          <Link 
+                            href="/who-we-are" 
+                            onClick={closeAll} 
+                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                          >
+                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                              Who We Are
+                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                            </span>
+                            <span className="text-[11px] text-slate-600 mt-0.5">Telephony heritage &amp; leadership</span>
+                          </Link>
+
+                          <Link 
+                            href="/about-us" 
+                            onClick={closeAll} 
+                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                          >
+                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                              About Us
+                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                            </span>
+                            <span className="text-[11px] text-slate-600 mt-0.5">Global carrier-grade infrastructure</span>
+                          </Link>
+
+                          <Link 
+                            href="/page/Customer Experience management" 
+                            onClick={closeAll} 
+                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                          >
+                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                              Collection Management
+                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                            </span>
+                            <span className="text-[11px] text-slate-600 mt-0.5">FinTech &amp; debt recovery dialers</span>
+                          </Link>
+                        </div>
+                      </div>
+
+                      <div className="pt-3 border-t border-slate-200 mt-3">
+                        <Link 
+                          href="/about-us" 
+                          onClick={closeAll} 
+                          className="text-xs font-bold text-[#069bd8] hover:text-cyan-700 hover:underline flex items-center gap-1"
+                        >
+                          Learn About CXDYNAMIQ <ArrowRight className="w-3.5 h-3.5" />
                         </Link>
                       </div>
                     </div>
@@ -535,17 +521,17 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                   </div>
 
                   {/* Mega Menu Footer Strip */}
-                  <div className="bg-slate-50/90 border-t border-slate-100 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-600">
+                  <div className="bg-slate-50/90 border-t border-slate-100 px-6 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-600">
                     <div className="flex items-center gap-2">
                       <ShieldCheck className="w-4 h-4 text-emerald-500" />
-                      <span className="font-medium text-slate-700">99.99% Carrier-Grade SLA • SOC2 &amp; GDPR Compliant • Zero PBX Required</span>
+                      <span className="font-semibold text-slate-800">20+ NATIVE CRM &amp; MESSAGING INTEGRATIONS</span>
+                      <span className="hidden md:inline text-slate-400">•</span>
+                      <span className="hidden md:inline text-slate-600">SOC2 &amp; GDPR Compliant • Zero PBX Required</span>
                     </div>
                     <div className="flex items-center gap-4">
-                      <Link href="/blogs" onClick={closeAll} className="hover:text-[#069bd8] font-medium transition-colors">
-                        Knowledge Centre &amp; Insights →
-                      </Link>
-                      <Link href="/contact-us" onClick={closeAll} className="font-bold text-[#069bd8] hover:underline">
-                        Talk to an Architect →
+                      <Link href="/blogs" onClick={closeAll} className="font-bold text-[#069bd8] hover:text-cyan-700 flex items-center gap-1 group/btn">
+                        <span>READ CUSTOMER STORIES</span>
+                        <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
                       </Link>
                     </div>
                   </div>
