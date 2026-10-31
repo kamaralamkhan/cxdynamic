@@ -1,0 +1,307 @@
+{
+  "slug": "power-dialer",
+  "path": "/power-dialer",
+  "encodedPath": "/power-dialer",
+  "meta": {
+    "title": "Power Dialer | CXDYNAMIQ",
+    "description": "POWER DIALER SOFTWARE Automate calling, focus on growth CXDYNAMIQ’s flexible power dialers let you automate, streamline, and intelligently supervise your outbound calling while maximizing the time your agents spend conversing and converting.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Power Dialer | CXDYNAMIQ\n",
+    "ogDescription": "POWER DIALER SOFTWARE Automate calling, focus on growth CXDYNAMIQ’s flexible power dialers let you automate, streamline, and intelligently supervise your outbound calling while maximizing the time your agents spend conversing and converting.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Automate calling, focus on growth"
+    },
+    {
+      "type": "li",
+      "text": "CXDYNAMIQ’s flexible power dialers let you automate, streamline, and intelligently supervise your outbound calling while maximizing the time your agents spend conversing and converting."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/power-dialer.png",
+      "alt": "img"
+    },
+    {
+      "type": "h4",
+      "text": "Power Dialer"
+    },
+    {
+      "type": "p",
+      "text": "A Power Dialer is an automated outbound dialer that does the dialing for you while allowing the agent to focus on the live call nearby. when the call is done, the agent has the opportunity to fill up the survey, enter notes and show that they are prepared for the next call. The Power Dialer then dials the next user in the line. This dialer is advantageous for outreach groups, promotion and political gatherings that need to raise support and for crusades where the expense of not conversing with a contact is high."
+    },
+    {
+      "type": "h4",
+      "text": "How does a Power Dialer work?"
+    },
+    {
+      "type": "p",
+      "text": "A Power Dialer dials the following number solely after the past call closes, dissimilar to a Predictive Dialer that dials numbers before a specialist opens up. Along these lines, contacts don't experience the short 1-2s stop after pickup that can happen with a Predictive Dialer."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Automate calling, focus on growth"
+    },
+    {
+      "level": 4,
+      "text": "Power Dialer"
+    },
+    {
+      "level": 4,
+      "text": "How does a Power Dialer work?"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Automate calling, focus on growth",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "CXDYNAMIQ’s flexible power dialers let you automate, streamline, and intelligently supervise your outbound calling while maximizing the time your agents spend conversing and converting."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/power-dialer.png",
+          "alt": "img"
+        },
+        {
+          "type": "h4",
+          "text": "Power Dialer"
+        },
+        {
+          "type": "p",
+          "text": "A Power Dialer is an automated outbound dialer that does the dialing for you while allowing the agent to focus on the live call nearby. when the call is done, the agent has the opportunity to fill up the survey, enter notes and show that they are prepared for the next call. The Power Dialer then dials the next user in the line. This dialer is advantageous for outreach groups, promotion and political gatherings that need to raise support and for crusades where the expense of not conversing with a contact is high."
+        },
+        {
+          "type": "h4",
+          "text": "How does a Power Dialer work?"
+        },
+        {
+          "type": "p",
+          "text": "A Power Dialer dials the following number solely after the past call closes, dissimilar to a Predictive Dialer that dials numbers before a specialist opens up. Along these lines, contacts don't experience the short 1-2s stop after pickup that can happen with a Predictive Dialer."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 192
+}

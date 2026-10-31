@@ -1,0 +1,373 @@
+{
+  "slug": "blended-call-centre",
+  "path": "/blended-call-centre",
+  "encodedPath": "/blended-call-centre",
+  "meta": {
+    "title": "Blended call center solutions - Inbound & Outbound | CXDYNAMIQ",
+    "description": "Growing business use blended call centers for improved operational efficiency. Go live instantly, build call flows, monitor & manage.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Blended call center solutions - Inbound & Outbound | CXDYNAMIQ\n",
+    "ogDescription": "Growing business use blended call centers for improved operational efficiency. Go live instantly, build call flows, monitor & manage.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Inbound & outbound calls from the same platform"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/blended-calling.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Blended Call Center Solution"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/benefits.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Benefits of CXDYNAMIQ Outbound Call Center Services"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ blended call center services is one where agents both receive and make calls to reach the demands of strategic dictate. The combination of accurate dialing for outbound calls with automated call distribution for incoming calls results in each caller perfectly handling the work load of the other, thus making every employee time that much efficient.Apart from offering the blend call centre services, CXDYNAMIQglobal call centers also come with a wide range of features such as:"
+    },
+    {
+      "type": "li",
+      "text": "Live Reporting and Analytics"
+    },
+    {
+      "type": "li",
+      "text": "Call Barge-In"
+    },
+    {
+      "type": "li",
+      "text": "Intelligent Dialer Function"
+    },
+    {
+      "type": "li",
+      "text": "Call Recording"
+    },
+    {
+      "type": "li",
+      "text": "Call Transfer"
+    },
+    {
+      "type": "li",
+      "text": "Agents Extensions"
+    },
+    {
+      "type": "li",
+      "text": "Support for Work at Home Agents"
+    },
+    {
+      "type": "h2",
+      "text": "CXDYNAMIQ Blended call center features"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Inbound & outbound calls from the same platform"
+    },
+    {
+      "level": 2,
+      "text": "Blended Call Center Solution"
+    },
+    {
+      "level": 4,
+      "text": "Benefits of CXDYNAMIQ Outbound Call Center Services"
+    },
+    {
+      "level": 2,
+      "text": "CXDYNAMIQ Blended call center features"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Inbound & outbound calls from the same platform",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/blended-calling.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Blended Call Center Solution",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/benefits.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Benefits of CXDYNAMIQ Outbound Call Center Services"
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ blended call center services is one where agents both receive and make calls to reach the demands of strategic dictate. The combination of accurate dialing for outbound calls with automated call distribution for incoming calls results in each caller perfectly handling the work load of the other, thus making every employee time that much efficient.Apart from offering the blend call centre services, CXDYNAMIQglobal call centers also come with a wide range of features such as:"
+        },
+        {
+          "type": "li",
+          "text": "Live Reporting and Analytics"
+        },
+        {
+          "type": "li",
+          "text": "Call Barge-In"
+        },
+        {
+          "type": "li",
+          "text": "Intelligent Dialer Function"
+        },
+        {
+          "type": "li",
+          "text": "Call Recording"
+        },
+        {
+          "type": "li",
+          "text": "Call Transfer"
+        },
+        {
+          "type": "li",
+          "text": "Agents Extensions"
+        },
+        {
+          "type": "li",
+          "text": "Support for Work at Home Agents"
+        }
+      ]
+    },
+    {
+      "heading": "CXDYNAMIQ Blended call center features",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 139
+}

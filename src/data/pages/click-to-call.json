@@ -1,0 +1,311 @@
+{
+  "slug": "click-to-call",
+  "path": "/click-to-call",
+  "encodedPath": "/click-to-call",
+  "meta": {
+    "title": "Click to call feature with easy CRM integration | CXDYNAMIQ",
+    "description": "Make it easy for your team to click-to-call customers or prospects directly from their contact list. Works with Salesforce, Zoho & More.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Click to call feature with easy CRM integration | CXDYNAMIQ\n",
+    "ogDescription": "Make it easy for your team to click-to-call customers or prospects directly from their contact list. Works with Salesforce, Zoho & More.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Save time on every outbound call."
+    },
+    {
+      "type": "li",
+      "text": "Make it easy for your team to click-to-call customers or prospects directly from their contact list."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/click-to-call.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Sales Dialer Solutions"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/call1.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Click to Call"
+    },
+    {
+      "type": "p",
+      "text": "Click to Call refers to a type of computerized digital communication wherein a person clicks a button in order to be connected with one more person continuously, without both of them really dialing the number. With CXDYNAMIQ click to call solution, organizations can instantly integrate our API to execute a click-to-call service for their client confronting groups. In simpler terms, it permits a client to get a call from any business by simple dropping their number on the organization website or app. The CXDYNAMIQ click to Call Solution is a real time based calling gadget that can be arranged on a website or mobile app for clients to reach a business to get associated instantly. It helps organizations to allow their clients to reach their sales and support just by presenting their contact number to get a call back within time."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Save time on every outbound call."
+    },
+    {
+      "level": 2,
+      "text": "Sales Dialer Solutions"
+    },
+    {
+      "level": 4,
+      "text": "Click to Call"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Save time on every outbound call.",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Make it easy for your team to click-to-call customers or prospects directly from their contact list."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/click-to-call.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Sales Dialer Solutions",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/call1.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Click to Call"
+        },
+        {
+          "type": "p",
+          "text": "Click to Call refers to a type of computerized digital communication wherein a person clicks a button in order to be connected with one more person continuously, without both of them really dialing the number. With CXDYNAMIQ click to call solution, organizations can instantly integrate our API to execute a click-to-call service for their client confronting groups. In simpler terms, it permits a client to get a call from any business by simple dropping their number on the organization website or app. The CXDYNAMIQ click to Call Solution is a real time based calling gadget that can be arranged on a website or mobile app for clients to reach a business to get associated instantly. It helps organizations to allow their clients to reach their sales and support just by presenting their contact number to get a call back within time."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 187
+}

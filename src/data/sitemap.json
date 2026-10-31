@@ -1,0 +1,275 @@
+[
+  {
+    "slug": "home",
+    "path": "/",
+    "title": "Home | CXDYNAMIQ",
+    "h1": "Ultrafast Implementation with VIP support",
+    "words": 344
+  },
+  {
+    "slug": "about-us",
+    "path": "/about-us",
+    "title": "About | CXDYNAMIQ",
+    "h1": "",
+    "words": 249
+  },
+  {
+    "slug": "acd",
+    "path": "/acd",
+    "title": "Automatic Call Distribution (ACD) Software for Call Centers | CXDYNAMIQ",
+    "h1": "A simple way to sort & distribute your calls",
+    "words": 177
+  },
+  {
+    "slug": "auto-attendant",
+    "path": "/auto-attendant",
+    "title": "Best Auto Attendant Phone System | Virtual Receptionist | CXDYNAMIQ",
+    "h1": "The better way to answer calls",
+    "words": 267
+  },
+  {
+    "slug": "auto-dialer",
+    "path": "/auto-dialer",
+    "title": "Auto Dialer Software & Cloud Based Phone Dialers for Call Center | CXDYNAMIQ",
+    "h1": "Reach prospects, not dial tones with our industry-leading Auto Dialer Software.",
+    "words": 297
+  },
+  {
+    "slug": "blended-call-centre",
+    "path": "/blended-call-centre",
+    "title": "Blended call center solutions - Inbound & Outbound | CXDYNAMIQ",
+    "h1": "Inbound & outbound calls from the same platform",
+    "words": 139
+  },
+  {
+    "slug": "blog__revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+    "path": "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+    "title": "Revolutionizing Customer Engagement with CxDynamiQ's GenAI Solutions",
+    "h1": "Revolutionizing Customer Engagement with CxDynamiQ's GenAI Solutions",
+    "words": 699
+  },
+  {
+    "slug": "blog__the-importance-of-a-call-center-for-financial-services",
+    "path": "/blog/the-importance-of-a-call-center-for-financial-services",
+    "title": "The Importance of a Call Center for Financial Services",
+    "h1": "The Importance of a Call Center for Financial Services",
+    "words": 1543
+  },
+  {
+    "slug": "blogs",
+    "path": "/blogs",
+    "title": "Blogs | CXDYNAMIQ",
+    "h1": "",
+    "words": 76
+  },
+  {
+    "slug": "bpo",
+    "path": "/bpo",
+    "title": "BPO Call Center Solutions | Cloud Based Contact Center Software | CXDYNAMIQ",
+    "h1": "Contact Center Solutions Built for BPOs",
+    "words": 440
+  },
+  {
+    "slug": "category__business",
+    "path": "/category/business",
+    "title": "Business",
+    "h1": "",
+    "words": 64
+  },
+  {
+    "slug": "category__Customer__Experience__management",
+    "path": "/category/Customer Experience management",
+    "title": "CxDynamiq",
+    "h1": "",
+    "words": 45
+  },
+  {
+    "slug": "click-to-call",
+    "path": "/click-to-call",
+    "title": "Click to call feature with easy CRM integration | CXDYNAMIQ",
+    "h1": "Save time on every outbound call.",
+    "words": 187
+  },
+  {
+    "slug": "contact-manager",
+    "path": "/contact-manager",
+    "title": "Contact Management | Fully Automated Calling System | CXDYNAMIQ",
+    "h1": "Fully automated calling system",
+    "words": 267
+  },
+  {
+    "slug": "contact-us",
+    "path": "/contact-us",
+    "title": "Contact Us | CXDYNAMIQ",
+    "h1": "",
+    "words": 31
+  },
+  {
+    "slug": "conversational-ai",
+    "path": "/conversational-ai",
+    "title": "Conversational AI for intelligent contact center operations | CXDYNAMIQ",
+    "h1": "AI that puts the right emphasis on human-to-human conversations.",
+    "words": 187
+  },
+  {
+    "slug": "crm-integrations",
+    "path": "/crm-integrations",
+    "title": "Business Integration with CRM | CXDYNAMIQ",
+    "h1": "CXDYNAMIQ works seamlessly with other business tools",
+    "words": 522
+  },
+  {
+    "slug": "cti-integrations",
+    "path": "/cti-integrations",
+    "title": "CTI Integration | Business Integration with CRM | CXDYNAMIQ",
+    "h1": "CXDYNAMIQ works seamlessly with other business tools",
+    "words": 252
+  },
+  {
+    "slug": "education",
+    "path": "/education",
+    "title": "Education Call Center Software | CXDYNAMIQ",
+    "h1": "Connect with students using edTech Call Center Software",
+    "words": 480
+  },
+  {
+    "slug": "enterprise",
+    "path": "/enterprise",
+    "title": "Phone Systems for Enterprises | Cloud Calling Solutions | CXDYNAMIQ",
+    "h1": "Globalize growth using enterprise Call Center Software",
+    "words": 457
+  },
+  {
+    "slug": "freshdesk",
+    "path": "/freshdesk",
+    "title": "Freshdesk | CXDYNAMIQ",
+    "h1": "Plug & play a complete contact center within Freshdesk",
+    "words": 129
+  },
+  {
+    "slug": "hubspot",
+    "path": "/hubspot",
+    "title": "Hubspot | CXDYNAMIQ",
+    "h1": "A complete call solution within Hubspot",
+    "words": 94
+  },
+  {
+    "slug": "inbound-calling",
+    "path": "/inbound-calling",
+    "title": "Inbound Call Center Solutions | Inbound Contact Center Software | CXDYNAMIQ",
+    "h1": "Inbound Call Center Software quickly connects customers to agents. Anytime, anywhere.",
+    "words": 254
+  },
+  {
+    "slug": "intercom-integration",
+    "path": "/intercom-integration",
+    "title": "Intercom Integration | CXDYNAMIQ",
+    "h1": "Instantly switch from chats to calls",
+    "words": 130
+  },
+  {
+    "slug": "ivr",
+    "path": "/ivr",
+    "title": "Interactive Voice Response System | IVR as a Service | CXDYNAMIQ",
+    "h1": "Fully Customizable, Intelligent IVR System",
+    "words": 155
+  },
+  {
+    "slug": "omnichannel-routing",
+    "path": "/omnichannel-routing",
+    "title": "Omnichannel call center software solution with multi channel routing | CXDYNAMIQ",
+    "h1": "Manage multichannel interactions with ease",
+    "words": 178
+  },
+  {
+    "slug": "outbound-calling",
+    "path": "/outbound-calling",
+    "title": "Outbound Call Center Solutions | Outbound Contact Center Software | CXDYNAMIQ",
+    "h1": "Outbound Call Center Software for efficient sales, proactive support, and automated callbacks.",
+    "words": 225
+  },
+  {
+    "slug": "page__Customer__Experience__management",
+    "path": "/page/Customer Experience management",
+    "title": "Collection Management Solution",
+    "h1": "",
+    "words": 10
+  },
+  {
+    "slug": "power-dialer",
+    "path": "/power-dialer",
+    "title": "Power Dialer | CXDYNAMIQ",
+    "h1": "Automate calling, focus on growth",
+    "words": 192
+  },
+  {
+    "slug": "predictive-dialer",
+    "path": "/predictive-dialer",
+    "title": "Predictive Dialer | CXDYNAMIQ",
+    "h1": "Convert more leads per minute with Predictive Dialer Software",
+    "words": 116
+  },
+  {
+    "slug": "privacy-policy",
+    "path": "/privacy-policy",
+    "title": "Privacy Policy | CXDYNAMIQ",
+    "h1": "",
+    "words": 1002
+  },
+  {
+    "slug": "salesforce",
+    "path": "/salesforce",
+    "title": "Sales Force | CXDYNAMIQ",
+    "h1": "A full-fledged contact center within Salesforce",
+    "words": 109
+  },
+  {
+    "slug": "small-business",
+    "path": "/small-business",
+    "title": "Small Business Call Center Software | CXDYNAMIQ",
+    "h1": "Facilitate growth using Small Business Call Center Software",
+    "words": 498
+  },
+  {
+    "slug": "speech-analytics",
+    "path": "/speech-analytics",
+    "title": "Speech Analytics for Call Center | Voice Analytics | Sentiment Analysis | CXDYNAMIQ",
+    "h1": "Unlock the true value of your call center data",
+    "words": 197
+  },
+  {
+    "slug": "terms",
+    "path": "/terms",
+    "title": "Terms & Conditions | CXDYNAMIQ",
+    "h1": "",
+    "words": 1472
+  },
+  {
+    "slug": "whatsapp-business",
+    "path": "/whatsapp-business",
+    "title": "Whatsapp Business Solution | CXDYNAMIQ",
+    "h1": "AI-Powered WhatsApp Contact Center Solution",
+    "words": 86
+  },
+  {
+    "slug": "who-we-are",
+    "path": "/who-we-are",
+    "title": "About Us | CXDYNAMIQ",
+    "h1": "Delivering Contact Center Innovation Since 1997",
+    "words": 175
+  },
+  {
+    "slug": "zendesk",
+    "path": "/zendesk",
+    "title": "Zendesk CRM Integration | Zendesk Call Center CTI Integration | CXDYNAMIQ",
+    "h1": "Complete Contact Center within Zendesk",
+    "words": 137
+  },
+  {
+    "slug": "zoho",
+    "path": "/zoho",
+    "title": "Zoho CRM CTI Integration | Zoho Phonebridge | CXDYNAMIQ",
+    "h1": "Do more from within Zoho",
+    "words": 125
+  }
+]

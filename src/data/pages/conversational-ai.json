@@ -1,0 +1,299 @@
+{
+  "slug": "conversational-ai",
+  "path": "/conversational-ai",
+  "encodedPath": "/conversational-ai",
+  "meta": {
+    "title": "Conversational AI for intelligent contact center operations | CXDYNAMIQ",
+    "description": "Conversational AI improves customer experience by automating the right conversations and intelligently routing others to human agents,",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Conversational AI for intelligent contact center operations | CXDYNAMIQ\n",
+    "ogDescription": "Conversational AI improves customer experience by automating the right conversations and intelligently routing others to human agents,\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "AI that puts the right emphasis on human-to-human conversations."
+    },
+    {
+      "type": "li",
+      "text": "By automating the right conversations and intelligently routing others to human agents, our solution helps your contact center respond faster and achieve more while staying deeply empathetic and human."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/convo-ai.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Conversational AI"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/robot%20(1).svg",
+      "alt": "service"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ fostering the fundamental AI innovation making conversational computing a reality.Speed up your computerized experience with omni-channel undertaking grade Conversational AI Finance as an assistance platform worked from ground up for Financial Services. Deploy and scale quickly with 150+ use cases pre built out-of-the-box to expand client acquisition, decrease client service turn around time and deepen client commitment on Whatsapp, Messaging, Smart IVR, Mobile applications, Web, VoiceBots and IOT devices.CXDYNAMIQ empowers enterprise grade architecture, which can be flawlessly deployed On-Premise and On-Cloud. Genuine omni channel experience is conveyed across channels like Website, WhatsApp, Facebook Messenger, Mobile Apps, SMS, IVR and significantly more. present clients prefer engagement through unstructured micro conversations for financial services. CXDYNAMIQ Conversational AI empowers banks and other monetary institutions to naturally and intelligently engage with clients."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "AI that puts the right emphasis on human-to-human conversations."
+    },
+    {
+      "level": 2,
+      "text": "Conversational AI"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "AI that puts the right emphasis on human-to-human conversations.",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "By automating the right conversations and intelligently routing others to human agents, our solution helps your contact center respond faster and achieve more while staying deeply empathetic and human."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/convo-ai.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Conversational AI",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/robot%20(1).svg",
+          "alt": "service"
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ fostering the fundamental AI innovation making conversational computing a reality.Speed up your computerized experience with omni-channel undertaking grade Conversational AI Finance as an assistance platform worked from ground up for Financial Services. Deploy and scale quickly with 150+ use cases pre built out-of-the-box to expand client acquisition, decrease client service turn around time and deepen client commitment on Whatsapp, Messaging, Smart IVR, Mobile applications, Web, VoiceBots and IOT devices.CXDYNAMIQ empowers enterprise grade architecture, which can be flawlessly deployed On-Premise and On-Cloud. Genuine omni channel experience is conveyed across channels like Website, WhatsApp, Facebook Messenger, Mobile Apps, SMS, IVR and significantly more. present clients prefer engagement through unstructured micro conversations for financial services. CXDYNAMIQ Conversational AI empowers banks and other monetary institutions to naturally and intelligently engage with clients."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 187
+}

@@ -1,0 +1,331 @@
+{
+  "slug": "speech-analytics",
+  "path": "/speech-analytics",
+  "encodedPath": "/speech-analytics",
+  "meta": {
+    "title": "Speech Analytics for Call Center | Voice Analytics | Sentiment Analysis | CXDYNAMIQ",
+    "description": "Speech analytics helps analyze every single call center interaction for sentiment and quality in real time. Get customer insights like never before.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Speech Analytics for Call Center | Voice Analytics | Sentiment Analysis | CXDYNAMIQ\n",
+    "ogDescription": "Speech analytics helps analyze every single call center interaction for sentiment and quality in real time. Get customer insights like never before.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Unlock the true value of your call center data"
+    },
+    {
+      "type": "li",
+      "text": "When you analyze every single call center interaction for sentiment and quality in real time, you boost performance and get customer insights like never before."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/voice-analytics.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "CXDYNAMIQ Speech Analytics"
+    },
+    {
+      "type": "h4",
+      "text": "Speech Analytics"
+    },
+    {
+      "type": "p",
+      "text": "Speech Analytics is the most common way of separating importance from audio recordings and analyzing it to find significant business intelligence. Related to sound mining, speech analytics is regularly performed utilizing specialized speech analytics software that can understand the spoken word of numerous tongues and translate it into text."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/question1.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "How does CXDYNAMIQ perform Speech Analytics?"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ examines large volumes of recordings to identify key examples and patterns. To start with, the software interprets call recordings. These transcriptions take into account legitimate grammar, context, and meaning that traditional transcription tools miss. Then, utilizing our industry-leading text and sentiment analytics engine, we reveal the client's emotions, feelings and sentiment.By consolidating deep relevant awareness, emotion, and situational disclosure, we allow associations to maximize each customer interaction and to utilize the information to drive strategy, further develop, and ultimately deliver a satisfying client experience."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Unlock the true value of your call center data"
+    },
+    {
+      "level": 2,
+      "text": "CXDYNAMIQ Speech Analytics"
+    },
+    {
+      "level": 4,
+      "text": "Speech Analytics"
+    },
+    {
+      "level": 4,
+      "text": "How does CXDYNAMIQ perform Speech Analytics?"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Unlock the true value of your call center data",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "When you analyze every single call center interaction for sentiment and quality in real time, you boost performance and get customer insights like never before."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/voice-analytics.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "CXDYNAMIQ Speech Analytics",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "h4",
+          "text": "Speech Analytics"
+        },
+        {
+          "type": "p",
+          "text": "Speech Analytics is the most common way of separating importance from audio recordings and analyzing it to find significant business intelligence. Related to sound mining, speech analytics is regularly performed utilizing specialized speech analytics software that can understand the spoken word of numerous tongues and translate it into text."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/question1.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "How does CXDYNAMIQ perform Speech Analytics?"
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ examines large volumes of recordings to identify key examples and patterns. To start with, the software interprets call recordings. These transcriptions take into account legitimate grammar, context, and meaning that traditional transcription tools miss. Then, utilizing our industry-leading text and sentiment analytics engine, we reveal the client's emotions, feelings and sentiment.By consolidating deep relevant awareness, emotion, and situational disclosure, we allow associations to maximize each customer interaction and to utilize the information to drive strategy, further develop, and ultimately deliver a satisfying client experience."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 197
+}

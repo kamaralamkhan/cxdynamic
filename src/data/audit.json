@@ -1,0 +1,1007 @@
+[
+  {
+    "path": "/about-us",
+    "sev": "high",
+    "msg": "No H1 in main content"
+  },
+  {
+    "path": "/about-us, /blogs, /category/business, /category/Customer Experience management, /",
+    "sev": "high",
+    "msg": "Duplicate meta description (5 pages): \"Stress-free Contact Center Solutions Ultrafast Implementation with VIP…\""
+  },
+  {
+    "path": "/blogs",
+    "sev": "high",
+    "msg": "No H1 in main content"
+  },
+  {
+    "path": "/category/business",
+    "sev": "high",
+    "msg": "No H1 in main content"
+  },
+  {
+    "path": "/category/Customer Experience management",
+    "sev": "high",
+    "msg": "No H1 in main content"
+  },
+  {
+    "path": "/contact-us",
+    "sev": "high",
+    "msg": "No H1 in main content"
+  },
+  {
+    "path": "/crm-integrations, /cti-integrations",
+    "sev": "high",
+    "msg": "Duplicate meta description (2 pages): \"CXDYNAMIQ is built on an open API architecture. It can integrate with …\""
+  },
+  {
+    "path": "/education, /small-business",
+    "sev": "high",
+    "msg": "Duplicate meta description (2 pages): \"CXDYNAMIQ offers one of the best call center software solutions for ed…\""
+  },
+  {
+    "path": "/page/Customer Experience management",
+    "sev": "high",
+    "msg": "No H1 in main content"
+  },
+  {
+    "path": "/privacy-policy",
+    "sev": "high",
+    "msg": "No H1 in main content"
+  },
+  {
+    "path": "/terms",
+    "sev": "high",
+    "msg": "No H1 in main content"
+  },
+  {
+    "path": "/",
+    "sev": "med",
+    "msg": "Title is very short (16): \"Home | CXDYNAMIQ\""
+  },
+  {
+    "path": "/",
+    "sev": "med",
+    "msg": "Weak generic title \"Home | CXDYNAMIQ\""
+  },
+  {
+    "path": "/",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"Gloabal\""
+  },
+  {
+    "path": "/",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"CXDYNAMIQglobal\""
+  },
+  {
+    "path": "/about-us",
+    "sev": "med",
+    "msg": "Title is very short (17): \"About | CXDYNAMIQ\""
+  },
+  {
+    "path": "/about-us",
+    "sev": "med",
+    "msg": "Weak generic title \"About | CXDYNAMIQ\""
+  },
+  {
+    "path": "/about-us",
+    "sev": "med",
+    "msg": "Thin content: 249 words"
+  },
+  {
+    "path": "/about-us",
+    "sev": "med",
+    "msg": "Only 1 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/about-us",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"Gloabal\""
+  },
+  {
+    "path": "/about-us",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"CXDYNAMIQ Tele services\""
+  },
+  {
+    "path": "/acd",
+    "sev": "med",
+    "msg": "Title is 71 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/acd",
+    "sev": "med",
+    "msg": "Thin content: 177 words"
+  },
+  {
+    "path": "/acd",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/auto-attendant",
+    "sev": "med",
+    "msg": "Title is 67 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/auto-attendant",
+    "sev": "med",
+    "msg": "Thin content: 267 words"
+  },
+  {
+    "path": "/auto-attendant",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/auto-dialer",
+    "sev": "med",
+    "msg": "Title is 76 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/auto-dialer",
+    "sev": "med",
+    "msg": "Thin content: 297 words"
+  },
+  {
+    "path": "/auto-dialer",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/blended-call-centre",
+    "sev": "med",
+    "msg": "Title is 62 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/blended-call-centre",
+    "sev": "med",
+    "msg": "Thin content: 139 words"
+  },
+  {
+    "path": "/blended-call-centre",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/blended-call-centre",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"CXDYNAMIQglobal\""
+  },
+  {
+    "path": "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+    "sev": "med",
+    "msg": "Title is 68 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+    "sev": "med",
+    "msg": "2 H1s (should be exactly 1)"
+  },
+  {
+    "path": "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+    "sev": "med",
+    "msg": "Link to uncrawled/broken path /revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions"
+  },
+  {
+    "path": "/blog/the-importance-of-a-call-center-for-financial-services",
+    "sev": "med",
+    "msg": "Link to uncrawled/broken path /the-importance-of-a-call-center-for-financial-services"
+  },
+  {
+    "path": "/blogs",
+    "sev": "med",
+    "msg": "Title is very short (17): \"Blogs | CXDYNAMIQ\""
+  },
+  {
+    "path": "/blogs",
+    "sev": "med",
+    "msg": "Thin content: 76 words"
+  },
+  {
+    "path": "/blogs",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"Gloabal\""
+  },
+  {
+    "path": "/bpo",
+    "sev": "med",
+    "msg": "Title is 75 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/bpo",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/category/business",
+    "sev": "med",
+    "msg": "Title is very short (8): \"Business\""
+  },
+  {
+    "path": "/category/business",
+    "sev": "med",
+    "msg": "Thin content: 64 words"
+  },
+  {
+    "path": "/category/business",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"Gloabal\""
+  },
+  {
+    "path": "/category/Customer Experience management",
+    "sev": "med",
+    "msg": "Title is very short (9): \"CxDynamiq\""
+  },
+  {
+    "path": "/category/Customer Experience management",
+    "sev": "med",
+    "msg": "Thin content: 45 words"
+  },
+  {
+    "path": "/category/Customer Experience management",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"Gloabal\""
+  },
+  {
+    "path": "/click-to-call",
+    "sev": "med",
+    "msg": "Thin content: 187 words"
+  },
+  {
+    "path": "/click-to-call",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/contact-manager",
+    "sev": "med",
+    "msg": "Title is 63 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/contact-manager",
+    "sev": "med",
+    "msg": "Thin content: 267 words"
+  },
+  {
+    "path": "/contact-manager",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/contact-us",
+    "sev": "med",
+    "msg": "Thin content: 31 words"
+  },
+  {
+    "path": "/contact-us",
+    "sev": "med",
+    "msg": "Only 1 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/contact-us",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"Gloabal\""
+  },
+  {
+    "path": "/conversational-ai",
+    "sev": "med",
+    "msg": "Title is 71 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/conversational-ai",
+    "sev": "med",
+    "msg": "Thin content: 187 words"
+  },
+  {
+    "path": "/conversational-ai",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/crm-integrations",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/cti-integrations",
+    "sev": "med",
+    "msg": "Thin content: 252 words"
+  },
+  {
+    "path": "/cti-integrations",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/education",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/enterprise",
+    "sev": "med",
+    "msg": "Title is 67 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/enterprise",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/freshdesk",
+    "sev": "med",
+    "msg": "Thin content: 129 words"
+  },
+  {
+    "path": "/freshdesk",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/hubspot",
+    "sev": "med",
+    "msg": "Title is very short (19): \"Hubspot | CXDYNAMIQ\""
+  },
+  {
+    "path": "/hubspot",
+    "sev": "med",
+    "msg": "Thin content: 94 words"
+  },
+  {
+    "path": "/hubspot",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/inbound-calling",
+    "sev": "med",
+    "msg": "Title is 75 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/inbound-calling",
+    "sev": "med",
+    "msg": "Thin content: 254 words"
+  },
+  {
+    "path": "/inbound-calling",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/inbound-calling",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"Lamda\""
+  },
+  {
+    "path": "/intercom-integration",
+    "sev": "med",
+    "msg": "Thin content: 130 words"
+  },
+  {
+    "path": "/intercom-integration",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/ivr",
+    "sev": "med",
+    "msg": "Title is 64 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/ivr",
+    "sev": "med",
+    "msg": "Thin content: 155 words"
+  },
+  {
+    "path": "/ivr",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/omnichannel-routing",
+    "sev": "med",
+    "msg": "Title is 80 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/omnichannel-routing",
+    "sev": "med",
+    "msg": "Thin content: 178 words"
+  },
+  {
+    "path": "/omnichannel-routing",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/outbound-calling",
+    "sev": "med",
+    "msg": "Title is 77 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/outbound-calling",
+    "sev": "med",
+    "msg": "Thin content: 225 words"
+  },
+  {
+    "path": "/outbound-calling",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/outbound-calling",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"CXDYNAMIQglobal\""
+  },
+  {
+    "path": "/page/Customer Experience management",
+    "sev": "med",
+    "msg": "Thin content: 10 words"
+  },
+  {
+    "path": "/page/Customer Experience management",
+    "sev": "med",
+    "msg": "Only 1 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/power-dialer",
+    "sev": "med",
+    "msg": "Thin content: 192 words"
+  },
+  {
+    "path": "/power-dialer",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/predictive-dialer",
+    "sev": "med",
+    "msg": "Thin content: 116 words"
+  },
+  {
+    "path": "/predictive-dialer",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/privacy-policy",
+    "sev": "med",
+    "msg": "Only 1 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/salesforce",
+    "sev": "med",
+    "msg": "Thin content: 109 words"
+  },
+  {
+    "path": "/salesforce",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/small-business",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/speech-analytics",
+    "sev": "med",
+    "msg": "Title is 83 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/speech-analytics",
+    "sev": "med",
+    "msg": "Thin content: 197 words"
+  },
+  {
+    "path": "/speech-analytics",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/terms",
+    "sev": "med",
+    "msg": "Only 1 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/whatsapp-business",
+    "sev": "med",
+    "msg": "Thin content: 86 words"
+  },
+  {
+    "path": "/whatsapp-business",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/who-we-are",
+    "sev": "med",
+    "msg": "Thin content: 175 words"
+  },
+  {
+    "path": "/who-we-are",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/who-we-are",
+    "sev": "med",
+    "msg": "Typo/leftover text found: \"CXDYNAMIQ Tele services\""
+  },
+  {
+    "path": "/zendesk",
+    "sev": "med",
+    "msg": "Title is 73 chars (aim ≤ 60)"
+  },
+  {
+    "path": "/zendesk",
+    "sev": "med",
+    "msg": "Thin content: 137 words"
+  },
+  {
+    "path": "/zendesk",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/zoho",
+    "sev": "med",
+    "msg": "Thin content: 125 words"
+  },
+  {
+    "path": "/zoho",
+    "sev": "med",
+    "msg": "Only 0 contextual internal link(s) in body (aim ≥ 3 related pages)"
+  },
+  {
+    "path": "/",
+    "sev": "low",
+    "msg": "Meta description is 325 chars (aim 70-160)"
+  },
+  {
+    "path": "/",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Reduce Your Cost\")"
+  },
+  {
+    "path": "/about-us",
+    "sev": "low",
+    "msg": "Meta description is 325 chars (aim 70-160)"
+  },
+  {
+    "path": "/about-us",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/about-us",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Choose A Product\")"
+  },
+  {
+    "path": "/acd",
+    "sev": "low",
+    "msg": "Meta description is 208 chars (aim 70-160)"
+  },
+  {
+    "path": "/acd",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/acd",
+    "sev": "low",
+    "msg": "Heading level jumps H1 → H4 (\"ACD/Smart Routing\")"
+  },
+  {
+    "path": "/auto-attendant",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/auto-attendant",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Auto attendant\")"
+  },
+  {
+    "path": "/auto-dialer",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/auto-dialer",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Auto Dialer\")"
+  },
+  {
+    "path": "/blended-call-centre",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/blended-call-centre",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Benefits of CXDYNAMIQ Outbound Call Cent\")"
+  },
+  {
+    "path": "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+    "sev": "low",
+    "msg": "Meta description is 37 chars (aim 70-160)"
+  },
+  {
+    "path": "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+    "sev": "low",
+    "msg": "Heading level jumps H1 → H5 (\"By TalkNow Admin\")"
+  },
+  {
+    "path": "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+    "sev": "low",
+    "msg": "3 image(s) without alt text"
+  },
+  {
+    "path": "/blog/the-importance-of-a-call-center-for-financial-services",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/blog/the-importance-of-a-call-center-for-financial-services",
+    "sev": "low",
+    "msg": "Heading level jumps H1 → H5 (\"By Amar Tyagi\")"
+  },
+  {
+    "path": "/blogs",
+    "sev": "low",
+    "msg": "Meta description is 325 chars (aim 70-160)"
+  },
+  {
+    "path": "/blogs",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/blogs",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"The Importance of a Call Center for Fina\")"
+  },
+  {
+    "path": "/bpo",
+    "sev": "low",
+    "msg": "Meta description is 219 chars (aim 70-160)"
+  },
+  {
+    "path": "/bpo",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/bpo",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Lowers Operating Costs\")"
+  },
+  {
+    "path": "/category/business",
+    "sev": "low",
+    "msg": "Meta description is 325 chars (aim 70-160)"
+  },
+  {
+    "path": "/category/business",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/category/business",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"The Importance of a Call Center for Fina\")"
+  },
+  {
+    "path": "/category/Customer Experience management",
+    "sev": "low",
+    "msg": "Meta description is 325 chars (aim 70-160)"
+  },
+  {
+    "path": "/category/Customer Experience management",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/category/Customer Experience management",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Revolutionizing Customer Engagement with\")"
+  },
+  {
+    "path": "/click-to-call",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/click-to-call",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Click to Call\")"
+  },
+  {
+    "path": "/contact-manager",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/contact-manager",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Contact Manager\")"
+  },
+  {
+    "path": "/contact-us",
+    "sev": "low",
+    "msg": "Meta description is 325 chars (aim 70-160)"
+  },
+  {
+    "path": "/contact-us",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/conversational-ai",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/crm-integrations",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/crm-integrations",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Zoho\")"
+  },
+  {
+    "path": "/cti-integrations",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/cti-integrations",
+    "sev": "low",
+    "msg": "Heading level jumps H1 → H4 (\"CTI Integrations\")"
+  },
+  {
+    "path": "/education",
+    "sev": "low",
+    "msg": "Meta description is 201 chars (aim 70-160)"
+  },
+  {
+    "path": "/education",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/education",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Inbound Support Solution\")"
+  },
+  {
+    "path": "/enterprise",
+    "sev": "low",
+    "msg": "Meta description is 194 chars (aim 70-160)"
+  },
+  {
+    "path": "/enterprise",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/enterprise",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Inbound Support Solution\")"
+  },
+  {
+    "path": "/freshdesk",
+    "sev": "low",
+    "msg": "Meta description is 192 chars (aim 70-160)"
+  },
+  {
+    "path": "/freshdesk",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/hubspot",
+    "sev": "low",
+    "msg": "Meta description is 167 chars (aim 70-160)"
+  },
+  {
+    "path": "/hubspot",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/inbound-calling",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/inbound-calling",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Inbound Calling\")"
+  },
+  {
+    "path": "/intercom-integration",
+    "sev": "low",
+    "msg": "Meta description is 192 chars (aim 70-160)"
+  },
+  {
+    "path": "/intercom-integration",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/ivr",
+    "sev": "low",
+    "msg": "Meta description is 201 chars (aim 70-160)"
+  },
+  {
+    "path": "/ivr",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/ivr",
+    "sev": "low",
+    "msg": "Heading level jumps H1 → H4 (\"Interactive Voice Response\")"
+  },
+  {
+    "path": "/omnichannel-routing",
+    "sev": "low",
+    "msg": "Meta description is 166 chars (aim 70-160)"
+  },
+  {
+    "path": "/omnichannel-routing",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/outbound-calling",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/outbound-calling",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Benefits of CXDYNAMIQ Outbound Call Cent\")"
+  },
+  {
+    "path": "/page/Customer Experience management",
+    "sev": "low",
+    "msg": "Meta description is 6 chars (aim 70-160)"
+  },
+  {
+    "path": "/page/Customer Experience management",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/power-dialer",
+    "sev": "low",
+    "msg": "Meta description is 241 chars (aim 70-160)"
+  },
+  {
+    "path": "/power-dialer",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/power-dialer",
+    "sev": "low",
+    "msg": "Heading level jumps H1 → H4 (\"Power Dialer\")"
+  },
+  {
+    "path": "/predictive-dialer",
+    "sev": "low",
+    "msg": "Meta description is 315 chars (aim 70-160)"
+  },
+  {
+    "path": "/predictive-dialer",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/predictive-dialer",
+    "sev": "low",
+    "msg": "Heading level jumps H1 → H4 (\"Predictive Dialer\")"
+  },
+  {
+    "path": "/privacy-policy",
+    "sev": "low",
+    "msg": "Meta description is 233 chars (aim 70-160)"
+  },
+  {
+    "path": "/privacy-policy",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/salesforce",
+    "sev": "low",
+    "msg": "Meta description is 252 chars (aim 70-160)"
+  },
+  {
+    "path": "/salesforce",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/small-business",
+    "sev": "low",
+    "msg": "Meta description is 201 chars (aim 70-160)"
+  },
+  {
+    "path": "/small-business",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/small-business",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Inbound Support Solution\")"
+  },
+  {
+    "path": "/speech-analytics",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/speech-analytics",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Speech Analytics\")"
+  },
+  {
+    "path": "/terms",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/whatsapp-business",
+    "sev": "low",
+    "msg": "Meta description is 164 chars (aim 70-160)"
+  },
+  {
+    "path": "/whatsapp-business",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/who-we-are",
+    "sev": "low",
+    "msg": "Meta description is 343 chars (aim 70-160)"
+  },
+  {
+    "path": "/who-we-are",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/who-we-are",
+    "sev": "low",
+    "msg": "Heading level jumps H2 → H4 (\"Who We Are\")"
+  },
+  {
+    "path": "/zendesk",
+    "sev": "low",
+    "msg": "No canonical tag"
+  },
+  {
+    "path": "/zoho",
+    "sev": "low",
+    "msg": "No canonical tag"
+  }
+]

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CXdynamIQ — Website Revamp Proposal | Kamar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        @page {
+            size: A4;
+            margin: 1.8cm 2cm;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            table {
+                page-break-inside: avoid;
+            }
+
+            blockquote {
+                page-break-inside: avoid;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-size: 11pt;
+            line-height: 1.7;
+            color: #1e293b;
+            background: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+
+        h1 {
+            font-size: 28pt;
+            font-weight: 800;
+            color: #0f172a;
+            margin-top: 0;
+            margin-bottom: 6pt;
+            letter-spacing: -0.8px;
+        }
+
+        h1+h2 {
+            border-bottom: none !important;
+            font-size: 13pt;
+            color: #0891b2;
+            margin-top: 0;
+            padding-bottom: 0;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 16pt;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 32pt;
+            margin-bottom: 12pt;
+            padding-bottom: 8pt;
+            border-bottom: 3px solid #06b6d4;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #334155;
+            margin-top: 20pt;
+            margin-bottom: 8pt;
+        }
+
+        p {
+            margin-bottom: 10pt;
+            color: #334155;
+        }
+
+        strong {
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        blockquote {
+            border-left: 4px solid #06b6d4;
+            background: linear-gradient(135deg, #f0f9ff, #ecfeff);
+            padding: 16px 20px;
+            margin: 16pt 0;
+            border-radius: 0 10px 10px 0;
+            font-style: normal;
+            color: #1e293b;
+        }
+
+        blockquote p {
+            margin: 5pt 0;
+        }
+
+        blockquote strong {
+            color: #0891b2;
+        }
+
+        blockquote>p:first-child>strong:first-child {
+            font-size: 11.5pt;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14pt 0;
+            font-size: 10pt;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        thead tr {
+            background: #0f172a;
+            color: white;
+        }
+
+        thead th {
+            padding: 11px 14px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 9pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        tbody tr:hover {
+            background: #f1f5f9;
+        }
+
+        td {
+            padding: 10px 14px;
+            vertical-align: top;
+        }
+
+        td:first-child {
+            font-weight: 500;
+        }
+
+        ul,
+        ol {
+            padding-left: 22pt;
+            margin-bottom: 10pt;
+        }
+
+        li {
+            margin-bottom: 6pt;
+            color: #334155;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 24pt 0;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 9.5pt;
+            color: #0891b2;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        a {
+            color: #0891b2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        em {
+            color: #64748b;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="cxdynamiq">CXdynamIQ</h1>
+    <h2 id="website-revamp-development-proposal-ai-powered-omnichannel-cx-platform">Website Revamp &amp; Development
+        Proposal — AI-Powered Omnichannel CX Platform</h2>
+    <hr />
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: left;"></th>
+                <th style="text-align: left;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;"><strong>Prepared for</strong></td>
+                <td style="text-align: left;">CXdynamIQ</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Prepared by</strong></td>
+                <td style="text-align: left;">Kamar — Web Developer</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Date</strong></td>
+                <td style="text-align: left;">18 September 2026</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: left;"></th>
+                <th style="text-align: left;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;"><strong>What this is</strong></td>
+                <td style="text-align: left;">A full website redesign — new look, new messaging, easy for your team to
+                    update</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Built with</strong></td>
+                <td style="text-align: left;">Laravel — a reliable, widely-used framework with an easy,
+                    instantly-editable content panel</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>How we start</strong></td>
+                <td style="text-align: left;">Sitemap + homepage layout approved by you first, then we build</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>This proposal is for redesigning the CXdynamIQ website so it clearly presents the company as an AI-powered
+        customer experience platform — moving away from how a traditional call-center company looks and reads. The
+        existing CXQ360.ai platform stays exactly as it is; this project only touches the main marketing website.</p>
+    <p>Nothing gets built until you've seen and approved the page structure and homepage layout — that's step one,
+        before the rest of the build begins.</p>
+    <hr />
+    <h2 id="01-what-well-build">01 — What We'll Build</h2>
+    <p>A modern, mobile-friendly website that explains your platform clearly within seconds of landing on it.</p>
+    <p><strong>Core pages:</strong> Home, Platform, AI-Powered CX, Omnichannel Engagement, Contact Center, Agent
+        Experience, AI Quality &amp; Conversation Intelligence, Analytics, Agentic AI, Human + AI Collaboration,
+        Integrations.</p>
+    <p><strong>Individual pages</strong> for each industry you serve — banking, insurance, telecom, healthcare, retail
+        and others, as finalized in the sitemap.</p>
+    <p><strong>A clear path to conversion</strong> throughout — Book a Demo / Start Free Trial buttons that lead to
+        CXQ360.ai.</p>
+    <p><strong>Three rounds of revisions</strong> included, with flexibility if minor tweaks come up after.</p>
+    <hr />
+    <h2 id="02-design-direction">02 — Design Direction</h2>
+    <p>Clean, modern look in line with enterprise AI platforms like NICE, Genesys Cloud CX and Exotel — used only as
+        inspiration, never copied, matching the reference sites in your brief.</p>
+    <p>Visuals that show your product in action: dashboard screenshots, customer-journey diagrams, and simple flow
+        illustrations rather than generic stock images.</p>
+    <p>Mobile-first, fully responsive across every screen size, with purposeful animations — not decorative ones.</p>
+    <p>Strong, clear calls to action on every page.</p>
+    <hr />
+    <h2 id="03-easy-content-editing">03 — Easy Content Editing</h2>
+    <p>Your team can update page text, images and industry pages yourselves — no developer needed for routine changes.
+    </p>
+    <ul>
+        <li>A simple, secure admin panel where changes go live immediately after saving — no delays, no technical steps.
+        </li>
+        <li>Login protected, with two-factor authentication for extra security.</li>
+        <li>Manage testimonials, client logos and other proof content directly.</li>
+        <li>Page titles and descriptions (for Google search) are editable too.</li>
+    </ul>
+    <hr />
+    <h2 id="04-connecting-to-cxq360ai">04 — Connecting to CXQ360.ai</h2>
+    <p>When someone clicks Book a Demo or Start Free Trial, they're taken straight into CXQ360.ai with an account
+        already set up for them.</p>
+    <p>Marketing tracking parameters are carried across automatically, so you can see which page or campaign a signup
+        came from.</p>
+    <p>This only connects to CXQ360.ai — nothing about CXQ360.ai itself is being changed or rebuilt.</p>
+    <p>Needs the API/login details for CXQ360.ai from your side to set this up.</p>
+    <hr />
+    <h2 id="05-capturing-leads">05 — Capturing Leads</h2>
+    <ul>
+        <li>Contact and demo-request forms placed at the key points where a visitor is ready to act.</li>
+        <li>Every submission is sent to your email and WhatsApp number instantly.</li>
+        <li>Forms are protected against spam and bad input.</li>
+        <li>Optional: a gentle exit-intent prompt for visitors about to leave, offering a demo or consultation.</li>
+    </ul>
+    <hr />
+    <h2 id="06-seo-performance">06 — SEO &amp; Performance</h2>
+    <p>Technically set up for search engines to find and understand your pages properly — clean URLs, sitemap, proper
+        page structure, structured data.</p>
+    <p>Editable page titles and meta descriptions for every page, built around your AI/CX positioning.</p>
+    <p>Optimized so pages load quickly on both desktop and mobile.</p>
+    <p>Google Analytics 4 and Tag Manager set up with conversion tracking on demo requests and trial signups.</p>
+    <hr />
+    <h2 id="07-security">07 — Security</h2>
+    <p>Built following standard, well-tested security practices — protection against common attacks, safe handling of
+        passwords and data.</p>
+    <p>HTTPS enforced with proper security headers.</p>
+    <p>Two-factor authentication on all admin access.</p>
+    <hr />
+    <h2 id="08-technology">08 — Technology</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: left;">Component</th>
+                <th style="text-align: left;">Technology</th>
+                <th style="text-align: left;">Benefit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;"><strong>Framework</strong></td>
+                <td style="text-align: left;">Laravel</td>
+                <td style="text-align: left;">A mature, dependable platform used by enterprises worldwide, well-suited
+                    to your existing hosting.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Design/Frontend</strong></td>
+                <td style="text-align: left;">Blade + Tailwind CSS</td>
+                <td style="text-align: left;">Clean, modern styling, fully responsive.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Database</strong></td>
+                <td style="text-align: left;">MySQL</td>
+                <td style="text-align: left;">Standard, reliable, works on your current hosting.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Admin Panel</strong></td>
+                <td style="text-align: left;">Built-in content editor</td>
+                <td style="text-align: left;">So your team can make updates independently.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Hosting</strong></td>
+                <td style="text-align: left;">Existing shared hosting setup</td>
+                <td style="text-align: left;">Works on your existing shared hosting setup — no extra infrastructure
+                    needed.</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <h2 id="09-why-work-with-me-directly">09 — Why Work With Me Directly</h2>
+    <ul>
+        <li>✅ You deal directly with the person building your site — no account managers, no back-and-forth through a
+            team.</li>
+        <li>✅ Faster responses and faster turnaround on feedback, since there's no handoff between people.</li>
+        <li>✅ Your brief has already been studied in detail — this isn't a generic template, it's built around your
+            actual AI/CX positioning.</li>
+        <li>✅ SEO, performance and analytics are included from the start, not sold as add-ons later.</li>
+        <li>✅ Clear, upfront pricing with no hidden scope — you'll always know what you're paying for.</li>
+    </ul>
+    <hr />
+    <h2 id="10-timeline">10 — Timeline</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: left;">Phase</th>
+                <th style="text-align: left;">Deliverables</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;"><strong>Week 1</strong></td>
+                <td style="text-align: left;">Sitemap and homepage layout ready for your review and approval.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Week 2</strong></td>
+                <td style="text-align: left;">Core pages designed and built, shared with you as they're ready.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Week 3</strong></td>
+                <td style="text-align: left;">Industry pages, admin panel, and CXQ360.ai connection set up.</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Week 4</strong></td>
+                <td style="text-align: left;">SEO/analytics pass, final review and revisions.</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>This assumes timely feedback and content from your side at each step.</p>
+    <hr />
+    <h2 id="11-investment">11 — Investment</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: left;">Milestone</th>
+                <th style="text-align: left;">Payment</th>
+                <th style="text-align: left;">Trigger</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;"><strong>Milestone 1</strong></td>
+                <td style="text-align: left;">30%</td>
+                <td style="text-align: left;">On approving the sitemap &amp; homepage layout</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Milestone 2</strong></td>
+                <td style="text-align: left;">40%</td>
+                <td style="text-align: left;">On completing core pages, ready for review</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Milestone 3</strong></td>
+                <td style="text-align: left;">30%</td>
+                <td style="text-align: left;">On final approval, before going live</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Total project fee:</strong>This will be confirmed once we finalize how many industry pages and how much
+        content detail is needed.</p>
+    <h3 id="whats-included-in-the-price">What's included in the price</h3>
+    <ul>
+        <li>✅ Full website design &amp; build (12+ pages)</li>
+        <li>✅ Mobile-responsive design across all devices</li>
+        <li>✅ Content editor for self-service updates</li>
+        <li>✅ CXQ360.ai integration and lead capture setup</li>
+        <li>✅ Complete SEO foundation and analytics tracking</li>
+        <li>✅ Three rounds of revisions</li>
+        <li>✅ Cross-browser and cross-device testing</li>
+        <li>✅ Deployment to your hosting, with full handover documentation</li>
+    </ul>
+    <hr />
+    <h2 id="12-support-after-launch">12 — Support After Launch</h2>
+    <ul>
+        <li>✅ One month of free support after go-live — covering bug fixes, minor text/image changes, and small layout
+            tweaks at no extra cost.</li>
+        <li>✅ Direct access via WhatsApp or email during that period — no ticketing systems, no waiting.</li>
+        <li>✅ Full handover documentation — how to use the admin panel, deployment notes, and a site overview — so
+            anyone can pick it up later if needed.</li>
+        <li>✅ After the free month, an optional monthly maintenance plan is available for ongoing updates, monitoring
+            and priority support.</li>
+    </ul>
+    <hr />
+    <h2 id="13-whats-not-included">13 — What's Not Included</h2>
+    <ul>
+        <li>Any changes to CXQ360.ai itself — its AI, voice, telephony or omnichannel systems.</li>
+        <li>Billing, subscriptions or licensing systems.</li>
+        <li>Any integrations beyond what's listed in this proposal, unless agreed separately.</li>
+        <li>Ongoing SEO marketing, paid advertising, or content copywriting (the site is built around content you
+            provide).</li>
+        <li>Video production or professional photography.</li>
+        <li>Support beyond the free 30-day period, unless a separate maintenance plan is agreed.</li>
+    </ul>
+    <hr />
+    <h2 id="14-what-well-need-from-you">14 — What We'll Need From You</h2>
+    <ul>
+        <li>Access to your hosting so we can deploy the site if you wish to host at your own Hosting</li>
+        <!-- <li>CXQ360.ai's API/login documentation and test access.</li> -->
+        <li>Your logo, brand colors, and any existing brand guidelines.</li>
+        <li>Page content — text, testimonials, client logos — or approval to start with placeholder content.</li>
+        <li>Your preferred email and WhatsApp number for receiving leads.</li>
+        <li>Timely feedback at each review step, so the timeline above stays on track.</li>
+    </ul>
+    <hr />
+    <h2 id="15-next-steps">15 — Next Steps</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: left;">Step</th>
+                <th style="text-align: left;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;"><strong>Step 1</strong></td>
+                <td style="text-align: left;">Review this proposal and share any questions</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Step 2</strong></td>
+                <td style="text-align: left;">Confirm scope — number of industry pages, content depth</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;"><strong>Step 3</strong></td>
+                <td style="text-align: left;">Approve — we begin with the sitemap immediately</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <p><strong>Kamar — Web Developer</strong>
+        <em>Laravel • Tailwind CSS • Modern SaaS Web Experiences</em>
+    </p>
+    <div
+        style="margin-top: 40pt; padding-top: 16pt; border-top: 2px solid #e2e8f0; text-align: center; color: #94a3b8; font-size: 9pt;">
+        <p>CXdynamIQ Website Revamp & Development Proposal — September 2026</p>
+        <p>Prepared by Kamar — Web Developer</p>
+    </div>
+</body>
+
+</html>

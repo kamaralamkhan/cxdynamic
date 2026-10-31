@@ -1,0 +1,289 @@
+{
+  "slug": "zendesk",
+  "path": "/zendesk",
+  "encodedPath": "/zendesk",
+  "meta": {
+    "title": "Zendesk CRM Integration | Zendesk Call Center CTI Integration | CXDYNAMIQ",
+    "description": "Completely integrate your voice operations with your Zendesk CRM to boost agent productivity and customer satisfaction.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Zendesk CRM Integration | Zendesk Call Center CTI Integration | CXDYNAMIQ\n",
+    "ogDescription": "Completely integrate your voice operations with your Zendesk CRM to boost agent productivity and customer satisfaction.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Complete Contact Center within Zendesk"
+    },
+    {
+      "type": "li",
+      "text": "Completely integrate your voice operations with your Zendesk CRM to boost agent productivity and customer satisfaction."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/zendesk.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Zendesk CRM CTI Integration"
+    },
+    {
+      "type": "p",
+      "text": "ACRM refers to the Business cycles and Software empowering collaboration, further developing execution, and finding all the more effectively observable total customer touch points that will assist in enhancing customer relations with the brand. assuming client relationships are a driving parameter for your organization, then effective CRM processes and software become highly significant.ACXDYNAMIQ is arranging all the Zendesk programs with flawless setup. These zendesk programming that offers model services is Zendesk CRM. Upon a total walkthrough of this article, you will have a comprehensive understanding of the features, evaluating, and best practices for Zendesk CRM."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Complete Contact Center within Zendesk"
+    },
+    {
+      "level": 2,
+      "text": "Zendesk CRM CTI Integration"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Complete Contact Center within Zendesk",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Completely integrate your voice operations with your Zendesk CRM to boost agent productivity and customer satisfaction."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/zendesk.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Zendesk CRM CTI Integration",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "ACRM refers to the Business cycles and Software empowering collaboration, further developing execution, and finding all the more effectively observable total customer touch points that will assist in enhancing customer relations with the brand. assuming client relationships are a driving parameter for your organization, then effective CRM processes and software become highly significant.ACXDYNAMIQ is arranging all the Zendesk programs with flawless setup. These zendesk programming that offers model services is Zendesk CRM. Upon a total walkthrough of this article, you will have a comprehensive understanding of the features, evaluating, and best practices for Zendesk CRM."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 137
+}

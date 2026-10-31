@@ -1,0 +1,287 @@
+{
+  "slug": "predictive-dialer",
+  "path": "/predictive-dialer",
+  "encodedPath": "/predictive-dialer",
+  "meta": {
+    "title": "Predictive Dialer | CXDYNAMIQ",
+    "description": "PREDICTIVE DIALER SOFTWARE Convert more leads per minute with Predictive Dialer Software Don’t waste time dialing unanswered calls. Move your sales representatives from one conversation to the next with minimum idle times. Boost productivity by 150% and avail features that ensure successful outbound call outcomes.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Predictive Dialer | CXDYNAMIQ\n",
+    "ogDescription": "PREDICTIVE DIALER SOFTWARE Convert more leads per minute with Predictive Dialer Software Don’t waste time dialing unanswered calls. Move your sales representatives from one conversation to the next with minimum idle times. Boost productivity by 150% and avail features that ensure successful outbound call outcomes.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Convert more leads per minute with Predictive Dialer Software"
+    },
+    {
+      "type": "li",
+      "text": "Don’t waste time dialing unanswered calls. Move your sales representatives from one conversation to the next with minimum idle times. Boost productivity by 150% and avail features that ensure successful outbound call outcomes."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/predictive-dialer.png",
+      "alt": "img"
+    },
+    {
+      "type": "h4",
+      "text": "Predictive Dialer"
+    },
+    {
+      "type": "p",
+      "text": "Predictive dialer maximize agent usefulness and minimize worries of inactive time, replying mail and time region route with Engage Voice’s prescient auto dialer calculation.Cloud predictive dialer is useful in telemarketing, debt collection, customer service etc. A cloud based predictive dialer helps the businesses segment the data and dials out the contacts in a automatic manner."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Convert more leads per minute with Predictive Dialer Software"
+    },
+    {
+      "level": 4,
+      "text": "Predictive Dialer"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Convert more leads per minute with Predictive Dialer Software",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Don’t waste time dialing unanswered calls. Move your sales representatives from one conversation to the next with minimum idle times. Boost productivity by 150% and avail features that ensure successful outbound call outcomes."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/predictive-dialer.png",
+          "alt": "img"
+        },
+        {
+          "type": "h4",
+          "text": "Predictive Dialer"
+        },
+        {
+          "type": "p",
+          "text": "Predictive dialer maximize agent usefulness and minimize worries of inactive time, replying mail and time region route with Engage Voice’s prescient auto dialer calculation.Cloud predictive dialer is useful in telemarketing, debt collection, customer service etc. A cloud based predictive dialer helps the businesses segment the data and dials out the contacts in a automatic manner."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 116
+}

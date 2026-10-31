@@ -1,0 +1,319 @@
+{
+  "slug": "contact-us",
+  "path": "/contact-us",
+  "encodedPath": "/contact-us",
+  "meta": {
+    "title": "Contact Us | CXDYNAMIQ",
+    "description": "Stress-free Contact Center Solutions Ultrafast Implementation with VIP support Deploy a Cloud Contact Center in a day and automate it in minutes Try it Now Go live within a day! Seamless Integrations Cut operational costs Experts available 24/7 CXDYNAMIQ Gloabal offers an award-winning, cloud-based, contact center solution.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Contact Us | CXDYNAMIQ\n",
+    "ogDescription": "Stress-free Contact Center Solutions Ultrafast Implementation with VIP support Deploy a Cloud Contact Center in a day and automate it in minutes Try it Now Go live within a day! Seamless Integrations Cut operational costs Experts available 24/7 CXDYNAMIQ Gloabal offers an award-winning, cloud-based, contact center solution.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/contact-us",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": "Enter name",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Enter email",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "phone",
+          "label": "Enter mobile",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "Select Requirement",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "message",
+          "label": "Enter your message",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "example1",
+          "label": "I agree to the Terms & Conditions of CXDYNAMIQ.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [
+    {
+      "path": "/",
+      "text": "Home"
+    },
+    {
+      "path": "/contact-us",
+      "text": "Contact Us"
+    },
+    {
+      "path": "/",
+      "text": "www.cxdynamiq.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "li",
+      "text": "Home"
+    },
+    {
+      "type": "li",
+      "text": "Contact Us"
+    },
+    {
+      "type": "h2",
+      "text": "Contact Us"
+    },
+    {
+      "type": "h3",
+      "text": "Contact us"
+    },
+    {
+      "type": "p",
+      "text": "Address:29/F One Corporate Center, Julia Vargas Avenue, Corner Meralco Ave, Ortigas Center, Pasig, Metro Manila"
+    },
+    {
+      "type": "p",
+      "text": "Phone: +639060986036"
+    },
+    {
+      "type": "p",
+      "text": "Email: sales@cxdynamiq.com"
+    },
+    {
+      "type": "p",
+      "text": "Website www.cxdynamiq.com"
+    },
+    {
+      "type": "h2",
+      "text": "Get in touch"
+    }
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Contact Us"
+    },
+    {
+      "level": 3,
+      "text": "Contact us"
+    },
+    {
+      "level": 2,
+      "text": "Get in touch"
+    }
+  ],
+  "sections": [
+    {
+      "heading": null,
+      "level": 0,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Home"
+        },
+        {
+          "type": "li",
+          "text": "Contact Us"
+        }
+      ]
+    },
+    {
+      "heading": "Contact Us",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "h3",
+          "text": "Contact us"
+        },
+        {
+          "type": "p",
+          "text": "Address:29/F One Corporate Center, Julia Vargas Avenue, Corner Meralco Ave, Ortigas Center, Pasig, Metro Manila"
+        },
+        {
+          "type": "p",
+          "text": "Phone: +639060986036"
+        },
+        {
+          "type": "p",
+          "text": "Email: sales@cxdynamiq.com"
+        },
+        {
+          "type": "p",
+          "text": "Website www.cxdynamiq.com"
+        }
+      ]
+    },
+    {
+      "heading": "Get in touch",
+      "level": 2,
+      "blocks": []
+    }
+  ],
+  "wordCount": 31
+}

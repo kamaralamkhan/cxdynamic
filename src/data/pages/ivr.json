@@ -1,0 +1,287 @@
+{
+  "slug": "ivr",
+  "path": "/ivr",
+  "encodedPath": "/ivr",
+  "meta": {
+    "title": "Interactive Voice Response System | IVR as a Service | CXDYNAMIQ",
+    "description": "INTERACTIVE VOICE RESPONSE- IVR System Fully Customizable, Intelligent IVR System Build your own auto attendant, self-service, smart call routing, and more with our flexible, intelligent IVR solutions.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Interactive Voice Response System | IVR as a Service | CXDYNAMIQ\n",
+    "ogDescription": "INTERACTIVE VOICE RESPONSE- IVR System Fully Customizable, Intelligent IVR System Build your own auto attendant, self-service, smart call routing, and more with our flexible, intelligent IVR solutions.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Fully Customizable, Intelligent IVR System"
+    },
+    {
+      "type": "li",
+      "text": "Build your own auto attendant, self-service, smart call routing, and more with our flexible, intelligent IVR solutions."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/ivr.png",
+      "alt": "img"
+    },
+    {
+      "type": "h4",
+      "text": "Interactive Voice Response"
+    },
+    {
+      "type": "p",
+      "text": "Interactive Voice Response (IVR) is an automated telephony system that handles any call volume of your customers. At Spark TG, the best IVR service provider, we offer smart IVR service configured with a virtual IVR number. Our modern IVR service improves productivity and experience as it enables you to map departments and agents using the extension and so allow you interact with your customers and routes calls to the appropriate agent or department.Let our IVR system do more - gather information, get detailed reports of your business calls, speak to your customers, offer self-service or connect them to the right agent, both inbound and outbound campaigns. Cloud IVR solutions laced with powerful features."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Fully Customizable, Intelligent IVR System"
+    },
+    {
+      "level": 4,
+      "text": "Interactive Voice Response"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Fully Customizable, Intelligent IVR System",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Build your own auto attendant, self-service, smart call routing, and more with our flexible, intelligent IVR solutions."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/ivr.png",
+          "alt": "img"
+        },
+        {
+          "type": "h4",
+          "text": "Interactive Voice Response"
+        },
+        {
+          "type": "p",
+          "text": "Interactive Voice Response (IVR) is an automated telephony system that handles any call volume of your customers. At Spark TG, the best IVR service provider, we offer smart IVR service configured with a virtual IVR number. Our modern IVR service improves productivity and experience as it enables you to map departments and agents using the extension and so allow you interact with your customers and routes calls to the appropriate agent or department.Let our IVR system do more - gather information, get detailed reports of your business calls, speak to your customers, offer self-service or connect them to the right agent, both inbound and outbound campaigns. Cloud IVR solutions laced with powerful features."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 155
+}

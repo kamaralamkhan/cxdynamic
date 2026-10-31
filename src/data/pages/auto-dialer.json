@@ -1,0 +1,397 @@
+{
+  "slug": "auto-dialer",
+  "path": "/auto-dialer",
+  "encodedPath": "/auto-dialer",
+  "meta": {
+    "title": "Auto Dialer Software & Cloud Based Phone Dialers for Call Center | CXDYNAMIQ",
+    "description": "CXDYNAMIQ Auto dialer software to improve agent productivity. Chose from preview, progressive and predictive dialers.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Auto Dialer Software & Cloud Based Phone Dialers for Call Center | CXDYNAMIQ\n",
+    "ogDescription": "CXDYNAMIQ Auto dialer software to improve agent productivity. Chose from preview, progressive and predictive dialers.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Reach prospects, not dial tones with our industry-leading Auto Dialer Software."
+    },
+    {
+      "type": "li",
+      "text": "CXDYNAMIQ auto-dialing software helps your agents reach prospects, not dial tones. Less dialing means your agents spend more time with prospects. Our tools will help you cut through the busy tones and voicemails, boosting outbound calling campaign efficiency by 30%! Improve your lead conversion ratio and decrease your stress. CXDYNAMIQ’s software will extend agent talk time and decrease idle times so you can get more done with fewer worries. Take the hassle out of your next calling campaign with our auto-dialer. Goodbye stress, hello satisfaction."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/auto-dialer.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Sales Dialer Solutions"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/phone1.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Auto Dialer"
+    },
+    {
+      "type": "p",
+      "text": "Auto Dialer Software for Businesses will Increase agent productivity and takeout manual number dialing through our auto dialer programming. An auto dialer or programmed telephone dialer is an extraordinary sort of outbound dialer software which assists to dial out a bunch of contacts automatically. Depending on the call flow, you can play a greeting; ask for an IVR input and more. Each and every of the calls can be relegated to various agents relying on specific conditions.Benefits with Auto Dialer:"
+    },
+    {
+      "type": "p",
+      "text": "Setting manual outbound calls for a countless customers is time consuming. A programmed outbound dialer guarantees a streamlined and scalable outbound calling process."
+    },
+    {
+      "type": "p",
+      "text": "Auto dialer programming assists to reduce manpower by fundamentally expanding agent productivity, accordingly empowering organizations to accomplish more with less assets."
+    },
+    {
+      "type": "p",
+      "text": "An auto dialer fundamentally expands an organization's sales as it can make more number of calls than a human agent in the similar timeframe, and also can make calls in equal. It will result in bringing more sales."
+    },
+    {
+      "type": "li",
+      "text": "Call Recording"
+    },
+    {
+      "type": "li",
+      "text": "IVR"
+    },
+    {
+      "type": "li",
+      "text": "Call Reporting"
+    },
+    {
+      "type": "li",
+      "text": "Lead Generation"
+    },
+    {
+      "type": "li",
+      "text": "Lead Feedback"
+    },
+    {
+      "type": "li",
+      "text": "Lead Nurture"
+    },
+    {
+      "type": "h2",
+      "text": "CXDYNAMIQ Outbound call center features"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Reach prospects, not dial tones with our industry-leading Auto Dialer Software."
+    },
+    {
+      "level": 2,
+      "text": "Sales Dialer Solutions"
+    },
+    {
+      "level": 4,
+      "text": "Auto Dialer"
+    },
+    {
+      "level": 2,
+      "text": "CXDYNAMIQ Outbound call center features"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Reach prospects, not dial tones with our industry-leading Auto Dialer Software.",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "CXDYNAMIQ auto-dialing software helps your agents reach prospects, not dial tones. Less dialing means your agents spend more time with prospects. Our tools will help you cut through the busy tones and voicemails, boosting outbound calling campaign efficiency by 30%! Improve your lead conversion ratio and decrease your stress. CXDYNAMIQ’s software will extend agent talk time and decrease idle times so you can get more done with fewer worries. Take the hassle out of your next calling campaign with our auto-dialer. Goodbye stress, hello satisfaction."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/auto-dialer.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Sales Dialer Solutions",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/phone1.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Auto Dialer"
+        },
+        {
+          "type": "p",
+          "text": "Auto Dialer Software for Businesses will Increase agent productivity and takeout manual number dialing through our auto dialer programming. An auto dialer or programmed telephone dialer is an extraordinary sort of outbound dialer software which assists to dial out a bunch of contacts automatically. Depending on the call flow, you can play a greeting; ask for an IVR input and more. Each and every of the calls can be relegated to various agents relying on specific conditions.Benefits with Auto Dialer:"
+        },
+        {
+          "type": "p",
+          "text": "Setting manual outbound calls for a countless customers is time consuming. A programmed outbound dialer guarantees a streamlined and scalable outbound calling process."
+        },
+        {
+          "type": "p",
+          "text": "Auto dialer programming assists to reduce manpower by fundamentally expanding agent productivity, accordingly empowering organizations to accomplish more with less assets."
+        },
+        {
+          "type": "p",
+          "text": "An auto dialer fundamentally expands an organization's sales as it can make more number of calls than a human agent in the similar timeframe, and also can make calls in equal. It will result in bringing more sales."
+        },
+        {
+          "type": "li",
+          "text": "Call Recording"
+        },
+        {
+          "type": "li",
+          "text": "IVR"
+        },
+        {
+          "type": "li",
+          "text": "Call Reporting"
+        },
+        {
+          "type": "li",
+          "text": "Lead Generation"
+        },
+        {
+          "type": "li",
+          "text": "Lead Feedback"
+        },
+        {
+          "type": "li",
+          "text": "Lead Nurture"
+        }
+      ]
+    },
+    {
+      "heading": "CXDYNAMIQ Outbound call center features",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 297
+}

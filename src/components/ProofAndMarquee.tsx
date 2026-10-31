@@ -1,0 +1,167 @@
+"use client";
+
+import { useEffect, useState, useRef } from "react";
+import Link from "next/link";
+import { claims } from "@/lib/claims";
+import { 
+  ZendeskLogo, 
+  SalesforceLogo, 
+  ZohoLogo, 
+  FreshdeskLogo, 
+  HubSpotLogo, 
+  IntercomLogo, 
+  WhatsAppLogo 
+} from "@/components/IntegrationLogos";
+
+export default function ProofAndMarquee() {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [counts, setCounts] = useState([0, 0, 0, 0]);
+  const statsRef = useRef<HTMLDivElement>(null);
+
+  const statTargets = [1, 100, 40, 24];
+
+  // Count-up on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+
+          // Animate numbers
+          const duration = 1200;
+          const steps = 30;
+          const stepTime = duration / steps;
+          let currentStep = 0;
+
+          const timer = setInterval(() => {
+            currentStep++;
+            const progress = currentStep / steps;
+            setCounts([
+              Math.round(statTargets[0] * progress),
+              Math.round(statTargets[1] * progress),
+              Math.round(statTargets[2] * progress),
+              Math.round(statTargets[3] * progress),
+            ]);
+
+            if (currentStep >= steps) clearInterval(timer);
+          }, stepTime);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (statsRef.current) observer.observe(statsRef.current);
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
+  const brandList = [
+    { name: "Zendesk", path: "/zendesk", logo: ZendeskLogo, hoverColor: "group-hover:text-[#03363d]" },
+    { name: "Salesforce", path: "/salesforce", logo: SalesforceLogo, hoverColor: "group-hover:text-[#00a1e0]" },
+    { name: "Zoho CRM", path: "/zoho", logo: ZohoLogo, hoverColor: "group-hover:text-[#e42528]" },
+    { name: "Freshdesk", path: "/freshdesk", logo: FreshdeskLogo, hoverColor: "group-hover:text-[#25c974]" },
+    { name: "HubSpot", path: "/hubspot", logo: HubSpotLogo, hoverColor: "group-hover:text-[#ff7a59]" },
+    { name: "Intercom", path: "/intercom-integration", logo: IntercomLogo, hoverColor: "group-hover:text-[#1f8eed]" },
+    { name: "WhatsApp Business", path: "/whatsapp-business", logo: WhatsAppLogo, hoverColor: "group-hover:text-[#25d366]" },
+  ];
+
+  return (
+    <>
+      {/* 1. Dark Contrast Stats Strip */}
+      <section
+        ref={statsRef}
+        className="bg-slate-950 text-white py-12 relative overflow-hidden border-y border-white/10"
+      >
+        {/* Subtle slow drifting background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 opacity-80 pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+            
+            <div className="pt-4 lg:pt-0 lg:px-4">
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
+                {hasAnimated ? counts[0] : 1} Day
+              </div>
+              <div className="text-sm text-cyan-200 font-medium mt-1.5">
+                Deploy in a single business day
+              </div>
+            </div>
+
+            <div className="pt-4 lg:pt-0 lg:px-4">
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
+                {hasAnimated ? counts[1] : 100}%
+              </div>
+              <div className="text-sm text-cyan-200 font-medium mt-1.5">
+                Native CRM &amp; CTI integrations
+              </div>
+            </div>
+
+            <div className="pt-4 lg:pt-0 lg:px-4">
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
+                {hasAnimated ? counts[2] : 40}%+
+              </div>
+              <div className="text-sm text-cyan-200 font-medium mt-1.5">
+                Optimized contact center costs
+              </div>
+            </div>
+
+            <div className="pt-4 lg:pt-0 lg:px-4">
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
+                {hasAnimated ? counts[3] : 24}/7
+              </div>
+              <div className="text-sm text-cyan-200 font-medium mt-1.5">
+                Dedicated VIP experts on call
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 2. White Integrations Marquee with Narrow 48px Edge Fade Masks */}
+      <section className="bg-white border-b border-slate-200 py-12 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center mb-8">
+            <span className="text-xs font-semibold uppercase tracking-wider text-cyan-700">
+              Native Enterprise Ecosystem
+            </span>
+            <p className="text-xs text-slate-500 mt-1">
+              Works directly with your existing CRM and ticketing tools with zero code
+            </p>
+          </div>
+
+          {/* Marquee with Left/Right 48px Gradient Fade Masks */}
+          <div className="relative overflow-hidden w-full py-2">
+            {/* Left Edge Mask (48px) */}
+            <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            {/* Right Edge Mask (48px) */}
+            <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
+            <div className="animate-marquee flex items-center gap-8">
+              {[...brandList, ...brandList, ...brandList, ...brandList].map((item, idx) => {
+                const Logo = item.logo;
+                return (
+                  <Link
+                    key={idx}
+                    href={item.path}
+                    className="calm-card min-w-[168px] px-5 py-3.5 flex items-center gap-3 shrink-0 bg-white border border-slate-200 hover:border-[#069bd8] transition-all group"
+                  >
+                    <div className={`w-6 h-6 text-slate-400 ${item.hoverColor} transition-colors shrink-0`}>
+                      <Logo className="w-full h-full" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-slate-800 group-hover:text-slate-950 transition-colors block">
+                        {item.name}
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </>
+  );
+}

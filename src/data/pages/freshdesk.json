@@ -1,0 +1,289 @@
+{
+  "slug": "freshdesk",
+  "path": "/freshdesk",
+  "encodedPath": "/freshdesk",
+  "meta": {
+    "title": "Freshdesk | CXDYNAMIQ",
+    "description": "FRESHDESK CALL CENTER INTEGRATION Plug & play a complete contact center within Freshdesk Advanced call management & cloud telephony features for Freshdesk users, right within their CRM window.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Freshdesk | CXDYNAMIQ\n",
+    "ogDescription": "FRESHDESK CALL CENTER INTEGRATION Plug & play a complete contact center within Freshdesk Advanced call management & cloud telephony features for Freshdesk users, right within their CRM window.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Plug & play a complete contact center within Freshdesk"
+    },
+    {
+      "type": "li",
+      "text": "Advanced call management & cloud telephony features for Freshdesk users, right within their CRM window."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/freshdesk.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Freshdesk CRM CTI Integration"
+    },
+    {
+      "type": "p",
+      "text": "Freshdesk deliver faster and easier customer service, it is an online cloud based client support software and providing the help desk support with all smart automations to get things done faster. It has recognised a popular choice for organizations that want to increase client engagement and manage customers as they scale.Freshdesk supports many useful features for client engagement. employees can snap to call, answer calls, mute, require clients to briefly wait, or direct warm, blind, and consultative exchanges from directly within their Freshdesk window."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Plug & play a complete contact center within Freshdesk"
+    },
+    {
+      "level": 2,
+      "text": "Freshdesk CRM CTI Integration"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Plug & play a complete contact center within Freshdesk",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Advanced call management & cloud telephony features for Freshdesk users, right within their CRM window."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/freshdesk.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Freshdesk CRM CTI Integration",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Freshdesk deliver faster and easier customer service, it is an online cloud based client support software and providing the help desk support with all smart automations to get things done faster. It has recognised a popular choice for organizations that want to increase client engagement and manage customers as they scale.Freshdesk supports many useful features for client engagement. employees can snap to call, answer calls, mute, require clients to briefly wait, or direct warm, blind, and consultative exchanges from directly within their Freshdesk window."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 129
+}

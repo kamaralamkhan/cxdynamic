@@ -1,0 +1,319 @@
+{
+  "slug": "cti-integrations",
+  "path": "/cti-integrations",
+  "encodedPath": "/cti-integrations",
+  "meta": {
+    "title": "CTI Integration | Business Integration with CRM | CXDYNAMIQ",
+    "description": "CXDYNAMIQ is built on an open API architecture. It can integrate with almost any other business tool, custom CRM and ticketing solutions.",
+    "keywords": "Cloud Contact Centre, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "CTI Integration | Business Integration with CRM | CXDYNAMIQ\n",
+    "ogDescription": "CXDYNAMIQ is built on an open API architecture. It can integrate with almost any other business tool, custom CRM and ticketing solutions.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "CXDYNAMIQ works seamlessly with other business tools"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/cti-integration.png",
+      "alt": "img"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/miscellaneous.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "CTI Integrations"
+    },
+    {
+      "type": "p",
+      "text": "With CXDYNAMIQ CTI Integration services, customers can perform their tasks manually or traditionally with the desk phone, but now from their system or computer. Its customers can call directly from the system without requiring the mediation of telephone exchanges or mobile phones. Also, it allows companies to have a centralized communication control system in the cloud server and use a single interface. Generally CTI systems are more useful in call centre and contact centers since these are the areas of the company in charge of communications and information exchange."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/allocation.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "CTI is a significant asset for Call Centers"
+    },
+    {
+      "type": "p",
+      "text": "The CTI function is extensively used by call Centers, which have to process many calls and are under constant pressure to optimize their efficiency and productivity. A system of CTI Integration in lambda, included by default within a software-based VoIP mobile System, cost effective in the first place. They count on smart phone-type software that can be used on both mac and Windows and make a physical mobile practically obsolete.Rather, a normal headset is enough, and the most common purpose such as call answering, putting a call on hold and transferring can be done with just single click. More flexible, more profitable and more scalable than traditional telephone calls, this solution that also allows the use of hot-desking functionalities, which enables agents to works from shared spaces also."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "CXDYNAMIQ works seamlessly with other business tools"
+    },
+    {
+      "level": 4,
+      "text": "CTI Integrations"
+    },
+    {
+      "level": 4,
+      "text": "CTI is a significant asset for Call Centers"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "CXDYNAMIQ works seamlessly with other business tools",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/cti-integration.png",
+          "alt": "img"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/miscellaneous.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "CTI Integrations"
+        },
+        {
+          "type": "p",
+          "text": "With CXDYNAMIQ CTI Integration services, customers can perform their tasks manually or traditionally with the desk phone, but now from their system or computer. Its customers can call directly from the system without requiring the mediation of telephone exchanges or mobile phones. Also, it allows companies to have a centralized communication control system in the cloud server and use a single interface. Generally CTI systems are more useful in call centre and contact centers since these are the areas of the company in charge of communications and information exchange."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/allocation.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "CTI is a significant asset for Call Centers"
+        },
+        {
+          "type": "p",
+          "text": "The CTI function is extensively used by call Centers, which have to process many calls and are under constant pressure to optimize their efficiency and productivity. A system of CTI Integration in lambda, included by default within a software-based VoIP mobile System, cost effective in the first place. They count on smart phone-type software that can be used on both mac and Windows and make a physical mobile practically obsolete.Rather, a normal headset is enough, and the most common purpose such as call answering, putting a call on hold and transferring can be done with just single click. More flexible, more profitable and more scalable than traditional telephone calls, this solution that also allows the use of hot-desking functionalities, which enables agents to works from shared spaces also."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 252
+}

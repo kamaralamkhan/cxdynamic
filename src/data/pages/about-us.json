@@ -1,0 +1,407 @@
+{
+  "slug": "about-us",
+  "path": "/about-us",
+  "encodedPath": "/about-us",
+  "meta": {
+    "title": "About | CXDYNAMIQ",
+    "description": "Stress-free Contact Center Solutions Ultrafast Implementation with VIP support Deploy a Cloud Contact Center in a day\nand automate it in minutes Try it Now Go live within a day! Seamless Integrations Cut operational costs Experts\navailable 24/7 CXDYNAMIQ Gloabal offers an award-winning, cloud-based, contact center solution.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "About | CXDYNAMIQ\n",
+    "ogDescription": "Stress-free Contact Center Solutions Ultrafast Implementation with VIP support Deploy a Cloud Contact Center in a day\nand automate it in minutes Try it Now Go live within a day! Seamless Integrations Cut operational costs Experts\navailable 24/7 CXDYNAMIQ Gloabal offers an award-winning, cloud-based, contact center solution.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [
+    {
+      "path": "/",
+      "text": "Home"
+    },
+    {
+      "path": "/about-us",
+      "text": "About Us"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "li",
+      "text": "Home"
+    },
+    {
+      "type": "li",
+      "text": "About Us"
+    },
+    {
+      "type": "h2",
+      "text": "About Us"
+    },
+    {
+      "type": "h2",
+      "text": "About CXDYNAMIQ"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/who.svg",
+      "alt": "icon"
+    },
+    {
+      "type": "h3",
+      "text": "Who We Are?"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQGlobal was established in the year 1991. At CXDYNAMIQ, we offer Call Center Solutions, Business Phone System, Sales dialer Solution, CX hub and CTI integrations etc. Our team is the perfect combination of expert and experienced professionals of IT & cloud industry."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/what.svg",
+      "alt": "icon"
+    },
+    {
+      "type": "h3",
+      "text": "What We Do?"
+    },
+    {
+      "type": "p",
+      "text": "Organizations of all shapes and sizes are executing and embracing cloud strategies to drive development and boost revenues. Today, 85% of organizations are already utilizing cloud innovations to store data, and Cisco predicts that 94% of the worldwide responsibility could be handled in the cloud by 2021. In the present computerized world, CXDYNAMIQ Tele services dive into the world of cloud communications to unpick what this term joins and how it can streamline business cycles and drive achievement."
+    },
+    {
+      "type": "h2",
+      "text": "A group of creative minds dedicated to creating the best solutions for call centres in the world."
+    },
+    {
+      "type": "p",
+      "text": "At CXDYNAMIQ, we enable you to build a long lasting, trustworthy relationship with your consumers. Our virtual call center ensures to provide an ultimate customer experience. Moreover, we offer flexible CX rich solution that is easy to use and affordable too. Our services include Call Center Solutions, Business Phone System, Sales dialer Solution, CX hub and CTI integrations etc."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ provides native integrations with some of the best known Business tools, CRMs & Helpdesks such as Zendesk, Salesforce, Zoho and more."
+    },
+    {
+      "type": "h2",
+      "text": "Check Out Our Working Process!"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/research.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Choose A Product"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/chat.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Request A Meeting"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/monitor.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Receive Rocket Plan"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/trasparency.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Let’s Make It Happen"
+    }
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "About Us"
+    },
+    {
+      "level": 2,
+      "text": "About CXDYNAMIQ"
+    },
+    {
+      "level": 3,
+      "text": "Who We Are?"
+    },
+    {
+      "level": 3,
+      "text": "What We Do?"
+    },
+    {
+      "level": 2,
+      "text": "A group of creative minds dedicated to creating the best solutions for call centres in the world."
+    },
+    {
+      "level": 2,
+      "text": "Check Out Our Working Process!"
+    },
+    {
+      "level": 4,
+      "text": "Choose A Product"
+    },
+    {
+      "level": 4,
+      "text": "Request A Meeting"
+    },
+    {
+      "level": 4,
+      "text": "Receive Rocket Plan"
+    },
+    {
+      "level": 4,
+      "text": "Let’s Make It Happen"
+    }
+  ],
+  "sections": [
+    {
+      "heading": null,
+      "level": 0,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Home"
+        },
+        {
+          "type": "li",
+          "text": "About Us"
+        }
+      ]
+    },
+    {
+      "heading": "About Us",
+      "level": 2,
+      "blocks": []
+    },
+    {
+      "heading": "About CXDYNAMIQ",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/who.svg",
+          "alt": "icon"
+        },
+        {
+          "type": "h3",
+          "text": "Who We Are?"
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQGlobal was established in the year 1991. At CXDYNAMIQ, we offer Call Center Solutions, Business Phone System, Sales dialer Solution, CX hub and CTI integrations etc. Our team is the perfect combination of expert and experienced professionals of IT & cloud industry."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/what.svg",
+          "alt": "icon"
+        },
+        {
+          "type": "h3",
+          "text": "What We Do?"
+        },
+        {
+          "type": "p",
+          "text": "Organizations of all shapes and sizes are executing and embracing cloud strategies to drive development and boost revenues. Today, 85% of organizations are already utilizing cloud innovations to store data, and Cisco predicts that 94% of the worldwide responsibility could be handled in the cloud by 2021. In the present computerized world, CXDYNAMIQ Tele services dive into the world of cloud communications to unpick what this term joins and how it can streamline business cycles and drive achievement."
+        }
+      ]
+    },
+    {
+      "heading": "A group of creative minds dedicated to creating the best solutions for call centres in the world.",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "At CXDYNAMIQ, we enable you to build a long lasting, trustworthy relationship with your consumers. Our virtual call center ensures to provide an ultimate customer experience. Moreover, we offer flexible CX rich solution that is easy to use and affordable too. Our services include Call Center Solutions, Business Phone System, Sales dialer Solution, CX hub and CTI integrations etc."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ provides native integrations with some of the best known Business tools, CRMs & Helpdesks such as Zendesk, Salesforce, Zoho and more."
+        }
+      ]
+    },
+    {
+      "heading": "Check Out Our Working Process!",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/research.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Choose A Product"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/chat.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Request A Meeting"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/monitor.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Receive Rocket Plan"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/trasparency.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Let’s Make It Happen"
+        }
+      ]
+    }
+  ],
+  "wordCount": 249
+}

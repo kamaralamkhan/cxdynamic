@@ -1,0 +1,373 @@
+{
+  "slug": "contact-manager",
+  "path": "/contact-manager",
+  "encodedPath": "/contact-manager",
+  "meta": {
+    "title": "Contact Management | Fully Automated Calling System | CXDYNAMIQ",
+    "description": "CXDYNAMIQ's Intuitive contact manager for small business & enterprise that enables you to sync all contacts across channels of your choice.",
+    "keywords": "Cloud Contact Centre, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Contact Management | Fully Automated Calling System | CXDYNAMIQ\n",
+    "ogDescription": "CXDYNAMIQ's Intuitive contact manager for small business & enterprise that enables you to sync all contacts across channels of your choice.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Fully automated calling system"
+    },
+    {
+      "type": "li",
+      "text": "Built-in Contact Manager to save & manage calls instantly."
+    },
+    {
+      "type": "li",
+      "text": "Save phone numbers"
+    },
+    {
+      "type": "li",
+      "text": "Store conversations"
+    },
+    {
+      "type": "li",
+      "text": "Real-time responses"
+    },
+    {
+      "type": "li",
+      "text": "Go omnichannel across platforms"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/contact-manager.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "CXDYNAMIQ Business Phone System"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/communities.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Contact Manager"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ offers you a cloud contact management tool to impart your contacts with your colleagues and partners. Convert your various business contact lists into one bound together address book and access it from all over! The CXDYNAMIQ Relationships plan is a cutting-edge portable lightweight CRM application that assists you with getting sorted out your organization's leads, set advertising campaigns and deal with your sales pipeline. Meet CXDYNAMIQ, your virtual assistant that will check and update the stored info of your advertisement.Need to make your life simpler when managing leads? We went through ample of hours reviewing software and programming, detailing each component. Our best for most is CXDYNAMIQ contact solution. CXDYNAMIQ offers a amazing contact management solution for an itty biddy cost tag, non-existent truly.This is particularly useful for anybody on a limited spending plan. CXDYNAMIQ is a safe way to approach to getting your feet wet when utilizing their CRM."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/software1.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "The simple and Best Contact Management Software"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ is an industry-leading CRM platform worked for all sizes businesses. Need a simple way to store and manage contacts while building business connections beginning to end? CXDYNAMIQ is our top pick. The best part is you get every one of the features you need to streamline contact management for Sales, marketing, support, and operations without paying any of the money."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Fully automated calling system"
+    },
+    {
+      "level": 2,
+      "text": "CXDYNAMIQ Business Phone System"
+    },
+    {
+      "level": 4,
+      "text": "Contact Manager"
+    },
+    {
+      "level": 4,
+      "text": "The simple and Best Contact Management Software"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Fully automated calling system",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Built-in Contact Manager to save & manage calls instantly."
+        },
+        {
+          "type": "li",
+          "text": "Save phone numbers"
+        },
+        {
+          "type": "li",
+          "text": "Store conversations"
+        },
+        {
+          "type": "li",
+          "text": "Real-time responses"
+        },
+        {
+          "type": "li",
+          "text": "Go omnichannel across platforms"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/contact-manager.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "CXDYNAMIQ Business Phone System",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/communities.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Contact Manager"
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ offers you a cloud contact management tool to impart your contacts with your colleagues and partners. Convert your various business contact lists into one bound together address book and access it from all over! The CXDYNAMIQ Relationships plan is a cutting-edge portable lightweight CRM application that assists you with getting sorted out your organization's leads, set advertising campaigns and deal with your sales pipeline. Meet CXDYNAMIQ, your virtual assistant that will check and update the stored info of your advertisement.Need to make your life simpler when managing leads? We went through ample of hours reviewing software and programming, detailing each component. Our best for most is CXDYNAMIQ contact solution. CXDYNAMIQ offers a amazing contact management solution for an itty biddy cost tag, non-existent truly.This is particularly useful for anybody on a limited spending plan. CXDYNAMIQ is a safe way to approach to getting your feet wet when utilizing their CRM."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/software1.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "The simple and Best Contact Management Software"
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ is an industry-leading CRM platform worked for all sizes businesses. Need a simple way to store and manage contacts while building business connections beginning to end? CXDYNAMIQ is our top pick. The best part is you get every one of the features you need to streamline contact management for Sales, marketing, support, and operations without paying any of the money."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 267
+}

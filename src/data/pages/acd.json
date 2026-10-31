@@ -1,0 +1,287 @@
+{
+  "slug": "acd",
+  "path": "/acd",
+  "encodedPath": "/acd",
+  "meta": {
+    "title": "Automatic Call Distribution (ACD) Software for Call Centers | CXDYNAMIQ",
+    "description": "AUTOMATIC CALL DISTRIBUTION A simple way to sort & distribute your calls Efficiently distribute calls and chats amongst your agents—wherever they are — to reduce customer wait times & upgrade call management.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Automatic Call Distribution (ACD) Software for Call Centers | CXDYNAMIQ\n",
+    "ogDescription": "AUTOMATIC CALL DISTRIBUTION A simple way to sort & distribute your calls Efficiently distribute calls and chats amongst your agents—wherever they are — to reduce customer wait times & upgrade call management.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "A simple way to sort & distribute your calls"
+    },
+    {
+      "type": "li",
+      "text": "Efficiently distribute calls and chats amongst your agents—wherever they are — to reduce customer wait times & upgrade call management."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/acd.png",
+      "alt": "img"
+    },
+    {
+      "type": "h4",
+      "text": "ACD/Smart Routing"
+    },
+    {
+      "type": "p",
+      "text": "Automatic Call Distributor is a telephony software that receives the calls and routes them to the best available agent, team, or IVR, based on predefined routing rules. The ACD system utilizes a rule-based routing strategy based on instructions that dictate how inbound calls are handled and directed.With skill-based and intelligent routing, ACD software helps the inbound call center avoid common mistakes and follow a logical path to be more productive. It streamlines communication, preventing the overloading of call systems and ensuring that callers don’t wind up in a permanent loop or queue too long, improving their overall experience.For seamless call handling, ACD routes the call to an agent-based on business hours, call traffic, customer’s past interactions, behavioral transactions, and customer preference, ensuring that each caller gets a unique experience."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "A simple way to sort & distribute your calls"
+    },
+    {
+      "level": 4,
+      "text": "ACD/Smart Routing"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "A simple way to sort & distribute your calls",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Efficiently distribute calls and chats amongst your agents—wherever they are — to reduce customer wait times & upgrade call management."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/acd.png",
+          "alt": "img"
+        },
+        {
+          "type": "h4",
+          "text": "ACD/Smart Routing"
+        },
+        {
+          "type": "p",
+          "text": "Automatic Call Distributor is a telephony software that receives the calls and routes them to the best available agent, team, or IVR, based on predefined routing rules. The ACD system utilizes a rule-based routing strategy based on instructions that dictate how inbound calls are handled and directed.With skill-based and intelligent routing, ACD software helps the inbound call center avoid common mistakes and follow a logical path to be more productive. It streamlines communication, preventing the overloading of call systems and ensuring that callers don’t wind up in a permanent loop or queue too long, improving their overall experience.For seamless call handling, ACD routes the call to an agent-based on business hours, call traffic, customer’s past interactions, behavioral transactions, and customer preference, ensuring that each caller gets a unique experience."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 177
+}

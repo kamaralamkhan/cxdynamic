@@ -1,0 +1,515 @@
+{
+  "slug": "education",
+  "path": "/education",
+  "encodedPath": "/education",
+  "meta": {
+    "title": "Education Call Center Software | CXDYNAMIQ",
+    "description": "CXDYNAMIQ offers one of the best call center software solutions for education services in the world for greater operations efficiency and superior workflows, voicemail detection and compliance support.",
+    "keywords": "Cloud Contact Centre, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Education Call Center Software | CXDYNAMIQ\n",
+    "ogDescription": "CXDYNAMIQ offers one of the best call center software solutions for education services in the world for greater operations efficiency and superior workflows, voicemail detection and compliance support.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Connect with students using edTech Call Center Software"
+    },
+    {
+      "type": "li",
+      "text": "Provide educators and administrators easy access to students through our cloud software, auto dialers, and multiple digital channels."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/education.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Helping to support education services"
+    },
+    {
+      "type": "p",
+      "text": "Our call center software helps streamline services such as: Student Enrolment Campaigns, Automated Fee Payment Reminders, Financial aid support, Omnichannel education contact center solution, and Student hotlines"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/inbound1.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Inbound Support Solution"
+    },
+    {
+      "type": "p",
+      "text": "Add a personal touch to your educational call center with sticky agents. CXDYNAMIQs contact center software will route students right to the counsellor they’re used to, so they can build trust and maintain the relationship."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/outbound1.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Outbound Sales"
+    },
+    {
+      "type": "p",
+      "text": "Tap into remote working with a location independent education contact center solution. Shift personnel to work-from-home or back again, using CXDYNAMIQ’s cloud-based platform. Or use it to remotely outsource part of your operations. Stay agile, adaptable, and safe."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/24-hours.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Customer Support"
+    },
+    {
+      "type": "p",
+      "text": "Speed up your response time with CXDYNAMIQ’s self-service support options, conversational AI, and automated calls. Our intelligent customer service platform removes the burden from live agents, providing faster customer service and increasing your education call center’s efficiency."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/conversation.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Omnichannel Support"
+    },
+    {
+      "type": "p",
+      "text": "Easily manage digital channels Support tech savvy students on the channels they prefer. Our education call center solution routes their information right along with them, no matter how often they switch. Counsellors and administrators can go between voice and chat, without missing a beat."
+    },
+    {
+      "type": "cta",
+      "text": "Get Started",
+      "href": "#contact"
+    },
+    {
+      "type": "h2",
+      "text": "Lower your total cost of education operations with CXDYNAMIQ"
+    },
+    {
+      "type": "p",
+      "text": "Stay lean throughout the school year with our flexible pricing model. Seasonal spikes and fluctuations aren’t a problem with CXDYNAMIQ’s pay-per-use pricing. Key capabilities have been built into our call center software, specifically with the education sectors needs in mind. It doesn’t lock you into a contract, throttle your service, or expect you to precisely forecast your needs. You can increase or lower capacity when needed. Tighten up your cost of operations by up to 60% with our monthly plans."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/group1.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Transform student experience with CXDYNAMIQ CX hub"
+    },
+    {
+      "type": "p",
+      "text": "Transform the student experience with CXDYNAMIQ’s omnichannel contact center. Give your students the attention they need, with the smooth digital experiences they expect.Always be available with our intelligent AI chatbots, voice bots, and seamless omnichannel hub. With text messaging, webchats, voice interactions, social media, and more, CXDYNAMIQ’s CX hub puts you anywhere your students are.It all comes with the efficiency of streamlined, AI-assisted, omnichannel service."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/group.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Power your student experience with cloud based communications"
+    },
+    {
+      "type": "p",
+      "text": "Education institutions use cloud contact center software for flexibility and to streamline hardware setup inefficiencies, information alignment and to provide uninterrupted service to students across multiple digital channels.Let more students connect with your agents; at their convenience. Use automation to handle higher call & chat volumes across digital and voice channels. A single AI deployment can triple your interaction capabilities while cutting costs per contact."
+    },
+    {
+      "type": "h2",
+      "text": "CXDYNAMIQ Education call center features"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Connect with students using edTech Call Center Software"
+    },
+    {
+      "level": 2,
+      "text": "Helping to support education services"
+    },
+    {
+      "level": 4,
+      "text": "Inbound Support Solution"
+    },
+    {
+      "level": 4,
+      "text": "Outbound Sales"
+    },
+    {
+      "level": 4,
+      "text": "Customer Support"
+    },
+    {
+      "level": 4,
+      "text": "Omnichannel Support"
+    },
+    {
+      "level": 2,
+      "text": "Lower your total cost of education operations with CXDYNAMIQ"
+    },
+    {
+      "level": 4,
+      "text": "Transform student experience with CXDYNAMIQ CX hub"
+    },
+    {
+      "level": 4,
+      "text": "Power your student experience with cloud based communications"
+    },
+    {
+      "level": 2,
+      "text": "CXDYNAMIQ Education call center features"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Connect with students using edTech Call Center Software",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Provide educators and administrators easy access to students through our cloud software, auto dialers, and multiple digital channels."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/education.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Helping to support education services",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Our call center software helps streamline services such as: Student Enrolment Campaigns, Automated Fee Payment Reminders, Financial aid support, Omnichannel education contact center solution, and Student hotlines"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/inbound1.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Inbound Support Solution"
+        },
+        {
+          "type": "p",
+          "text": "Add a personal touch to your educational call center with sticky agents. CXDYNAMIQs contact center software will route students right to the counsellor they’re used to, so they can build trust and maintain the relationship."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/outbound1.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Outbound Sales"
+        },
+        {
+          "type": "p",
+          "text": "Tap into remote working with a location independent education contact center solution. Shift personnel to work-from-home or back again, using CXDYNAMIQ’s cloud-based platform. Or use it to remotely outsource part of your operations. Stay agile, adaptable, and safe."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/24-hours.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Customer Support"
+        },
+        {
+          "type": "p",
+          "text": "Speed up your response time with CXDYNAMIQ’s self-service support options, conversational AI, and automated calls. Our intelligent customer service platform removes the burden from live agents, providing faster customer service and increasing your education call center’s efficiency."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/conversation.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Omnichannel Support"
+        },
+        {
+          "type": "p",
+          "text": "Easily manage digital channels Support tech savvy students on the channels they prefer. Our education call center solution routes their information right along with them, no matter how often they switch. Counsellors and administrators can go between voice and chat, without missing a beat."
+        },
+        {
+          "type": "cta",
+          "text": "Get Started",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "heading": "Lower your total cost of education operations with CXDYNAMIQ",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Stay lean throughout the school year with our flexible pricing model. Seasonal spikes and fluctuations aren’t a problem with CXDYNAMIQ’s pay-per-use pricing. Key capabilities have been built into our call center software, specifically with the education sectors needs in mind. It doesn’t lock you into a contract, throttle your service, or expect you to precisely forecast your needs. You can increase or lower capacity when needed. Tighten up your cost of operations by up to 60% with our monthly plans."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/group1.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Transform student experience with CXDYNAMIQ CX hub"
+        },
+        {
+          "type": "p",
+          "text": "Transform the student experience with CXDYNAMIQ’s omnichannel contact center. Give your students the attention they need, with the smooth digital experiences they expect.Always be available with our intelligent AI chatbots, voice bots, and seamless omnichannel hub. With text messaging, webchats, voice interactions, social media, and more, CXDYNAMIQ’s CX hub puts you anywhere your students are.It all comes with the efficiency of streamlined, AI-assisted, omnichannel service."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/group.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Power your student experience with cloud based communications"
+        },
+        {
+          "type": "p",
+          "text": "Education institutions use cloud contact center software for flexibility and to streamline hardware setup inefficiencies, information alignment and to provide uninterrupted service to students across multiple digital channels.Let more students connect with your agents; at their convenience. Use automation to handle higher call & chat volumes across digital and voice channels. A single AI deployment can triple your interaction capabilities while cutting costs per contact."
+        }
+      ]
+    },
+    {
+      "heading": "CXDYNAMIQ Education call center features",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 480
+}

@@ -1,0 +1,299 @@
+{
+  "slug": "omnichannel-routing",
+  "path": "/omnichannel-routing",
+  "encodedPath": "/omnichannel-routing",
+  "meta": {
+    "title": "Omnichannel call center software solution with multi channel routing | CXDYNAMIQ",
+    "description": "Route calls and chats to the right agent in the right department irrespective of which channel they use. Features : AI based self service, Sticky agent, Agent assist.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Omnichannel call center software solution with multi channel routing | CXDYNAMIQ\n",
+    "ogDescription": "Route calls and chats to the right agent in the right department irrespective of which channel they use. Features : AI based self service, Sticky agent, Agent assist.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Manage multichannel interactions with ease"
+    },
+    {
+      "type": "li",
+      "text": "Route calls and chats to the right agent in the right department irrespective of which channel they use."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/omnichannel-routing.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Omni Channel Routing"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/flowchart.svg",
+      "alt": "service"
+    },
+    {
+      "type": "p",
+      "text": "Our solution empowers omni channel service, research, sales, marketing and collections with secure id and verification strategies as applicable (TPIN, OTP, Voice Biometrics) any time, any spot, any station (Voice, Alternate & Digital channels) utilizing existing voice (Telephony channel) infrastructure and integrated with main backend applications and CRM software. CXDYNAMIQ allows you to automate your dispatching processes while regarding genuine limitations to bring productivity, straightforwardness and consistency in your omnichannel retailing.CXDYNAMIQ allows you to utilize existing retail infrastructure to build your omnichannel platform. Subsequently helping you to achieve same day door-step deliveries to your clients. Omnichannel executives after consideration of business elements including SKU bifurcation, retail outlet work timings, regulatory constraints and so on for the improved dispatch plans. Omnichannel ideal fleet mix (once just as day by day powerful designs) for satisfaction operations."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Manage multichannel interactions with ease"
+    },
+    {
+      "level": 2,
+      "text": "Omni Channel Routing"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Manage multichannel interactions with ease",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Route calls and chats to the right agent in the right department irrespective of which channel they use."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/omnichannel-routing.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Omni Channel Routing",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/flowchart.svg",
+          "alt": "service"
+        },
+        {
+          "type": "p",
+          "text": "Our solution empowers omni channel service, research, sales, marketing and collections with secure id and verification strategies as applicable (TPIN, OTP, Voice Biometrics) any time, any spot, any station (Voice, Alternate & Digital channels) utilizing existing voice (Telephony channel) infrastructure and integrated with main backend applications and CRM software. CXDYNAMIQ allows you to automate your dispatching processes while regarding genuine limitations to bring productivity, straightforwardness and consistency in your omnichannel retailing.CXDYNAMIQ allows you to utilize existing retail infrastructure to build your omnichannel platform. Subsequently helping you to achieve same day door-step deliveries to your clients. Omnichannel executives after consideration of business elements including SKU bifurcation, retail outlet work timings, regulatory constraints and so on for the improved dispatch plans. Omnichannel ideal fleet mix (once just as day by day powerful designs) for satisfaction operations."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 178
+}

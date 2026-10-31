@@ -1,0 +1,321 @@
+{
+  "slug": "who-we-are",
+  "path": "/who-we-are",
+  "encodedPath": "/who-we-are",
+  "meta": {
+    "title": "About Us | CXDYNAMIQ",
+    "description": "About us Delivering Contact Center Innovation Since 2007 At CXDYNAMIQ, we offer secure, cloud-based communication solutions that provide a better customer experience at a lower total cost for contact centers. Trusted by 2000+ Businesses This is our story CXDYNAMIQ was founded in 2007 by an experienced team of technologists and entrepreneurs.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "About Us | CXDYNAMIQ\n",
+    "ogDescription": "About us Delivering Contact Center Innovation Since 2007 At CXDYNAMIQ, we offer secure, cloud-based communication solutions that provide a better customer experience at a lower total cost for contact centers. Trusted by 2000+ Businesses This is our story CXDYNAMIQ was founded in 2007 by an experienced team of technologists and entrepreneurs.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Delivering Contact Center Innovation Since 1997"
+    },
+    {
+      "type": "li",
+      "text": "At CXDYNAMIQ, we offer secure, cloud-based communication solutions that provide a better customer experience at a lower total cost for contact centers."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/who-we-are.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "About Us"
+    },
+    {
+      "type": "h4",
+      "text": "Who We Are"
+    },
+    {
+      "type": "p",
+      "text": "We, CXDYNAMIQGlobal established in the year 1991, are engaged in offering Call Center Solutions, Business Phone System, Sales dialer Solution, CX hub and CTI integrations etc. All the services are offered by our experienced professionals having immense experience in the IT and cloud Industry."
+    },
+    {
+      "type": "h4",
+      "text": "What We Do"
+    },
+    {
+      "type": "p",
+      "text": "Organizations of all shapes and sizes are executing and embracing cloud strategies to drive development and boost revenues. Today, 85% of organizations are already utilizing cloud innovations to store data, and Cisco predicts that 94% of the worldwide responsibility could be handled in the cloud by 2021. In the present computerized world, CXDYNAMIQ Tele services dive into the world of cloud communications to unpick what this term joins and how it can streamline business cycles and drive achievement."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Delivering Contact Center Innovation Since 1997"
+    },
+    {
+      "level": 2,
+      "text": "About Us"
+    },
+    {
+      "level": 4,
+      "text": "Who We Are"
+    },
+    {
+      "level": 4,
+      "text": "What We Do"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Delivering Contact Center Innovation Since 1997",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "At CXDYNAMIQ, we offer secure, cloud-based communication solutions that provide a better customer experience at a lower total cost for contact centers."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/who-we-are.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "About Us",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "h4",
+          "text": "Who We Are"
+        },
+        {
+          "type": "p",
+          "text": "We, CXDYNAMIQGlobal established in the year 1991, are engaged in offering Call Center Solutions, Business Phone System, Sales dialer Solution, CX hub and CTI integrations etc. All the services are offered by our experienced professionals having immense experience in the IT and cloud Industry."
+        },
+        {
+          "type": "h4",
+          "text": "What We Do"
+        },
+        {
+          "type": "p",
+          "text": "Organizations of all shapes and sizes are executing and embracing cloud strategies to drive development and boost revenues. Today, 85% of organizations are already utilizing cloud innovations to store data, and Cisco predicts that 94% of the worldwide responsibility could be handled in the cloud by 2021. In the present computerized world, CXDYNAMIQ Tele services dive into the world of cloud communications to unpick what this term joins and how it can streamline business cycles and drive achievement."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 175
+}

@@ -1,0 +1,507 @@
+{
+  "slug": "enterprise",
+  "path": "/enterprise",
+  "encodedPath": "/enterprise",
+  "meta": {
+    "title": "Phone Systems for Enterprises | Cloud Calling Solutions | CXDYNAMIQ",
+    "description": "CXDYNAMIQ offers one of the best call center software solutions for enterprises in the world for greater operations\nefficiency and superior workflows, voicemail detection and compliance support.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Phone Systems for Enterprises | Cloud Calling Solutions | CXDYNAMIQ\n",
+    "ogDescription": "CXDYNAMIQ offers one of the best call center software solutions for enterprises in the world for greater operations\nefficiency and superior workflows, voicemail detection and compliance support.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Globalize growth using enterprise Call Center Software"
+    },
+    {
+      "type": "li",
+      "text": "Match your current call center needs and with software that offers expansion as your enterprise grows."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/payment.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "A central call center for all of your enterprise communications"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/inbound.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Inbound Support Solution"
+    },
+    {
+      "type": "p",
+      "text": "Our dependable solution enables enterprises to meet highly stringent SLAs with 100% uptimes while our rich feature set ensures the highest levels of productivity—while lowering total operational costs by up to 50%. Support customers across voice and digital channels by combining our AI & rule-based self-service bots with advanced routing options."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/outbound.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Outbound Sales"
+    },
+    {
+      "type": "p",
+      "text": "Enterprises use our award-winning dialers with deep CRM integrations and dialer APIs to build highly effective outbound call automations. This includes 30%-60% more efficient sales and telemarketing campaigns, accelerated inbound sales conversion cycles, automated customer service call-backs, and proactive customer support campaigns."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/dashboard.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Consolidated Dashboards"
+    },
+    {
+      "type": "p",
+      "text": "Thanks to our deep CRM integrations, agents can both make and receive calls from within their CRM window leading to an average of 40% higher agent efficiency. They automatically view all customer information during calls and save precious time thanks to our automated call logging."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/translation.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Call Transcriptions"
+    },
+    {
+      "type": "p",
+      "text": "Our advanced call monitoring tools enable supervisors and managers to increase first call resolutions, improve quality assurance, compliance and training. This includes 70+ performance & workforce management insights, call recordings, live call monitoring, AI based speech analytics, and automated call transcriptions."
+    },
+    {
+      "type": "cta",
+      "text": "Get Started",
+      "href": "#contact"
+    },
+    {
+      "type": "h2",
+      "text": "Grow with CXDYNAMIQ"
+    },
+    {
+      "type": "p",
+      "text": "Here is why CXDYNAMIQ is uniquely placed to serve growing business needs."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/growth.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Easily scale your business"
+    },
+    {
+      "type": "p",
+      "text": "Add and remove someone from your team or CRM seamlessly. So you can expand your platform and team effortlessly to meet your activity levels.With no annual commitments and a pay-as-you-go model, CXDYNAMIQ offers enterprises the most flexible ways to grow and scale their business. Our homegrown platform does not depend on any third party for its core telephony. Alongside our Open API platform, this offers enterprises high interoperability with the rest of the technology portfolio as well as scope to customize their workflows as per their growing needs."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/customer-satisfaction.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Optimize customer experience with the CXDYNAMIQ CX Hub"
+    },
+    {
+      "type": "p",
+      "text": "Build the seamless, fast, personalized communications your modern customer craves.The real challenge for enterprises today is to offer personalized customer experience at scale across multiple channels. This can only be achieved by using a single, robust yet flexible, omnichannel solution with deep CRM integrations and a strong AI foundation. CXDYNAMIQ CX hub is built with exactly these needs in mind. With advanced call routing, conversational AI & speech analytics to offer a combination of human and bot support across voice and an emerging array of digital channels including SMS texts, live chat, WhatsApp, and more."
+    },
+    {
+      "type": "h2",
+      "text": "CXDYNAMIQ call center features for enterprises"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Globalize growth using enterprise Call Center Software"
+    },
+    {
+      "level": 2,
+      "text": "A central call center for all of your enterprise communications"
+    },
+    {
+      "level": 4,
+      "text": "Inbound Support Solution"
+    },
+    {
+      "level": 4,
+      "text": "Outbound Sales"
+    },
+    {
+      "level": 4,
+      "text": "Consolidated Dashboards"
+    },
+    {
+      "level": 4,
+      "text": "Call Transcriptions"
+    },
+    {
+      "level": 2,
+      "text": "Grow with CXDYNAMIQ"
+    },
+    {
+      "level": 4,
+      "text": "Easily scale your business"
+    },
+    {
+      "level": 4,
+      "text": "Optimize customer experience with the CXDYNAMIQ CX Hub"
+    },
+    {
+      "level": 2,
+      "text": "CXDYNAMIQ call center features for enterprises"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Globalize growth using enterprise Call Center Software",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Match your current call center needs and with software that offers expansion as your enterprise grows."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/payment.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "A central call center for all of your enterprise communications",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/inbound.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Inbound Support Solution"
+        },
+        {
+          "type": "p",
+          "text": "Our dependable solution enables enterprises to meet highly stringent SLAs with 100% uptimes while our rich feature set ensures the highest levels of productivity—while lowering total operational costs by up to 50%. Support customers across voice and digital channels by combining our AI & rule-based self-service bots with advanced routing options."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/outbound.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Outbound Sales"
+        },
+        {
+          "type": "p",
+          "text": "Enterprises use our award-winning dialers with deep CRM integrations and dialer APIs to build highly effective outbound call automations. This includes 30%-60% more efficient sales and telemarketing campaigns, accelerated inbound sales conversion cycles, automated customer service call-backs, and proactive customer support campaigns."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/dashboard.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Consolidated Dashboards"
+        },
+        {
+          "type": "p",
+          "text": "Thanks to our deep CRM integrations, agents can both make and receive calls from within their CRM window leading to an average of 40% higher agent efficiency. They automatically view all customer information during calls and save precious time thanks to our automated call logging."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/translation.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Call Transcriptions"
+        },
+        {
+          "type": "p",
+          "text": "Our advanced call monitoring tools enable supervisors and managers to increase first call resolutions, improve quality assurance, compliance and training. This includes 70+ performance & workforce management insights, call recordings, live call monitoring, AI based speech analytics, and automated call transcriptions."
+        },
+        {
+          "type": "cta",
+          "text": "Get Started",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "heading": "Grow with CXDYNAMIQ",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Here is why CXDYNAMIQ is uniquely placed to serve growing business needs."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/growth.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Easily scale your business"
+        },
+        {
+          "type": "p",
+          "text": "Add and remove someone from your team or CRM seamlessly. So you can expand your platform and team effortlessly to meet your activity levels.With no annual commitments and a pay-as-you-go model, CXDYNAMIQ offers enterprises the most flexible ways to grow and scale their business. Our homegrown platform does not depend on any third party for its core telephony. Alongside our Open API platform, this offers enterprises high interoperability with the rest of the technology portfolio as well as scope to customize their workflows as per their growing needs."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/customer-satisfaction.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Optimize customer experience with the CXDYNAMIQ CX Hub"
+        },
+        {
+          "type": "p",
+          "text": "Build the seamless, fast, personalized communications your modern customer craves.The real challenge for enterprises today is to offer personalized customer experience at scale across multiple channels. This can only be achieved by using a single, robust yet flexible, omnichannel solution with deep CRM integrations and a strong AI foundation. CXDYNAMIQ CX hub is built with exactly these needs in mind. With advanced call routing, conversational AI & speech analytics to offer a combination of human and bot support across voice and an emerging array of digital channels including SMS texts, live chat, WhatsApp, and more."
+        }
+      ]
+    },
+    {
+      "heading": "CXDYNAMIQ call center features for enterprises",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 457
+}

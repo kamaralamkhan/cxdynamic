@@ -1,0 +1,289 @@
+{
+  "slug": "hubspot",
+  "path": "/hubspot",
+  "encodedPath": "/hubspot",
+  "meta": {
+    "title": "Hubspot | CXDYNAMIQ",
+    "description": "HUBSPOT INTEGRATION A complete call solution within Hubspot A readymade integration that enables agents to answer or receive calls from within their Hubspot dashboard.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Hubspot | CXDYNAMIQ\n",
+    "ogDescription": "HUBSPOT INTEGRATION A complete call solution within Hubspot A readymade integration that enables agents to answer or receive calls from within their Hubspot dashboard.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "A complete call solution within Hubspot"
+    },
+    {
+      "type": "li",
+      "text": "A readymade integration that enables agents to answer or receive calls from within their Hubspot dashboard."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/hubspot.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Hubspot CRM CTI Integration"
+    },
+    {
+      "type": "p",
+      "text": "In HubSpot, integrations permit data to be passed to and from outside/internal systems and the HubSpot COS.Regularly, organizations are forced to use several different applications at once to serve a singular need. HubSpot integrations try to offer a unified solution by delivering these applications within the accommodation of its own software."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "A complete call solution within Hubspot"
+    },
+    {
+      "level": 2,
+      "text": "Hubspot CRM CTI Integration"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "A complete call solution within Hubspot",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "A readymade integration that enables agents to answer or receive calls from within their Hubspot dashboard."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/hubspot.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Hubspot CRM CTI Integration",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "In HubSpot, integrations permit data to be passed to and from outside/internal systems and the HubSpot COS.Regularly, organizations are forced to use several different applications at once to serve a singular need. HubSpot integrations try to offer a unified solution by delivering these applications within the accommodation of its own software."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 94
+}

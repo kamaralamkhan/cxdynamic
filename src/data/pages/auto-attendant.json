@@ -1,0 +1,311 @@
+{
+  "slug": "auto-attendant",
+  "path": "/auto-attendant",
+  "encodedPath": "/auto-attendant",
+  "meta": {
+    "title": "Best Auto Attendant Phone System | Virtual Receptionist | CXDYNAMIQ",
+    "description": "An auto attendant virtual receptionist to promptly greet callers and auto forward calls to employees working from your office or remotely.",
+    "keywords": "Cloud Contact Centre, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Best Auto Attendant Phone System | Virtual Receptionist | CXDYNAMIQ\n",
+    "ogDescription": "An auto attendant virtual receptionist to promptly greet callers and auto forward calls to employees working from your office or remotely.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "The better way to answer calls"
+    },
+    {
+      "type": "li",
+      "text": "Let a virtual receptionist promptly greet callers and forward calls to employees working from your office or remotely."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/auto-attendant.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "CXDYNAMIQ Business Phone System"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/robotic.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Auto attendant"
+    },
+    {
+      "type": "p",
+      "text": "Like same way many entrepreneurs, you may be at the point of development where you believe you need to hire a full-time assistant. since your reputation depends on remarkable customer service and responsiveness to possibilities and clients, you can’t bear to miss a single call or react too leisurely to an important voicemail.With the CXDYNAMIQ Auto Attendant, you can avoid the cost of a full-time receptionist and still answer each and every call expertly and in a timely manner. The Auto Attendant brings a few vital elements to give you the peace of mind to know that your business consistently appears professional. The system and process for setting up your CXDYNAMIQ Auto Attendant is quick and simple. You’ll send us the hello greeting script you’d like playing when your business gets a call, and we’ll have an expert voice artist record the auto assistant message. We will likewise record the names and extensions of your group for a Dial-by-Name index.We will even record the extensions for your business’s different departments — Marketing, General Inquiries, Sales and even if you are a business of one and those messages essentially all forward to your voice message or voicemail. By having extensions recorded and setting up your dial-by-name catalog your telephone system is ready for the proceeded with development of your business."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "The better way to answer calls"
+    },
+    {
+      "level": 2,
+      "text": "CXDYNAMIQ Business Phone System"
+    },
+    {
+      "level": 4,
+      "text": "Auto attendant"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "The better way to answer calls",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Let a virtual receptionist promptly greet callers and forward calls to employees working from your office or remotely."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/auto-attendant.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "CXDYNAMIQ Business Phone System",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/robotic.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Auto attendant"
+        },
+        {
+          "type": "p",
+          "text": "Like same way many entrepreneurs, you may be at the point of development where you believe you need to hire a full-time assistant. since your reputation depends on remarkable customer service and responsiveness to possibilities and clients, you can’t bear to miss a single call or react too leisurely to an important voicemail.With the CXDYNAMIQ Auto Attendant, you can avoid the cost of a full-time receptionist and still answer each and every call expertly and in a timely manner. The Auto Attendant brings a few vital elements to give you the peace of mind to know that your business consistently appears professional. The system and process for setting up your CXDYNAMIQ Auto Attendant is quick and simple. You’ll send us the hello greeting script you’d like playing when your business gets a call, and we’ll have an expert voice artist record the auto assistant message. We will likewise record the names and extensions of your group for a Dial-by-Name index.We will even record the extensions for your business’s different departments — Marketing, General Inquiries, Sales and even if you are a business of one and those messages essentially all forward to your voice message or voicemail. By having extensions recorded and setting up your dial-by-name catalog your telephone system is ready for the proceeded with development of your business."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 267
+}

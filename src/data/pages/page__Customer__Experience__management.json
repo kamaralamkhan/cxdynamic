@@ -1,0 +1,210 @@
+{
+  "slug": "page__Customer__Experience__management",
+  "path": "/page/Customer Experience management",
+  "encodedPath": "/page/Customer%20Experience%20management",
+  "meta": {
+    "title": "Collection Management Solution",
+    "description": "dfsfsf",
+    "keywords": "collections,debtcollection",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Collection Management Solution\n",
+    "ogDescription": "dfsfsf\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/page/Customer%20Experience%20management",
+    "/privacy-policy"
+  ],
+  "links": [
+    {
+      "path": "/",
+      "text": "Home"
+    },
+    {
+      "path": "/page/Customer%20Experience%20management",
+      "text": "Collection Management Solution"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "li",
+      "text": "Home"
+    },
+    {
+      "type": "li",
+      "text": "Collection Management Solution"
+    },
+    {
+      "type": "h2",
+      "text": "Collection Management Solution"
+    },
+    {
+      "type": "p",
+      "text": "Testing page ."
+    }
+  ],
+  "headings": [
+    {
+      "level": 2,
+      "text": "Collection Management Solution"
+    }
+  ],
+  "sections": [
+    {
+      "heading": null,
+      "level": 0,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Home"
+        },
+        {
+          "type": "li",
+          "text": "Collection Management Solution"
+        }
+      ]
+    },
+    {
+      "heading": "Collection Management Solution",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Testing page ."
+        }
+      ]
+    }
+  ],
+  "wordCount": 10
+}

@@ -1,0 +1,355 @@
+{
+  "slug": "inbound-calling",
+  "path": "/inbound-calling",
+  "encodedPath": "/inbound-calling",
+  "meta": {
+    "title": "Inbound Call Center Solutions | Inbound Contact Center Software | CXDYNAMIQ",
+    "description": "Inbound Call Center Solutions for your contact center with Modern IVR, ACD, Skill Routing, Warm Transfer, Screenpop, call recording & more.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Inbound Call Center Solutions | Inbound Contact Center Software | CXDYNAMIQ\n",
+    "ogDescription": "Inbound Call Center Solutions for your contact center with Modern IVR, ACD, Skill Routing, Warm Transfer, Screenpop, call recording & more.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Inbound Call Center Software quickly connects customers to agents. Anytime, anywhere."
+    },
+    {
+      "type": "li",
+      "text": "Instantly access all the tools you need to ensure highly responsive phone support."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/inbound-call.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Call Center Solution"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/inbound.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Inbound Calling"
+    },
+    {
+      "type": "p",
+      "text": "In simple manner, an inbound call center services mainly relies on the management of telephone calls by third-party telephone agencies. To better understand a call center concept, we initially need to understand the basic meaning when it comes to a call center or a call centre setup.Actually Inbound call center is a physical work place of where agents receive and make phone calls to the company's customers for Service or pre-existing sales. From the software call center technology through which they make and receive calls can be classified into different categories based on the processes performed."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/question1.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Why should companies Outsource inbound customer service to Lamda BPO?"
+    },
+    {
+      "type": "p",
+      "text": "Organizations are facing many challenges nowadays. Product lifecycles have been shortened over time and customer loyalty is more challenging to achieve, and constant advancement in technology instantly makes existing business models obsolete.Because of this reason, companies streamline each business process compulsory, making them more productive, profitable and gaining an advantage over the competition in the market.The outsourcing of business is also one of the strategies that companies will carry out to divide their activities for smoother process. This method will helps companies to increase their efficiency in operations, reduce costs, and increase overall sales and profitability."
+    },
+    {
+      "type": "h2",
+      "text": "CXDYNAMIQ inbound call center features"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Inbound Call Center Software quickly connects customers to agents. Anytime, anywhere."
+    },
+    {
+      "level": 2,
+      "text": "Call Center Solution"
+    },
+    {
+      "level": 4,
+      "text": "Inbound Calling"
+    },
+    {
+      "level": 4,
+      "text": "Why should companies Outsource inbound customer service to Lamda BPO?"
+    },
+    {
+      "level": 2,
+      "text": "CXDYNAMIQ inbound call center features"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Inbound Call Center Software quickly connects customers to agents. Anytime, anywhere.",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Instantly access all the tools you need to ensure highly responsive phone support."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/inbound-call.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Call Center Solution",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/inbound.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Inbound Calling"
+        },
+        {
+          "type": "p",
+          "text": "In simple manner, an inbound call center services mainly relies on the management of telephone calls by third-party telephone agencies. To better understand a call center concept, we initially need to understand the basic meaning when it comes to a call center or a call centre setup.Actually Inbound call center is a physical work place of where agents receive and make phone calls to the company's customers for Service or pre-existing sales. From the software call center technology through which they make and receive calls can be classified into different categories based on the processes performed."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/question1.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Why should companies Outsource inbound customer service to Lamda BPO?"
+        },
+        {
+          "type": "p",
+          "text": "Organizations are facing many challenges nowadays. Product lifecycles have been shortened over time and customer loyalty is more challenging to achieve, and constant advancement in technology instantly makes existing business models obsolete.Because of this reason, companies streamline each business process compulsory, making them more productive, profitable and gaining an advantage over the competition in the market.The outsourcing of business is also one of the strategies that companies will carry out to divide their activities for smoother process. This method will helps companies to increase their efficiency in operations, reduce costs, and increase overall sales and profitability."
+        }
+      ]
+    },
+    {
+      "heading": "CXDYNAMIQ inbound call center features",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful inbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 254
+}

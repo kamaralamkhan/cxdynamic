@@ -1,0 +1,289 @@
+{
+  "slug": "whatsapp-business",
+  "path": "/whatsapp-business",
+  "encodedPath": "/whatsapp-business",
+  "meta": {
+    "title": "Whatsapp Business Solution | CXDYNAMIQ",
+    "description": "WHATSAPP BUSINESS SOLUTION AI-Powered WhatsApp Contact Center Solution Everything you need to deliver enterprise-grade service levels on this popular messaging app.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Whatsapp Business Solution | CXDYNAMIQ\n",
+    "ogDescription": "WHATSAPP BUSINESS SOLUTION AI-Powered WhatsApp Contact Center Solution Everything you need to deliver enterprise-grade service levels on this popular messaging app.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "AI-Powered WhatsApp Contact Center Solution"
+    },
+    {
+      "type": "li",
+      "text": "Everything you need to deliver enterprise-grade service levels on this popular messaging app."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/whatsapp-business.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Whatsapp Business Solution"
+    },
+    {
+      "type": "p",
+      "text": "70% of WhatsApp users thought that it is the easiest way to connect with the businesses. As your WhatsApp Business Solution Provider.CXDYNAMIQ are here to help you connect with your clients at every touchpoint on their favorite application with the help of our approved whats app business api."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "AI-Powered WhatsApp Contact Center Solution"
+    },
+    {
+      "level": 2,
+      "text": "Whatsapp Business Solution"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "AI-Powered WhatsApp Contact Center Solution",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Everything you need to deliver enterprise-grade service levels on this popular messaging app."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/whatsapp-business.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Whatsapp Business Solution",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "70% of WhatsApp users thought that it is the easiest way to connect with the businesses. As your WhatsApp Business Solution Provider.CXDYNAMIQ are here to help you connect with your clients at every touchpoint on their favorite application with the help of our approved whats app business api."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 86
+}

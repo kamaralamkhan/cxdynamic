@@ -1,0 +1,289 @@
+{
+  "slug": "zoho",
+  "path": "/zoho",
+  "encodedPath": "/zoho",
+  "meta": {
+    "title": "Zoho CRM CTI Integration | Zoho Phonebridge | CXDYNAMIQ",
+    "description": "Automate and streamline how agents make and receive calls, texts, and chats from within Zoho. Improve customer satisfaction like never before!",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Zoho CRM CTI Integration | Zoho Phonebridge | CXDYNAMIQ\n",
+    "ogDescription": "Automate and streamline how agents make and receive calls, texts, and chats from within Zoho. Improve customer satisfaction like never before!\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Do more from within Zoho"
+    },
+    {
+      "type": "li",
+      "text": "Automate and streamline how agents make and receive calls, texts, and chats from within Zoho. Transform productivity and customer satisfaction like never before!"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/zoho.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "Zoho CRM CTI Integration"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ works with all Zoho items. We have the most recent Zoho Phonebridge 3 Integration that coordinates across 40+ Zoho Products including Zoho CRM, Zoho Mail, and Zoho Recruit.Zoho is an extremely effective, grant winning, cloud-based Customer Relationship Management (CRM) programming supplier. It's likewise the reliable tech firm behind a not insignificant rundown of in excess of 40 generally utilized web applications. These include project management, invoice applications, wikis, note-taking, databases, spreadsheets, reports, and word handling."
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Do more from within Zoho"
+    },
+    {
+      "level": 2,
+      "text": "Zoho CRM CTI Integration"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Do more from within Zoho",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Automate and streamline how agents make and receive calls, texts, and chats from within Zoho. Transform productivity and customer satisfaction like never before!"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/zoho.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "Zoho CRM CTI Integration",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ works with all Zoho items. We have the most recent Zoho Phonebridge 3 Integration that coordinates across 40+ Zoho Products including Zoho CRM, Zoho Mail, and Zoho Recruit.Zoho is an extremely effective, grant winning, cloud-based Customer Relationship Management (CRM) programming supplier. It's likewise the reliable tech firm behind a not insignificant rundown of in excess of 40 generally utilized web applications. These include project management, invoice applications, wikis, note-taking, databases, spreadsheets, reports, and word handling."
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 125
+}

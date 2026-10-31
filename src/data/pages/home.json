@@ -1,0 +1,752 @@
+{
+  "slug": "home",
+  "path": "/",
+  "encodedPath": "/",
+  "meta": {
+    "title": "Home | CXDYNAMIQ",
+    "description": "Stress-free Contact Center Solutions Ultrafast Implementation with VIP support Deploy a Cloud Contact Center in a day\nand automate it in minutes Try it Now Go live within a day! Seamless Integrations Cut operational costs Experts\navailable 24/7 CXDYNAMIQ Gloabal offers an award-winning, cloud-based, contact center solution.",
+    "keywords": "Cloud Contact Centere, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Home | CXDYNAMIQ\n",
+    "ogDescription": "Stress-free Contact Center Solutions Ultrafast Implementation with VIP support Deploy a Cloud Contact Center in a day\nand automate it in minutes Try it Now Go live within a day! Seamless Integrations Cut operational costs Experts\navailable 24/7 CXDYNAMIQ Gloabal offers an award-winning, cloud-based, contact center solution.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/call-back-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": "Full Name",
+          "required": false
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Address",
+          "required": false
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "phone",
+          "label": "Contact Number",
+          "required": false
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "Select Requirement",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "message",
+          "label": "Enter your message",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "example1",
+          "label": "I agree to the Terms & Conditions of CXDYNAMIQ.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/blog/the-importance-of-a-call-center-for-financial-services",
+    "/category/business",
+    "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+    "/category/Customer%20Experience%20management",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [
+    {
+      "path": "/contact-us",
+      "text": "Try It Now"
+    },
+    {
+      "path": "/category/business",
+      "text": "Business"
+    },
+    {
+      "path": "/blog/the-importance-of-a-call-center-for-financial-services",
+      "text": "June 20, 2022"
+    },
+    {
+      "path": "/blog/the-importance-of-a-call-center-for-financial-services",
+      "text": "The Importance of a Call Center for Financial Services"
+    },
+    {
+      "path": "/category/Customer%20Experience%20management",
+      "text": "CxDynamiq"
+    },
+    {
+      "path": "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+      "text": "December 4, 2025"
+    },
+    {
+      "path": "/blog/revolutionizing-customer-engagement-with-cxdynamiq-s-genai-solutions",
+      "text": "Revolutionizing Customer Engagement with CxDynamiQ's GenAI Solutions"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "p",
+      "text": "STRESS-FREE CONTACT CENTER SOLUTIONS"
+    },
+    {
+      "type": "h1",
+      "text": "Ultrafast Implementation with VIP support"
+    },
+    {
+      "type": "p",
+      "text": "Deploy a Cloud Contact Center in a day and automate it in minutes"
+    },
+    {
+      "type": "cta",
+      "text": "Try It Now",
+      "href": "/contact-us"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/hero-image.png",
+      "alt": "web development"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/about/about-image.png",
+      "alt": "about"
+    },
+    {
+      "type": "h2",
+      "text": "Welcome To CXDYNAMIQ"
+    },
+    {
+      "type": "p",
+      "text": "Build strong connections with your customers across the globe!"
+    },
+    {
+      "type": "p",
+      "text": "At CXDYNAMIQ, we enable you to build a long lasting, trustworthy relationship with your consumers. Our virtual call center ensures to provide an ultimate customer experience. Moreover, we offer flexible CX rich solution that is easy to use and affordable too. Our services include Call Center Solutions, Business Phone System, Sales dialer Solution, CX hub and CTI integrations etc. CXDYNAMIQ provides native integrations with some of the best known Business tools, CRMs & Helpdesks such as Zendesk, Salesforce, Zoho and more."
+    },
+    {
+      "type": "h2",
+      "text": "Why Choose Us?"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/rupee.svg",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Reduce Your Cost"
+    },
+    {
+      "type": "p",
+      "text": "We ensure a significant cost reduction from the day one. Our cost effective solutions deliver a measurable ROI."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/increase.svg",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Industry Experience"
+    },
+    {
+      "type": "p",
+      "text": "Multi Industry exposure is our strength. CXDYNAMIQglobal offers customized solutions and plans to suit businesses of all size."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/team1.svg",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Your Success Is Our Success"
+    },
+    {
+      "type": "p",
+      "text": "Aligning your company goals with your expectations of better solutions will help you choose the right outsourcing partner."
+    },
+    {
+      "type": "h4",
+      "text": "We Assure"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/assurance.svg",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Service Assurance"
+    },
+    {
+      "type": "p",
+      "text": "Our expert professional team will be exclusively serving you with all the goodwill. Our Advanced Business solutions and Services will enable us to have the track of the process with assured results."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/report.svg",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Reports And Analytics"
+    },
+    {
+      "type": "p",
+      "text": "Our prompt Report and analysis has a wide aspect in meeting the customer Requirements. Planning, Script Analysis and Pitching based on the Customers Interaction make us stand in the front line."
+    },
+    {
+      "type": "p",
+      "text": "15+ Products & Solutions"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/supplier.svg",
+      "alt": "img"
+    },
+    {
+      "type": "h6",
+      "text": "Industry Solution"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/call-center-agent.svg",
+      "alt": "img"
+    },
+    {
+      "type": "h6",
+      "text": "Call Centre Solution"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/landline.svg",
+      "alt": "img"
+    },
+    {
+      "type": "h6",
+      "text": "Business Phone System"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/sales-dialer.svg",
+      "alt": "img"
+    },
+    {
+      "type": "h6",
+      "text": "Sales Dialer Solution"
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/process.svg",
+      "alt": "img"
+    },
+    {
+      "type": "h6",
+      "text": "CXDYNAMIQ CX Hub"
+    },
+    {
+      "type": "cta",
+      "text": "Explore Our Products & Services",
+      "href": "#"
+    },
+    {
+      "type": "h2",
+      "text": "Knowledge Centre"
+    },
+    {
+      "type": "p",
+      "text": "A collection of information, expert tips and strategies on contact centers, telephony, service management and more."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/blogimages/1656415062_featured_image.png",
+      "alt": "The Importance of a Call Center for Financial Services"
+    },
+    {
+      "type": "h4",
+      "text": "The Importance of a Call Center for Financial Services"
+    },
+    {
+      "type": "p",
+      "text": "Consumers have lots of options for banking and other financial services, and a financial services call center streamlines sales and support operations...."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/blogimages/1764844525_featured_image.png",
+      "alt": "Revolutionizing Customer Engagement with CxDynamiQ's GenAI Solutions"
+    },
+    {
+      "type": "h4",
+      "text": "Revolutionizing Customer Engagement with CxDynamiQ's GenAI Solutions"
+    },
+    {
+      "type": "p",
+      "text": "Enhancing Customer Service with GenAI..."
+    },
+    {
+      "type": "h2",
+      "text": "Have Question?Get a Callback Now."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/about/hellopic.png",
+      "alt": "enquire"
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Ultrafast Implementation with VIP support"
+    },
+    {
+      "level": 2,
+      "text": "Welcome To CXDYNAMIQ"
+    },
+    {
+      "level": 2,
+      "text": "Why Choose Us?"
+    },
+    {
+      "level": 4,
+      "text": "Reduce Your Cost"
+    },
+    {
+      "level": 4,
+      "text": "Industry Experience"
+    },
+    {
+      "level": 4,
+      "text": "Your Success Is Our Success"
+    },
+    {
+      "level": 4,
+      "text": "We Assure"
+    },
+    {
+      "level": 4,
+      "text": "Service Assurance"
+    },
+    {
+      "level": 4,
+      "text": "Reports And Analytics"
+    },
+    {
+      "level": 6,
+      "text": "Industry Solution"
+    },
+    {
+      "level": 6,
+      "text": "Call Centre Solution"
+    },
+    {
+      "level": 6,
+      "text": "Business Phone System"
+    },
+    {
+      "level": 6,
+      "text": "Sales Dialer Solution"
+    },
+    {
+      "level": 6,
+      "text": "CXDYNAMIQ CX Hub"
+    },
+    {
+      "level": 2,
+      "text": "Knowledge Centre"
+    },
+    {
+      "level": 4,
+      "text": "The Importance of a Call Center for Financial Services"
+    },
+    {
+      "level": 4,
+      "text": "Revolutionizing Customer Engagement with CxDynamiQ's GenAI Solutions"
+    },
+    {
+      "level": 2,
+      "text": "Have Question?Get a Callback Now."
+    }
+  ],
+  "sections": [
+    {
+      "heading": null,
+      "level": 0,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "STRESS-FREE CONTACT CENTER SOLUTIONS"
+        }
+      ]
+    },
+    {
+      "heading": "Ultrafast Implementation with VIP support",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Deploy a Cloud Contact Center in a day and automate it in minutes"
+        },
+        {
+          "type": "cta",
+          "text": "Try It Now",
+          "href": "/contact-us"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/hero-image.png",
+          "alt": "web development"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/about/about-image.png",
+          "alt": "about"
+        }
+      ]
+    },
+    {
+      "heading": "Welcome To CXDYNAMIQ",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Build strong connections with your customers across the globe!"
+        },
+        {
+          "type": "p",
+          "text": "At CXDYNAMIQ, we enable you to build a long lasting, trustworthy relationship with your consumers. Our virtual call center ensures to provide an ultimate customer experience. Moreover, we offer flexible CX rich solution that is easy to use and affordable too. Our services include Call Center Solutions, Business Phone System, Sales dialer Solution, CX hub and CTI integrations etc. CXDYNAMIQ provides native integrations with some of the best known Business tools, CRMs & Helpdesks such as Zendesk, Salesforce, Zoho and more."
+        }
+      ]
+    },
+    {
+      "heading": "Why Choose Us?",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/rupee.svg",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Reduce Your Cost"
+        },
+        {
+          "type": "p",
+          "text": "We ensure a significant cost reduction from the day one. Our cost effective solutions deliver a measurable ROI."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/increase.svg",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Industry Experience"
+        },
+        {
+          "type": "p",
+          "text": "Multi Industry exposure is our strength. CXDYNAMIQglobal offers customized solutions and plans to suit businesses of all size."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/team1.svg",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Your Success Is Our Success"
+        },
+        {
+          "type": "p",
+          "text": "Aligning your company goals with your expectations of better solutions will help you choose the right outsourcing partner."
+        },
+        {
+          "type": "h4",
+          "text": "We Assure"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/assurance.svg",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Service Assurance"
+        },
+        {
+          "type": "p",
+          "text": "Our expert professional team will be exclusively serving you with all the goodwill. Our Advanced Business solutions and Services will enable us to have the track of the process with assured results."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/report.svg",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Reports And Analytics"
+        },
+        {
+          "type": "p",
+          "text": "Our prompt Report and analysis has a wide aspect in meeting the customer Requirements. Planning, Script Analysis and Pitching based on the Customers Interaction make us stand in the front line."
+        },
+        {
+          "type": "p",
+          "text": "15+ Products & Solutions"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/supplier.svg",
+          "alt": "img"
+        },
+        {
+          "type": "h6",
+          "text": "Industry Solution"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/call-center-agent.svg",
+          "alt": "img"
+        },
+        {
+          "type": "h6",
+          "text": "Call Centre Solution"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/landline.svg",
+          "alt": "img"
+        },
+        {
+          "type": "h6",
+          "text": "Business Phone System"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/sales-dialer.svg",
+          "alt": "img"
+        },
+        {
+          "type": "h6",
+          "text": "Sales Dialer Solution"
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/process.svg",
+          "alt": "img"
+        },
+        {
+          "type": "h6",
+          "text": "CXDYNAMIQ CX Hub"
+        },
+        {
+          "type": "cta",
+          "text": "Explore Our Products & Services",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "heading": "Knowledge Centre",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "A collection of information, expert tips and strategies on contact centers, telephony, service management and more."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/blogimages/1656415062_featured_image.png",
+          "alt": "The Importance of a Call Center for Financial Services"
+        },
+        {
+          "type": "h4",
+          "text": "The Importance of a Call Center for Financial Services"
+        },
+        {
+          "type": "p",
+          "text": "Consumers have lots of options for banking and other financial services, and a financial services call center streamlines sales and support operations...."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/blogimages/1764844525_featured_image.png",
+          "alt": "Revolutionizing Customer Engagement with CxDynamiQ's GenAI Solutions"
+        },
+        {
+          "type": "h4",
+          "text": "Revolutionizing Customer Engagement with CxDynamiQ's GenAI Solutions"
+        },
+        {
+          "type": "p",
+          "text": "Enhancing Customer Service with GenAI..."
+        }
+      ]
+    },
+    {
+      "heading": "Have Question?Get a Callback Now.",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/about/hellopic.png",
+          "alt": "enquire"
+        }
+      ]
+    }
+  ],
+  "wordCount": 344
+}

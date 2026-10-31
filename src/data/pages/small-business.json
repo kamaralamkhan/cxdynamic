@@ -1,0 +1,515 @@
+{
+  "slug": "small-business",
+  "path": "/small-business",
+  "encodedPath": "/small-business",
+  "meta": {
+    "title": "Small Business Call Center Software | CXDYNAMIQ",
+    "description": "CXDYNAMIQ offers one of the best call center software solutions for education services in the world for greater operations efficiency and superior workflows, voicemail detection and compliance support.",
+    "keywords": "Cloud Contact Centre, Call Centre, Online Call Centre Solution, Industry Solutions.",
+    "canonical": "",
+    "robots": "",
+    "ogTitle": "Small Business Call Center Software | CXDYNAMIQ\n",
+    "ogDescription": "CXDYNAMIQ offers one of the best call center software solutions for education services in the world for greater operations efficiency and superior workflows, voicemail detection and compliance support.\n",
+    "ogImage": "https://www.cxdynamiq.com/images/favicon.png\n",
+    "lang": "en"
+  },
+  "jsonLd": [],
+  "forms": [
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/quote-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "name",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "tel",
+          "name": "phone",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "select",
+          "type": "",
+          "name": "requirement",
+          "label": "requirement",
+          "required": true,
+          "options": [
+            "",
+            "Industry Solution",
+            "Call Centre Solution",
+            "Business Phone System",
+            "Sales Dialer Solution",
+            "CXDYNAMIQ CX Hub"
+          ]
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "location",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "whatsapp",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "textarea",
+          "type": "",
+          "name": "brief",
+          "label": " ",
+          "required": true
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "agree",
+          "label": "By clicking the “Submit” button you agree to our Terms & Conditions.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "action": "https://www.cxdynamiq.com/newsletter-request",
+      "method": "post",
+      "fields": [
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "email",
+          "label": "Email Your Address",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "contacts": {
+    "emails": [
+      "info@cxdynamiq.com",
+      "sales@cxdynamiq.com"
+    ],
+    "phones": [
+      "+9188464868095",
+      "+639060986036"
+    ]
+  },
+  "allLinks": [
+    "/",
+    "/about-us",
+    "/enterprise",
+    "/bpo",
+    "/education",
+    "/small-business",
+    "/inbound-calling",
+    "/outbound-calling",
+    "/blended-call-centre",
+    "/cti-integrations",
+    "/auto-attendant",
+    "/contact-manager",
+    "/click-to-call",
+    "/auto-dialer",
+    "/crm-integrations",
+    "/omnichannel-routing",
+    "/conversational-ai",
+    "/speech-analytics",
+    "/zoho",
+    "/zendesk",
+    "/salesforce",
+    "/freshdesk",
+    "/hubspot",
+    "/whatsapp-business",
+    "/intercom-integration",
+    "/who-we-are",
+    "/power-dialer",
+    "/predictive-dialer",
+    "/ivr",
+    "/acd",
+    "/blogs",
+    "/contact-us",
+    "/terms",
+    "/privacy-policy",
+    "/page/Customer%20Experience%20management"
+  ],
+  "links": [],
+  "blocks": [
+    {
+      "type": "h1",
+      "text": "Facilitate growth using Small Business Call Center Software"
+    },
+    {
+      "type": "li",
+      "text": "Match your current call center needs with software that offers expansion as your small business grows."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/hero/small-business.png",
+      "alt": "img"
+    },
+    {
+      "type": "h2",
+      "text": "A central call center for all of your small business communications"
+    },
+    {
+      "type": "p",
+      "text": "Eliminate the need for excessive hardware setups and instead manage all of your calls and messages from a central location."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/inbound.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Inbound Support Solution"
+    },
+    {
+      "type": "p",
+      "text": "Our business phone system offers advanced call routing that efficiently distributes inbound calls amongst your staff. Your teams can answer from anywhere while you can supervise and monitor them with ease. You’ll gain access to cutting-edge technology and customization options that make it easy for you to run and scale support operations without any help from an IT team."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/outbound.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Outbound Sales"
+    },
+    {
+      "type": "p",
+      "text": "An all-in-one solution that helps you improve outbound service and sales, ensuring efficiency even with smaller teams. Use local numbers to triple your telemarketing answer rates. Use automation to call inbound leads within minutes. And track key metrics that help you continuously improve operations."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/dashboard.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Consolidated Dashboards"
+    },
+    {
+      "type": "p",
+      "text": "Did you know that small business call centers are nearly 30% less efficient because agents find it difficult to access customer information? CXDYNAMIQ seamlessly integrates with almost any CRM, including homegrown ones, to ensure that agents automatically view customer data on every inbound and outbound call."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/translation.png",
+      "alt": "icon"
+    },
+    {
+      "type": "h4",
+      "text": "Call Transcriptions"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ offers advanced call monitoring tools to improve training, compliance, and call center performance. This includes call recording, live call monitoring, 70+ performance reports, and advanced options such as automated call transcriptions."
+    },
+    {
+      "type": "cta",
+      "text": "Get Started",
+      "href": "#contact"
+    },
+    {
+      "type": "h2",
+      "text": "Grow your small business with CXDYNAMIQ"
+    },
+    {
+      "type": "p",
+      "text": "Here is why CXDYNAMIQ is uniquely placed to serve growing business needs."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/growth.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Easily scale your business"
+    },
+    {
+      "type": "p",
+      "text": "Add and remove someone from your team or CRM seamlessly. So you can expand your platform and team effortlessly to meet your activity levels.Our flexible, monthly, pay-as-you-go pricing makes it easy for you to scale up or downsize anytime. And our international presence with local phone number availability across 160+ countries ensures that we can support your expansion plans across the country or world. With CXDYNAMIQ, you get enterprise-grade features right from the start, and you can add more AI-based capabilities as and when you need them."
+    },
+    {
+      "type": "img",
+      "src": "https://www.cxdynamiq.com/images/icons/customer-satisfaction.svg",
+      "alt": "service"
+    },
+    {
+      "type": "h4",
+      "text": "Optimize customer experience with the CXDYNAMIQ CX Hub"
+    },
+    {
+      "type": "p",
+      "text": "Build the seamless, fast, personalized communications your modern customer craves.CXDYNAMIQ CX hub is the easiest way for small businesses to explore omnichannel capabilities. Our unified platform enables you to use the same teams to handle calls, chats, and social media. This makes it easy for you to explore and scale new digital channels without any heavy investments or team-building efforts. Moreover, our in-built contact manager for small businesses helps you ensure a consistent customer experience even before you’re ready to invest in a CRM. And our chatbots can ensure high efficiency and low cost of operations while giving customers the 24 x 7 availability and fast responses they crave."
+    },
+    {
+      "type": "h2",
+      "text": "CXDYNAMIQ call center features for small business"
+    },
+    {
+      "type": "p",
+      "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+    }
+  ],
+  "headings": [
+    {
+      "level": 1,
+      "text": "Facilitate growth using Small Business Call Center Software"
+    },
+    {
+      "level": 2,
+      "text": "A central call center for all of your small business communications"
+    },
+    {
+      "level": 4,
+      "text": "Inbound Support Solution"
+    },
+    {
+      "level": 4,
+      "text": "Outbound Sales"
+    },
+    {
+      "level": 4,
+      "text": "Consolidated Dashboards"
+    },
+    {
+      "level": 4,
+      "text": "Call Transcriptions"
+    },
+    {
+      "level": 2,
+      "text": "Grow your small business with CXDYNAMIQ"
+    },
+    {
+      "level": 4,
+      "text": "Easily scale your business"
+    },
+    {
+      "level": 4,
+      "text": "Optimize customer experience with the CXDYNAMIQ CX Hub"
+    },
+    {
+      "level": 2,
+      "text": "CXDYNAMIQ call center features for small business"
+    }
+  ],
+  "sections": [
+    {
+      "heading": "Facilitate growth using Small Business Call Center Software",
+      "level": 1,
+      "blocks": [
+        {
+          "type": "li",
+          "text": "Match your current call center needs with software that offers expansion as your small business grows."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/hero/small-business.png",
+          "alt": "img"
+        }
+      ]
+    },
+    {
+      "heading": "A central call center for all of your small business communications",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Eliminate the need for excessive hardware setups and instead manage all of your calls and messages from a central location."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/inbound.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Inbound Support Solution"
+        },
+        {
+          "type": "p",
+          "text": "Our business phone system offers advanced call routing that efficiently distributes inbound calls amongst your staff. Your teams can answer from anywhere while you can supervise and monitor them with ease. You’ll gain access to cutting-edge technology and customization options that make it easy for you to run and scale support operations without any help from an IT team."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/outbound.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Outbound Sales"
+        },
+        {
+          "type": "p",
+          "text": "An all-in-one solution that helps you improve outbound service and sales, ensuring efficiency even with smaller teams. Use local numbers to triple your telemarketing answer rates. Use automation to call inbound leads within minutes. And track key metrics that help you continuously improve operations."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/dashboard.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Consolidated Dashboards"
+        },
+        {
+          "type": "p",
+          "text": "Did you know that small business call centers are nearly 30% less efficient because agents find it difficult to access customer information? CXDYNAMIQ seamlessly integrates with almost any CRM, including homegrown ones, to ensure that agents automatically view customer data on every inbound and outbound call."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/translation.png",
+          "alt": "icon"
+        },
+        {
+          "type": "h4",
+          "text": "Call Transcriptions"
+        },
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ offers advanced call monitoring tools to improve training, compliance, and call center performance. This includes call recording, live call monitoring, 70+ performance reports, and advanced options such as automated call transcriptions."
+        },
+        {
+          "type": "cta",
+          "text": "Get Started",
+          "href": "#contact"
+        }
+      ]
+    },
+    {
+      "heading": "Grow your small business with CXDYNAMIQ",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Here is why CXDYNAMIQ is uniquely placed to serve growing business needs."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/growth.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Easily scale your business"
+        },
+        {
+          "type": "p",
+          "text": "Add and remove someone from your team or CRM seamlessly. So you can expand your platform and team effortlessly to meet your activity levels.Our flexible, monthly, pay-as-you-go pricing makes it easy for you to scale up or downsize anytime. And our international presence with local phone number availability across 160+ countries ensures that we can support your expansion plans across the country or world. With CXDYNAMIQ, you get enterprise-grade features right from the start, and you can add more AI-based capabilities as and when you need them."
+        },
+        {
+          "type": "img",
+          "src": "https://www.cxdynamiq.com/images/icons/customer-satisfaction.svg",
+          "alt": "service"
+        },
+        {
+          "type": "h4",
+          "text": "Optimize customer experience with the CXDYNAMIQ CX Hub"
+        },
+        {
+          "type": "p",
+          "text": "Build the seamless, fast, personalized communications your modern customer craves.CXDYNAMIQ CX hub is the easiest way for small businesses to explore omnichannel capabilities. Our unified platform enables you to use the same teams to handle calls, chats, and social media. This makes it easy for you to explore and scale new digital channels without any heavy investments or team-building efforts. Moreover, our in-built contact manager for small businesses helps you ensure a consistent customer experience even before you’re ready to invest in a CRM. And our chatbots can ensure high efficiency and low cost of operations while giving customers the 24 x 7 availability and fast responses they crave."
+        }
+      ]
+    },
+    {
+      "heading": "CXDYNAMIQ call center features for small business",
+      "level": 2,
+      "blocks": [
+        {
+          "type": "p",
+          "text": "CXDYNAMIQ Auto dialers come packed with every tool and feature you need to run a successful outbound campaign."
+        }
+      ]
+    }
+  ],
+  "wordCount": 498
+}
