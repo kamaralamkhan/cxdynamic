@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Deploy an enterprise cloud contact center in 1 business day with VIP engineering support. Blended inbound/outbound calling, intelligent IVR, native CRM screen pops, and real-time speech analytics.",
   url: "https://www.cxdynamiq.com",
-  
+
   // Canonical contact information
   phones: {
     primary: "+91 88464 68095",
