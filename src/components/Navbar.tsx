@@ -24,7 +24,18 @@ import {
   Headphones,
   Bot,
   Zap,
-  Globe2
+  Globe2,
+  GraduationCap,
+  Store,
+  PhoneForwarded,
+  Users,
+  BarChart3,
+  Activity,
+  Mic,
+  MessageCircle,
+  HelpCircle,
+  Radio,
+  FileText
 } from "lucide-react";
 
 interface NavbarProps {
@@ -223,37 +234,46 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                           <Link 
                             href="/conversational-ai" 
                             onClick={closeAll} 
-                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                            className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
-                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                              Conversational AI
-                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                            </span>
-                            <span className="text-[11px] text-slate-600 mt-0.5">Autonomous speech &amp; chat voicebots</span>
+                            <Bot className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
+                            <div className="flex-1">
+                              <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                                Conversational AI
+                                <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                              </span>
+                              <span className="text-[11px] text-slate-600 mt-0.5 block">Autonomous speech &amp; chat voicebots</span>
+                            </div>
                           </Link>
 
                           <Link 
                             href="/omnichannel-routing" 
                             onClick={closeAll} 
-                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                            className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
-                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                              Omnichannel Routing
-                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                            </span>
-                            <span className="text-[11px] text-slate-600 mt-0.5">Unified voice, SMS &amp; WhatsApp queue</span>
+                            <Shuffle className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
+                            <div className="flex-1">
+                              <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                                Omnichannel Routing
+                                <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                              </span>
+                              <span className="text-[11px] text-slate-600 mt-0.5 block">Unified voice, SMS &amp; WhatsApp queue</span>
+                            </div>
                           </Link>
 
                           <Link 
                             href="/speech-analytics" 
                             onClick={closeAll} 
-                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                            className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
-                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                              Speech Analytics
-                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                            </span>
-                            <span className="text-[11px] text-slate-600 mt-0.5">Real-time sentiment &amp; QA audits</span>
+                            <Activity className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
+                            <div className="flex-1">
+                              <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                                Speech Analytics
+                                <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                              </span>
+                              <span className="text-[11px] text-slate-600 mt-0.5 block">Real-time sentiment &amp; QA audits</span>
+                            </div>
                           </Link>
                         </div>
                       </div>
@@ -277,22 +297,34 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                         <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
                           <span>Industry</span>
                         </div>
-                        <div className="space-y-0.5">
-                          <Link href="/enterprise" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Enterprise</span>
-                            <span className="text-[11px] text-slate-500 block">High-volume ops</span>
+                        <div className="space-y-1">
+                          <Link href="/enterprise" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Building2 className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Enterprise</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">High-volume ops</span>
+                            </div>
                           </Link>
-                          <Link href="/bpo" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">BPO Solutions</span>
-                            <span className="text-[11px] text-slate-500 block">Multi-tenant pacing</span>
+                          <Link href="/bpo" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Headphones className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">BPO Solutions</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Multi-tenant pacing</span>
+                            </div>
                           </Link>
-                          <Link href="/education" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Education</span>
-                            <span className="text-[11px] text-slate-500 block">Admissions outreach</span>
+                          <Link href="/education" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <GraduationCap className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Education</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Admissions outreach</span>
+                            </div>
                           </Link>
-                          <Link href="/small-business" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Small Business</span>
-                            <span className="text-[11px] text-slate-500 block">Virtual phone setup</span>
+                          <Link href="/small-business" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Store className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Small Business</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Virtual phone setup</span>
+                            </div>
                           </Link>
                         </div>
                       </div>
@@ -302,22 +334,34 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                         <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
                           <span>Call Centre</span>
                         </div>
-                        <div className="space-y-0.5">
-                          <Link href="/inbound-calling" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Inbound Calling</span>
-                            <span className="text-[11px] text-slate-500 block">Intelligent ACD</span>
+                        <div className="space-y-1">
+                          <Link href="/inbound-calling" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <PhoneCall className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Inbound Calling</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Intelligent ACD</span>
+                            </div>
                           </Link>
-                          <Link href="/outbound-calling" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Outbound Calling</span>
-                            <span className="text-[11px] text-slate-500 block">High connect rates</span>
+                          <Link href="/outbound-calling" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <PhoneOutgoing className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Outbound Calling</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">High connect rates</span>
+                            </div>
                           </Link>
-                          <Link href="/blended-call-centre" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Blended Centre</span>
-                            <span className="text-[11px] text-slate-500 block">Unified 2-way handling</span>
+                          <Link href="/blended-call-centre" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Shuffle className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Blended Centre</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Unified 2-way handling</span>
+                            </div>
                           </Link>
-                          <Link href="/cti-integrations" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">CTI Integrations</span>
-                            <span className="text-[11px] text-slate-500 block">CRM screen pops</span>
+                          <Link href="/cti-integrations" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Cpu className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">CTI Integrations</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">CRM screen pops</span>
+                            </div>
                           </Link>
                         </div>
                       </div>
@@ -327,14 +371,27 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                         <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
                           <span>Phone System</span>
                         </div>
-                        <div className="space-y-0.5">
-                          <Link href="/auto-attendant" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Auto Attendant</span>
-                            <span className="text-[11px] text-slate-500 block">24/7 Smart IVR</span>
+                        <div className="space-y-1">
+                          <Link href="/auto-attendant" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Bot className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Auto Attendant</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">24/7 Smart IVR</span>
+                            </div>
                           </Link>
-                          <Link href="/contact-manager" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Contact Manager</span>
-                            <span className="text-[11px] text-slate-500 block">Unified caller logs</span>
+                          <Link href="/contact-manager" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Users className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Contact Manager</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Unified caller logs</span>
+                            </div>
+                          </Link>
+                          <Link href="/ivr" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Phone className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">IVR Menus</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Multi-tier flow builder</span>
+                            </div>
                           </Link>
                         </div>
                       </div>
@@ -344,18 +401,27 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                         <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
                           <span>Sales Dialers</span>
                         </div>
-                        <div className="space-y-0.5">
-                          <Link href="/click-to-call" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Click to Call</span>
-                            <span className="text-[11px] text-slate-500 block">1-click web dialing</span>
+                        <div className="space-y-1">
+                          <Link href="/click-to-call" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <PhoneForwarded className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Click to Call</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">1-click web dialing</span>
+                            </div>
                           </Link>
-                          <Link href="/auto-dialer" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Auto Dialer</span>
-                            <span className="text-[11px] text-slate-500 block">Smart list pacing</span>
+                          <Link href="/auto-dialer" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Zap className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Auto Dialer</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Smart list pacing</span>
+                            </div>
                           </Link>
-                          <Link href="/crm-integrations" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">CRM Integrations</span>
-                            <span className="text-[11px] text-slate-500 block">Salesforce, Zoho, Hub</span>
+                          <Link href="/crm-integrations" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Layers className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">CRM Integrations</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Salesforce, Zoho, Hub</span>
+                            </div>
                           </Link>
                         </div>
                       </div>
@@ -429,26 +495,41 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                         <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
                           <span>CRM &amp; CTI</span>
                         </div>
-                        <div className="space-y-0.5">
-                          <Link href="/zoho" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Zoho CRM</span>
-                            <span className="text-[11px] text-slate-500 block">PhoneBridge 1-click CTI</span>
+                        <div className="space-y-1">
+                          <Link href="/zoho" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Layers className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Zoho CRM</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">PhoneBridge 1-click CTI</span>
+                            </div>
                           </Link>
-                          <Link href="/zendesk" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Zendesk</span>
-                            <span className="text-[11px] text-slate-500 block">Live ticket sync &amp; pop</span>
+                          <Link href="/zendesk" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Headphones className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Zendesk</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Live ticket sync &amp; pop</span>
+                            </div>
                           </Link>
-                          <Link href="/salesforce" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Salesforce</span>
-                            <span className="text-[11px] text-slate-500 block">Omni-channel softphone</span>
+                          <Link href="/salesforce" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <ShieldCheck className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Salesforce</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Omni-channel softphone</span>
+                            </div>
                           </Link>
-                          <Link href="/freshdesk" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Freshdesk</span>
-                            <span className="text-[11px] text-slate-500 block">Instant call logging</span>
+                          <Link href="/freshdesk" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <HelpCircle className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Freshdesk</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Instant call logging</span>
+                            </div>
                           </Link>
-                          <Link href="/hubspot" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">HubSpot</span>
-                            <span className="text-[11px] text-slate-500 block">Auto contact timeline</span>
+                          <Link href="/hubspot" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Activity className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">HubSpot</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Auto contact timeline</span>
+                            </div>
                           </Link>
                         </div>
                       </div>
@@ -458,14 +539,20 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                         <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
                           <span>Digital Channels</span>
                         </div>
-                        <div className="space-y-0.5">
-                          <Link href="/whatsapp-business" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">WhatsApp Business</span>
-                            <span className="text-[11px] text-slate-500 block">Official Meta messaging</span>
+                        <div className="space-y-1">
+                          <Link href="/whatsapp-business" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <MessageCircle className="w-3.5 h-3.5 text-[#25D366] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">WhatsApp Business</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Official Meta messaging</span>
+                            </div>
                           </Link>
-                          <Link href="/intercom-integration" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Intercom</span>
-                            <span className="text-[11px] text-slate-500 block">Live chat &amp; agent routing</span>
+                          <Link href="/intercom-integration" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <MessageSquare className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Intercom</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Live chat &amp; agent routing</span>
+                            </div>
                           </Link>
                         </div>
                       </div>
@@ -475,26 +562,41 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                         <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
                           <span>Core Telephony</span>
                         </div>
-                        <div className="space-y-0.5">
-                          <Link href="/auto-dialer" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Auto Dialer</span>
-                            <span className="text-[11px] text-slate-500 block">Paced agent outreach</span>
+                        <div className="space-y-1">
+                          <Link href="/auto-dialer" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Zap className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Auto Dialer</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Paced agent outreach</span>
+                            </div>
                           </Link>
-                          <Link href="/power-dialer" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Power Dialer</span>
-                            <span className="text-[11px] text-slate-500 block">Sequential campaign list</span>
+                          <Link href="/power-dialer" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <PhoneForwarded className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Power Dialer</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Sequential campaign list</span>
+                            </div>
                           </Link>
-                          <Link href="/predictive-dialer" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Predictive Dialer</span>
-                            <span className="text-[11px] text-slate-500 block">Zero idle algorithm</span>
+                          <Link href="/predictive-dialer" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Flame className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">Predictive Dialer</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Zero idle algorithm</span>
+                            </div>
                           </Link>
-                          <Link href="/ivr" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">IVR (Voice Menus)</span>
-                            <span className="text-[11px] text-slate-500 block">Multi-tier self-service</span>
+                          <Link href="/ivr" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <PhoneCall className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">IVR (Voice Menus)</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Multi-tier self-service</span>
+                            </div>
                           </Link>
-                          <Link href="/acd" onClick={closeAll} className="group/item block p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">ACD (Distribution)</span>
-                            <span className="text-[11px] text-slate-500 block">Skill &amp; queue routing</span>
+                          <Link href="/acd" onClick={closeAll} className="group/item flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-50 transition-colors">
+                            <Shuffle className="w-3.5 h-3.5 text-slate-400 group-hover/item:text-[#069bd8] shrink-0 mt-0.5 transition-colors" />
+                            <div>
+                              <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#069bd8] block">ACD (Distribution)</span>
+                              <span className="text-[10px] text-slate-500 block leading-tight">Skill &amp; queue routing</span>
+                            </div>
                           </Link>
                         </div>
                       </div>
@@ -518,37 +620,46 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                           <Link 
                             href="/who-we-are" 
                             onClick={closeAll} 
-                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                            className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
-                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                              Who We Are
-                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                            </span>
-                            <span className="text-[11px] text-slate-600 mt-0.5">Telephony heritage &amp; leadership</span>
+                            <Compass className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
+                            <div className="flex-1">
+                              <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                                Who We Are
+                                <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                              </span>
+                              <span className="text-[11px] text-slate-600 mt-0.5 block">Telephony heritage &amp; leadership</span>
+                            </div>
                           </Link>
 
                           <Link 
                             href="/about-us" 
                             onClick={closeAll} 
-                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                            className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
-                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                              About Us
-                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                            </span>
-                            <span className="text-[11px] text-slate-600 mt-0.5">Global carrier-grade infrastructure</span>
+                            <Building2 className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
+                            <div className="flex-1">
+                              <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                                About Us
+                                <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                              </span>
+                              <span className="text-[11px] text-slate-600 mt-0.5 block">Global carrier-grade infrastructure</span>
+                            </div>
                           </Link>
 
                           <Link 
                             href="/page/Customer Experience management" 
                             onClick={closeAll} 
-                            className="group/item flex flex-col p-2.5 rounded-lg hover:bg-white transition-all shadow-2xs"
+                            className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
-                            <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
-                              Collection Management
-                              <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
-                            </span>
-                            <span className="text-[11px] text-slate-600 mt-0.5">FinTech &amp; debt recovery dialers</span>
+                            <ShieldCheck className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
+                            <div className="flex-1">
+                              <span className="text-[13px] font-bold text-slate-800 group-hover/item:text-[#069bd8] transition-colors flex items-center justify-between">
+                                Collection Management
+                                <ArrowRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 text-[#069bd8] transition-all" />
+                              </span>
+                              <span className="text-[11px] text-slate-600 mt-0.5 block">FinTech &amp; debt recovery dialers</span>
+                            </div>
                           </Link>
                         </div>
                       </div>
