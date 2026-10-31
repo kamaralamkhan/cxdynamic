@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import CalmHero from "@/components/CalmHero";
 import ProofAndMarquee from "@/components/ProofAndMarquee";
+import BusinessChallengesSection from "@/components/BusinessChallengesSection";
 import AboutSection from "@/components/AboutSection";
 import ProductsBento from "@/components/ProductsBento";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -65,7 +66,10 @@ export default function Home() {
       {/* 3. Proof Strip & Integrations Infinite Marquee */}
       <ProofAndMarquee />
 
-      {/* 4. About CXDYNAMIQ */}
+      {/* 4. Solve Real Business Challenges (Sales, Support, Collection) - Convin Inspired */}
+      <BusinessChallengesSection />
+
+      {/* 5. About CXDYNAMIQ */}
       <AboutSection />
 
       {/* 5. Products Bento Grid */}
