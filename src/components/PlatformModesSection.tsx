@@ -184,7 +184,17 @@ export default function PlatformModesSection() {
       if (!containerRef.current) return;
 
       const viewportHeight = window.innerHeight;
-      const viewportCenter = window.scrollY + viewportHeight * 0.45;
+      const triggerPoint = viewportHeight * 0.45;
+      const containerRect = containerRef.current.getBoundingClientRect();
+
+      // If user hasn't reached the platform modes section yet, stay on Tier 1
+      if (containerRect.top > triggerPoint) {
+        setProgressFills([0, 0, 0]);
+        if (!isManualScroll) {
+          setActiveModeIdx(0);
+        }
+        return;
+      }
 
       const newFills: number[] = [0, 0, 0];
       let currentActive = 0;
@@ -192,24 +202,29 @@ export default function PlatformModesSection() {
       sectionRefs.current.forEach((el, index) => {
         if (!el) return;
         const rect = el.getBoundingClientRect();
-        const elementTop = rect.top + window.scrollY;
-        const elementHeight = rect.height;
 
-        // Progress calculation through section runway
-        const scrolledIntoSection = window.scrollY + viewportHeight * 0.35 - elementTop;
-        const sectionProgress = Math.min(Math.max((scrolledIntoSection / (elementHeight * 0.8)) * 100, 0), 100);
-
-        newFills[index] = Math.round(sectionProgress);
-
-        // Check if viewport center is inside this section
-        if (viewportCenter >= elementTop && viewportCenter < elementTop + elementHeight) {
+        // When the top of this section reaches the trigger point, set it active
+        if (rect.top <= triggerPoint) {
           currentActive = index;
+        }
+
+        // Progress fill calculation
+        if (rect.top > triggerPoint) {
+          newFills[index] = 0;
+        } else if (rect.bottom < triggerPoint) {
+          newFills[index] = 100;
+        } else {
+          const progress = ((triggerPoint - rect.top) / rect.height) * 100;
+          newFills[index] = Math.min(Math.max(Math.round(progress), 0), 100);
         }
       });
 
-      // If past the last section, clamp
-      if (window.scrollY > (sectionRefs.current[2]?.offsetTop || 0) + (sectionRefs.current[2]?.offsetHeight || 0) * 0.5) {
+      // If user scrolled completely past this container, clamp to Tier 3
+      if (containerRect.bottom < triggerPoint) {
         currentActive = 2;
+        newFills[0] = 100;
+        newFills[1] = 100;
+        newFills[2] = 100;
       }
 
       setProgressFills(newFills);
@@ -232,7 +247,7 @@ export default function PlatformModesSection() {
 
     const targetEl = sectionRefs.current[index];
     if (targetEl) {
-      const headerOffset = 90;
+      const headerOffset = 100;
       const elementPosition = targetEl.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
@@ -244,7 +259,7 @@ export default function PlatformModesSection() {
 
     setTimeout(() => {
       setIsManualScroll(false);
-    }, 800);
+    }, 1000);
   };
 
   const activeMode = MODES[activeModeIdx] || MODES[0];
@@ -614,3 +629,4 @@ export default function PlatformModesSection() {
     </section>
   );
 }
+
