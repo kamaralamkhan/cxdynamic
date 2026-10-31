@@ -38,7 +38,8 @@ export default function CallbackSection() {
   };
 
   return (
-    <section id="callback-section" className="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-white/10">
+    <section id="contact" className="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-white/10 scroll-mt-12">
+      <div id="callback-section" className="sr-only" aria-hidden="true" />
       {/* Slow-drifting low-contrast gradient navy -> slate-900 */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 opacity-90 pointer-events-none" />
 

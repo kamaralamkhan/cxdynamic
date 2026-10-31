@@ -105,7 +105,8 @@ export default function WhyChooseUs() {
       </noscript>
 
       {/* 1. Why Choose Us (Clean White Background) */}
-      <section className="py-24 bg-white border-b border-slate-200">
+      <section id="why-cxdynamiq" className="py-24 bg-white border-b border-slate-200 scroll-mt-12">
+        <div id="features" className="sr-only" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}

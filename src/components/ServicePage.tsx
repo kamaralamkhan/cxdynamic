@@ -120,7 +120,7 @@ export default function ServicePage({ page }: ServicePageProps) {
       </nav>
 
       {/* 2. Hero Section: Exactly ONE H1, Value Statement, CTAs */}
-      <section className="bg-white border-b border-slate-200 pt-12 pb-16 lg:pt-16 lg:pb-20">
+      <section id="home" className="bg-white border-b border-slate-200 pt-12 pb-16 lg:pt-16 lg:pb-20 scroll-mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-cyan-700 border border-sky-100 text-xs font-bold uppercase tracking-wider">
@@ -199,7 +199,8 @@ export default function ServicePage({ page }: ServicePageProps) {
       </section>
 
       {/* 5. Key Features (H2) */}
-      <section className="py-20 bg-white border-b border-slate-200">
+      <section id="services" className="py-20 bg-white border-b border-slate-200 scroll-mt-12">
+        <div id="features" className="sr-only" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="max-w-2xl space-y-2">
             <span className="text-xs font-semibold uppercase tracking-wider text-cyan-700">
@@ -474,8 +475,9 @@ export default function ServicePage({ page }: ServicePageProps) {
         </div>
       </section>
 
-      {/* 11. Request a Quote / Free-Trial Form (id="quote-form") */}
-      <section id="quote-form" className="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-white/10">
+      {/* 11. Request a Quote / Free-Trial Form (id="contact" & id="quote-form") */}
+      <section id="contact" className="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-white/10 scroll-mt-12">
+        <div id="quote-form" className="sr-only" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             

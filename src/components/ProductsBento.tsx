@@ -95,7 +95,8 @@ export default function ProductsBento() {
   }, [isInView]);
 
   return (
-    <section ref={containerRef} id="products-bento" className="py-24 bg-slate-50 border-b border-slate-200">
+    <section ref={containerRef} id="services" className="py-24 bg-slate-50 border-b border-slate-200 scroll-mt-12">
+      <div id="products-bento" className="sr-only" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

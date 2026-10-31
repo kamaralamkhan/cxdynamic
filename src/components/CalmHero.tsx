@@ -88,7 +88,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
   };
 
   return (
-    <section className="relative isolate overflow-x-clip pt-12 pb-20 lg:pt-16 lg:pb-28 bg-white border-b border-slate-200">
+    <section id="home" className="relative isolate overflow-x-clip pt-12 pb-20 lg:pt-16 lg:pb-28 bg-white border-b border-slate-200">
       {/* Subtle Dot Grid Background */}
       <NetworkBackground />
 
