@@ -139,9 +139,9 @@ export default function ServicePage({ page }: ServicePageProps) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <a
                 href="#quote-form"
-                className="btn-tactile btn-primary-emerald inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs font-bold rounded-xl shadow-xs cursor-pointer"
+                className="btn-tactile inline-flex items-center justify-center gap-2 px-7 py-3.5 text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white rounded-xl shadow-sm transition-colors cursor-pointer"
               >
-                <span>Start your 21-day free trial</span>
+                <span>Book a Demo</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
@@ -656,10 +656,10 @@ export default function ServicePage({ page }: ServicePageProps) {
 
                     <button
                       type="submit"
-                      className="btn-tactile btn-primary-emerald w-full py-3.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 cursor-pointer shadow-xs mt-2"
+                      className="btn-tactile w-full py-3.5 rounded-xl text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white flex items-center justify-center gap-2 cursor-pointer shadow-sm mt-2 transition-colors"
                     >
                       <Send className="w-3.5 h-3.5" />
-                      <span>Submit Request &amp; Start Free Trial</span>
+                      <span>Book a Demo</span>
                     </button>
                   </form>
                 )}

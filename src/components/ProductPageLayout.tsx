@@ -72,9 +72,9 @@ export default function ProductPageLayout({ page }: ProductPageLayoutProps) {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                 <Link
                   href="/contact-us"
-                  className="btn-tactile btn-primary-emerald inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-bold rounded-xl shadow-xs"
+                  className="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white rounded-xl shadow-sm transition-colors"
                 >
-                  <span>Start 21-Day Free Trial</span>
+                  <span>Book a Demo</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 
@@ -200,9 +200,9 @@ export default function ProductPageLayout({ page }: ProductPageLayoutProps) {
             <div className="shrink-0">
               <Link
                 href="/contact-us"
-                className="btn-tactile btn-primary-emerald inline-flex items-center gap-2 px-7 py-3.5 text-xs font-bold rounded-xl shadow-xs"
+                className="btn-tactile inline-flex items-center gap-2 px-7 py-3.5 text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white rounded-xl shadow-sm transition-colors"
               >
-                <span>Request Trial Setup</span>
+                <span>Book a Demo</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

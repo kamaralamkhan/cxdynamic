@@ -18,7 +18,7 @@ export default function ProofAndMarquee() {
   const [counts, setCounts] = useState([0, 0, 0, 0]);
   const statsRef = useRef<HTMLDivElement>(null);
 
-  const statTargets = [1, 100, 40, 24];
+  const statTargets = [1, 15, 24, 20];
 
   // Count-up on scroll
   useEffect(() => {
@@ -88,28 +88,28 @@ export default function ProofAndMarquee() {
 
             <div className="pt-4 lg:pt-0 lg:px-4">
               <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
-                {hasAnimated ? counts[1] : 100}%
+                {hasAnimated ? counts[1] : 15}+
               </div>
               <div className="text-sm text-cyan-200 font-medium mt-1.5">
-                Native CRM &amp; CTI integrations
+                Products &amp; cloud solutions
               </div>
             </div>
 
             <div className="pt-4 lg:pt-0 lg:px-4">
               <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
-                {hasAnimated ? counts[2] : 40}%+
+                {hasAnimated ? counts[2] : 24}/7
               </div>
               <div className="text-sm text-cyan-200 font-medium mt-1.5">
-                Optimized contact center costs
+                Dedicated VIP support
               </div>
             </div>
 
             <div className="pt-4 lg:pt-0 lg:px-4">
               <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
-                {hasAnimated ? counts[3] : 24}/7
+                {hasAnimated ? counts[3] : 20}+
               </div>
               <div className="text-sm text-cyan-200 font-medium mt-1.5">
-                Dedicated VIP experts on call
+                Native CRM &amp; channel integrations
               </div>
             </div>
 

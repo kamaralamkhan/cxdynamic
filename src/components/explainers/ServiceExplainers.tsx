@@ -278,7 +278,7 @@ function OutboundCallingExplainer() {
             <button
               onClick={() => setRunning(!running)}
               className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer transition-all ${
-                running ? "bg-amber-100 text-amber-900 border border-amber-200" : "btn-primary-emerald"
+                running ? "bg-amber-100 text-amber-900 border border-amber-200" : "bg-sky-700 hover:bg-sky-800 text-white shadow-sm"
               }`}
             >
               {running ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
@@ -564,7 +564,7 @@ function ClickToCallExplainer() {
             <button
               onClick={() => setCalling(!calling)}
               className={`px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer transition-all ${
-                calling ? "bg-red-500 text-white hover:bg-red-600" : "btn-primary-emerald"
+                calling ? "bg-red-500 text-white hover:bg-red-600" : "bg-sky-700 hover:bg-sky-800 text-white shadow-sm"
               }`}
             >
               <PhoneCall className="w-3.5 h-3.5" />
@@ -606,7 +606,7 @@ function AutoDialerExplainer() {
             <button
               onClick={() => setIsDialing(!isDialing)}
               className={`px-4 py-2 rounded-xl text-xs font-bold cursor-pointer ${
-                isDialing ? "bg-amber-100 text-amber-900 border border-amber-200" : "btn-primary-emerald"
+                isDialing ? "bg-amber-100 text-amber-900 border border-amber-200" : "bg-sky-700 hover:bg-sky-800 text-white shadow-sm"
               }`}
             >
               {isDialing ? "Pause Queue" : "Start Auto-Dialer"}
@@ -668,7 +668,7 @@ function PowerDialerExplainer() {
             </div>
             <button
               onClick={nextLead}
-              className="btn-primary-emerald px-4 py-2 rounded-xl text-xs font-bold cursor-pointer"
+              className="px-4 py-2 rounded-xl text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white shadow-sm cursor-pointer"
             >
               Wrap Call &amp; Next Lead →
             </button>
@@ -923,7 +923,7 @@ function ConversationalAiExplainer() {
           <div className="flex items-center justify-end">
             <button
               onClick={() => setStep(step === "bot" ? "human" : "bot")}
-              className="btn-primary-emerald px-4 py-2 rounded-xl text-xs font-bold cursor-pointer"
+              className="px-4 py-2 rounded-xl text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white shadow-sm cursor-pointer"
             >
               {step === "bot" ? "Escalate to Human Agent →" : "Reset Simulation"}
             </button>
@@ -1027,7 +1027,7 @@ function IntercomExplainer() {
             &quot;I am looking at your enterprise pricing and need a custom quotation for 100 agents.&quot;
           </div>
           <div className="flex justify-end">
-            <button className="btn-primary-emerald px-4 py-2 rounded-xl text-xs font-bold cursor-pointer flex items-center gap-1.5">
+            <button className="px-4 py-2 rounded-xl text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white shadow-sm cursor-pointer flex items-center gap-1.5">
               <PhoneCall className="w-3.5 h-3.5" />
               <span>Instant Escalate to Voice Call</span>
             </button>

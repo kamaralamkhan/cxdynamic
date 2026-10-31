@@ -299,9 +299,9 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
               <Link
                 href="/contact-us"
                 onClick={onClose}
-                className="btn-tactile btn-primary-emerald px-5 py-2 rounded-lg text-xs font-bold inline-flex items-center gap-1.5 shadow-xs"
+                className="btn-tactile px-5 py-2 rounded-lg text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white inline-flex items-center gap-1.5 shadow-sm transition-colors"
               >
-                <span>Request a Quote</span>
+                <span>Book a Demo</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             )}

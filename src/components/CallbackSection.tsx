@@ -200,9 +200,9 @@ export default function CallbackSection() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="btn-tactile btn-primary-emerald w-full py-3.5 text-xs font-bold text-slate-950 rounded-xl shadow-xs cursor-pointer flex items-center justify-center gap-2"
+                    className="btn-tactile w-full py-3.5 text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white rounded-xl shadow-sm cursor-pointer flex items-center justify-center gap-2 transition-colors"
                   >
-                    <span>{loading ? "Submitting..." : "Submit Quote Request"}</span>
+                    <span>{loading ? "Submitting..." : "Book a Demo"}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </form>

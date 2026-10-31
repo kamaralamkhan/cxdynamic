@@ -158,9 +158,9 @@ export default function WhyChooseUs() {
               <div className="pt-6">
                 <Link
                   href="/contact-us"
-                  className="btn-tactile btn-primary-emerald w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-xs cursor-pointer"
+                  className="btn-tactile w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-semibold bg-white text-slate-900 hover:bg-slate-100 shadow-sm transition-colors cursor-pointer"
                 >
-                  <span>Request a Quote</span>
+                  <span>Book a Demo</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -191,9 +191,9 @@ export default function WhyChooseUs() {
               <div className="pt-2 hidden lg:block">
                 <Link
                   href="/contact-us"
-                  className="btn-tactile btn-primary-emerald inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-slate-950 shadow-xs cursor-pointer"
+                  className="btn-tactile inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white shadow-sm transition-colors cursor-pointer"
                 >
-                  <span>Start Your 1-Day Rollout</span>
+                  <span>Book a Demo</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

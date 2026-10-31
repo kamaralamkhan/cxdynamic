@@ -5,549 +5,347 @@ import Link from "next/link";
 import { 
   ArrowRight, 
   PhoneCall, 
-  Clock, 
-  TrendingUp, 
   MessageSquare, 
-  Activity, 
-  ShieldCheck, 
-  Play, 
-  Users, 
-  Sparkles, 
   Bot, 
-  Zap, 
   CheckCircle2, 
-  PhoneForwarded, 
-  Volume2, 
-  Send, 
-  Building 
+  Shuffle, 
+  Headphones, 
+  Sparkles,
+  Zap
 } from "lucide-react";
 import NetworkBackground from "@/components/NetworkBackground";
 import { 
-  ZendeskLogo, 
   SalesforceLogo, 
   ZohoLogo, 
-  FreshdeskLogo, 
-  HubSpotLogo, 
-  WhatsAppLogo 
+  ZendeskLogo, 
+  WhatsAppLogo, 
+  FreshdeskLogo 
 } from "@/components/IntegrationLogos";
 
 interface CalmHeroProps {
   onOpenDemo: () => void;
 }
 
-const ROTATING_PHRASES = [
-  "qualifies leads and resolves issues 24/7.",
-  "syncs natively with your CRM & ERP.",
-  "empowers agents with real-time AI assist.",
-  "deploys in 1 day with zero PBX hardware."
-];
+type TabType = "voice" | "whatsapp" | "ai";
+
+interface FlowStep {
+  stepNum: string;
+  badge: string;
+  title: string;
+  desc: string;
+  icon: typeof PhoneCall;
+}
+
+const FLOW_DATA: Record<TabType, { label: string; tag: string; steps: FlowStep[] }> = {
+  voice: {
+    label: "Voice",
+    tag: "SIP / PSTN",
+    steps: [
+      {
+        stepNum: "01",
+        badge: "Inbound Call",
+        title: "Customer Calls +91 88464 68095",
+        desc: "Carrier-grade SIP trunk ingests call with zero hold-time queue.",
+        icon: PhoneCall,
+      },
+      {
+        stepNum: "02",
+        badge: "IVR / ACD Routing",
+        title: "Smart Routing Evaluates Skill & Language",
+        desc: "Sub-second evaluation matches query to available Tier-2 Support agent.",
+        icon: Shuffle,
+      },
+      {
+        stepNum: "03",
+        badge: "CRM Screen-Pop",
+        title: "Agent Connects With Live CRM History",
+        desc: "Salesforce / Zoho screen-pop displays caller profile before pickup.",
+        icon: Headphones,
+      },
+    ],
+  },
+  whatsapp: {
+    label: "WhatsApp",
+    tag: "Official API",
+    steps: [
+      {
+        stepNum: "01",
+        badge: "Inbound Message",
+        title: "Customer Sends WhatsApp Query",
+        desc: "Automated greeting acknowledges message via official WhatsApp Business API.",
+        icon: MessageSquare,
+      },
+      {
+        stepNum: "02",
+        badge: "Unified Queue",
+        title: "Omnichannel Inbox Queues Message",
+        desc: "Priority routing assigns ticket to first available omnichannel agent.",
+        icon: Shuffle,
+      },
+      {
+        stepNum: "03",
+        badge: "Instant Resolution",
+        title: "Agent Chats & Transcript Syncs to CRM",
+        desc: "Live 2-way chat resolved inside unified console and logged to contact history.",
+        icon: CheckCircle2,
+      },
+    ],
+  },
+  ai: {
+    label: "AI Assistant",
+    tag: "Autonomous",
+    steps: [
+      {
+        stepNum: "01",
+        badge: "Autonomous Greeting",
+        title: "Conversational Voicebot Answers Instantly",
+        desc: "Natural human-sounding voice handles initial greeting 24/7.",
+        icon: Bot,
+      },
+      {
+        stepNum: "02",
+        badge: "Intent & Verification",
+        title: "AI Understands Intent & Verifies Details",
+        desc: "Answers FAQs, collects order numbers, or verifies OTP without human delay.",
+        icon: Zap,
+      },
+      {
+        stepNum: "03",
+        badge: "Warm Handover",
+        title: "Warm Transfer to Human Specialist",
+        desc: "Complex cases bridged to live agent with full AI summary transcript.",
+        icon: Sparkles,
+      },
+    ],
+  },
+};
 
 export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
-  const [activeTab, setActiveTab] = useState<"cti" | "whatsapp" | "dialer" | "analytics">("cti");
+  const [activeTab, setActiveTab] = useState<TabType>("voice");
+  const [activeStep, setActiveStep] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [callTimer, setCallTimer] = useState(165); // 02:45
 
-  // Dynamic rotating text animation (Aircall inspired)
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setPhraseIndex((prev) => (prev + 1) % ROTATING_PHRASES.length);
-    }, 3800);
-    return () => clearInterval(timer);
-  }, []);
-
-  // Live ticking call timer
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCallTimer((prev) => prev + 1);
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
-  // Auto-cycle workspace tabs every 8s if user doesn't hover/interact
+  // Auto-advance the 3 steps every 3.2 seconds (pauses when hovered)
   useEffect(() => {
     if (isPaused) return;
-    const interval = setInterval(() => {
-      setActiveTab((prev) => {
-        if (prev === "cti") return "whatsapp";
-        if (prev === "whatsapp") return "dialer";
-        if (prev === "dialer") return "analytics";
-        return "cti";
-      });
-    }, 7500);
-    return () => clearInterval(interval);
-  }, [isPaused]);
+    const timer = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % 3);
+    }, 3200);
+    return () => clearInterval(timer);
+  }, [isPaused, activeTab]);
 
-  const formatTimer = (sec: number) => {
-    const m = Math.floor(sec / 60);
-    const s = sec % 60;
-    return `${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
-  };
+  const currentFlow = FLOW_DATA[activeTab];
 
   return (
-    <section id="home" className="relative isolate overflow-x-clip pt-8 pb-16 lg:pt-12 lg:pb-20 bg-white border-b border-slate-200">
+    <section 
+      id="home" 
+      className="relative isolate overflow-x-clip bg-white border-b border-slate-200 pt-10 pb-12 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-16"
+    >
       {/* Subtle Dot Grid Background */}
       <NetworkBackground />
 
-      {/* Faint, ambient cyan radial glow centered behind workspace */}
+      {/* Very soft sky-50 radial glow top-right */}
       <div 
         aria-hidden="true" 
-        className="pointer-events-none absolute top-1/3 right-1/4 w-[600px] h-[400px] bg-gradient-to-tr from-[#069bd8]/8 via-sky-100/10 to-transparent rounded-full blur-3xl -z-10" 
+        className="pointer-events-none absolute top-0 right-0 w-[550px] h-[450px] bg-gradient-to-bl from-sky-100/40 via-sky-50/20 to-transparent rounded-full blur-3xl -z-10" 
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Balanced Split Hero: Left Copy & Actions | Right Live Interactive Workspace Console */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        {/* Two-Column Responsive Split (visible above the fold at 1280x720) */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-12 items-center">
           
-          {/* Left Column (5 cols on lg): Authoritative Copy & Metrics */}
-          <div className="lg:col-span-5 space-y-5 text-left">
+          {/* Left Column: Authoritative Copy & Verified Promise */}
+          <div className="space-y-5 text-left">
             
-            {/* Subtle Enterprise Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[11px] font-semibold text-slate-700 tracking-wide uppercase">
-                Enterprise Cloud Telephony
-              </span>
-              <span className="text-slate-300">•</span>
-              <span className="text-[11px] font-mono font-bold text-[#069bd8]">99.99% SLA</span>
+            {/* 1. Eyebrow Pill (No SLA) */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-100 text-xs font-medium text-sky-800">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-600" />
+              <span>Ultrafast implementation · VIP support</span>
             </div>
 
-            {/* Headline with Smooth Rotating Phrase */}
-            <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.12]">
-              Customer communications, evolved —
-              <span className="block mt-1 text-[#069bd8] min-h-[1.2em] transition-all duration-300">
-                {ROTATING_PHRASES[phraseIndex]}
-              </span>
+            {/* 2. H1 Headline (Weight 700, max 2 lines at 1280px) */}
+            <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight text-slate-900 leading-[1.15]">
+              Your cloud contact center,{" "}
+              <span className="text-sky-600">live in a day.</span>
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-              Deploy an enterprise cloud contact center in 1 day. Inbound/outbound calling, intelligent IVR, native CRM screen pops, and real-time speech analytics — without bulky PBX hardware.
+            {/* 3. Sub-headline (Calm & specific) */}
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
+              Inbound and outbound calling, IVR, CRM integrations and WhatsApp on one cloud platform, set up by our team with VIP support from day one.
             </p>
 
-            {/* Dual CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
-              <Link
-                href="/contact-us"
-                className="btn-tactile btn-primary-emerald inline-flex items-center justify-center gap-2 px-6 py-3 text-xs font-bold text-slate-950 rounded-xl shadow-xs cursor-pointer"
-              >
-                <span>Request a Custom Quote</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-
+            {/* 4. Action CTAs (Primary Brand Blue, Crisp Secondary, Subtle Link) */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <button
                 onClick={onOpenDemo}
-                className="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold text-slate-700 bg-white hover:bg-slate-50 rounded-xl border border-slate-200 shadow-2xs transition-colors cursor-pointer"
+                className="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-sky-700 text-white hover:bg-sky-800 shadow-sm transition-colors cursor-pointer"
               >
-                <Play className="w-3.5 h-3.5 text-[#069bd8] fill-[#069bd8]" />
-                <span>Watch 60-Sec Demo</span>
+                <span>Book a Demo</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
+
+              <Link
+                href="/#products"
+                className="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-white text-slate-900 border border-slate-300 hover:bg-slate-50 hover:border-slate-400 transition-colors"
+              >
+                <span>Explore Products</span>
+              </Link>
+
+              <a
+                href="#challenges"
+                className="inline-flex items-center justify-center sm:justify-start gap-1 text-sm text-slate-600 hover:text-slate-900 underline-offset-4 hover:underline py-2 sm:px-2 transition-colors"
+              >
+                <span>See how it works</span>
+                <span aria-hidden="true">↓</span>
+              </a>
             </div>
 
-            {/* Quick Impact Numbers */}
-            <div className="pt-3 grid grid-cols-3 gap-3 border-t border-slate-100 text-xs">
-              <div>
-                <div className="font-extrabold text-slate-900 text-base sm:text-lg tabular-nums">1 Day</div>
-                <div className="text-[11px] text-slate-500 font-medium">Fast Rollout</div>
-              </div>
-              <div>
-                <div className="font-extrabold text-[#069bd8] text-base sm:text-lg tabular-nums">100%</div>
-                <div className="text-[11px] text-slate-500 font-medium">CRM Compatibility</div>
-              </div>
-              <div>
-                <div className="font-extrabold text-emerald-600 text-base sm:text-lg tabular-nums">40%+</div>
-                <div className="text-[11px] text-slate-500 font-medium">Cost Optimized</div>
-              </div>
-            </div>
-
-            {/* Partner CRM & Channel Logos */}
-            <div className="pt-1">
-              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">
-                Native CRM &amp; Telephony Connectors
-              </div>
-              <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs grayscale hover:grayscale-0 transition-all opacity-85">
-                <span className="flex items-center gap-1 font-semibold text-slate-700"><SalesforceLogo className="w-3.5 h-3.5" /> Salesforce</span>
-                <span className="flex items-center gap-1 font-semibold text-slate-700"><ZohoLogo className="w-3.5 h-3.5" /> Zoho</span>
-                <span className="flex items-center gap-1 font-semibold text-slate-700"><ZendeskLogo className="w-3.5 h-3.5" /> Zendesk</span>
-                <span className="flex items-center gap-1 font-semibold text-slate-700"><WhatsAppLogo className="w-3.5 h-3.5" /> WhatsApp</span>
-                <span className="flex items-center gap-1 font-semibold text-slate-700"><HubSpotLogo className="w-3.5 h-3.5" /> HubSpot</span>
-              </div>
+            {/* 5. Micro-line Under CTAs (Emerald checkmarks for verified guarantees) */}
+            <div className="flex items-center gap-4 text-xs text-slate-500 flex-wrap pt-1">
+              <span className="flex items-center gap-1.5 font-medium">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                Free 21-day trial
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-medium">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                No hardware to install
+              </span>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 font-medium">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                Go live within a day
+              </span>
             </div>
 
           </div>
 
-          {/* Right Column (7 cols on lg): Live Interactive Operations Workspace */}
-          <div className="lg:col-span-7">
-            <div 
-              className="rounded-2xl border border-slate-200/90 bg-white shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden"
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
-            >
-              {/* Workspace Window Header */}
-              <div className="bg-slate-50/95 border-b border-slate-200 px-4 py-2.5 flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-slate-300" />
-                  </div>
-                  <span className="text-xs font-bold text-slate-700 flex items-center gap-1.5 pl-1">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    CXDYNAMIQ Cloud Workspace
-                    <span className="text-slate-400 font-normal">v4.2</span>
-                  </span>
+          {/* Right Column: CallFlowCard (Compact Interactive 3-Step Real Flow) */}
+          <div 
+            className="w-full max-w-md mx-auto lg:max-w-none"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            <div className="rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/50 p-5 sm:p-6 space-y-4">
+              
+              {/* Header: Segmented Control Tabs */}
+              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                <div className="inline-flex p-1 bg-slate-100 rounded-lg text-xs font-semibold gap-1">
+                  {(["voice", "whatsapp", "ai"] as TabType[]).map((tabKey) => {
+                    const isCurrent = activeTab === tabKey;
+                    return (
+                      <button
+                        key={tabKey}
+                        onClick={() => {
+                          setActiveTab(tabKey);
+                          setActiveStep(0);
+                        }}
+                        className={`px-3 py-1.5 rounded-md transition-all cursor-pointer capitalize text-xs ${
+                          isCurrent
+                            ? "bg-white text-slate-900 shadow-2xs font-bold"
+                            : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/50"
+                        }`}
+                      >
+                        {FLOW_DATA[tabKey].label}
+                      </button>
+                    );
+                  })}
                 </div>
 
-                <div className="flex items-center gap-2 text-xs font-mono text-slate-500">
-                  <span className="hidden sm:flex items-center gap-1 bg-white px-2 py-0.5 rounded border border-slate-200 text-[11px]">
-                    <Activity className="w-3 h-3 text-[#069bd8]" />
-                    Carrier: 14ms
-                  </span>
-                  <span className="flex items-center gap-1 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 text-[11px] text-emerald-700 font-semibold">
-                    99.99% Uptime
-                  </span>
-                </div>
+                <span className="text-[11px] font-mono text-sky-700 bg-sky-50 border border-sky-100 px-2 py-0.5 rounded font-semibold hidden sm:inline-block">
+                  {currentFlow.tag}
+                </span>
               </div>
 
-              {/* Channel Selector / Subtabs */}
-              <div className="bg-slate-100/70 p-1.5 border-b border-slate-200 flex items-center gap-1 overflow-x-auto text-xs font-semibold">
-                <button
-                  onClick={() => setActiveTab("cti")}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer shrink-0 text-xs ${
-                    activeTab === "cti"
-                      ? "bg-white text-slate-900 shadow-2xs border border-slate-200"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/50"
-                  }`}
-                >
-                  <PhoneCall className={`w-3.5 h-3.5 ${activeTab === "cti" ? "text-[#069bd8]" : "text-slate-500"}`} />
-                  <span>Inbound &amp; CTI</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                </button>
-
-                <button
-                  onClick={() => setActiveTab("whatsapp")}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer shrink-0 text-xs ${
-                    activeTab === "whatsapp"
-                      ? "bg-white text-slate-900 shadow-2xs border border-slate-200"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/50"
-                  }`}
-                >
-                  <MessageSquare className={`w-3.5 h-3.5 ${activeTab === "whatsapp" ? "text-emerald-500" : "text-slate-500"}`} />
-                  <span>WhatsApp</span>
-                </button>
-
-                <button
-                  onClick={() => setActiveTab("dialer")}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer shrink-0 text-xs ${
-                    activeTab === "dialer"
-                      ? "bg-white text-slate-900 shadow-2xs border border-slate-200"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/50"
-                  }`}
-                >
-                  <Zap className={`w-3.5 h-3.5 ${activeTab === "dialer" ? "text-[#069bd8]" : "text-slate-500"}`} />
-                  <span>Auto-Dialer</span>
-                </button>
-
-                <button
-                  onClick={() => setActiveTab("analytics")}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all cursor-pointer shrink-0 text-xs ${
-                    activeTab === "analytics"
-                      ? "bg-white text-slate-900 shadow-2xs border border-slate-200"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/50"
-                  }`}
-                >
-                  <Sparkles className={`w-3.5 h-3.5 ${activeTab === "analytics" ? "text-[#069bd8]" : "text-slate-500"}`} />
-                  <span>Speech AI</span>
-                </button>
-              </div>
-
-              {/* Dynamic Workspace Body */}
-              <div className="p-4 sm:p-5 bg-slate-50/50">
-                
-                {/* VIEW 1: Inbound & CTI Screenpop */}
-                {activeTab === "cti" && (
-                  <div className="space-y-3.5 animate-in fade-in duration-200">
-                    {/* Caller Identity Bar */}
-                    <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5">
-                      <div className="flex items-center gap-2.5">
-                        <div className="w-9 h-9 rounded-full bg-sky-50 text-[#069bd8] font-bold text-xs flex items-center justify-center border border-sky-100">
-                          PS
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-2">
-                            <span className="font-extrabold text-xs sm:text-sm text-slate-900">Priya Sharma</span>
-                            <span className="text-[9px] font-bold uppercase tracking-wider text-cyan-800 bg-sky-100/70 px-1.5 py-0.5 rounded">
-                              Enterprise VIP
+              {/* Body: 3-Step Vertical Timeline */}
+              <div className="space-y-2.5">
+                {currentFlow.steps.map((step, idx) => {
+                  const Icon = step.icon;
+                  const isCurrent = activeStep === idx;
+                  return (
+                    <div
+                      key={step.stepNum}
+                      onClick={() => setActiveStep(idx)}
+                      className={`p-3 rounded-xl border transition-all cursor-pointer text-left ${
+                        isCurrent
+                          ? "border-sky-400 bg-sky-50/70 shadow-xs"
+                          : "border-slate-100 bg-slate-50/50 hover:bg-slate-100/60"
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2.5">
+                          <div className={`w-7 h-7 rounded-lg flex items-center justify-center transition-colors ${
+                            isCurrent
+                              ? "bg-sky-600 text-white shadow-2xs"
+                              : "bg-slate-200 text-slate-600"
+                          }`}>
+                            <Icon className="w-3.5 h-3.5" />
+                          </div>
+                          <div>
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-sky-800 block">
+                              {step.badge}
                             </span>
+                            <h4 className="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight">
+                              {step.title}
+                            </h4>
                           </div>
-                          <div className="text-[11px] text-slate-500 flex items-center gap-1.5 mt-0.5">
-                            <span>+91 98450 12345</span>
-                            <span>•</span>
-                            <span className="flex items-center gap-1 text-slate-600">
-                              <Building className="w-3 h-3 text-slate-400" /> FinCorp Global
+                        </div>
+
+                        {/* Status indicator */}
+                        <div className="flex items-center gap-1.5 shrink-0 pl-2">
+                          {isCurrent ? (
+                            <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-sky-700 bg-white px-2 py-0.5 rounded border border-sky-200">
+                              <span className="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse" />
+                              Active
                             </span>
-                          </div>
+                          ) : (
+                            <span className="text-[10px] font-mono text-slate-400">
+                              {step.stepNum}
+                            </span>
+                          )}
                         </div>
                       </div>
 
-                      <div className="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-end">
-                        <span className="text-[11px] font-mono font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">
-                          Connected ({formatTimer(callTimer)})
-                        </span>
-                        <span className="text-[11px] text-slate-600 bg-slate-50 border border-slate-200 px-2 py-0.5 rounded flex items-center gap-1 font-medium">
-                          <ZohoLogo className="w-3 h-3" />
-                          Zoho CTI
-                        </span>
-                      </div>
+                      <p className="text-[11px] text-slate-600 mt-1.5 pl-9 leading-relaxed">
+                        {step.desc}
+                      </p>
                     </div>
-
-                    {/* 3-Panel Working Workspace */}
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-3 text-xs">
-                      
-                      {/* Left: CRM History & Tickets (4 cols) */}
-                      <div className="md:col-span-4 bg-white p-3 rounded-xl border border-slate-200 space-y-2">
-                        <div className="font-bold text-slate-800 text-[10px] uppercase tracking-wider border-b border-slate-100 pb-1 flex items-center justify-between">
-                          <span>CRM Tickets</span>
-                          <span className="text-[9px] text-emerald-600 font-semibold">Auto-Sync</span>
-                        </div>
-                        <div className="space-y-1.5">
-                          <div className="p-1.5 rounded-lg bg-slate-50 border border-slate-100">
-                            <div className="font-semibold text-slate-800 text-[11px]">Ticket #8921</div>
-                            <div className="text-[10px] text-slate-500">Consignment Dispatch Status</div>
-                            <div className="text-[9px] text-cyan-700 font-medium mt-0.5">Priority: High • SLA 4h</div>
-                          </div>
-                          <div className="p-1.5 rounded-lg bg-slate-50 border border-slate-100">
-                            <div className="font-semibold text-slate-800 text-[11px]">Ticket #7410</div>
-                            <div className="text-[10px] text-slate-500">Subscription Renewal</div>
-                            <div className="text-[9px] text-emerald-600 font-medium mt-0.5">CSAT: 5/5 Stars</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Center: Live Audio Stream & Real-time Transcript (4 cols) */}
-                      <div className="md:col-span-4 bg-white p-3 rounded-xl border border-slate-200 flex flex-col justify-between space-y-2">
-                        <div>
-                          <div className="font-bold text-slate-800 text-[10px] uppercase tracking-wider border-b border-slate-100 pb-1 flex items-center justify-between">
-                            <span>Audio Stream</span>
-                            <span className="font-mono text-[9px] text-cyan-700 font-semibold">HD Opus 48kHz</span>
-                          </div>
-
-                          {/* Live Animated Audio Waveform */}
-                          <div className="h-8 my-2 flex items-center justify-center gap-1 bg-slate-50 p-1 rounded-lg border border-slate-100">
-                            {[40, 65, 30, 85, 95, 60, 45, 90, 100, 50, 35, 80, 65, 40, 85, 60, 95, 75, 45, 80].map((h, i) => (
-                              <span
-                                key={i}
-                                style={{ height: `${h}%`, animationDelay: `${i * 0.08}s` }}
-                                className="w-1 bg-[#069bd8] rounded-full animate-wave-bar"
-                              />
-                            ))}
-                          </div>
-
-                          {/* Live Transcript Snippet */}
-                          <div className="space-y-1 text-[11px] text-slate-600">
-                            <p><strong className="text-slate-900">Caller:</strong> &ldquo;Checking delivery dispatch for #8921.&rdquo;</p>
-                            <p><strong className="text-cyan-800">Agent:</strong> &ldquo;Accessing your tracking records now...&rdquo;</p>
-                          </div>
-                        </div>
-
-                        {/* Quick Action Buttons */}
-                        <div className="flex gap-1.5 pt-1.5 border-t border-slate-100">
-                          <button className="flex-1 py-1 rounded bg-slate-100 text-slate-700 text-[11px] font-semibold hover:bg-slate-200">
-                            Hold
-                          </button>
-                          <button className="flex-1 py-1 rounded bg-slate-100 text-slate-700 text-[11px] font-semibold hover:bg-slate-200">
-                            Transfer
-                          </button>
-                          <button className="flex-1 py-1 rounded bg-emerald-50 text-emerald-800 text-[11px] font-bold border border-emerald-200">
-                            Push CRM
-                          </button>
-                        </div>
-                      </div>
-
-                      {/* Right: AI Copilot Whisper (4 cols) */}
-                      <div className="md:col-span-4 bg-gradient-to-br from-cyan-50/70 via-white to-white p-3 rounded-xl border border-cyan-200/80 space-y-2">
-                        <div className="flex items-center justify-between pb-1 border-b border-cyan-100">
-                          <span className="font-bold text-cyan-900 text-[10px] uppercase tracking-wider flex items-center gap-1">
-                            <Sparkles className="w-3 h-3 text-[#069bd8]" />
-                            AI Copilot
-                          </span>
-                          <span className="text-[9px] font-bold text-emerald-700 bg-emerald-100/80 px-1 py-0.5 rounded">
-                            Active
-                          </span>
-                        </div>
-
-                        <div className="bg-white p-2 rounded-lg border border-cyan-100 shadow-2xs space-y-1">
-                          <div className="text-[9px] font-bold uppercase tracking-wider text-slate-400">Recommended Resolution</div>
-                          <p className="text-[11px] text-slate-700 leading-snug font-medium">
-                            Consignment #8921 cleared Mumbai hub. Scheduled delivery by 4 PM.
-                          </p>
-                          <div className="pt-1">
-                            <button className="w-full py-1 rounded bg-[#069bd8] hover:bg-[#0584b8] text-white font-bold text-[10px] transition-colors flex items-center justify-center gap-1">
-                              <Send className="w-3 h-3" /> Auto-SMS Tracking
-                            </button>
-                          </div>
-                        </div>
-
-                        <div className="text-[10px] text-slate-500 flex items-center justify-between pt-0.5">
-                          <span>Sentiment: <strong>+0.92</strong></span>
-                          <span>Audit: <strong>100%</strong></span>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                )}
-
-                {/* VIEW 2: WhatsApp & Omnichannel */}
-                {activeTab === "whatsapp" && (
-                  <div className="space-y-3 animate-in fade-in duration-200">
-                    <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs flex items-center justify-between">
-                      <div className="flex items-center gap-2.5">
-                        <div className="p-2 rounded-lg bg-emerald-50 text-emerald-600">
-                          <WhatsAppLogo className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-slate-900 text-xs">Official WhatsApp Business Enterprise API</div>
-                          <div className="text-[11px] text-slate-500">Auto-routed to active queue • Conversational AI Responder</div>
-                        </div>
-                      </div>
-                      <span className="text-[11px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                        Response &lt; 2s
-                      </span>
-                    </div>
-
-                    <div className="bg-white p-3.5 rounded-xl border border-slate-200 space-y-2.5 text-xs">
-                      <div className="max-w-xs sm:max-w-sm bg-slate-100 p-2.5 rounded-xl rounded-tl-sm text-slate-800">
-                        <p className="font-semibold text-slate-900 text-[11px] mb-0.5">Customer (WhatsApp):</p>
-                        &ldquo;Hi CXDYNAMIQ, we need custom pricing for 50 blended inbound/outbound seats with Zoho CTI.&rdquo;
-                      </div>
-
-                      <div className="max-w-xs sm:max-w-sm ml-auto bg-sky-50 border border-sky-100 p-2.5 rounded-xl rounded-tr-sm text-slate-800 space-y-1.5">
-                        <p className="font-semibold text-cyan-800 text-[11px] flex items-center gap-1">
-                          <Bot className="w-3.5 h-3.5 text-[#069bd8]" /> Conversational AI Agent:
-                        </p>
-                        <p className="text-[11px] leading-relaxed">
-                          &ldquo;Hello! Our 50-seat enterprise bundle includes unlimited IVR, Zoho PhoneBridge CTI, and real-time Speech Analytics. Connecting you with our deployment architect.&rdquo;
-                        </p>
-                        <div className="text-[10px] text-slate-500 border-t border-sky-200/60 pt-1 flex items-center justify-between">
-                          <span>Instant Agent Takeover: Ready</span>
-                          <span className="text-emerald-600 font-bold">Auto-Logged to CRM ✓</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* VIEW 3: Auto-Dialer & Outbound */}
-                {activeTab === "dialer" && (
-                  <div className="space-y-3 animate-in fade-in duration-200">
-                    <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs flex items-center justify-between">
-                      <div className="flex items-center gap-2.5">
-                        <div className="p-2 rounded-lg bg-purple-50 text-purple-600">
-                          <Zap className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-slate-900 text-xs">Predictive &amp; Auto Dialer Engine</div>
-                          <div className="text-[11px] text-slate-500">Dynamic 3:1 pacing algorithm • Zero agent idle time</div>
-                        </div>
-                      </div>
-                      <span className="text-[11px] font-mono font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">
-                        Campaign Active
-                      </span>
-                    </div>
-
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
-                      <div className="p-2.5 bg-white rounded-xl border border-slate-200">
-                        <div className="text-slate-400 font-bold uppercase text-[9px]">Connect Rate</div>
-                        <div className="text-lg font-extrabold text-slate-900 mt-0.5">48.4%</div>
-                        <div className="text-emerald-600 text-[9px] font-semibold">+18% vs avg</div>
-                      </div>
-                      <div className="p-2.5 bg-white rounded-xl border border-slate-200">
-                        <div className="text-slate-400 font-bold uppercase text-[9px]">Active Agents</div>
-                        <div className="text-lg font-extrabold text-[#069bd8] mt-0.5">48 / 50</div>
-                        <div className="text-slate-500 text-[9px]">2 in wrap-up</div>
-                      </div>
-                      <div className="p-2.5 bg-white rounded-xl border border-slate-200">
-                        <div className="text-slate-400 font-bold uppercase text-[9px]">Answering Machine</div>
-                        <div className="text-lg font-extrabold text-slate-900 mt-0.5">99.4%</div>
-                        <div className="text-slate-500 text-[9px]">Skipped &lt;400ms</div>
-                      </div>
-                      <div className="p-2.5 bg-white rounded-xl border border-slate-200">
-                        <div className="text-slate-400 font-bold uppercase text-[9px]">Calls / Hour</div>
-                        <div className="text-lg font-extrabold text-slate-900 mt-0.5">1,240</div>
-                        <div className="text-emerald-600 text-[9px] font-semibold">High Velocity</div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* VIEW 4: AI Speech Analytics & QA */}
-                {activeTab === "analytics" && (
-                  <div className="space-y-3 animate-in fade-in duration-200">
-                    <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs flex items-center justify-between">
-                      <div className="flex items-center gap-2.5">
-                        <div className="p-2 rounded-lg bg-sky-50 text-[#069bd8]">
-                          <Sparkles className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <div className="font-bold text-slate-900 text-xs">Real-Time Speech &amp; Acoustic Analytics</div>
-                          <div className="text-[11px] text-slate-500">Live sentiment scoring • 100% automated QA evaluation</div>
-                        </div>
-                      </div>
-                      <span className="text-[11px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                        QA: 98/100 PASSED
-                      </span>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
-                      <div className="p-2.5 bg-white rounded-xl border border-slate-200 space-y-1">
-                        <div className="font-bold text-slate-700 text-xs">Customer Emotion</div>
-                        <div className="text-xl font-extrabold text-emerald-600 font-mono">+0.92</div>
-                        <div className="text-[10px] text-slate-500">Dominant: Satisfied</div>
-                      </div>
-
-                      <div className="p-2.5 bg-white rounded-xl border border-slate-200 space-y-1">
-                        <div className="font-bold text-slate-700 text-xs">Compliance Checklist</div>
-                        <div className="space-y-0.5 text-[10px] text-slate-600">
-                          <div className="flex items-center gap-1 text-emerald-600 font-semibold">
-                            <CheckCircle2 className="w-3 h-3" /> Greeting Stated
-                          </div>
-                          <div className="flex items-center gap-1 text-emerald-600 font-semibold">
-                            <CheckCircle2 className="w-3 h-3" /> PII Auto-Masked
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="p-2.5 bg-white rounded-xl border border-slate-200 space-y-1">
-                        <div className="font-bold text-slate-700 text-xs">Silence Ratio</div>
-                        <div className="text-xl font-extrabold text-[#069bd8] font-mono">3.1%</div>
-                        <div className="text-[10px] text-slate-500">Optimal (&lt; 10%)</div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-              </div>
-
-              {/* Workspace Footer Bar */}
-              <div className="bg-white border-t border-slate-200 px-4 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-600">
-                <div className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                  <span className="font-semibold text-slate-700">Enterprise Carrier Infrastructure:</span>
-                  <span className="text-slate-500 hidden sm:inline">Encrypted • Zero PBX Hardware • High-Availability SIP</span>
-                </div>
-
-                <button
-                  onClick={onOpenDemo}
-                  className="text-[#069bd8] font-bold hover:underline flex items-center gap-1 cursor-pointer"
-                >
-                  <span>Interactive 30-Sec Demo</span>
-                  <ArrowRight className="w-3 h-3" />
-                </button>
+                  );
+                })}
               </div>
 
             </div>
+
+            {/* Under Card: Caption + 5 Grayscale Integration Logos */}
+            <div className="pt-3 px-2 space-y-2">
+              <div className="text-[11px] font-medium text-slate-500 text-center sm:text-left">
+                Works natively with your existing tools
+              </div>
+              <div className="flex items-center justify-center sm:justify-start gap-5 sm:gap-6 opacity-70 hover:opacity-100 transition-opacity">
+                <span className="flex items-center gap-1 text-xs font-semibold text-slate-700">
+                  <SalesforceLogo className="w-4 h-4" />
+                  <span className="hidden sm:inline">Salesforce</span>
+                </span>
+                <span className="flex items-center gap-1 text-xs font-semibold text-slate-700">
+                  <ZohoLogo className="w-4 h-4" />
+                  <span className="hidden sm:inline">Zoho</span>
+                </span>
+                <span className="flex items-center gap-1 text-xs font-semibold text-slate-700">
+                  <ZendeskLogo className="w-4 h-4" />
+                  <span className="hidden sm:inline">Zendesk</span>
+                </span>
+                <span className="flex items-center gap-1 text-xs font-semibold text-slate-700">
+                  <WhatsAppLogo className="w-4 h-4" />
+                  <span className="hidden sm:inline">WhatsApp</span>
+                </span>
+                <span className="flex items-center gap-1 text-xs font-semibold text-slate-700">
+                  <FreshdeskLogo className="w-4 h-4" />
+                  <span className="hidden sm:inline">Freshdesk</span>
+                </span>
+              </div>
+            </div>
+
           </div>
 
         </div>

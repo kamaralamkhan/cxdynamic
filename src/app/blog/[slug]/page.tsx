@@ -213,9 +213,9 @@ export default async function BlogPostPage({
             <div className="shrink-0">
               <Link
                 href="/contact-us"
-                className="btn-tactile btn-primary-emerald inline-flex items-center gap-2 px-6 py-3 text-xs font-bold rounded-xl shadow-xs"
+                className="btn-tactile inline-flex items-center gap-2 px-6 py-3 text-xs font-semibold rounded-xl bg-white text-slate-900 hover:bg-slate-100 shadow-sm transition-colors"
               >
-                <span>Request a Quote</span>
+                <span>Book a Demo</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
