@@ -11,7 +11,12 @@ import {
   Shuffle, 
   Headphones, 
   Sparkles,
-  Zap
+  Zap,
+  Volume2,
+  VolumeX,
+  Play,
+  Pause,
+  Activity
 } from "lucide-react";
 import NetworkBackground from "@/components/NetworkBackground";
 import { 
@@ -124,6 +129,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
   const [activeTab, setActiveTab] = useState<TabType>("voice");
   const [activeStep, setActiveStep] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
 
   // Auto-advance the 3 steps every 3.2 seconds (pauses when hovered)
   useEffect(() => {
@@ -134,12 +140,39 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
     return () => clearInterval(timer);
   }, [isPaused, activeTab]);
 
+  // Interactive voice sample trigger
+  const handleToggleVoicePreview = () => {
+    if (typeof window === "undefined") return;
+
+    if (isPlayingAudio) {
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+      setIsPlayingAudio(false);
+    } else {
+      setIsPlayingAudio(true);
+      if ("speechSynthesis" in window) {
+        const text = activeTab === "ai" 
+          ? "Hello, thank you for calling CXDYNAMIQ. I'm your AI virtual assistant. How can I help you today?" 
+          : "Thank you for calling CXDYNAMIQ customer care. Connecting you with our enterprise specialist now.";
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+        utterance.onend = () => setIsPlayingAudio(false);
+        utterance.onerror = () => setIsPlayingAudio(false);
+        window.speechSynthesis.speak(utterance);
+      } else {
+        setTimeout(() => setIsPlayingAudio(false), 4000);
+      }
+    }
+  };
+
   const currentFlow = FLOW_DATA[activeTab];
 
   return (
     <section 
       id="home" 
-      className="relative isolate overflow-x-clip bg-white border-b border-slate-200 pt-10 pb-12 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-16"
+      className="relative isolate overflow-x-clip bg-[#fbfbfa] border-b border-slate-200/90 pt-10 pb-12 sm:pt-14 sm:pb-16 lg:pt-16 lg:pb-16"
     >
       {/* Subtle Dot Grid Background */}
       <NetworkBackground />
@@ -158,28 +191,28 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           {/* Left Column: Authoritative Copy & Verified Promise */}
           <div className="space-y-5 text-left">
             
-            {/* 1. Eyebrow Pill (No SLA) */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-100 text-xs font-medium text-sky-800">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-600" />
+            {/* 1. Eyebrow Pill */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-slate-200/80 shadow-2xs text-xs font-semibold text-[#012635]">
+              <span className="w-2 h-2 rounded-full bg-[#008f6d] animate-pulse" />
               <span>Ultrafast implementation · VIP support</span>
             </div>
 
-            {/* 2. H1 Headline (Weight 700, max 2 lines at 1280px) */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight text-slate-900 leading-[1.15]">
+            {/* 2. H1 Headline (Aircall Garamond Serif Fluid Scaling) */}
+            <h1 className="heading-fluid-hero font-serif-heading text-[#012635] tracking-tight font-bold">
               Your cloud contact center,{" "}
-              <span className="text-sky-600">live in a day.</span>
+              <span className="italic font-normal text-sky-700">live in a day.</span>
             </h1>
 
             {/* 3. Sub-headline (Calm & specific) */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal">
               Inbound and outbound calling, IVR, CRM integrations and WhatsApp on one cloud platform, set up by our team with VIP support from day one.
             </p>
 
-            {/* 4. Action CTAs (Primary Brand Blue, Crisp Secondary, Subtle Link) */}
+            {/* 4. Action CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <button
                 onClick={onOpenDemo}
-                className="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-sky-700 text-white hover:bg-sky-800 shadow-sm transition-colors cursor-pointer"
+                className="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-sky-700 text-white hover:bg-sky-800 shadow-sm transition-all cursor-pointer"
               >
                 <span>Book a Demo</span>
                 <ArrowRight className="w-4 h-4" />
@@ -187,50 +220,50 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
 
               <Link
                 href="/products"
-                className="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-white text-slate-900 border border-slate-300 hover:bg-slate-50 hover:border-slate-400 transition-colors"
+                className="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-white text-[#012635] border border-slate-300/80 hover:bg-slate-50 hover:border-slate-400 transition-all shadow-2xs"
               >
                 <span>Explore Products</span>
               </Link>
 
               <a
                 href="#how-it-works"
-                className="inline-flex items-center justify-center sm:justify-start gap-1 text-sm text-slate-600 hover:text-slate-900 underline-offset-4 hover:underline py-2 sm:px-2 transition-colors"
+                className="inline-flex items-center justify-center sm:justify-start gap-1 text-sm font-medium text-slate-600 hover:text-slate-900 underline-offset-4 hover:underline py-2 sm:px-2 transition-colors"
               >
                 <span>See how it works</span>
                 <span aria-hidden="true">↓</span>
               </a>
             </div>
 
-            {/* 5. Micro-line Under CTAs (Emerald checkmarks for verified guarantees) */}
-            <div className="flex items-center gap-4 text-xs text-slate-500 flex-wrap pt-1">
+            {/* 5. Micro-line Under CTAs */}
+            <div className="flex items-center gap-4 text-xs text-slate-600 flex-wrap pt-1">
               <span className="flex items-center gap-1.5 font-medium">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#008f6d] shrink-0" />
                 Free 21-day trial
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5 font-medium">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#008f6d] shrink-0" />
                 No hardware to install
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5 font-medium">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#008f6d] shrink-0" />
                 Go live within a day
               </span>
             </div>
 
           </div>
 
-          {/* Right Column: CallFlowCard (Compact Interactive 3-Step Real Flow) */}
+          {/* Right Column: CallFlowCard (Dialpad/Talkdesk Interactive Telemetry) */}
           <div 
             className="w-full max-w-md mx-auto lg:max-w-none"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            <div className="rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/50 p-5 sm:p-6 space-y-4">
+            <div className="rounded-2xl border border-slate-200/90 bg-white shadow-xl shadow-slate-200/50 p-5 sm:p-6 space-y-4">
               
-              {/* Header: Segmented Control Tabs */}
-              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+              {/* Header: Segmented Control Tabs + Live Indicator */}
+              <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                 <div className="inline-flex p-1 bg-slate-100 rounded-lg text-xs font-semibold gap-1">
                   {(["voice", "whatsapp", "ai"] as TabType[]).map((tabKey) => {
                     const isCurrent = activeTab === tabKey;
@@ -243,7 +276,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                         }}
                         className={`px-3 py-1.5 rounded-md transition-all cursor-pointer capitalize text-xs ${
                           isCurrent
-                            ? "bg-white text-slate-900 shadow-2xs font-bold"
+                            ? "bg-white text-[#012635] shadow-xs font-bold"
                             : "text-slate-600 hover:text-slate-900 hover:bg-slate-200/50"
                         }`}
                       >
@@ -253,9 +286,15 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   })}
                 </div>
 
-                <span className="text-[11px] font-mono text-sky-700 bg-sky-50 border border-sky-100 px-2 py-0.5 rounded font-semibold hidden sm:inline-block">
-                  {currentFlow.tag}
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="text-[11px] font-mono text-sky-700 bg-sky-50 border border-sky-100 px-2 py-0.5 rounded font-semibold hidden sm:inline-block">
+                    {currentFlow.tag}
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-[11px] font-mono font-medium text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2 py-0.5 rounded">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    Live
+                  </span>
+                </div>
               </div>
 
               {/* Body: 3-Step Vertical Timeline */}
@@ -283,21 +322,27 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                             <Icon className="w-3.5 h-3.5" />
                           </div>
                           <div>
-                            <span className="text-[10px] font-bold uppercase tracking-wider text-sky-800 block">
+                            <span className="text-[10px] font-bold uppercase tracking-wider text-sky-800 block font-mono">
                               {step.badge}
                             </span>
-                            <h4 className="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight">
+                            <h4 className="text-xs sm:text-[13px] font-bold text-[#012635] leading-tight">
                               {step.title}
                             </h4>
                           </div>
                         </div>
 
-                        {/* Status indicator */}
+                        {/* Status indicator / Live Frequency Bars */}
                         <div className="flex items-center gap-1.5 shrink-0 pl-2">
                           {isCurrent ? (
-                            <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-sky-700 bg-white px-2 py-0.5 rounded border border-sky-200">
-                              <span className="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse" />
-                              Active
+                            <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-sky-700 bg-white px-2 py-0.5 rounded border border-sky-200">
+                              {/* Animated Waveform bars */}
+                              <span className="inline-flex items-end gap-0.5 h-3">
+                                <span className="w-0.5 bg-sky-500 rounded-full animate-pulse h-2" />
+                                <span className="w-0.5 bg-sky-600 rounded-full animate-pulse h-3 [animation-delay:150ms]" />
+                                <span className="w-0.5 bg-sky-500 rounded-full animate-pulse h-1.5 [animation-delay:300ms]" />
+                                <span className="w-0.5 bg-sky-600 rounded-full animate-pulse h-2.5 [animation-delay:450ms]" />
+                              </span>
+                              <span>Active</span>
                             </span>
                           ) : (
                             <span className="text-[10px] font-mono text-slate-400">
@@ -315,14 +360,44 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                 })}
               </div>
 
+              {/* Interactive Telemetry / Audio Trigger Bar (Talkdesk / Dialpad feel) */}
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between gap-2 text-xs">
+                <button
+                  type="button"
+                  onClick={handleToggleVoicePreview}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
+                    isPlayingAudio
+                      ? "bg-emerald-50 text-emerald-800 border-emerald-300 ring-2 ring-emerald-200/50"
+                      : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100"
+                  }`}
+                >
+                  {isPlayingAudio ? (
+                    <>
+                      <Volume2 className="w-3.5 h-3.5 text-emerald-600 animate-bounce" />
+                      <span>Speaking Sample... (Stop)</span>
+                    </>
+                  ) : (
+                    <>
+                      <Play className="w-3.5 h-3.5 text-sky-600 fill-sky-600" />
+                      <span>Listen to Audio Greeting</span>
+                    </>
+                  )}
+                </button>
+
+                <div className="flex items-center gap-1 text-[11px] font-mono text-slate-500">
+                  <Activity className="w-3 h-3 text-emerald-600" />
+                  <span>Sub-15ms Latency</span>
+                </div>
+              </div>
+
             </div>
 
-            {/* Under Card: Caption + 5 Grayscale Integration Logos */}
+            {/* Under Card: Caption + Grayscale Integration Logos */}
             <div className="pt-3 px-2 space-y-2">
               <div className="text-[11px] font-medium text-slate-500 text-center sm:text-left">
                 Works natively with your existing tools
               </div>
-              <div className="flex items-center justify-center sm:justify-start gap-5 sm:gap-6 opacity-70 hover:opacity-100 transition-opacity">
+              <div className="flex items-center justify-center sm:justify-start gap-5 sm:gap-6 opacity-75 hover:opacity-100 transition-opacity">
                 <span className="flex items-center gap-1 text-xs font-semibold text-slate-700">
                   <SalesforceLogo className="w-4 h-4" />
                   <span className="hidden sm:inline">Salesforce</span>

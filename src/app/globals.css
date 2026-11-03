@@ -9,6 +9,9 @@
   --brand-cyan-hover: #0582b6;
   --brand-emerald: #10b981;
   --brand-emerald-hover: #34d399;
+  --bg-paper: #f7f6f0;
+  --color-cobalt: #012635;
+  --color-forest: #216358;
 }
 
 @theme inline {
@@ -16,6 +19,42 @@
   --color-foreground: var(--foreground);
   --font-display: var(--font-jakarta), system-ui, -apple-system, sans-serif;
   --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
+}
+
+/* Fluid Typography Strategy (Aircall & Enterprise SaaS Spec) */
+.heading-fluid-hero {
+  font-size: clamp(2.1rem, 2.5vw + 1.4rem, 3.8rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.heading-fluid-section {
+  font-size: clamp(1.85rem, 2.2vw + 1.1rem, 2.9rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+/* Editorial Serif & Sans High-Contrast Pairing */
+.font-serif-heading {
+  font-family: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+/* Aircall Glassmorphism & Surface Tokens */
+.glass-overlay {
+  background: linear-gradient(129deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.45) 100%);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.bg-warm-paper {
+  background-color: #f7f6f0;
+}
+
+.bg-cobalt-dark {
+  background-color: #012635;
 }
 
 body {

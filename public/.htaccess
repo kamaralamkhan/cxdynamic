@@ -18,11 +18,21 @@
   RewriteRule ^ index.html [L]
 </IfModule>
 
-# Force fresh cache for icons & images so updates reflect instantly across CDN and browsers
+# Force fresh cache for HTML, metadata, and OpenGraph link previews across all CDNs, crawlers & browsers
 <IfModule mod_headers.c>
+  <FilesMatch "\.(html|xml|json|txt)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+
   <FilesMatch "\.(ico|png|jpe?g|webp|svg)$">
     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
     Header set Pragma "no-cache"
     Header set Expires "0"
   </FilesMatch>
+</IfModule>
+
+<IfModule LiteSpeed>
+  CacheEngine off
 </IfModule>

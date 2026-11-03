@@ -56,7 +56,7 @@ const MODES: PlatformMode[] = [
     label: "TEAM-LED",
     navTitle: "Team-Led Telephony",
     navIcon: Users,
-    headline: "Powered by a modern cloud phone platform.",
+    headline: "Customer communication, powered by modern cloud telephony.",
     subhead: "High-fidelity carrier SIP trunking, predictive pacing dialers, and blended queue distribution empower your human agents to resolve calls with zero dropped audio.",
     features: [
       {
@@ -96,7 +96,7 @@ const MODES: PlatformMode[] = [
     label: "AI-ASSISTED",
     navTitle: "AI-Assisted Operations",
     navIcon: Sparkles,
-    headline: "Live in-call intelligence for every agent.",
+    headline: "Live in-call intelligence, augmented for every agent.",
     subhead: "Native integrations with Salesforce, Zoho, Zendesk and HubSpot automatically sync customer context, trigger screen pops, and generate AI call summaries.",
     features: [
       {
@@ -136,7 +136,7 @@ const MODES: PlatformMode[] = [
     label: "AI-LED",
     navTitle: "AI-Led Autonomous",
     navIcon: Bot,
-    headline: "Autonomous customer conversations at scale.",
+    headline: "Autonomous customer conversations, delivered at global scale.",
     subhead: "Human-sounding Conversational AI voicebots and official WhatsApp Business bots resolve routine inquiries, verify accounts, and schedule callbacks around the clock.",
     features: [
       {
@@ -320,10 +320,10 @@ export default function PlatformModesSection() {
             <aside className="lg:col-span-3 space-y-4">
               
               <div className="hidden lg:block space-y-1 pb-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 font-mono">
                   Platform Architecture
                 </span>
-                <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                <h3 className="text-xl font-bold font-serif-heading text-[#012635] tracking-tight">
                   Three Operating Modes
                 </h3>
               </div>
@@ -426,11 +426,11 @@ export default function PlatformModesSection() {
                   </span>
                 </div>
                 
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                <h2 className="heading-fluid-section font-serif-heading font-bold text-[#012635] tracking-tight leading-[1.2]">
                   {activeMode.headline}
                 </h2>
                 
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
                   {activeMode.subhead}
                 </p>
               </div>

@@ -36,3 +36,4 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return <ProductsClientView />;
 }
+
