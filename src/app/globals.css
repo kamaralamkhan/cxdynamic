@@ -20,39 +20,39 @@
   --color-foreground: var(--foreground);
   --font-display: var(--font-jakarta), system-ui, -apple-system, sans-serif;
   --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
-  --font-serif: var(--font-serif), "Instrument Serif", Garamond, Georgia, serif;
+  --font-serif: var(--font-jakarta), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-mono), "JetBrains Mono", monospace;
 }
 
-/* Fluid Typography Strategy (Editorial Calligraphic Serif & Enterprise SaaS Spec) */
+/* Clean High-End Enterprise SaaS Typography (Inter & Plus Jakarta Sans) */
 .heading-fluid-hero {
-  font-family: var(--font-serif), "Instrument Serif", Garamond, Georgia, serif;
-  font-size: clamp(2.4rem, 4vw + 1rem, 4.4rem);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
-  font-weight: 400;
+  font-family: var(--font-jakarta), var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: clamp(2.3rem, 3.8vw + 1rem, 4.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 800;
 }
 
 .heading-fluid-section {
-  font-family: var(--font-serif), "Instrument Serif", Garamond, Georgia, serif;
-  font-size: clamp(2rem, 2.8vw + 0.8rem, 3.2rem);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  font-weight: 400;
+  font-family: var(--font-jakarta), var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: clamp(1.85rem, 2.4vw + 0.8rem, 2.85rem);
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
 
-/* Editorial Calligraphic Serif Headings */
-.font-serif-heading {
-  font-family: var(--font-serif), "Instrument Serif", Garamond, Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.02em;
+/* Authoritative Clean Sans-Serif SaaS Headings */
+.font-serif-heading, .font-saas-heading {
+  font-family: var(--font-jakarta), var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
-/* Authentic Calligraphic Cursive Italic */
+/* Subtle Italic Accent (Clean & Professional) */
 .font-calligraphic-italic {
-  font-family: var(--font-serif), "Instrument Serif", Garamond, Georgia, serif;
+  font-family: var(--font-jakarta), var(--font-inter), system-ui, -apple-system, sans-serif;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 /* Engineered Monospace Utility Labels & Metadata */

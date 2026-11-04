@@ -180,7 +180,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               About Us
             </Link>
 
-            {/* Level 2: Our Products Mega Menu (Aircall & Convin Inspired Layout) */}
+            {/* Level 2: Our Products Mega Menu (Sleek SaaS Layout) */}
             <div 
               className="group h-full flex items-center"
               onMouseEnter={() => handleMouseEnter("products")}
@@ -190,42 +190,42 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                 type="button"
                 onClick={() => toggleDropdown("products")}
                 aria-expanded={openDropdown === "products"}
-                className={`inline-flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-colors cursor-pointer ${
+                className={`inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
                   openDropdown === "products" 
-                    ? "text-[#069bd8] bg-slate-50" 
+                    ? "text-[#069bd8] bg-slate-100/90 shadow-2xs" 
                     : "text-slate-700 hover:text-[#069bd8] hover:bg-slate-50"
                 }`}
               >
                 <span>Our Products</span>
-                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
+                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-300 ${
                   openDropdown === "products" ? "rotate-180 text-[#069bd8]" : "group-hover:rotate-180"
                 }`} />
               </button>
 
-              {/* Mega Menu Dropdown: Centered to Container with Invisible Hit Bridge & Timeout Buffer */}
+              {/* Mega Menu Dropdown: Ultra-Smooth SaaS Animation with Cubic Bezier */}
               <div 
                 onMouseEnter={() => handleMouseEnter("products")}
                 onMouseLeave={handleMouseLeave}
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
                   openDropdown === "products"
-                    ? "opacity-100 visible pointer-events-auto translate-y-0"
-                    : "opacity-0 invisible pointer-events-none -translate-y-2 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0"
+                    ? "opacity-100 visible pointer-events-auto translate-y-0 scale-100"
+                    : "opacity-0 invisible pointer-events-none -translate-y-1.5 scale-[0.985]"
                 }`}
               >
-                <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden">
+                <div className="backdrop-blur-xl bg-white/98 rounded-2xl border border-slate-200/90 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.14),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden transition-all duration-300">
                   
                   {/* Grid Layout: Left Spotlight Card (4 cols) + Right 4 Product Columns (8 cols) */}
                   <div className="p-6 grid grid-cols-12 gap-5">
                     
-                    {/* Left Spotlight: AI Voice & CX Platform (Like Aircall's AI Voice Agents card) */}
+                    {/* Left Spotlight: AI Voice & CX Platform */}
                     <div className="col-span-4 bg-gradient-to-br from-cyan-50/70 via-sky-50/40 to-slate-50 p-4 rounded-xl border border-cyan-100/90 flex flex-col justify-between">
                       <div>
                         <div className="flex items-center justify-between pb-2 border-b border-cyan-100 mb-3">
-                          <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-900 flex items-center gap-1.5">
-                            <Sparkles className="w-3.5 h-3.5 text-[#069bd8]" />
+                          <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-900 flex items-center gap-1.5 font-mono">
+                            <Bot className="w-3.5 h-3.5 text-[#069bd8]" />
                             AI Voice &amp; CX Platform
                           </span>
-                          <span className="text-[9px] font-bold uppercase tracking-wider text-cyan-700 bg-cyan-100/80 px-2 py-0.5 rounded-md">
+                          <span className="text-[9px] font-bold uppercase tracking-wider text-cyan-700 bg-cyan-100/80 px-2 py-0.5 rounded-md font-mono">
                             GenAI
                           </span>
                         </div>
@@ -462,27 +462,27 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                 aria-expanded={openDropdown === "why"}
                 className={`inline-flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-colors cursor-pointer ${
                   openDropdown === "why" 
-                    ? "text-[#069bd8] bg-slate-50" 
+                    ? "text-[#069bd8] bg-slate-100/90 shadow-2xs" 
                     : "text-slate-700 hover:text-[#069bd8] hover:bg-slate-50"
                 }`}
               >
                 <span>Why CXDYNAMIQ</span>
-                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
+                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-300 ${
                   openDropdown === "why" ? "rotate-180 text-[#069bd8]" : "group-hover:rotate-180"
                 }`} />
               </button>
 
-              {/* Mega Menu Dropdown: Centered to Container with Invisible Hit Bridge & Timeout Buffer */}
+              {/* Mega Menu Dropdown: Ultra-Smooth SaaS Animation with Cubic Bezier */}
               <div 
                 onMouseEnter={() => handleMouseEnter("why")}
                 onMouseLeave={handleMouseLeave}
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
                   openDropdown === "why"
-                    ? "opacity-100 visible pointer-events-auto translate-y-0"
-                    : "opacity-0 invisible pointer-events-none -translate-y-2 lg:group-hover:opacity-100 lg:group-hover:visible lg:group-hover:pointer-events-auto lg:group-hover:translate-y-0"
+                    ? "opacity-100 visible pointer-events-auto translate-y-0 scale-100"
+                    : "opacity-0 invisible pointer-events-none -translate-y-1.5 scale-[0.985]"
                 }`}
               >
-                <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.12),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden">
+                <div className="backdrop-blur-xl bg-white/98 rounded-2xl border border-slate-200/90 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.14),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden transition-all duration-300">
                   
                   {/* Grid Layout: Left 3 Columns (8 cols) + Right Spotlight Card (4 cols) */}
                   <div className="p-6 grid grid-cols-12 gap-5">

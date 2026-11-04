@@ -198,10 +198,10 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
               <span className="mono-label">AGENTIC AI CUSTOMER EXPERIENCE</span>
             </div>
 
-            {/* 2. H1 Headline (Tri-font Editorial Instrument Serif - Weight 400, Negative tracking) */}
-            <h1 className="heading-fluid-hero font-serif-heading text-[#002620] tracking-tight font-normal">
+            {/* 2. H1 Headline (Clean Modern Enterprise SaaS Typography) */}
+            <h1 className="heading-fluid-hero font-display text-[#002620] tracking-tight font-extrabold">
               The Agentic AI Platform That{" "}
-              <span className="font-calligraphic-italic text-sky-700">Resolves Customer Inquiries in Real Time.</span>
+              <span className="text-sky-700">Resolves Customer Inquiries in Real Time.</span>
             </h1>
 
             {/* 3. Sub-headline (Fellix/Inter readability spec: 16px, 1.625 line-height, #012635) */}

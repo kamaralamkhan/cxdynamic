@@ -117,7 +117,7 @@ export default function AgenticAISection() {
   const [progressFills, setProgressFills] = useState<number[]>([100, 0, 0, 0, 0]);
   const [isManualScroll, setIsManualScroll] = useState<boolean>(false);
 
-  // Scroll Runway Effect (mirrors PlatformModesSection)
+  // Smooth Scroll Runway Effect with Comfortable Center-Lock Offset
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
@@ -127,11 +127,15 @@ export default function AgenticAISection() {
       if (runwayHeight <= 0) return;
 
       const scrolled = window.scrollY - containerTop;
-      const progress = Math.max(0, Math.min(1, scrolled / runwayHeight));
+      // Clamped progress from 0.0 to 1.0
+      const rawProgress = Math.max(0, Math.min(1, scrolled / runwayHeight));
 
-      // 5 Steps -> each takes 20% (0.2) of runway
-      const stepIdx = Math.min(4, Math.max(0, Math.floor(progress / 0.2)));
-      const stepProgress = (progress - (stepIdx * 0.2)) / 0.2; // 0.0 to 1.0 within current step
+      // Ease into center: 0.0 to 0.08 is smooth centering lock; 0.08 to 0.92 runs the 5 steps; 0.92 to 1.0 exits gracefully
+      const activeProgress = Math.max(0, Math.min(1, (rawProgress - 0.06) / 0.88));
+
+      // 5 Steps -> each takes 20% (0.2) of active runway
+      const stepIdx = Math.min(4, Math.max(0, Math.floor(activeProgress / 0.2)));
+      const stepProgress = (activeProgress - (stepIdx * 0.2)) / 0.2; // 0.0 to 1.0 within current step
 
       const fills = [0, 0, 0, 0, 0];
       for (let i = 0; i < stepIdx; i++) fills[i] = 100;
@@ -165,7 +169,7 @@ export default function AgenticAISection() {
       const runwayHeight = containerRef.current.offsetHeight - window.innerHeight;
 
       if (runwayHeight > 100) {
-        const targetPercent = (index * 0.2) + 0.08;
+        const targetPercent = 0.06 + (index * 0.2 * 0.88) + 0.04;
         const targetScroll = containerTop + runwayHeight * targetPercent;
 
         window.scrollTo({
@@ -187,38 +191,38 @@ export default function AgenticAISection() {
     <section 
       ref={containerRef}
       id="agentic-ai" 
-      className="relative bg-[#021824] text-white border-b border-slate-800 lg:h-[320vh] scroll-mt-12"
+      className="relative bg-[#021824] text-white border-b border-slate-800 lg:h-[340vh] scroll-mt-16 pb-24 lg:pb-36"
     >
       {/* Decorative Cyan Radial Lighting */}
       <div 
         aria-hidden="true" 
-        className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-cyan-500/15 via-sky-500/5 to-transparent blur-3xl -z-10" 
+        className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-cyan-500/15 via-sky-500/5 to-transparent blur-3xl -z-10" 
       />
 
-      {/* Sticky Viewport Container */}
-      <div className="lg:sticky lg:top-20 xl:top-24 lg:h-[calc(100vh-5rem)] flex flex-col justify-center py-12 lg:py-0 lg:overflow-hidden relative z-10">
+      {/* Sticky Viewport Container - Perfectly Centered Vertically with Breathing Room */}
+      <div className="lg:sticky lg:top-14 xl:top-16 lg:h-[calc(100vh-4rem)] flex flex-col justify-center py-8 lg:py-4 overflow-visible relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           
-          {/* Section Header - High Contrast White & Luminous Cyan */}
-          <div className="max-w-3xl mx-auto text-center space-y-3 mb-8 sm:mb-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/90 border border-cyan-500/40 text-cyan-300 text-xs font-semibold shadow-inner">
+          {/* Section Header - Clean Modern Inter/Jakarta Sans Typography */}
+          <div className="max-w-3xl mx-auto text-center space-y-2.5 mb-6 sm:mb-8">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/90 border border-cyan-500/40 text-cyan-300 text-xs font-semibold shadow-inner">
               <Cpu className="w-3.5 h-3.5 text-cyan-400" />
               <span className="mono-label">AUTONOMOUS AGENTIC ARCHITECTURE</span>
             </div>
 
-            <h2 className="heading-fluid-section font-serif-heading text-white tracking-tight font-normal">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-display">
               Beyond Static Chatbots:{" "}
-              <span className="font-calligraphic-italic text-cyan-300">True Agentic AI for Enterprise CX.</span>
+              <span className="text-cyan-400">True Agentic AI for Enterprise CX.</span>
             </h2>
 
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto font-normal">
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl mx-auto font-normal">
               Legacy bots only answer FAQs. CXdynamIQ's Agentic AI reasons through business rules, 
               triggers real-time backend APIs, and autonomously resolves customer requests from end to end.
             </p>
           </div>
 
           {/* 5-Step Stepper Navigation with Dynamic Scroll Fill Bars */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 mb-6 sm:mb-7">
             {AGENTIC_STEPS.map((s, idx) => {
               const Icon = s.icon;
               const isActive = activeStepIndex === idx;
@@ -227,26 +231,26 @@ export default function AgenticAISection() {
                 <button
                   key={s.step}
                   onClick={() => handleTabClick(idx)}
-                  className={`p-3.5 sm:p-4 rounded-xl border text-left transition-all cursor-pointer ${
+                  className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
                     isActive 
                       ? "bg-slate-900 border-cyan-400 shadow-xl ring-1 ring-cyan-400/50 translate-y-[-2px]" 
-                      : "bg-slate-950/70 border-white/10 hover:bg-slate-900/60 hover:border-white/20"
+                      : "bg-slate-950/80 border-white/10 hover:bg-slate-900/60 hover:border-white/20"
                   }`}
                 >
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center justify-between mb-1.5">
                     <span className="text-xs font-mono font-bold text-cyan-400">{s.step}</span>
                     <div 
-                      className="w-7 h-7 rounded-lg flex items-center justify-center transition-transform"
+                      className="w-6 h-6 rounded-md flex items-center justify-center transition-transform"
                       style={{ backgroundColor: `${s.color}25`, color: s.color }}
                     >
-                      <Icon className="w-3.5 h-3.5" />
+                      <Icon className="w-3 h-3" />
                     </div>
                   </div>
-                  <div className="text-xs sm:text-sm font-bold text-white tracking-wide truncate">{s.title}</div>
-                  <div className="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 truncate">{s.badge}</div>
+                  <div className="text-xs sm:text-sm font-bold text-white tracking-wide truncate font-display">{s.title}</div>
+                  <div className="text-[10px] text-slate-400 mt-0.5 truncate">{s.badge}</div>
 
                   {/* Dynamic Progress Bar Fill on Scroll */}
-                  <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden mt-2.5">
+                  <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden mt-2">
                     <div 
                       className="h-full bg-cyan-400 rounded-full transition-all duration-150 ease-out"
                       style={{ width: `${isActive ? Math.max(fillPercent, 10) : fillPercent}%` }}
@@ -257,19 +261,19 @@ export default function AgenticAISection() {
             })}
           </div>
 
-          {/* Interactive Step Console */}
-          <div className="bg-slate-950/95 rounded-2xl border border-white/15 p-5 sm:p-7 lg:p-8 shadow-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-10 items-center">
+          {/* Interactive Step Console Card */}
+          <div className="bg-slate-950/95 rounded-2xl border border-white/15 p-5 sm:p-6 lg:p-7 shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-8 items-center">
               
               {/* Left: Step Details & Business Value */}
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/90 border border-cyan-500/40 text-cyan-300">
+              <div className="space-y-3.5">
+                <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full text-xs font-semibold bg-cyan-950/90 border border-cyan-500/40 text-cyan-300">
                   <span className="mono-label">PHASE {currentStep.step} OF 05</span>
                   <span>•</span>
                   <span>{currentStep.badge}</span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-normal font-serif-heading text-white">
+                <h3 className="text-xl sm:text-2xl font-bold font-display text-white tracking-tight">
                   {currentStep.step}. {currentStep.title}: How it Works
                 </h3>
 
@@ -277,7 +281,7 @@ export default function AgenticAISection() {
                   {currentStep.summary}
                 </p>
 
-                <div className="p-3.5 rounded-xl bg-slate-900/90 border border-white/10 space-y-1.5">
+                <div className="p-3.5 rounded-xl bg-slate-900/90 border border-white/10 space-y-1">
                   <div className="text-xs font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-1.5">
                     <Zap className="w-3.5 h-3.5" />
                     Live Execution Scenario
@@ -296,8 +300,8 @@ export default function AgenticAISection() {
               </div>
 
               {/* Right: Real-Time Code & Webhook Payload Execution */}
-              <div className="rounded-xl bg-[#010912] border border-cyan-900/60 p-4 sm:p-5 shadow-inner space-y-3 font-mono text-xs">
-                <div className="flex items-center justify-between text-slate-400 border-b border-white/10 pb-2.5">
+              <div className="rounded-xl bg-[#010912] border border-cyan-900/60 p-4 sm:p-5 shadow-inner space-y-2.5 font-mono text-xs">
+                <div className="flex items-center justify-between text-slate-400 border-b border-white/10 pb-2">
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
                     <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
@@ -309,7 +313,7 @@ export default function AgenticAISection() {
                   </span>
                 </div>
 
-                <pre className="text-cyan-300/95 overflow-x-auto text-[11px] leading-relaxed py-2">
+                <pre className="text-cyan-300/95 overflow-x-auto text-[11px] leading-relaxed py-1.5">
                   <code>{currentStep.codeSnippet}</code>
                 </pre>
 
@@ -326,12 +330,12 @@ export default function AgenticAISection() {
           </div>
 
           {/* Micro Bottom CTA */}
-          <div className="mt-8 text-center">
+          <div className="mt-6 text-center">
             <a
               href="https://cxq360.ai/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold bg-[#008f6d] hover:bg-[#007a5d] text-white shadow-md transition-all whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-[#008f6d] hover:bg-[#007a5d] text-white shadow-md transition-all whitespace-nowrap"
             >
               <span>Test-Drive Agentic Workflows on CXQ360.ai Sandbox</span>
               <ArrowRight className="w-4 h-4 shrink-0" />

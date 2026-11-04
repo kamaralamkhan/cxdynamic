@@ -41,9 +41,9 @@ export default function CXAnalyticsSection() {
             <span className="mono-label">REAL-TIME BUSINESS TELEMETRY</span>
           </div>
 
-          <h2 className="heading-fluid-section font-serif-heading text-[#002620] tracking-tight font-normal">
+          <h2 className="heading-fluid-section font-display font-extrabold text-[#002620] tracking-tight">
             See the Metrics That{" "}
-            <span className="font-calligraphic-italic text-sky-700">Actually Move the Bottom Line.</span>
+            <span className="text-sky-700">Actually Move the Bottom Line.</span>
           </h2>
 
           <p className="text-base text-[#012635] leading-relaxed font-normal">
@@ -144,7 +144,7 @@ export default function CXAnalyticsSection() {
                   <Zap className="w-3.5 h-3.5 text-[#069bd8]" />
                   <span className="mono-label">ENTERPRISE ROI CALCULATOR</span>
                 </div>
-                <h3 className="text-2xl font-normal font-serif-heading text-[#002620]">
+                <h3 className="text-2xl font-bold font-display text-[#002620]">
                   Calculate Your Projected Savings with Agentic AI
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600">

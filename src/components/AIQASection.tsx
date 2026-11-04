@@ -89,9 +89,9 @@ export default function AIQASection() {
             <span className="mono-label">100% CONVERSATION INTELLIGENCE</span>
           </div>
 
-          <h2 className="heading-fluid-section font-serif-heading text-[#002620] tracking-tight font-normal">
+          <h2 className="heading-fluid-section font-display font-extrabold text-[#002620] tracking-tight">
             Ditch the 2% Sample Audit.{" "}
-            <span className="font-calligraphic-italic text-sky-700">Inspect 100% of Conversations.</span>
+            <span className="text-sky-700">Inspect 100% of Conversations.</span>
           </h2>
 
           <p className="text-base text-[#012635] leading-relaxed font-normal">
@@ -130,7 +130,7 @@ export default function AIQASection() {
                 <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
                 <span className="mono-label">LIVE SUPERVISOR AUDIT CONSOLE</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-normal font-serif-heading text-white">
+              <h3 className="text-xl sm:text-2xl font-bold font-display text-white">
                 Automated Scorecard &amp; Script Adherence Telemetry
               </h3>
             </div>

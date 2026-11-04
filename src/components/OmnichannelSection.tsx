@@ -174,9 +174,9 @@ export default function OmnichannelSection() {
             <span className="mono-label">UNIFIED OMNICHANNEL FABRIC</span>
           </div>
 
-          <h2 className="heading-fluid-section font-serif-heading text-[#002620] tracking-tight font-normal">
+          <h2 className="heading-fluid-section font-display font-extrabold text-[#002620] tracking-tight">
             One Unified Context.{" "}
-            <span className="font-calligraphic-italic text-sky-700">Every Voice &amp; Digital Channel.</span>
+            <span className="text-sky-700">Every Voice &amp; Digital Channel.</span>
           </h2>
 
           <p className="text-base text-[#012635] leading-relaxed font-normal">
@@ -267,7 +267,7 @@ export default function OmnichannelSection() {
               <History className="w-3.5 h-3.5 text-cyan-400" />
               <span className="mono-label">PERSISTENT CONVERSATION MEMORY</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-normal font-serif-heading tracking-tight text-white">
+            <h3 className="text-2xl sm:text-3xl font-bold font-display tracking-tight text-white">
               Watch Context Flow Across 3 Days and 3 Different Channels
             </h3>
             <p className="text-sm sm:text-base text-slate-300">

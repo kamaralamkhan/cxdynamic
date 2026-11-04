@@ -24,9 +24,9 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
             <span className="mono-label">LAUNCH YOUR TRANSFORMATION</span>
           </div>
 
-          <h2 className="heading-fluid-section font-serif-heading text-white tracking-tight font-normal">
+          <h2 className="heading-fluid-section font-display font-extrabold text-white tracking-tight">
             Ready to Modernize Your{" "}
-            <span className="italic font-normal text-cyan-400">Customer Experience?</span>
+            <span className="text-cyan-400">Customer Experience?</span>
           </h2>
 
           <p className="text-base text-slate-300 leading-relaxed font-normal">
@@ -50,7 +50,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
               </div>
 
               <div>
-                <h3 className="text-2xl font-normal font-serif-heading text-white">
+                <h3 className="text-2xl font-bold font-display text-white">
                   Test-Drive CXQ360.ai Sandbox
                 </h3>
                 <p className="text-sm text-slate-300 mt-2 leading-relaxed">
@@ -98,7 +98,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
               </div>
 
               <div>
-                <h3 className="text-2xl font-normal font-serif-heading text-white">
+                <h3 className="text-2xl font-bold font-display text-white">
                   Enterprise Architecture &amp; Telecom
                 </h3>
                 <p className="text-sm text-slate-300 mt-2 leading-relaxed">
