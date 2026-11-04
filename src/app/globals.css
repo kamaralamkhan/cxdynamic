@@ -20,34 +20,39 @@
   --color-foreground: var(--foreground);
   --font-display: var(--font-jakarta), system-ui, -apple-system, sans-serif;
   --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
-  --font-serif: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
+  --font-serif: var(--font-serif), "Instrument Serif", Garamond, Georgia, serif;
   --font-mono: var(--font-mono), "JetBrains Mono", monospace;
 }
 
-/* Fluid Typography Strategy (Editorial Serif & Enterprise SaaS Spec) */
+/* Fluid Typography Strategy (Editorial Calligraphic Serif & Enterprise SaaS Spec) */
 .heading-fluid-hero {
-  font-family: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
-  font-size: clamp(2.3rem, 3.8vw + 1rem, 4.2rem);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  font-family: var(--font-serif), "Instrument Serif", Garamond, Georgia, serif;
+  font-size: clamp(2.4rem, 4vw + 1rem, 4.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
   font-weight: 400;
-  color: #002620;
 }
 
 .heading-fluid-section {
-  font-family: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
-  font-size: clamp(1.9rem, 2.5vw + 0.9rem, 3.2rem);
-  line-height: 1.14;
-  letter-spacing: -0.025em;
+  font-family: var(--font-serif), "Instrument Serif", Garamond, Georgia, serif;
+  font-size: clamp(2rem, 2.8vw + 0.8rem, 3.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
   font-weight: 400;
-  color: #002620;
 }
 
-/* Editorial Serif Headings (Weight 400 per Typography Spec) */
+/* Editorial Calligraphic Serif Headings */
 .font-serif-heading {
-  font-family: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
+  font-family: var(--font-serif), "Instrument Serif", Garamond, Georgia, serif;
   font-weight: 400;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
+}
+
+/* Authentic Calligraphic Cursive Italic */
+.font-calligraphic-italic {
+  font-family: var(--font-serif), "Instrument Serif", Garamond, Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
 }
 
 /* Engineered Monospace Utility Labels & Metadata */

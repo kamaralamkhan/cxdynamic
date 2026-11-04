@@ -43,7 +43,7 @@ export default function CXAnalyticsSection() {
 
           <h2 className="heading-fluid-section font-serif-heading text-[#002620] tracking-tight font-normal">
             See the Metrics That{" "}
-            <span className="italic font-normal text-sky-700">Actually Move the Bottom Line.</span>
+            <span className="font-calligraphic-italic text-sky-700">Actually Move the Bottom Line.</span>
           </h2>
 
           <p className="text-base text-[#012635] leading-relaxed font-normal">

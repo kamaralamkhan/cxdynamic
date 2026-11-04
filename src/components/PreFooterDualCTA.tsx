@@ -10,13 +10,13 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
   return (
     <section className="py-20 lg:py-24 bg-[#012635] text-white relative overflow-hidden border-t border-slate-800">
       {/* Radial soft lighting */}
-      <div 
-        aria-hidden="true" 
-        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-gradient-to-tr from-cyan-500/10 via-emerald-500/10 to-transparent rounded-full blur-3xl -z-10" 
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-gradient-to-tr from-cyan-500/10 via-emerald-500/10 to-transparent rounded-full blur-3xl -z-10"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 text-xs font-semibold">
@@ -30,14 +30,14 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
           </h2>
 
           <p className="text-base text-slate-300 leading-relaxed font-normal">
-            Whether you want to test-drive autonomous AI agents on our instant sandbox or need 
+            Whether you want to test-drive autonomous AI agents on our instant sandbox or need
             an enterprise telecom whitelisting consultation, we’re ready.
           </p>
         </div>
 
         {/* Dual Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          
+
           {/* Card 1: Self-Serve SaaS Sandbox (CXQ360.ai) */}
           <div className="bg-slate-900/90 rounded-3xl p-8 border border-cyan-500/30 shadow-2xl flex flex-col justify-between space-y-6 relative group hover:border-cyan-400/60 transition-all">
             <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#008f6d] text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">

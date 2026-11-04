@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { 
   Cpu, 
   Brain, 
@@ -8,12 +8,8 @@ import {
   CheckCircle, 
   GraduationCap, 
   ArrowRight, 
-  Sparkles, 
   Zap, 
-  Activity, 
-  ShieldCheck,
-  Code2,
-  Database
+  ShieldCheck
 } from "lucide-react";
 
 interface WorkflowStep {
@@ -116,152 +112,234 @@ await conversationQA.ingestTurn({
 ];
 
 export default function AgenticAISection() {
+  const containerRef = useRef<HTMLDivElement>(null);
   const [activeStepIndex, setActiveStepIndex] = useState(0);
-  const currentStep = AGENTIC_STEPS[activeStepIndex];
+  const [progressFills, setProgressFills] = useState<number[]>([100, 0, 0, 0, 0]);
+  const [isManualScroll, setIsManualScroll] = useState<boolean>(false);
+
+  // Scroll Runway Effect (mirrors PlatformModesSection)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const containerTop = rect.top + window.scrollY;
+      const runwayHeight = containerRef.current.offsetHeight - window.innerHeight;
+      if (runwayHeight <= 0) return;
+
+      const scrolled = window.scrollY - containerTop;
+      const progress = Math.max(0, Math.min(1, scrolled / runwayHeight));
+
+      // 5 Steps -> each takes 20% (0.2) of runway
+      const stepIdx = Math.min(4, Math.max(0, Math.floor(progress / 0.2)));
+      const stepProgress = (progress - (stepIdx * 0.2)) / 0.2; // 0.0 to 1.0 within current step
+
+      const fills = [0, 0, 0, 0, 0];
+      for (let i = 0; i < stepIdx; i++) fills[i] = 100;
+      fills[stepIdx] = Math.min(100, Math.max(0, Math.round(stepProgress * 100)));
+
+      setProgressFills(fills);
+
+      if (!isManualScroll) {
+        setActiveStepIndex(stepIdx);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isManualScroll]);
+
+  // Click tab to jump directly to that step in the scroll runway
+  const handleTabClick = (index: number) => {
+    setIsManualScroll(true);
+    setActiveStepIndex(index);
+
+    const fills = [0, 0, 0, 0, 0];
+    for (let i = 0; i <= index; i++) fills[i] = 100;
+    setProgressFills(fills);
+
+    if (containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect();
+      const containerTop = rect.top + window.scrollY;
+      const runwayHeight = containerRef.current.offsetHeight - window.innerHeight;
+
+      if (runwayHeight > 100) {
+        const targetPercent = (index * 0.2) + 0.08;
+        const targetScroll = containerTop + runwayHeight * targetPercent;
+
+        window.scrollTo({
+          top: targetScroll,
+          behavior: "smooth",
+        });
+      }
+    }
+
+    setTimeout(() => {
+      setIsManualScroll(false);
+    }, 800);
+  };
+
+  const currentStep = AGENTIC_STEPS[activeStepIndex] || AGENTIC_STEPS[0];
   const StepIcon = currentStep.icon;
 
   return (
-    <section id="agentic-ai" className="py-20 lg:py-28 bg-[#012635] text-white relative overflow-hidden border-b border-slate-800">
-      {/* Decorative Glow */}
+    <section 
+      ref={containerRef}
+      id="agentic-ai" 
+      className="relative bg-[#021824] text-white border-b border-slate-800 lg:h-[320vh] scroll-mt-12"
+    >
+      {/* Decorative Cyan Radial Lighting */}
       <div 
         aria-hidden="true" 
-        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-cyan-500/10 via-sky-500/5 to-transparent blur-3xl -z-10" 
+        className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-cyan-500/15 via-sky-500/5 to-transparent blur-3xl -z-10" 
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 text-xs font-semibold">
-            <Cpu className="w-3.5 h-3.5 text-cyan-400" />
-            <span className="mono-label">AUTONOMOUS AGENTIC ARCHITECTURE</span>
+      {/* Sticky Viewport Container */}
+      <div className="lg:sticky lg:top-20 xl:top-24 lg:h-[calc(100vh-5rem)] flex flex-col justify-center py-12 lg:py-0 lg:overflow-hidden relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          
+          {/* Section Header - High Contrast White & Luminous Cyan */}
+          <div className="max-w-3xl mx-auto text-center space-y-3 mb-8 sm:mb-10">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/90 border border-cyan-500/40 text-cyan-300 text-xs font-semibold shadow-inner">
+              <Cpu className="w-3.5 h-3.5 text-cyan-400" />
+              <span className="mono-label">AUTONOMOUS AGENTIC ARCHITECTURE</span>
+            </div>
+
+            <h2 className="heading-fluid-section font-serif-heading text-white tracking-tight font-normal">
+              Beyond Static Chatbots:{" "}
+              <span className="font-calligraphic-italic text-cyan-300">True Agentic AI for Enterprise CX.</span>
+            </h2>
+
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto font-normal">
+              Legacy bots only answer FAQs. CXdynamIQ's Agentic AI reasons through business rules, 
+              triggers real-time backend APIs, and autonomously resolves customer requests from end to end.
+            </p>
           </div>
 
-          <h2 className="heading-fluid-section font-serif-heading text-white tracking-tight font-normal">
-            Beyond Static Chatbots:{" "}
-            <span className="italic font-normal text-cyan-400">True Agentic AI for Enterprise CX.</span>
-          </h2>
+          {/* 5-Step Stepper Navigation with Dynamic Scroll Fill Bars */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
+            {AGENTIC_STEPS.map((s, idx) => {
+              const Icon = s.icon;
+              const isActive = activeStepIndex === idx;
+              const fillPercent = progressFills[idx] ?? 0;
+              return (
+                <button
+                  key={s.step}
+                  onClick={() => handleTabClick(idx)}
+                  className={`p-3.5 sm:p-4 rounded-xl border text-left transition-all cursor-pointer ${
+                    isActive 
+                      ? "bg-slate-900 border-cyan-400 shadow-xl ring-1 ring-cyan-400/50 translate-y-[-2px]" 
+                      : "bg-slate-950/70 border-white/10 hover:bg-slate-900/60 hover:border-white/20"
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-mono font-bold text-cyan-400">{s.step}</span>
+                    <div 
+                      className="w-7 h-7 rounded-lg flex items-center justify-center transition-transform"
+                      style={{ backgroundColor: `${s.color}25`, color: s.color }}
+                    >
+                      <Icon className="w-3.5 h-3.5" />
+                    </div>
+                  </div>
+                  <div className="text-xs sm:text-sm font-bold text-white tracking-wide truncate">{s.title}</div>
+                  <div className="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 truncate">{s.badge}</div>
 
-          <p className="text-base text-slate-300 leading-relaxed font-normal">
-            Legacy bots only answer FAQs. CXdynamIQ's Agentic AI reasons through business rules, 
-            triggers real-time backend APIs, and autonomously resolves customer requests from end to end.
-          </p>
-        </div>
+                  {/* Dynamic Progress Bar Fill on Scroll */}
+                  <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden mt-2.5">
+                    <div 
+                      className="h-full bg-cyan-400 rounded-full transition-all duration-150 ease-out"
+                      style={{ width: `${isActive ? Math.max(fillPercent, 10) : fillPercent}%` }}
+                    />
+                  </div>
+                </button>
+              );
+            })}
+          </div>
 
-        {/* 5-Step Stepper Navigation */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-10">
-          {AGENTIC_STEPS.map((s, idx) => {
-            const Icon = s.icon;
-            const isActive = activeStepIndex === idx;
-            return (
-              <button
-                key={s.step}
-                onClick={() => setActiveStepIndex(idx)}
-                className={`p-4 rounded-xl border text-left transition-all cursor-pointer ${
-                  isActive 
-                    ? "bg-slate-800/95 border-cyan-400 shadow-lg ring-1 ring-cyan-400/50 translate-y-[-2px]" 
-                    : "bg-slate-900/60 border-white/10 hover:bg-slate-800/60 hover:border-white/20"
-                }`}
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-mono font-bold text-cyan-400">{s.step}</span>
-                  <div 
-                    className="w-7 h-7 rounded-lg flex items-center justify-center"
-                    style={{ backgroundColor: `${s.color}20`, color: s.color }}
-                  >
-                    <Icon className="w-3.5 h-3.5" />
+          {/* Interactive Step Console */}
+          <div className="bg-slate-950/95 rounded-2xl border border-white/15 p-5 sm:p-7 lg:p-8 shadow-2xl">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-10 items-center">
+              
+              {/* Left: Step Details & Business Value */}
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/90 border border-cyan-500/40 text-cyan-300">
+                  <span className="mono-label">PHASE {currentStep.step} OF 05</span>
+                  <span>•</span>
+                  <span>{currentStep.badge}</span>
+                </div>
+
+                <h3 className="text-xl sm:text-2xl font-normal font-serif-heading text-white">
+                  {currentStep.step}. {currentStep.title}: How it Works
+                </h3>
+
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  {currentStep.summary}
+                </p>
+
+                <div className="p-3.5 rounded-xl bg-slate-900/90 border border-white/10 space-y-1.5">
+                  <div className="text-xs font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-1.5">
+                    <Zap className="w-3.5 h-3.5" />
+                    Live Execution Scenario
+                  </div>
+                  <div className="text-xs text-slate-200 leading-relaxed">
+                    {currentStep.actionDetails}
                   </div>
                 </div>
-                <div className="text-sm font-bold text-white tracking-wide">{s.title}</div>
-                <div className="text-[11px] text-slate-400 mt-0.5 truncate">{s.badge}</div>
-              </button>
-            );
-          })}
-        </div>
 
-        {/* Interactive Step Console */}
-        <div className="bg-slate-950 rounded-2xl border border-white/10 p-6 sm:p-8 lg:p-10 shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-12 items-center">
-            
-            {/* Left: Step Details & Business Value */}
-            <div className="space-y-5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/80 border border-cyan-800/50 text-cyan-300">
-                <span>Phase {currentStep.step} of 05</span>
-                <span>•</span>
-                <span>{currentStep.badge}</span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-bold font-serif-heading text-white">
-                {currentStep.step}. {currentStep.title}: How it Works
-              </h3>
-
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                {currentStep.summary}
-              </p>
-
-              <div className="p-4 rounded-xl bg-slate-900/90 border border-white/10 space-y-2">
-                <div className="text-xs font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-1.5">
-                  <Zap className="w-3.5 h-3.5" />
-                  Live Execution Scenario
-                </div>
-                <div className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                  {currentStep.actionDetails}
+                <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                  <span className="text-xs text-slate-400">Target Telemetry SLA</span>
+                  <span className="text-xs font-mono font-bold text-emerald-400 bg-emerald-950/50 px-3 py-1 rounded-md border border-emerald-500/40">
+                    {currentStep.metric}
+                  </span>
                 </div>
               </div>
 
-              <div className="flex items-center justify-between pt-2 border-t border-white/10">
-                <span className="text-xs text-slate-400">Target Telemetry SLA</span>
-                <span className="text-sm font-mono font-bold text-emerald-400 bg-emerald-950/50 px-3 py-1 rounded-md border border-emerald-800/50">
-                  {currentStep.metric}
-                </span>
+              {/* Right: Real-Time Code & Webhook Payload Execution */}
+              <div className="rounded-xl bg-[#010912] border border-cyan-900/60 p-4 sm:p-5 shadow-inner space-y-3 font-mono text-xs">
+                <div className="flex items-center justify-between text-slate-400 border-b border-white/10 pb-2.5">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                    <span className="text-[11px] text-slate-300 ml-1">agentic_orchestrator.ts</span>
+                  </div>
+                  <span className="text-[10px] text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800/40">
+                    LIVE TELEMETRY
+                  </span>
+                </div>
+
+                <pre className="text-cyan-300/95 overflow-x-auto text-[11px] leading-relaxed py-2">
+                  <code>{currentStep.codeSnippet}</code>
+                </pre>
+
+                <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-400">
+                  <span className="flex items-center gap-1.5">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                    SOC2 &amp; HIPAA Guardrails Enforced
+                  </span>
+                  <span className="text-slate-500">Latency: 320ms</span>
+                </div>
               </div>
+
             </div>
-
-            {/* Right: Real-Time Code & Webhook Payload Execution */}
-            <div className="rounded-xl bg-[#030914] border border-cyan-950/80 p-5 shadow-inner space-y-3 font-mono text-xs">
-              <div className="flex items-center justify-between text-slate-400 border-b border-white/10 pb-2.5">
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-                  <span className="text-[11px] text-slate-300 ml-1">agentic_orchestrator.ts</span>
-                </div>
-                <span className="text-[10px] text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
-                  LIVE TELEMETRY
-                </span>
-              </div>
-
-              <pre className="text-cyan-300/90 overflow-x-auto text-[11px] leading-relaxed py-2">
-                <code>{currentStep.codeSnippet}</code>
-              </pre>
-
-              <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-400">
-                <span className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  SOC2 &amp; HIPAA Guardrails Enforced
-                </span>
-                <span className="text-slate-500">Latency: 418ms</span>
-              </div>
-            </div>
-
           </div>
-        </div>
 
-        {/* Micro Bottom CTA */}
-        <div className="mt-12 text-center">
-          <a
-            href="https://cxq360.ai/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold bg-[#008f6d] hover:bg-[#007a5d] text-white shadow-md transition-all"
-          >
-            <span>Test-Drive Agentic Workflows on CXQ360.ai Sandbox</span>
-            <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
+          {/* Micro Bottom CTA */}
+          <div className="mt-8 text-center">
+            <a
+              href="https://cxq360.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold bg-[#008f6d] hover:bg-[#007a5d] text-white shadow-md transition-all whitespace-nowrap"
+            >
+              <span>Test-Drive Agentic Workflows on CXQ360.ai Sandbox</span>
+              <ArrowRight className="w-4 h-4 shrink-0" />
+            </a>
+          </div>
 
+        </div>
       </div>
     </section>
   );
 }
-

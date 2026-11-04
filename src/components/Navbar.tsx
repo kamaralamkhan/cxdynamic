@@ -161,8 +161,8 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center h-full gap-1">
+          {/* Desktop Navigation - Centered & Balanced */}
+          <nav className="hidden lg:flex items-center justify-center flex-1 h-full mx-6 gap-1 xl:gap-2">
             
             {/* Level 1: Home */}
             <Link 
