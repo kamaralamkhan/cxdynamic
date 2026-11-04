@@ -50,3 +50,4 @@ if (violations.length > 0) {
 } else {
   console.log("✅ Button color audit passed: Zero buttons or links use green/emerald/teal backgrounds.");
 }
+

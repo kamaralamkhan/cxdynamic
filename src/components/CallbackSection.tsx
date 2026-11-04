@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowRight, CheckCircle2, ShieldCheck, Phone, Mail, Clock } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 
@@ -15,6 +15,27 @@ export default function CallbackSection() {
     brief: "",
     botcheck: "",
   });
+
+  // Auto-scroll to the quote form when navigated to with #quote or #quote-form
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const checkHash = () => {
+        const hash = window.location.hash;
+        if (hash === "#quote" || hash === "#quote-form" || hash === "#contact") {
+          const el = document.getElementById("quote") || document.getElementById("quote-form");
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 100);
+          }
+        }
+      };
+
+      checkHash();
+      window.addEventListener("hashchange", checkHash);
+      return () => window.removeEventListener("hashchange", checkHash);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,6 +61,7 @@ export default function CallbackSection() {
   return (
     <section id="contact" className="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-white/10 scroll-mt-12">
       <div id="callback-section" className="sr-only" aria-hidden="true" />
+      <div id="contact-form" className="sr-only" aria-hidden="true" />
       {/* Slow-drifting low-contrast gradient navy -> slate-900 */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 opacity-90 pointer-events-none" />
 
@@ -115,8 +137,8 @@ export default function CallbackSection() {
           </div>
 
           {/* Right Column: White Form Card (Crisp Contrast!) */}
-          <div className="lg:col-span-7">
-            <div className="calm-card p-6 sm:p-9 bg-white text-slate-900 border border-slate-200 shadow-xl rounded-2xl">
+          <div id="quote" className="lg:col-span-7 scroll-mt-24">
+            <div id="quote-form" className="calm-card p-6 sm:p-9 bg-white text-slate-900 border border-slate-200 shadow-xl rounded-2xl scroll-mt-24">
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {/* Spam honeypot hidden field */}

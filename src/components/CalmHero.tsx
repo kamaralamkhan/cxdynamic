@@ -149,7 +149,6 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link
               href="/contact-us#quote"
-              onClick={onOpenDemo}
               className="btn-tactile inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-semibold bg-sky-700 text-white hover:bg-sky-800 shadow-sm transition-colors cursor-pointer whitespace-nowrap"
             >
               Book a Demo
