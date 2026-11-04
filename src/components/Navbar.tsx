@@ -147,22 +147,25 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
 
       {/* Main Navbar Container */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex items-center justify-between transition-all duration-200 ${isScrolled ? "h-14" : "h-18"}`}>
+        {/* 3-Column Equal Grid on Desktop for Mathematical Symmetry; Flex on Mobile */}
+        <div className={`flex lg:grid lg:grid-cols-[1fr_auto_1fr] items-center justify-between transition-all duration-200 ${isScrolled ? "h-14" : "h-18"}`}>
           
-          {/* Authentic Logo */}
-          <Link href="/" onClick={closeAll} className="flex items-center shrink-0 pr-4">
-            <Image
-              src="/images/logo.png"
-              alt="CXDYNAMIQ Cloud Contact Center"
-              width={200}
-              height={40}
-              priority
-              className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-all"
-            />
-          </Link>
+          {/* Column 1 (Left 1fr): Logo pinned to container left edge */}
+          <div className="flex items-center justify-start shrink-0">
+            <Link href="/" onClick={closeAll} className="flex items-center pr-4">
+              <Image
+                src="/images/logo.png"
+                alt="CXDYNAMIQ Cloud Contact Center"
+                width={180}
+                height={36}
+                priority
+                className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-all"
+              />
+            </Link>
+          </div>
 
-          {/* Desktop Navigation - Centered & Balanced */}
-          <nav className="hidden lg:flex items-center justify-center flex-1 h-full mx-6 gap-1 xl:gap-2">
+          {/* Column 2 (Center auto): Navigation Menu Mathematically Centered in Container */}
+          <nav className="hidden lg:flex items-center justify-center h-full gap-1 xl:gap-2">
             
             {/* Level 1: Home */}
             <Link 
@@ -715,37 +718,39 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
 
           </nav>
 
-          {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-3">
-            <Link
-              href="/contact-us"
-              onClick={onRequestQuote}
-              className="text-xs font-semibold text-slate-700 hover:text-slate-900 transition-colors px-2 py-1.5"
-            >
-              Book a Demo
-            </Link>
-            
-            {/* Primary Action Button (CXQ360 Trial Platform) */}
-            <a
-              href="https://cxq360.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-tactile inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold bg-[#008f6d] hover:bg-[#007a5d] text-white rounded-lg shadow-sm transition-all cursor-pointer"
-            >
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
+          {/* Column 3 (Right 1fr): CTAs pinned to container right edge */}
+          <div className="flex items-center justify-end gap-3 shrink-0">
+            <div className="hidden sm:flex items-center gap-3">
+              <Link
+                href="/contact-us"
+                onClick={onRequestQuote}
+                className="text-xs font-semibold text-slate-700 hover:text-slate-900 transition-colors px-2 py-1.5"
+              >
+                Book a Demo
+              </Link>
+              
+              {/* Primary Action Button (CXQ360 Trial Platform) */}
+              <a
+                href="https://cxq360.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-tactile inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold bg-[#008f6d] hover:bg-[#007a5d] text-white rounded-lg shadow-sm transition-all cursor-pointer whitespace-nowrap"
+              >
+                <span>Start Free Trial</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
 
-          {/* Mobile Hamburger */}
-          <div className="flex lg:hidden items-center">
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 text-slate-700 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition-colors"
-              aria-label="Toggle navigation"
-            >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Mobile Hamburger (visible on mobile) */}
+            <div className="flex lg:hidden items-center">
+              <button
+                onClick={() => setMobileOpen(!mobileOpen)}
+                className="p-2 text-slate-700 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition-colors"
+                aria-label="Toggle navigation"
+              >
+                {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
 
         </div>
