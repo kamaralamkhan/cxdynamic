@@ -27,56 +27,59 @@ const garamond = EB_Garamond({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://chocolate-frog-774793.hostingersite.com";
 
 export const metadata: Metadata = {
-  title: "CXDYNAMIQ — Cloud Contact Center & AI Customer Experience Platform",
+  title: "CXdynamIQ — AI-Powered Omnichannel Customer Experience Platform",
   description:
-    "Stress-free contact center solutions. Deploy a cloud contact center in a day and automate customer engagement in minutes with omnichannel routing, CTI integrations, and conversational AI.",
+    "CXdynamIQ delivers autonomous AI agents, omnichannel engagement, and 100% conversation intelligence — resolving customer inquiries in real time across Voice, WhatsApp, Chat, and more.",
   metadataBase: new URL(siteUrl),
   keywords: [
-    "Cloud Contact Center",
-    "Call Centre Solutions",
-    "Omnichannel Contact Center",
+    "AI Customer Experience Platform",
+    "Agentic AI Contact Center",
+    "Omnichannel CX Platform",
+    "AI Voice Agents",
     "Conversational AI",
-    "Auto Dialer",
-    "CTI Integration",
-    "CXDYNAMIQ",
+    "CXdynamIQ",
+    "CXQ360",
+    "Contact Center AI",
+    "AI Quality Assurance",
+    "Agent Assist Copilot",
   ],
   icons: {
     icon: [
-      { url: "/cxdynamiq-favicon.png", sizes: "512x512", type: "image/png" },
-      { url: "/cxdynamiq-favicon.ico", type: "image/x-icon" },
-      { url: "/favicon-32x32.png?v=cxdynamiq", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png?v=cxdynamiq", sizes: "16x16", type: "image/png" },
-      { url: "/favicon.png?v=cxdynamiq", type: "image/png" },
-      { url: "/favicon.ico?v=cxdynamiq", type: "image/x-icon" },
+      { url: "/cxdynamiq-favicon.png?v=2", sizes: "512x512", type: "image/png" },
+      { url: "/favicon-32x32.png?v=2", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png?v=2", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.png?v=2", type: "image/png" },
+      { url: "/favicon.ico?v=2", type: "image/x-icon" },
     ],
     apple: [
-      { url: "/cxdynamiq-favicon.png", sizes: "180x180", type: "image/png" },
-      { url: "/apple-touch-icon.png?v=cxdynamiq", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png?v=2", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: "/cxdynamiq-favicon.ico",
+    shortcut: "/cxdynamiq-favicon.png?v=2",
   },
   openGraph: {
-    title: "CXDYNAMIQ — Cloud Contact Center Solutions",
-    description: "Deploy a Cloud Contact Center in a day and automate it in minutes with VIP support.",
+    title: "CXdynamIQ — AI-Powered Omnichannel Customer Experience Platform",
+    description:
+      "Autonomous AI agents resolving customer inquiries in real time. Voice, WhatsApp, Chat & more — with 72% AI containment, 100% conversation intelligence, and enterprise-grade compliance.",
     url: siteUrl,
-    siteName: "CXDYNAMIQ",
+    siteName: "CXdynamIQ",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/cxdynamiq-og.png",
-        width: 512,
-        height: 512,
-        alt: "CXDYNAMIQ — Redefining Customer Experiences",
+        url: "/cxdynamiq-og.png?v=2",
+        width: 1200,
+        height: 630,
+        alt: "CXdynamIQ — AI-Powered Customer Experience Platform",
         type: "image/png",
       },
     ],
   },
   twitter: {
-    card: "summary",
-    title: "CXDYNAMIQ — Cloud Contact Center Solutions",
-    description: "Deploy a Cloud Contact Center in a day and automate it in minutes with VIP support.",
-    images: ["/cxdynamiq-og.png"],
+    card: "summary_large_image",
+    title: "CXdynamIQ — AI-Powered Omnichannel Customer Experience Platform",
+    description:
+      "Autonomous AI agents resolving customer inquiries in real time. 72% AI containment, 100% conversation intelligence.",
+    images: ["/cxdynamiq-og.png?v=2"],
   },
 };
 
