@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { 
   BarChart3, 
   TrendingUp, 
@@ -12,7 +13,7 @@ import {
   Clock, 
   CheckCircle2, 
   DollarSign, 
-  Sparkles,
+  ArrowRight,
   Zap
 } from "lucide-react";
 
@@ -234,14 +235,13 @@ export default function CXAnalyticsSection() {
               </div>
 
               <div className="pt-2">
-                <a
-                  href="https://cxq360.ai/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-[#008f6d] hover:bg-[#007a5d] text-white shadow-md transition-all cursor-pointer"
+                <Link
+                  href="/contact-us#quote"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-sky-700 hover:bg-sky-800 text-white shadow-md transition-all cursor-pointer"
                 >
-                  <span>Experience Real Analytics on CXQ360.ai Trial →</span>
-                </a>
+                  <span>Book a Demo to See Full Analytics</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
 

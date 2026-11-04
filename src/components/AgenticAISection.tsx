@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { 
   Cpu, 
   Brain, 
@@ -82,7 +83,7 @@ await salesforce.updateCase({ status: "RESOLVED", resolutionCode: "AI_AUTO" });`
     badge: "Autonomous or Warm Handoff",
     icon: CheckCircle,
     color: "#069bd8",
-    summary: "72%+ of routine inquiries complete autonomously. For complex edge-cases, the engine triggers a warm handoff with a pre-compiled summary.",
+    summary: "Routine inquiries complete autonomously. For complex edge-cases, the engine triggers a warm handoff with a pre-compiled summary.",
     actionDetails: "Ticket closed with zero human delay. Customer receives voice confirmation and a branded WhatsApp notification with transaction receipt.",
     codeSnippet: `// 04. Multi-Channel Resolution Sync
 await omnichannelBridge.dispatchConfirmation({
@@ -331,15 +332,13 @@ export default function AgenticAISection() {
 
           {/* Micro Bottom CTA */}
           <div className="mt-6 text-center">
-            <a
-              href="https://cxq360.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-[#008f6d] hover:bg-[#007a5d] text-white shadow-md transition-all whitespace-nowrap"
+            <Link
+              href="/contact-us#quote"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-white text-slate-900 hover:bg-slate-100 shadow-md transition-all whitespace-nowrap"
             >
-              <span>Test-Drive Agentic Workflows on CXQ360.ai Sandbox</span>
+              <span>Book a Demo to See Agentic Workflows</span>
               <ArrowRight className="w-4 h-4 shrink-0" />
-            </a>
+            </Link>
           </div>
 
         </div>

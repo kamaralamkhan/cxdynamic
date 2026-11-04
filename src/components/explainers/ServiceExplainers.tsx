@@ -516,8 +516,8 @@ function ContactManagerExplainer() {
                   <div className="font-bold text-slate-900">{c.name} — <span className="font-normal text-slate-500">{c.company}</span></div>
                   <div className="text-[11px] text-slate-400">{c.phone} • Tags: {c.tags}</div>
                 </div>
-                <button className="px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 font-bold cursor-pointer flex items-center gap-1">
-                  <PhoneCall className="w-3 h-3 text-emerald-600" />
+                <button className="px-3 py-1.5 rounded-lg bg-sky-50 text-sky-700 hover:bg-sky-100 border border-sky-200 font-bold cursor-pointer flex items-center gap-1">
+                  <PhoneCall className="w-3 h-3 text-sky-600" />
                   <span>Call</span>
                 </button>
               </div>

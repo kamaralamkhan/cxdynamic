@@ -40,7 +40,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
 
           {/* Card 1: Self-Serve SaaS Sandbox (CXQ360.ai) */}
           <div className="bg-slate-900/90 rounded-3xl p-8 border border-cyan-500/30 shadow-2xl flex flex-col justify-between space-y-6 relative group hover:border-cyan-400/60 transition-all">
-            <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#008f6d] text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+            <div className="absolute top-0 right-8 -translate-y-1/2 bg-sky-700 text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
               Instant Access
             </div>
 
@@ -79,7 +79,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
                 href="https://cxq360.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold bg-[#008f6d] hover:bg-[#007a5d] text-white shadow-lg transition-all whitespace-nowrap"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold bg-sky-700 hover:bg-sky-800 text-white shadow-lg transition-all whitespace-nowrap"
               >
                 <span>Launch CXQ360.ai Trial</span>
                 <ArrowRight className="w-4 h-4 shrink-0" />

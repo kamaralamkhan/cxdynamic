@@ -3,17 +3,17 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  ChevronDown, 
-  Menu, 
-  X, 
-  PhoneCall, 
-  PhoneOutgoing, 
-  Shuffle, 
-  Cpu, 
-  Phone, 
-  Flame, 
-  Building2, 
+import {
+  ChevronDown,
+  Menu,
+  X,
+  PhoneCall,
+  PhoneOutgoing,
+  Shuffle,
+  Cpu,
+  Phone,
+  Flame,
+  Building2,
   ArrowRight,
   Layers,
   Sparkles,
@@ -124,11 +124,11 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
   return (
     <header ref={navRef} className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs transition-shadow">
       {/* Top Utility Bar (36px, bg-slate-900, hidden on <md) */}
-      <div className="hidden md:flex h-9 items-center bg-slate-900 text-slate-300 px-4 text-xs border-b border-slate-800">
+      <div className="hidden md:flex h-9 items-center bg-slate-900 text-slate-300 px-6 text-xs border-b border-slate-800">
         <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2 text-slate-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
               <span>VIP support · </span>
               <a href="tel:+639060986036" className="hover:text-white transition-colors font-medium">
                 +63 906 098 6036
@@ -145,78 +145,75 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
         </div>
       </div>
 
-      {/* Main Navbar Container */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex items-center justify-between transition-all duration-200 ${isScrolled ? "h-14" : "h-18"}`}>
-          
+      {/* Main Navbar Container (Height 64px, max-w-7xl px-6) */}
+      <div className="relative max-w-7xl mx-auto px-6">
+        <div className="flex h-16 items-center justify-between transition-all duration-200">
+
           {/* Authentic Brand Logo */}
           <Link href="/" onClick={closeAll} className="flex items-center shrink-0 pr-4">
             <Image
               src="/images/logo.png"
               alt="CXDYNAMIQ Cloud Contact Center"
-              width={204}
-              height={40}
+              width={180}
+              height={36}
               priority
-              className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-all"
+              className="h-8 w-auto object-contain transition-all"
             />
           </Link>
 
           {/* Desktop Navigation with Smooth Transitions */}
-          <nav className="hidden lg:flex items-center h-full gap-1 xl:gap-2">
-            
+          <nav className="hidden lg:flex items-center h-full gap-7 xl:gap-8">
+
             {/* Level 1: Home */}
-            <Link 
-              href="/" 
-              className="whitespace-nowrap px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-50 rounded-lg transition-colors"
+            <Link
+              href="/"
+              className="whitespace-nowrap text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors"
             >
               Home
             </Link>
 
             {/* Level 1: About Us */}
-            <Link 
-              href="/about-us" 
-              className="whitespace-nowrap px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-50 rounded-lg transition-colors"
+            <Link
+              href="/about-us"
+              className="whitespace-nowrap text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors"
             >
               About Us
             </Link>
 
             {/* Level 2: Our Products Mega Menu (Sleek SaaS Layout) */}
-            <div 
+            <div
               className="group h-full flex items-center"
               onMouseEnter={() => handleMouseEnter("products")}
               onMouseLeave={handleMouseLeave}
             >
-              <button 
+              <button
                 type="button"
                 onClick={() => toggleDropdown("products")}
                 aria-expanded={openDropdown === "products"}
-                className={`whitespace-nowrap inline-flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
-                  openDropdown === "products" 
-                    ? "text-[#069bd8] bg-slate-100/90 shadow-2xs" 
-                    : "text-slate-700 hover:text-[#069bd8] hover:bg-slate-50"
-                }`}
+                className={`whitespace-nowrap inline-flex items-center gap-1.5 text-[15px] font-medium transition-colors cursor-pointer ${openDropdown === "products"
+                    ? "text-sky-700 font-semibold"
+                    : "text-slate-600 hover:text-slate-900"
+                  }`}
               >
                 <span>Our Products</span>
-                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-                  openDropdown === "products" ? "rotate-180 text-[#069bd8]" : "group-hover:rotate-180"
-                }`} />
+                <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${openDropdown === "products" ? "rotate-180 text-sky-700" : "group-hover:rotate-180"
+                  }`} />
               </button>
 
               {/* Mega Menu Dropdown: Ultra-Smooth SaaS Animation with Cubic Bezier */}
-              <div 
+              <div
                 onMouseEnter={() => handleMouseEnter("products")}
                 onMouseLeave={handleMouseLeave}
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
-                  openDropdown === "products"
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${openDropdown === "products"
                     ? "opacity-100 visible pointer-events-auto translate-y-0 scale-100"
                     : "opacity-0 invisible pointer-events-none -translate-y-1.5 scale-[0.985]"
-                }`}
+                  }`}
               >
                 <div className="backdrop-blur-xl bg-white/98 rounded-2xl border border-slate-200/90 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.14),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden transition-all duration-300">
-                  
+
                   {/* Grid Layout: Left Spotlight Card (4 cols) + Right 4 Product Columns (8 cols) */}
                   <div className="p-6 grid grid-cols-12 gap-5">
-                    
+
                     {/* Left Spotlight: AI Voice & CX Platform */}
                     <div className="col-span-4 bg-gradient-to-br from-cyan-50/70 via-sky-50/40 to-slate-50 p-4 rounded-xl border border-cyan-100/90 flex flex-col justify-between">
                       <div>
@@ -229,11 +226,11 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                             GenAI
                           </span>
                         </div>
-                        
+
                         <div className="space-y-1">
-                          <Link 
-                            href="/conversational-ai" 
-                            onClick={closeAll} 
+                          <Link
+                            href="/conversational-ai"
+                            onClick={closeAll}
                             className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
                             <Bot className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
@@ -246,9 +243,9 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                             </div>
                           </Link>
 
-                          <Link 
-                            href="/omnichannel-routing" 
-                            onClick={closeAll} 
+                          <Link
+                            href="/omnichannel-routing"
+                            onClick={closeAll}
                             className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
                             <Shuffle className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
@@ -261,9 +258,9 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                             </div>
                           </Link>
 
-                          <Link 
-                            href="/speech-analytics" 
-                            onClick={closeAll} 
+                          <Link
+                            href="/speech-analytics"
+                            onClick={closeAll}
                             className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
                             <Activity className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
@@ -279,9 +276,9 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                       </div>
 
                       <div className="pt-3 border-t border-cyan-100/80 mt-3">
-                        <Link 
-                          href="/conversational-ai" 
-                          onClick={closeAll} 
+                        <Link
+                          href="/conversational-ai"
+                          onClick={closeAll}
                           className="text-xs font-bold text-[#069bd8] hover:text-cyan-700 hover:underline flex items-center gap-1"
                         >
                           Explore AI Platform Suite <ArrowRight className="w-3.5 h-3.5" />
@@ -291,7 +288,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
 
                     {/* Right Columns: 4 Clean Columns (spans 8 cols) with vertical accent line */}
                     <div className="col-span-8 grid grid-cols-4 gap-4 pl-1">
-                      
+
                       {/* Col 1: Industry Solution */}
                       <div className="space-y-2">
                         <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
@@ -451,45 +448,42 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             </div>
 
             {/* Level 2: Why CXDYNAMIQ Mega Menu (Aircall Integrations Inspired Layout) */}
-            <div 
+            <div
               className="group h-full flex items-center"
               onMouseEnter={() => handleMouseEnter("why")}
               onMouseLeave={handleMouseLeave}
             >
-              <button 
+              <button
                 type="button"
                 onClick={() => toggleDropdown("why")}
                 aria-expanded={openDropdown === "why"}
-                className={`whitespace-nowrap inline-flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
-                  openDropdown === "why" 
-                    ? "text-[#069bd8] bg-slate-100/90 shadow-2xs" 
-                    : "text-slate-700 hover:text-[#069bd8] hover:bg-slate-50"
-                }`}
+                className={`whitespace-nowrap inline-flex items-center gap-1.5 text-[15px] font-medium transition-colors cursor-pointer ${openDropdown === "why"
+                    ? "text-sky-700 font-semibold"
+                    : "text-slate-600 hover:text-slate-900"
+                  }`}
               >
                 <span>Why CXDYNAMIQ</span>
-                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
-                  openDropdown === "why" ? "rotate-180 text-[#069bd8]" : "group-hover:rotate-180"
-                }`} />
+                <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${openDropdown === "why" ? "rotate-180 text-sky-700" : "group-hover:rotate-180"
+                  }`} />
               </button>
 
               {/* Mega Menu Dropdown: Ultra-Smooth SaaS Animation with Cubic Bezier */}
-              <div 
+              <div
                 onMouseEnter={() => handleMouseEnter("why")}
                 onMouseLeave={handleMouseLeave}
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
-                  openDropdown === "why"
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${openDropdown === "why"
                     ? "opacity-100 visible pointer-events-auto translate-y-0 scale-100"
                     : "opacity-0 invisible pointer-events-none -translate-y-1.5 scale-[0.985]"
-                }`}
+                  }`}
               >
                 <div className="backdrop-blur-xl bg-white/98 rounded-2xl border border-slate-200/90 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.14),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden transition-all duration-300">
-                  
+
                   {/* Grid Layout: Left 3 Columns (8 cols) + Right Spotlight Card (4 cols) */}
                   <div className="p-6 grid grid-cols-12 gap-5">
-                    
+
                     {/* Left Columns: 3 Organized Columns (spans 8 cols) */}
                     <div className="col-span-8 grid grid-cols-3 gap-5 pr-2">
-                      
+
                       {/* Col 1: CTI Integrations */}
                       <div className="space-y-2">
                         <div className="text-[11px] font-bold uppercase tracking-wider text-slate-900 border-l-2 border-[#069bd8] pl-2 flex items-center gap-1">
@@ -615,11 +609,11 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                             99.99% SLA
                           </span>
                         </div>
-                        
+
                         <div className="space-y-1">
-                          <Link 
-                            href="/who-we-are" 
-                            onClick={closeAll} 
+                          <Link
+                            href="/who-we-are"
+                            onClick={closeAll}
                             className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
                             <Compass className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
@@ -632,9 +626,9 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                             </div>
                           </Link>
 
-                          <Link 
-                            href="/about-us" 
-                            onClick={closeAll} 
+                          <Link
+                            href="/about-us"
+                            onClick={closeAll}
                             className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
                             <Building2 className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
@@ -647,9 +641,9 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                             </div>
                           </Link>
 
-                          <Link 
-                            href="/page/Customer Experience management" 
-                            onClick={closeAll} 
+                          <Link
+                            href="/page/Customer Experience management"
+                            onClick={closeAll}
                             className="group/item flex items-start gap-2.5 p-2 rounded-lg hover:bg-white transition-all shadow-2xs"
                           >
                             <ShieldCheck className="w-4 h-4 text-[#069bd8] shrink-0 mt-0.5" />
@@ -665,9 +659,9 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                       </div>
 
                       <div className="pt-3 border-t border-slate-200 mt-3">
-                        <Link 
-                          href="/about-us" 
-                          onClick={closeAll} 
+                        <Link
+                          href="/about-us"
+                          onClick={closeAll}
                           className="text-xs font-bold text-[#069bd8] hover:text-cyan-700 hover:underline flex items-center gap-1"
                         >
                           Learn About CXDYNAMIQ <ArrowRight className="w-3.5 h-3.5" />
@@ -698,44 +692,34 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             </div>
 
             {/* Level 1: Our Blog */}
-            <Link 
-              href="/blogs" 
-              className="whitespace-nowrap px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-50 rounded-lg transition-colors"
+            <Link
+              href="/blogs"
+              className="whitespace-nowrap text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors"
             >
               Our Blog
             </Link>
 
             {/* Level 1: Contact Us */}
-            <Link 
-              href="/contact-us" 
-              className="whitespace-nowrap px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-50 rounded-lg transition-colors"
+            <Link
+              href="/contact-us"
+              className="whitespace-nowrap text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors"
             >
               Contact Us
             </Link>
 
           </nav>
 
-          {/* Right Action Buttons */}
-          <div className="flex items-center gap-3 shrink-0">
-            <div className="hidden sm:flex items-center gap-3">
+          {/* Right Action: ONE Primary "Book a Demo" Button */}
+          <div className="flex items-center gap-4 shrink-0">
+            <div className="hidden sm:flex items-center">
               <Link
-                href="/contact-us"
+                href="/contact-us#quote"
                 onClick={onRequestQuote}
-                className="whitespace-nowrap text-xs font-semibold text-slate-700 hover:text-slate-900 transition-colors px-2 py-1.5 rounded-lg hover:bg-slate-100/70"
+                className="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold bg-sky-700 hover:bg-sky-800 text-white rounded-lg shadow-sm transition-colors cursor-pointer whitespace-nowrap"
               >
-                Book a Demo
-              </Link>
-              
-              {/* Primary Action Button (CXQ360 Trial Platform) */}
-              <a
-                href="https://cxq360.ai/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-tactile inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold bg-[#008f6d] hover:bg-[#007a5d] text-white rounded-lg shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap"
-              >
-                <span>Start Free Trial</span>
+                <span>Book a Demo</span>
                 <ArrowRight className="w-3.5 h-3.5 shrink-0" />
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Hamburger (visible on mobile) */}
@@ -754,12 +738,11 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
       </div>
 
       {/* Mobile Drawer with Full 3-Level Hierarchy Accordions */}
-      <div className={`lg:hidden border-t border-slate-200 bg-white px-4 pt-4 pb-8 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto ${
-        mobileOpen ? "block animate-in slide-in-from-top-2" : "hidden"
-      }`}>
-        
+      <div className={`lg:hidden border-t border-slate-200 bg-white px-4 pt-4 pb-8 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto ${mobileOpen ? "block animate-in slide-in-from-top-2" : "hidden"
+        }`}>
+
         <div className="space-y-1 font-semibold text-sm">
-          
+
           {/* Level 1: Home */}
           <Link href="/" onClick={closeAll} className="block px-3 py-2 text-slate-800 hover:bg-slate-50 rounded-lg">
             Home
@@ -772,7 +755,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
 
           {/* Level 2: Our Products Accordion */}
           <div className="border-t border-slate-100 pt-2">
-            <button 
+            <button
               type="button"
               onClick={() => toggleMobileAccordion("products")}
               className="flex items-center justify-between w-full px-3 py-2 text-left font-bold text-slate-900 hover:bg-slate-50 rounded-lg"
@@ -782,7 +765,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             </button>
 
             <div className={`pl-3 pr-1 py-2 space-y-3 bg-slate-50/70 rounded-xl my-1 border border-slate-100 ${mobileAccordion === "products" ? "block" : "hidden"}`}>
-              
+
               {/* Sub 1: Industry Solution */}
               <div className="space-y-1">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-700 px-2 pt-1">
@@ -871,7 +854,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
 
           {/* Level 2: Why CXDYNAMIQ Accordion */}
           <div className="border-t border-slate-100 pt-2">
-            <button 
+            <button
               type="button"
               onClick={() => toggleMobileAccordion("why")}
               className="flex items-center justify-between w-full px-3 py-2 text-left font-bold text-slate-900 hover:bg-slate-50 rounded-lg"
@@ -881,7 +864,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             </button>
 
             <div className={`pl-3 pr-1 py-2 space-y-3 bg-slate-50/70 rounded-xl my-1 border border-slate-100 ${mobileAccordion === "why" ? "block" : "hidden"}`}>
-              
+
               {/* Sub 1: CTI Integrations */}
               <div className="space-y-1">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-cyan-700 px-2 pt-1">
@@ -990,22 +973,12 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             </a>
           </div>
 
-          <a
-            href="https://cxq360.ai/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={closeAll}
-            className="btn-tactile w-full py-3 text-center text-xs font-bold bg-[#008f6d] hover:bg-[#007a5d] text-white rounded-lg shadow-sm transition-colors block"
-          >
-            Start Free Trial (CXQ360.ai) →
-          </a>
-
           <Link
-            href="/contact-us"
+            href="/contact-us#quote"
             onClick={closeAll}
-            className="w-full py-2.5 text-center text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg transition-colors block"
+            className="btn-tactile w-full py-3 text-center text-sm font-semibold bg-sky-700 hover:bg-sky-800 text-white rounded-lg shadow-sm transition-colors block"
           >
-            Book Custom Enterprise Demo
+            Book a Demo
           </Link>
         </div>
 

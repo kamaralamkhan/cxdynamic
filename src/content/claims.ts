@@ -24,6 +24,12 @@ export interface ClaimsConfig {
   callRecordingCompliance: ClaimItem;
   trainingAndOnboarding: ClaimItem;
   cancellationPolicy: ClaimItem;
+  containmentRate: ClaimItem;
+  latencyMs: ClaimItem;
+  soc2Iso: ClaimItem;
+  sandboxTrialLength: ClaimItem;
+  carrierGrade: ClaimItem;
+  officialWhatsApp: ClaimItem;
 }
 
 /**
@@ -150,6 +156,48 @@ export const claims: ClaimsConfig = {
     value: "Cancel anytime with 30-day notice",
     confirmed: false,
     unconfirmedFallback: "Flexible cancellation terms",
+  },
+  containmentRate: {
+    id: "containment-rate",
+    label: "AI Containment Rate",
+    value: "72%+ AI containment",
+    confirmed: false,
+    unconfirmedFallback: "High first-contact resolution",
+  },
+  latencyMs: {
+    id: "latency-ms",
+    label: "Audio Latency",
+    value: "Sub-15ms latency",
+    confirmed: false,
+    unconfirmedFallback: "Low-latency real-time voice",
+  },
+  soc2Iso: {
+    id: "soc2-iso",
+    label: "Compliance Certifications",
+    value: "SOC 2 & ISO 27001 Ready",
+    confirmed: false,
+    unconfirmedFallback: "Enterprise security architecture",
+  },
+  sandboxTrialLength: {
+    id: "sandbox-trial-length",
+    label: "Sandbox / Trial",
+    value: "Free 14-day CXQ360.ai sandbox",
+    confirmed: false,
+    unconfirmedFallback: "Interactive demo environment",
+  },
+  carrierGrade: {
+    id: "carrier-grade",
+    label: "Carrier Grade Telephony",
+    value: "Carrier-grade SIP trunk with zero hold-time queue",
+    confirmed: false,
+    unconfirmedFallback: "High-availability cloud telephony",
+  },
+  officialWhatsApp: {
+    id: "official-whatsapp",
+    label: "WhatsApp Business API",
+    value: "Official WhatsApp Business Partner",
+    confirmed: false,
+    unconfirmedFallback: "WhatsApp Business messaging integration",
   },
 };
 
