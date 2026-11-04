@@ -716,23 +716,25 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-4">
-            <Link
-              href="/products"
-              className="text-xs font-medium text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              Explore Products
-            </Link>
-            
-            {/* Primary Action Button (Brand Sky-700) */}
+          <div className="hidden sm:flex items-center gap-3">
             <Link
               href="/contact-us"
               onClick={onRequestQuote}
-              className="btn-tactile inline-flex items-center justify-center gap-2 px-4 py-2 text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white rounded-lg shadow-sm transition-colors cursor-pointer"
+              className="text-xs font-semibold text-slate-700 hover:text-slate-900 transition-colors px-2 py-1.5"
             >
-              <span>Book a Demo</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              Book a Demo
             </Link>
+            
+            {/* Primary Action Button (CXQ360 Trial Platform) */}
+            <a
+              href="https://cxq360.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-tactile inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold bg-[#008f6d] hover:bg-[#007a5d] text-white rounded-lg shadow-sm transition-all cursor-pointer"
+            >
+              <span>Start Free Trial</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
           </div>
 
           {/* Mobile Hamburger */}
@@ -986,12 +988,22 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             </a>
           </div>
 
+          <a
+            href="https://cxq360.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeAll}
+            className="btn-tactile w-full py-3 text-center text-xs font-bold bg-[#008f6d] hover:bg-[#007a5d] text-white rounded-lg shadow-sm transition-colors block"
+          >
+            Start Free Trial (CXQ360.ai) →
+          </a>
+
           <Link
             href="/contact-us"
             onClick={closeAll}
-            className="btn-tactile w-full py-3 text-center text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white rounded-lg shadow-sm transition-colors"
+            className="w-full py-2.5 text-center text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg transition-colors block"
           >
-            Book a Demo
+            Book Custom Enterprise Demo
           </Link>
         </div>
 

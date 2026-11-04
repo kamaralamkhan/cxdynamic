@@ -18,7 +18,7 @@ export default function ProofAndMarquee() {
   const [counts, setCounts] = useState([0, 0, 0, 0]);
   const statsRef = useRef<HTMLDivElement>(null);
 
-  const statTargets = [1, 15, 24, 20];
+  const statTargets = [72, 38, 100, 44];
 
   // Count-up on scroll
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function ProofAndMarquee() {
             const progress = currentStep / steps;
             setCounts([
               Math.round(statTargets[0] * progress),
-              Math.round(statTargets[1] * progress),
+              Math.round((statTargets[1] * progress) / 10),
               Math.round(statTargets[2] * progress),
               Math.round(statTargets[3] * progress),
             ]);
@@ -78,38 +78,38 @@ export default function ProofAndMarquee() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-white/10">
             
             <div className="pt-4 lg:pt-0 lg:px-4">
-              <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
-                {hasAnimated ? counts[0] : 1} Day
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-cyan-400 tracking-tight tabular-nums">
+                {hasAnimated ? counts[0] : 72}%
               </div>
-              <div className="text-sm text-cyan-200 font-medium mt-1.5">
-                Deploy in a single business day
-              </div>
-            </div>
-
-            <div className="pt-4 lg:pt-0 lg:px-4">
-              <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
-                {hasAnimated ? counts[1] : 15}+
-              </div>
-              <div className="text-sm text-cyan-200 font-medium mt-1.5">
-                Products &amp; cloud solutions
+              <div className="text-sm text-slate-200 font-medium mt-1.5">
+                Average AI containment rate
               </div>
             </div>
 
             <div className="pt-4 lg:pt-0 lg:px-4">
-              <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
-                {hasAnimated ? counts[2] : 24}/7
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-emerald-400 tracking-tight tabular-nums">
+                3.8x
               </div>
-              <div className="text-sm text-cyan-200 font-medium mt-1.5">
-                Dedicated VIP support
+              <div className="text-sm text-slate-200 font-medium mt-1.5">
+                Faster First Contact Resolution (FCR)
               </div>
             </div>
 
             <div className="pt-4 lg:pt-0 lg:px-4">
-              <div className="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight tabular-nums">
-                {hasAnimated ? counts[3] : 20}+
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-cyan-400 tracking-tight tabular-nums">
+                {hasAnimated ? counts[2] : 100}%
               </div>
-              <div className="text-sm text-cyan-200 font-medium mt-1.5">
-                Native CRM &amp; channel integrations
+              <div className="text-sm text-slate-200 font-medium mt-1.5">
+                Automated conversation QA coverage
+              </div>
+            </div>
+
+            <div className="pt-4 lg:pt-0 lg:px-4">
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-emerald-400 tracking-tight tabular-nums">
+                -{hasAnimated ? counts[3] : 44}%
+              </div>
+              <div className="text-sm text-slate-200 font-medium mt-1.5">
+                Lower cost per contact
               </div>
             </div>
 

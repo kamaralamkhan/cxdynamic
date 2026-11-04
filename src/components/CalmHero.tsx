@@ -194,42 +194,44 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             {/* 1. Eyebrow Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-slate-200/80 shadow-2xs text-xs font-semibold text-[#012635]">
               <span className="w-2 h-2 rounded-full bg-[#008f6d] animate-pulse" />
-              <span>Ultrafast implementation · VIP support</span>
+              <span>✨ Next-Generation AI-First Customer Experience</span>
             </div>
 
             {/* 2. H1 Headline (Aircall Garamond Serif Fluid Scaling) */}
             <h1 className="heading-fluid-hero font-serif-heading text-[#012635] tracking-tight font-bold">
-              Your cloud contact center,{" "}
-              <span className="italic font-normal text-sky-700">live in a day.</span>
+              The Agentic AI Platform That{" "}
+              <span className="italic font-normal text-sky-700">Resolves Customer Inquiries in Real Time.</span>
             </h1>
 
-            {/* 3. Sub-headline (Calm & specific) */}
+            {/* 3. Sub-headline (AI-First & specific) */}
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal">
-              Inbound and outbound calling, IVR, CRM integrations and WhatsApp on one cloud platform, set up by our team with VIP support from day one.
+              Combine autonomous Agentic AI with real-time human agent copilot across Voice, WhatsApp, and all digital channels — driving 72%+ containment with zero lost context.
             </p>
 
             {/* 4. Action CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
-              <button
-                onClick={onOpenDemo}
-                className="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-sky-700 text-white hover:bg-sky-800 shadow-sm transition-all cursor-pointer"
+              <a
+                href="https://cxq360.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-[#008f6d] text-white hover:bg-[#007a5d] shadow-sm transition-all cursor-pointer"
               >
-                <span>Book a Demo</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>Experience CXdynamIQ Free →</span>
+              </a>
+
+              <button
+                type="button"
+                onClick={onOpenDemo}
+                className="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-white text-[#012635] border border-slate-300/80 hover:bg-slate-50 hover:border-slate-400 transition-all shadow-2xs cursor-pointer"
+              >
+                <span>▶ Watch Platform Tour</span>
               </button>
 
-              <Link
-                href="/products"
-                className="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-white text-[#012635] border border-slate-300/80 hover:bg-slate-50 hover:border-slate-400 transition-all shadow-2xs"
-              >
-                <span>Explore Products</span>
-              </Link>
-
               <a
-                href="#how-it-works"
+                href="#omnichannel"
                 className="inline-flex items-center justify-center sm:justify-start gap-1 text-sm font-medium text-slate-600 hover:text-slate-900 underline-offset-4 hover:underline py-2 sm:px-2 transition-colors"
               >
-                <span>See how it works</span>
+                <span>Omnichannel Flow</span>
                 <span aria-hidden="true">↓</span>
               </a>
             </div>
@@ -238,17 +240,17 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             <div className="flex items-center gap-4 text-xs text-slate-600 flex-wrap pt-1">
               <span className="flex items-center gap-1.5 font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#008f6d] shrink-0" />
-                Free 21-day trial
+                Free 14-day CXQ360.ai sandbox
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5 font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#008f6d] shrink-0" />
-                No hardware to install
+                Pre-integrated CRM &amp; WhatsApp
               </span>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5 font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#008f6d] shrink-0" />
-                Go live within a day
+                SOC 2 &amp; ISO 27001 Ready
               </span>
             </div>
 
