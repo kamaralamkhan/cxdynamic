@@ -222,7 +222,7 @@ const PRODUCTS_DATA: ProductItem[] = [
     tagline: "Single Queue for Voice, SMS & WhatsApp",
     category: "ai-digital",
     href: "/omnichannel-routing",
-    icon: Sparkles,
+    icon: Zap,
     highlights: ["Unified agent inbox", "Cross-channel conversation thread", "Universal queue prioritization"],
     description: "Consolidate voice calls, WhatsApp messages, and SMS inquiries into a single unified workspace with complete customer context.",
   },
@@ -678,7 +678,7 @@ export default function ProductsClientView() {
       <section className="py-16 bg-slate-900 text-white relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+            <Zap className="w-3.5 h-3.5 text-cyan-400" />
             <span>Ready to Modernize Your Stack?</span>
           </div>
 

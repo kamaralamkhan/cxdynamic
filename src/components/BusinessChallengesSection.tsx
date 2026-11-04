@@ -215,7 +215,7 @@ export default function BusinessChallengesSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-cyan-800 border border-sky-100 text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-[#069bd8]" />
+            <Zap className="w-3.5 h-3.5 text-[#069bd8]" />
             <span>SOLVE REAL BUSINESS CHALLENGES</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">

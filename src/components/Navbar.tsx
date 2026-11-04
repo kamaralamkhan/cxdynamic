@@ -147,30 +147,30 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
 
       {/* Main Navbar Container */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 3-Column Equal Grid on Desktop for Mathematical Symmetry; Flex on Mobile */}
-        <div className={`flex lg:grid lg:grid-cols-[1fr_auto_1fr] items-center justify-between transition-all duration-200 ${isScrolled ? "h-14" : "h-18"}`}>
+        {/* Mathematically Centered Navbar on Desktop (Logo Left, Menu Dead-Center 50%, CTAs Right) */}
+        <div className={`relative flex items-center justify-between transition-all duration-200 ${isScrolled ? "h-14" : "h-18"}`}>
           
-          {/* Column 1 (Left 1fr): Logo pinned to container left edge */}
-          <div className="flex items-center justify-start shrink-0">
-            <Link href="/" onClick={closeAll} className="flex items-center pr-4">
+          {/* Left Column: Horizontal Brand Logo pinned to container left edge */}
+          <div className="flex items-center justify-start shrink-0 z-20">
+            <Link href="/" onClick={closeAll} className="flex items-center pr-2 sm:pr-4 group">
               <Image
                 src="/images/logo.png"
                 alt="CXDYNAMIQ Cloud Contact Center"
-                width={180}
-                height={36}
+                width={204}
+                height={40}
                 priority
-                className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-all"
+                className={`w-auto object-contain transition-all duration-200 ${isScrolled ? "h-7 sm:h-8" : "h-8 sm:h-9 md:h-10"}`}
               />
             </Link>
           </div>
 
-          {/* Column 2 (Center auto): Navigation Menu Mathematically Centered in Container */}
-          <nav className="hidden lg:flex items-center justify-center h-full gap-1 xl:gap-2">
+          {/* Center Column: Navigation Menu Mathematically Centered in Container */}
+          <nav className="hidden lg:flex items-center justify-center absolute left-1/2 -translate-x-1/2 h-full gap-0.5 xl:gap-1.5 z-20">
             
             {/* Level 1: Home */}
             <Link 
               href="/" 
-              className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-50 rounded-lg transition-colors"
+              className="px-2.5 xl:px-3 py-1.5 xl:py-2 text-[13px] xl:text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-100/70 rounded-lg transition-colors"
             >
               Home
             </Link>
@@ -178,7 +178,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             {/* Level 1: About Us */}
             <Link 
               href="/about-us" 
-              className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-50 rounded-lg transition-colors"
+              className="px-2.5 xl:px-3 py-1.5 xl:py-2 text-[13px] xl:text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-100/70 rounded-lg transition-colors"
             >
               About Us
             </Link>
@@ -193,14 +193,14 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                 type="button"
                 onClick={() => toggleDropdown("products")}
                 aria-expanded={openDropdown === "products"}
-                className={`inline-flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
+                className={`inline-flex items-center gap-1 xl:gap-1.5 px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-[13px] xl:text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
                   openDropdown === "products" 
                     ? "text-[#069bd8] bg-slate-100/90 shadow-2xs" 
-                    : "text-slate-700 hover:text-[#069bd8] hover:bg-slate-50"
+                    : "text-slate-700 hover:text-[#069bd8] hover:bg-slate-100/70"
                 }`}
               >
                 <span>Our Products</span>
-                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-300 ${
+                <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${
                   openDropdown === "products" ? "rotate-180 text-[#069bd8]" : "group-hover:rotate-180"
                 }`} />
               </button>
@@ -209,7 +209,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               <div 
                 onMouseEnter={() => handleMouseEnter("products")}
                 onMouseLeave={handleMouseLeave}
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
                   openDropdown === "products"
                     ? "opacity-100 visible pointer-events-auto translate-y-0 scale-100"
                     : "opacity-0 invisible pointer-events-none -translate-y-1.5 scale-[0.985]"
@@ -463,14 +463,14 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                 type="button"
                 onClick={() => toggleDropdown("why")}
                 aria-expanded={openDropdown === "why"}
-                className={`inline-flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded-lg transition-colors cursor-pointer ${
+                className={`inline-flex items-center gap-1 xl:gap-1.5 px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-[13px] xl:text-sm font-semibold rounded-lg transition-all duration-200 cursor-pointer ${
                   openDropdown === "why" 
                     ? "text-[#069bd8] bg-slate-100/90 shadow-2xs" 
-                    : "text-slate-700 hover:text-[#069bd8] hover:bg-slate-50"
+                    : "text-slate-700 hover:text-[#069bd8] hover:bg-slate-100/70"
                 }`}
               >
                 <span>Why CXDYNAMIQ</span>
-                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-300 ${
+                <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${
                   openDropdown === "why" ? "rotate-180 text-[#069bd8]" : "group-hover:rotate-180"
                 }`} />
               </button>
@@ -479,7 +479,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               <div 
                 onMouseEnter={() => handleMouseEnter("why")}
                 onMouseLeave={handleMouseLeave}
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl pt-3 z-50 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] before:absolute before:-top-4 before:left-0 before:right-0 before:h-6 before:content-[''] ${
                   openDropdown === "why"
                     ? "opacity-100 visible pointer-events-auto translate-y-0 scale-100"
                     : "opacity-0 invisible pointer-events-none -translate-y-1.5 scale-[0.985]"
@@ -703,7 +703,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             {/* Level 1: Our Blog */}
             <Link 
               href="/blogs" 
-              className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-50 rounded-lg transition-colors"
+              className="px-2.5 xl:px-3 py-1.5 xl:py-2 text-[13px] xl:text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-100/70 rounded-lg transition-colors"
             >
               Our Blog
             </Link>
@@ -711,20 +711,20 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             {/* Level 1: Contact Us */}
             <Link 
               href="/contact-us" 
-              className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-50 rounded-lg transition-colors"
+              className="px-2.5 xl:px-3 py-1.5 xl:py-2 text-[13px] xl:text-sm font-semibold text-slate-700 hover:text-[#069bd8] hover:bg-slate-100/70 rounded-lg transition-colors"
             >
               Contact Us
             </Link>
 
           </nav>
 
-          {/* Column 3 (Right 1fr): CTAs pinned to container right edge */}
-          <div className="flex items-center justify-end gap-3 shrink-0">
-            <div className="hidden sm:flex items-center gap-3">
+          {/* Right Column: Actions pinned to container right edge */}
+          <div className="flex items-center justify-end gap-2.5 sm:gap-3 shrink-0 z-20">
+            <div className="hidden sm:flex items-center gap-2 xl:gap-3">
               <Link
                 href="/contact-us"
                 onClick={onRequestQuote}
-                className="text-xs font-semibold text-slate-700 hover:text-slate-900 transition-colors px-2 py-1.5"
+                className="text-xs font-semibold text-slate-700 hover:text-slate-900 transition-colors px-2.5 py-1.5 rounded-lg hover:bg-slate-100/70"
               >
                 Book a Demo
               </Link>
@@ -734,10 +734,10 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                 href="https://cxq360.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-tactile inline-flex items-center justify-center gap-1.5 px-4 py-2 text-xs font-bold bg-[#008f6d] hover:bg-[#007a5d] text-white rounded-lg shadow-sm transition-all cursor-pointer whitespace-nowrap"
+                className="btn-tactile inline-flex items-center justify-center gap-1.5 px-3.5 xl:px-4 py-2 text-xs font-bold bg-[#008f6d] hover:bg-[#007a5d] text-white rounded-lg shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap"
               >
                 <span>Start Free Trial</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5 shrink-0" />
               </a>
             </div>
 

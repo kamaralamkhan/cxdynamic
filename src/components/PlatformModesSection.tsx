@@ -95,7 +95,7 @@ const MODES: PlatformMode[] = [
     id: "ai-assisted",
     label: "AI-ASSISTED",
     navTitle: "AI-Assisted Operations",
-    navIcon: Sparkles,
+    navIcon: Bot,
     headline: "Live in-call intelligence, augmented for every agent.",
     subhead: "Native integrations with Salesforce, Zoho, Zendesk and HubSpot automatically sync customer context, trigger screen pops, and generate AI call summaries.",
     features: [
@@ -323,7 +323,7 @@ export default function PlatformModesSection() {
                 <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 font-mono">
                   Platform Architecture
                 </span>
-                <h3 className="text-xl font-bold font-serif-heading text-[#012635] tracking-tight">
+                <h3 className="text-xl font-bold font-display text-[#012635] tracking-tight">
                   Three Operating Modes
                 </h3>
               </div>
@@ -426,7 +426,7 @@ export default function PlatformModesSection() {
                   </span>
                 </div>
                 
-                <h2 className="heading-fluid-section font-serif-heading font-normal text-[#002620] tracking-tight leading-[1.12]">
+                <h2 className="heading-fluid-section font-display font-bold text-[#002620] tracking-tight leading-[1.12]">
                   {activeMode.headline}
                 </h2>
                 
@@ -694,7 +694,7 @@ export default function PlatformModesSection() {
                         <div className="space-y-4 animate-in fade-in duration-300">
                           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                             <div className="flex items-center gap-2">
-                              <Sparkles className="w-4 h-4 text-sky-600" />
+                              <Bot className="w-4 h-4 text-sky-600" />
                               <span className="text-xs font-bold text-slate-900">
                                 Live In-Call Guidance
                               </span>

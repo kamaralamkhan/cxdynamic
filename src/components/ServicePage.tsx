@@ -25,7 +25,8 @@ import {
   Calendar, 
   MousePointer, 
   Flame,
-  ShieldCheck
+  ShieldCheck,
+  Cpu
 } from "lucide-react";
 import { 
   ZendeskLogo, 
@@ -124,7 +125,7 @@ export default function ServicePage({ page }: ServicePageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-cyan-700 border border-sky-100 text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-[#069bd8]" />
+              <Cpu className="w-3.5 h-3.5 text-[#069bd8]" />
               <span>{seo.group?.toUpperCase() || "ENTERPRISE TELEPHONY"}</span>
             </div>
 

@@ -57,7 +57,7 @@ export default function ProductPageLayout({ page }: ProductPageLayoutProps) {
             {/* Left Hero Column */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-cyan-700 border border-sky-100 text-xs font-bold uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" />
+                <Cpu className="w-3.5 h-3.5" />
                 <span>{category.replace("-", " ").toUpperCase()} SOLUTION</span>
               </div>
 

@@ -120,7 +120,7 @@ const FLOW_DATA: Record<TabType, { label: string; tag: string; steps: FlowStep[]
         badge: "Warm Handover",
         title: "Warm Transfer to Human Specialist",
         desc: "Complex cases bridged to live agent with full AI summary transcript.",
-        icon: Sparkles,
+        icon: Headphones,
       },
     ],
   },

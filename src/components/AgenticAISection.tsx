@@ -191,7 +191,7 @@ export default function AgenticAISection() {
     <section 
       ref={containerRef}
       id="agentic-ai" 
-      className="relative bg-[#021824] text-white border-b border-slate-800 lg:h-[340vh] scroll-mt-16 pb-24 lg:pb-36"
+      className="relative bg-[#021824] text-white border-b border-slate-800 lg:h-[300vh] scroll-mt-28 pb-32 lg:pb-48"
     >
       {/* Decorative Cyan Radial Lighting */}
       <div 
@@ -199,8 +199,8 @@ export default function AgenticAISection() {
         className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-cyan-500/15 via-sky-500/5 to-transparent blur-3xl -z-10" 
       />
 
-      {/* Sticky Viewport Container - Perfectly Centered Vertically with Breathing Room */}
-      <div className="lg:sticky lg:top-14 xl:top-16 lg:h-[calc(100vh-4rem)] flex flex-col justify-center py-8 lg:py-4 overflow-visible relative z-10">
+      {/* Sticky Viewport Container - Perfectly Centered Vertically with Breathing Room Below Header */}
+      <div className="lg:sticky lg:top-24 xl:top-28 lg:min-h-[calc(100vh-7rem)] flex flex-col justify-center py-6 lg:py-8 overflow-visible relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           
           {/* Section Header - Clean Modern Inter/Jakarta Sans Typography */}
