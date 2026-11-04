@@ -70,7 +70,7 @@ const evaluation = await policyGraph.evaluate({
     icon: Workflow,
     color: "#008f6d",
     summary: "Unlike static chatbots that only output text, Agentic AI directly triggers authenticated backend tools, database mutations, and webhooks.",
-    actionDetails: "Executes Stripe refund API ($189.00), updates subscription status in Salesforce CRM, and sends instant WhatsApp confirmation with receipt PDF.",
+    actionDetails: "Executes Stripe refund API ($189.00), updates subscription status in Salesforce CRM, and sends instant WhatsApp confirmation with digital receipt details.",
     codeSnippet: `// 03. Authenticated Webhook & API Call
 const tx = await stripeConnector.refund({
   chargeId: "ch_3N884x",
@@ -132,17 +132,17 @@ export default function AgenticAISection() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 text-xs font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-            <span>PDF Brief Page 7 · Enterprise Differentiator</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 text-xs font-semibold">
+            <Cpu className="w-3.5 h-3.5 text-cyan-400" />
+            <span className="mono-label">AUTONOMOUS AGENTIC ARCHITECTURE</span>
           </div>
 
-          <h2 className="heading-fluid-section font-serif-heading text-white tracking-tight font-bold">
+          <h2 className="heading-fluid-section font-serif-heading text-white tracking-tight font-normal">
             Beyond Static Chatbots:{" "}
             <span className="italic font-normal text-cyan-400">True Agentic AI for Enterprise CX.</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+          <p className="text-base text-slate-300 leading-relaxed font-normal">
             Legacy bots only answer FAQs. CXdynamIQ's Agentic AI reasons through business rules, 
             triggers real-time backend APIs, and autonomously resolves customer requests from end to end.
           </p>
@@ -264,3 +264,4 @@ export default function AgenticAISection() {
     </section>
   );
 }
+

@@ -169,17 +169,17 @@ export default function OmnichannelSection() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-[#012635]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-[#012635]">
             <span className="w-2 h-2 rounded-full bg-[#069bd8] animate-pulse" />
-            <span>PDF Brief · Core Platform Pillar</span>
+            <span className="mono-label">UNIFIED OMNICHANNEL FABRIC</span>
           </div>
 
-          <h2 className="heading-fluid-section font-serif-heading text-[#012635] tracking-tight font-bold">
+          <h2 className="heading-fluid-section font-serif-heading text-[#002620] tracking-tight font-normal">
             One Unified Context.{" "}
             <span className="italic font-normal text-sky-700">Every Voice &amp; Digital Channel.</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+          <p className="text-base text-[#012635] leading-relaxed font-normal">
             Customers switch channels effortlessly. CXdynamIQ preserves every conversation thread, 
             ticket status, and sentiment so neither customer nor agent ever has to repeat a single word.
           </p>
@@ -263,11 +263,11 @@ export default function OmnichannelSection() {
         {/* The Key Message: Context Preservation Journey (Interactive 3-Day Simulation) */}
         <div className="rounded-3xl bg-[#012635] text-white p-6 sm:p-10 lg:p-12 shadow-xl border border-slate-800">
           <div className="max-w-3xl mb-10 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/50 text-cyan-300 text-xs font-semibold">
-              <History className="w-3.5 h-3.5" />
-              <span>Key Brief Mandate: Never Lose Conversation History</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800/50 text-cyan-300 text-xs font-semibold">
+              <History className="w-3.5 h-3.5 text-cyan-400" />
+              <span className="mono-label">PERSISTENT CONVERSATION MEMORY</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold font-serif-heading tracking-tight text-white">
+            <h3 className="text-2xl sm:text-3xl font-normal font-serif-heading tracking-tight text-white">
               Watch Context Flow Across 3 Days and 3 Different Channels
             </h3>
             <p className="text-sm sm:text-base text-slate-300">
@@ -387,3 +387,4 @@ export default function OmnichannelSection() {
     </section>
   );
 }
+

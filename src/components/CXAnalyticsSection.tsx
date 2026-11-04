@@ -36,17 +36,17 @@ export default function CXAnalyticsSection() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-[#012635]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-[#012635]">
             <BarChart3 className="w-3.5 h-3.5 text-[#069bd8]" />
-            <span>PDF Brief Page 6-7 · Real-Time CX Intelligence</span>
+            <span className="mono-label">REAL-TIME BUSINESS TELEMETRY</span>
           </div>
 
-          <h2 className="heading-fluid-section font-serif-heading text-[#012635] tracking-tight font-bold">
+          <h2 className="heading-fluid-section font-serif-heading text-[#002620] tracking-tight font-normal">
             See the Metrics That{" "}
             <span className="italic font-normal text-sky-700">Actually Move the Bottom Line.</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+          <p className="text-base text-[#012635] leading-relaxed font-normal">
             No vanity reports. CXdynamIQ surfaces real-time business telemetry: autonomous AI containment, 
             slashed handle times, and continuous First Contact Resolution (FCR).
           </p>
@@ -141,10 +141,10 @@ export default function CXAnalyticsSection() {
             <div className="space-y-6">
               <div className="space-y-2">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-sky-800 text-xs font-semibold">
-                  <Sparkles className="w-3.5 h-3.5 text-[#069bd8]" />
-                  <span>Interactive Enterprise ROI Calculator</span>
+                  <Zap className="w-3.5 h-3.5 text-[#069bd8]" />
+                  <span className="mono-label">ENTERPRISE ROI CALCULATOR</span>
                 </div>
-                <h3 className="text-2xl font-bold font-serif-heading text-[#012635]">
+                <h3 className="text-2xl font-normal font-serif-heading text-[#002620]">
                   Calculate Your Projected Savings with Agentic AI
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600">
@@ -252,3 +252,4 @@ export default function CXAnalyticsSection() {
     </section>
   );
 }
+

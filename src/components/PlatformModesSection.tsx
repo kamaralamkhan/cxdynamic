@@ -426,7 +426,7 @@ export default function PlatformModesSection() {
                   </span>
                 </div>
                 
-                <h2 className="heading-fluid-section font-serif-heading font-bold text-[#012635] tracking-tight leading-[1.2]">
+                <h2 className="heading-fluid-section font-serif-heading font-normal text-[#002620] tracking-tight leading-[1.12]">
                   {activeMode.headline}
                 </h2>
                 

@@ -72,19 +72,19 @@ export default function Home() {
       {/* 3. Proof Strip: 4 Core AI SaaS Metrics (72% Containment, 3.8x FCR, 100% QA, -44% Cost) */}
       <ProofAndMarquee />
 
-      {/* 4. Agentic AI Engine: 5-Stage Stepper (Understand -> Reason -> Act -> Resolve -> Learn) [PDF Page 7] */}
+      {/* 4. Agentic AI Engine: 5-Stage Autonomous Execution Stepper */}
       <AgenticAISection />
 
-      {/* 5. Omnichannel Engagement: 7 Channels + 3-Day Cross-Channel Context Preservation Simulation [PDF Page 5] */}
+      {/* 5. Omnichannel Engagement: 7 Channels & 3-Day Cross-Channel Context Preservation */}
       <OmnichannelSection />
 
       {/* 6. Human + AI Synergy: Operating Modes (Autonomous Bot, Copilot-Assisted, Outbound Campaigns) */}
       <PlatformModesSection />
 
-      {/* 7. AI Quality Assurance & 100% Conversation Intelligence (Major Section) [PDF Page 6] */}
+      {/* 7. AI Quality Assurance & 100% Conversation Intelligence */}
       <AIQASection />
 
-      {/* 8. Real-Time CX Analytics & Interactive ROI Calculator [PDF Page 6-7] */}
+      {/* 8. Real-Time CX Analytics & Interactive Enterprise ROI Calculator */}
       <CXAnalyticsSection />
 
       {/* 9. Products Bento: Complete Platform Modules */}

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { 
   ArrowRight, 
+  ArrowDown,
   PhoneCall, 
   MessageSquare, 
   Bot, 
@@ -192,47 +193,49 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           <div className="space-y-5 text-left">
             
             {/* 1. Eyebrow Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-slate-200/80 shadow-2xs text-xs font-semibold text-[#012635]">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-[#012635]">
               <span className="w-2 h-2 rounded-full bg-[#008f6d] animate-pulse" />
-              <span>✨ Next-Generation AI-First Customer Experience</span>
+              <span className="mono-label">AGENTIC AI CUSTOMER EXPERIENCE</span>
             </div>
 
-            {/* 2. H1 Headline (Aircall Garamond Serif Fluid Scaling) */}
-            <h1 className="heading-fluid-hero font-serif-heading text-[#012635] tracking-tight font-bold">
+            {/* 2. H1 Headline (Tri-font Editorial Garamond Serif - Weight 400, Negative tracking) */}
+            <h1 className="heading-fluid-hero font-serif-heading text-[#002620] tracking-tight font-normal">
               The Agentic AI Platform That{" "}
               <span className="italic font-normal text-sky-700">Resolves Customer Inquiries in Real Time.</span>
             </h1>
 
-            {/* 3. Sub-headline (AI-First & specific) */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl font-normal">
+            {/* 3. Sub-headline (Fellix/Inter readability spec: 16px, 1.625 line-height, #012635) */}
+            <p className="text-base sm:text-lg text-[#012635] leading-relaxed max-w-xl font-normal">
               Combine autonomous Agentic AI with real-time human agent copilot across Voice, WhatsApp, and all digital channels — driving 72%+ containment with zero lost context.
             </p>
 
-            {/* 4. Action CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+            {/* 4. Action CTAs (Guaranteed inline alignment without wrapping broken arrows) */}
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
                 href="https://cxq360.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-[#008f6d] text-white hover:bg-[#007a5d] shadow-sm transition-all cursor-pointer"
+                className="btn-tactile group inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-[#008f6d] text-white hover:bg-[#007a5d] shadow-sm transition-all cursor-pointer whitespace-nowrap"
               >
-                <span>Experience CXdynamIQ Free →</span>
+                <span>Experience CXdynamIQ Free</span>
+                <ArrowRight className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-0.5" />
               </a>
 
               <button
                 type="button"
                 onClick={onOpenDemo}
-                className="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-white text-[#012635] border border-slate-300/80 hover:bg-slate-50 hover:border-slate-400 transition-all shadow-2xs cursor-pointer"
+                className="btn-tactile group inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg text-sm font-semibold bg-white text-[#012635] border border-slate-300/80 hover:bg-slate-50 hover:border-slate-400 transition-all shadow-2xs cursor-pointer whitespace-nowrap"
               >
-                <span>▶ Watch Platform Tour</span>
+                <Play className="w-3.5 h-3.5 text-sky-600 fill-sky-600 shrink-0" />
+                <span>Watch Platform Tour</span>
               </button>
 
               <a
                 href="#omnichannel"
-                className="inline-flex items-center justify-center sm:justify-start gap-1 text-sm font-medium text-slate-600 hover:text-slate-900 underline-offset-4 hover:underline py-2 sm:px-2 transition-colors"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-slate-900 underline-offset-4 hover:underline py-2 px-2 transition-colors whitespace-nowrap"
               >
                 <span>Omnichannel Flow</span>
-                <span aria-hidden="true">↓</span>
+                <ArrowDown className="w-3.5 h-3.5 shrink-0" />
               </a>
             </div>
 

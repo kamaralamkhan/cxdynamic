@@ -187,7 +187,7 @@ export default function CallbackSection() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">Brief Requirements (Optional)</label>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Project Details / Requirements (Optional)</label>
                     <textarea
                       rows={3}
                       value={formData.brief}

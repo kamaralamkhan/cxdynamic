@@ -19,17 +19,17 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
         
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 text-xs font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Begin Your Transformation Today</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 text-xs font-semibold">
+            <Zap className="w-3.5 h-3.5 text-cyan-400" />
+            <span className="mono-label">LAUNCH YOUR TRANSFORMATION</span>
           </div>
 
-          <h2 className="heading-fluid-section font-serif-heading text-white tracking-tight font-bold">
+          <h2 className="heading-fluid-section font-serif-heading text-white tracking-tight font-normal">
             Ready to Modernize Your{" "}
             <span className="italic font-normal text-cyan-400">Customer Experience?</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+          <p className="text-base text-slate-300 leading-relaxed font-normal">
             Whether you want to test-drive autonomous AI agents on our instant sandbox or need 
             an enterprise telecom whitelisting consultation, we’re ready.
           </p>
@@ -50,7 +50,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold font-serif-heading text-white">
+                <h3 className="text-2xl font-normal font-serif-heading text-white">
                   Test-Drive CXQ360.ai Sandbox
                 </h3>
                 <p className="text-sm text-slate-300 mt-2 leading-relaxed">
@@ -79,9 +79,10 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
                 href="https://cxq360.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-bold bg-[#008f6d] hover:bg-[#007a5d] text-white shadow-lg transition-all"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold bg-[#008f6d] hover:bg-[#007a5d] text-white shadow-lg transition-all whitespace-nowrap"
               >
-                <span>Launch CXQ360.ai Trial →</span>
+                <span>Launch CXQ360.ai Trial</span>
+                <ArrowRight className="w-4 h-4 shrink-0" />
               </a>
               <p className="text-[11px] text-center text-slate-400 mt-2">
                 Official CXdynamIQ Customer &amp; Demo Platform
@@ -97,7 +98,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold font-serif-heading text-white">
+                <h3 className="text-2xl font-normal font-serif-heading text-white">
                   Enterprise Architecture &amp; Telecom
                 </h3>
                 <p className="text-sm text-slate-300 mt-2 leading-relaxed">
@@ -142,3 +143,4 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
     </section>
   );
 }
+

@@ -622,7 +622,7 @@ export default function ServicePage({ page }: ServicePageProps) {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">Brief about the requirement</label>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Project Details / Requirements (Optional)</label>
                       <textarea
                         rows={3}
                         placeholder="Tell us about your active seat count, current phone setup, and target go-live date..."

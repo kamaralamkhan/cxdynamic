@@ -2,14 +2,15 @@
 
 :root {
   --background: #f8fafc;
-  --foreground: #0f172a;
+  --foreground: #012635;
   --card-bg: #ffffff;
   --card-border: #e2e8f0;
   --brand-cyan: #069bd8;
   --brand-cyan-hover: #0582b6;
-  --brand-emerald: #10b981;
-  --brand-emerald-hover: #34d399;
+  --brand-emerald: #008f6d;
+  --brand-emerald-hover: #007a5d;
   --bg-paper: #f7f6f0;
+  --color-deep-teal: #002620;
   --color-cobalt: #012635;
   --color-forest: #216358;
 }
@@ -20,26 +21,42 @@
   --font-display: var(--font-jakarta), system-ui, -apple-system, sans-serif;
   --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", monospace;
 }
 
-/* Fluid Typography Strategy (Aircall & Enterprise SaaS Spec) */
+/* Fluid Typography Strategy (Editorial Serif & Enterprise SaaS Spec) */
 .heading-fluid-hero {
-  font-size: clamp(2.1rem, 2.5vw + 1.4rem, 3.8rem);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
+  font-family: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
+  font-size: clamp(2.3rem, 3.8vw + 1rem, 4.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  color: #002620;
 }
 
 .heading-fluid-section {
-  font-size: clamp(1.85rem, 2.2vw + 1.1rem, 2.9rem);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
+  font-family: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
+  font-size: clamp(1.9rem, 2.5vw + 0.9rem, 3.2rem);
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+  color: #002620;
 }
 
-/* Editorial Serif & Sans High-Contrast Pairing */
+/* Editorial Serif Headings (Weight 400 per Typography Spec) */
 .font-serif-heading {
   font-family: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
-  font-weight: 500;
-  letter-spacing: -0.015em;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+/* Engineered Monospace Utility Labels & Metadata */
+.mono-label, .label-text {
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 /* Aircall Glassmorphism & Surface Tokens */

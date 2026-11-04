@@ -84,17 +84,17 @@ export default function AIQASection() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-[#012635]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-[#012635]">
             <ShieldCheck className="w-3.5 h-3.5 text-[#008f6d]" />
-            <span>PDF Brief Page 6 · Major Platform Section</span>
+            <span className="mono-label">100% CONVERSATION INTELLIGENCE</span>
           </div>
 
-          <h2 className="heading-fluid-section font-serif-heading text-[#012635] tracking-tight font-bold">
+          <h2 className="heading-fluid-section font-serif-heading text-[#002620] tracking-tight font-normal">
             Ditch the 2% Sample Audit.{" "}
             <span className="italic font-normal text-sky-700">Inspect 100% of Conversations.</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+          <p className="text-base text-[#012635] leading-relaxed font-normal">
             Legacy contact centers manually grade 2 out of 100 calls and miss 98% of compliance breaches. 
             CXdynamIQ's Conversation Intelligence audits every voice, chat, and WhatsApp interaction automatically.
           </p>
@@ -127,10 +127,10 @@ export default function AIQASection() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-8">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 text-xs font-semibold mb-2">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>Live Supervisor Audit Console</span>
+                <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
+                <span className="mono-label">LIVE SUPERVISOR AUDIT CONSOLE</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold font-serif-heading text-white">
+              <h3 className="text-xl sm:text-2xl font-normal font-serif-heading text-white">
                 Automated Scorecard &amp; Script Adherence Telemetry
               </h3>
             </div>
@@ -253,3 +253,4 @@ export default function AIQASection() {
     </section>
   );
 }
+
