@@ -11,12 +11,15 @@ import {
   ArrowRight, 
   Zap, 
   ShieldCheck,
-  ExternalLink
+  ExternalLink,
+  Pause,
+  Play
 } from "lucide-react";
 
 interface WorkflowStep {
   step: string;
   title: string;
+  shortBadge: string;
   badge: string;
   icon: typeof Brain;
   color: string;
@@ -30,6 +33,7 @@ const AGENTIC_STEPS: WorkflowStep[] = [
   {
     step: "01",
     title: "UNDERSTAND",
+    shortBadge: "Multilingual NLU",
     badge: "Multilingual & Acoustic Parsing",
     icon: Brain,
     color: "#38bdf8",
@@ -43,11 +47,12 @@ const parsedIntent = await agenticEngine.understand({
   supportedLanguages: ["en", "es", "hi", "ar", "tl"]
 });
 // Result: { intent: "UPDATE_DELIVERY_ADDRESS", confidence: 0.988, urgency: "HIGH" }`,
-    metric: "280ms Parsing Latency",
+    metric: "280ms Latency",
   },
   {
     step: "02",
     title: "REASON",
+    shortBadge: "ERP Policy Check",
     badge: "ERP & Policy Evaluation",
     icon: Cpu,
     color: "#818cf8",
@@ -61,11 +66,12 @@ const evaluation = await policyGraph.evaluate({
   newAddress: "Suite 400, Ortigas Center, Pasig"
 });
 // Decision: APPROVED (Transit cutoff: 18:00 | Current: 14:22)`,
-    metric: "100% Policy Compliant",
+    metric: "100% Compliant",
   },
   {
     step: "03",
     title: "ACT",
+    shortBadge: "API Tool Trigger",
     badge: "Autonomous Backend API Trigger",
     icon: Workflow,
     color: "#34d399",
@@ -79,11 +85,12 @@ const dispatchMutation = await logisticsERP.updateDelivery({
   authorizedBy: "CXdynamIQ_Agentic_Engine"
 });
 await salesforce.updateCase({ status: "AUTONOMOUSLY_RESOLVED" });`,
-    metric: "Sub-Second API Mutation",
+    metric: "Sub-Second Mutation",
   },
   {
     step: "04",
     title: "RESOLVE",
+    shortBadge: "Multichannel Sync",
     badge: "Omnichannel Resolution Sync",
     icon: CheckCircle,
     color: "#38bdf8",
@@ -95,11 +102,12 @@ await omnichannelBridge.dispatchConfirmation({
   channel: "WHATSAPP",
   message: "Your delivery address for Order #CX-88492 has been updated. New window: Tomorrow 9:00 AM - 12:00 PM. Tracking: cxd.link/tr-88492"
 });`,
-    metric: "74.8% Autonomous Containment",
+    metric: "74.8% Containment",
   },
   {
     step: "05",
     title: "LEARN",
+    shortBadge: "Auto-QA & RL",
     badge: "Reinforcement & Auto QA",
     icon: GraduationCap,
     color: "#c084fc",
@@ -118,76 +126,34 @@ await conversationQA.ingestTurn({
 ];
 
 export default function AgenticAISection() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [activeStepIndex, setActiveStepIndex] = useState(0);
-  const [progressFills, setProgressFills] = useState<number[]>([100, 0, 0, 0, 0]);
-  const [isManualScroll, setIsManualScroll] = useState<boolean>(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const stepDurationMs = 5000; // 5 seconds per step
 
-  // Smooth Scroll Runway Effect with Generous Center-Lock Offset
+  // Auto-advance with smooth progress bar
   useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const containerTop = rect.top + window.scrollY;
-      const runwayHeight = containerRef.current.offsetHeight - window.innerHeight;
-      if (runwayHeight <= 0) return;
+    if (isPaused) return;
 
-      const scrolled = window.scrollY - containerTop;
-      // Clamped progress from 0.0 to 1.0
-      const rawProgress = Math.max(0, Math.min(1, scrolled / runwayHeight));
+    const intervalTime = 50;
+    const increment = (intervalTime / stepDurationMs) * 100;
 
-      // Ease into center: 0.0 to 0.06 is smooth centering lock; 0.06 to 0.94 runs the 5 steps; 0.94 to 1.0 exits gracefully
-      const activeProgress = Math.max(0, Math.min(1, (rawProgress - 0.06) / 0.88));
+    const timer = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          setActiveStepIndex((current) => (current + 1) % AGENTIC_STEPS.length);
+          return 0;
+        }
+        return prev + increment;
+      });
+    }, intervalTime);
 
-      // 5 Steps -> each takes 20% (0.2) of active runway
-      const stepIdx = Math.min(4, Math.max(0, Math.floor(activeProgress / 0.2)));
-      const stepProgress = (activeProgress - (stepIdx * 0.2)) / 0.2; // 0.0 to 1.0 within current step
+    return () => clearInterval(timer);
+  }, [isPaused, activeStepIndex]);
 
-      const fills = [0, 0, 0, 0, 0];
-      for (let i = 0; i < stepIdx; i++) fills[i] = 100;
-      fills[stepIdx] = Math.min(100, Math.max(0, Math.round(stepProgress * 100)));
-
-      setProgressFills(fills);
-
-      if (!isManualScroll) {
-        setActiveStepIndex(stepIdx);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isManualScroll]);
-
-  // Click tab to jump directly to that step in the scroll runway
   const handleTabClick = (index: number) => {
-    setIsManualScroll(true);
     setActiveStepIndex(index);
-
-    const fills = [0, 0, 0, 0, 0];
-    for (let i = 0; i <= index; i++) fills[i] = 100;
-    setProgressFills(fills);
-
-    if (containerRef.current) {
-      const rect = containerRef.current.getBoundingClientRect();
-      const containerTop = rect.top + window.scrollY;
-      const runwayHeight = containerRef.current.offsetHeight - window.innerHeight;
-
-      if (runwayHeight > 100) {
-        const targetPercent = 0.06 + (index * 0.2 * 0.88) + 0.04;
-        const targetScroll = containerTop + runwayHeight * targetPercent;
-
-        window.scrollTo({
-          top: targetScroll,
-          behavior: "smooth",
-        });
-      }
-    }
-
-    setTimeout(() => {
-      setIsManualScroll(false);
-    }, 800);
+    setProgress(0);
   };
 
   const currentStep = AGENTIC_STEPS[activeStepIndex] || AGENTIC_STEPS[0];
@@ -195,168 +161,189 @@ export default function AgenticAISection() {
 
   return (
     <section 
-      ref={containerRef}
       id="agentic-ai" 
-      className="relative bg-[#02131e] text-white border-b border-slate-800 lg:h-[320vh] scroll-mt-24 pb-28 lg:pb-36"
+      className="relative bg-[#02131e] text-white border-b border-slate-800 py-16 sm:py-20 lg:py-24 scroll-mt-20 overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
     >
       {/* Decorative Cyan Radial Lighting */}
       <div 
         aria-hidden="true" 
-        className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[550px] bg-gradient-to-b from-sky-500/20 via-cyan-500/10 to-transparent blur-3xl -z-10" 
+        className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-gradient-to-b from-sky-500/15 via-cyan-500/10 to-transparent blur-3xl -z-10" 
       />
 
-      {/* Sticky Viewport Container - Perfectly Centered Vertically with Breathing Room Below Header */}
-      <div className="lg:sticky lg:top-20 xl:top-24 lg:min-h-[calc(100vh-5.5rem)] flex flex-col justify-center py-8 lg:py-12 overflow-visible relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          
-          {/* Section Header - High Contrast White & Sky Typography */}
-          <div className="max-w-3xl mx-auto text-center space-y-3 mb-6 sm:mb-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-950/90 border border-sky-500/50 text-sky-300 text-xs font-semibold shadow-inner">
-              <Cpu className="w-3.5 h-3.5 text-sky-400" />
-              <span className="mono-label">AUTONOMOUS AGENTIC ARCHITECTURE</span>
-            </div>
-
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white tracking-tight font-display">
-              Beyond Static Chatbots:{" "}
-              <span className="text-sky-400">True Agentic AI for Enterprise CX.</span>
-            </h2>
-
-            <p className="text-sm sm:text-base text-slate-200 leading-relaxed max-w-2xl mx-auto font-normal">
-              Legacy bots only answer canned FAQs. CXdynamIQ's Agentic AI reasons through business rules, 
-              triggers real-time backend APIs, and autonomously resolves customer requests from end to end.
-            </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-8 sm:space-y-10">
+        
+        {/* Section Header - Compact, High Contrast, Perfectly Proportioned */}
+        <div className="max-w-3xl mx-auto text-center space-y-2.5">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-950/90 border border-sky-500/50 text-sky-300 text-xs font-semibold shadow-inner">
+            <Cpu className="w-3.5 h-3.5 text-sky-400" />
+            <span className="mono-label">AUTONOMOUS AGENTIC ARCHITECTURE</span>
           </div>
 
-          {/* 5-Step Stepper Navigation with Dynamic Scroll Fill Bars */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 mb-6 sm:mb-7">
-            {AGENTIC_STEPS.map((s, idx) => {
-              const Icon = s.icon;
-              const isActive = activeStepIndex === idx;
-              const fillPercent = progressFills[idx] ?? 0;
-              return (
-                <button
-                  key={s.step}
-                  onClick={() => handleTabClick(idx)}
-                  className={`p-3.5 rounded-xl border text-left transition-all cursor-pointer ${
-                    isActive 
-                      ? "bg-slate-900 border-sky-400 shadow-xl ring-1 ring-sky-400/50 translate-y-[-2px]" 
-                      : "bg-slate-950/80 border-white/15 hover:bg-slate-900/70 hover:border-white/25"
-                  }`}
-                >
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs font-mono font-bold text-sky-400">{s.step}</span>
-                    <div 
-                      className="w-6 h-6 rounded-md flex items-center justify-center transition-transform"
-                      style={{ backgroundColor: `${s.color}25`, color: s.color }}
-                    >
-                      <Icon className="w-3.5 h-3.5" />
-                    </div>
-                  </div>
-                  <div className="text-xs sm:text-sm font-semibold text-white tracking-wide truncate font-display">{s.title}</div>
-                  <div className="text-[11px] text-slate-300 mt-0.5 truncate">{s.badge}</div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white tracking-tight font-display">
+            Beyond Static Chatbots:{" "}
+            <span className="text-sky-400">True Agentic AI for Enterprise CX.</span>
+          </h2>
 
-                  {/* Dynamic Progress Bar Fill on Scroll */}
-                  <div className="w-full h-1 bg-white/15 rounded-full overflow-hidden mt-2.5">
-                    <div 
-                      className="h-full bg-sky-400 rounded-full transition-all duration-150 ease-out"
-                      style={{ width: `${isActive ? Math.max(fillPercent, 10) : fillPercent}%` }}
-                    />
-                  </div>
-                </button>
-              );
-            })}
-          </div>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl mx-auto font-normal">
+            Legacy bots only answer canned FAQs. CXdynamIQ's Agentic AI reasons through business rules, 
+            triggers real-time backend APIs, and autonomously resolves customer requests from end to end.
+          </p>
+        </div>
 
-          {/* Interactive Step Console Card - High Contrast Light on Dark */}
-          <div className="bg-[#051928] rounded-2xl border border-sky-900/60 p-5 sm:p-7 lg:p-8 shadow-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-8 items-center">
+        {/* 5-Step Segmented Navigation Bar */}
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 sm:gap-2.5">
+          {AGENTIC_STEPS.map((s, idx) => {
+            const Icon = s.icon;
+            const isActive = activeStepIndex === idx;
+            return (
+              <button
+                key={s.step}
+                onClick={() => handleTabClick(idx)}
+                className={`p-3 rounded-xl border text-left transition-all cursor-pointer relative overflow-hidden ${
+                  isActive 
+                    ? "bg-slate-900 border-sky-400 shadow-lg ring-1 ring-sky-400/50" 
+                    : "bg-slate-950/80 border-white/10 hover:bg-slate-900/60 hover:border-white/20"
+                }`}
+              >
+                <div className="flex items-center justify-between mb-1">
+                  <span className={`text-xs font-mono font-bold ${isActive ? "text-sky-400" : "text-slate-400"}`}>
+                    {s.step}
+                  </span>
+                  <div 
+                    className="w-5 h-5 rounded-md flex items-center justify-center transition-transform"
+                    style={{ backgroundColor: `${s.color}25`, color: s.color }}
+                  >
+                    <Icon className="w-3 h-3" />
+                  </div>
+                </div>
+                
+                <div className="text-xs sm:text-sm font-semibold text-white tracking-wide truncate font-display">
+                  {s.title}
+                </div>
+                <div className="text-[10px] text-slate-400 truncate mt-0.5">
+                  {s.shortBadge}
+                </div>
+
+                {/* Animated Progress Bar on Active Tab */}
+                <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden mt-2">
+                  <div 
+                    className={`h-full bg-sky-400 rounded-full transition-all duration-75 ease-linear ${
+                      isActive ? "opacity-100" : "opacity-0"
+                    }`}
+                    style={{ width: isActive ? `${progress}%` : "0%" }}
+                  />
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Interactive Step Console Card - Perfectly Proportioned & Never Cut Off */}
+        <div className="bg-[#051928] rounded-2xl border border-sky-900/60 p-5 sm:p-6 lg:p-7 shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+            
+            {/* Left Column (7 cols): Step Details & Live Execution Scenario */}
+            <div className="lg:col-span-7 space-y-3.5">
               
-              {/* Left: Step Details & Business Value (Crystal Clear Text!) */}
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-950/90 border border-sky-500/40 text-sky-300">
+              <div className="flex items-center justify-between flex-wrap gap-2">
+                <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-sky-950/90 border border-sky-500/40 text-sky-300">
                   <span className="mono-label">PHASE {currentStep.step} OF 05</span>
                   <span>•</span>
                   <span>{currentStep.badge}</span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-bold font-display text-white tracking-tight">
-                  {currentStep.step}. {currentStep.title}: How it Works
-                </h3>
-
-                <p className="text-sm text-slate-200 leading-relaxed">
-                  {currentStep.summary}
-                </p>
-
-                <div className="p-4 rounded-xl bg-slate-900/90 border border-slate-700/80 space-y-1.5 shadow-inner">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-sky-400 flex items-center gap-1.5">
-                    <Zap className="w-3.5 h-3.5 text-sky-400" />
-                    Live Execution Scenario
-                  </div>
-                  <div className="text-xs sm:text-sm text-slate-100 leading-relaxed font-normal">
-                    {currentStep.actionDetails}
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between pt-3 border-t border-white/15">
-                  <span className="text-xs text-slate-300">Target Telemetry SLA</span>
-                  <span className="text-xs font-mono font-bold text-emerald-400 bg-emerald-950/70 px-3 py-1 rounded-md border border-emerald-500/50">
+                <div className="flex items-center gap-2">
+                  <span className="text-[11px] text-slate-400 font-mono">Target SLA:</span>
+                  <span className="text-[11px] font-mono font-bold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40">
                     {currentStep.metric}
                   </span>
                 </div>
               </div>
 
-              {/* Right: Real-Time Code & Webhook Payload Execution */}
-              <div className="rounded-xl bg-[#010912] border border-sky-900/70 p-4 sm:p-5 shadow-2xl space-y-2.5 font-mono text-xs">
-                <div className="flex items-center justify-between text-slate-300 border-b border-white/10 pb-2">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
-                    <span className="text-[11px] text-slate-200 ml-1">agentic_orchestrator.ts</span>
-                  </div>
-                  <span className="text-[10px] text-sky-300 bg-sky-950/80 px-2.5 py-0.5 rounded border border-sky-800/60 font-semibold">
-                    LIVE TELEMETRY
-                  </span>
+              <div>
+                <h3 className="text-lg sm:text-xl font-bold font-display text-white tracking-tight">
+                  {currentStep.step}. {currentStep.title}: How it Works
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed mt-1">
+                  {currentStep.summary}
+                </p>
+              </div>
+
+              {/* Live Execution Scenario Box */}
+              <div className="p-3.5 rounded-xl bg-slate-900/90 border border-slate-700/80 space-y-1 shadow-inner">
+                <div className="text-[11px] font-semibold uppercase tracking-wider text-sky-400 flex items-center gap-1.5">
+                  <Zap className="w-3.5 h-3.5 text-sky-400" />
+                  Live Workflow Scenario
                 </div>
-
-                <pre className="text-sky-300 overflow-x-auto text-[11px] leading-relaxed py-2">
-                  <code>{currentStep.codeSnippet}</code>
-                </pre>
-
-                <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-300">
-                  <span className="flex items-center gap-1.5">
-                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                    SOC 2 &amp; HIPAA Guardrails Enforced
-                  </span>
-                  <span className="text-slate-400">Latency: 280ms</span>
+                <div className="text-xs text-slate-100 leading-relaxed font-normal">
+                  {currentStep.actionDetails}
                 </div>
               </div>
 
+              {/* Guardrails Footer */}
+              <div className="pt-2 flex items-center justify-between text-[11px] text-slate-300 border-t border-white/10">
+                <span className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                  SOC 2 Type II &amp; HIPAA Guardrails Enforced
+                </span>
+                <span className="text-slate-400 text-[10px]">Hover to pause auto-play</span>
+              </div>
             </div>
+
+            {/* Right Column (5 cols): Code & Real-Time Payload Console */}
+            <div className="lg:col-span-5 rounded-xl bg-[#010912] border border-sky-900/70 p-4 shadow-xl space-y-2 font-mono text-xs">
+              
+              <div className="flex items-center justify-between text-slate-300 border-b border-white/10 pb-2">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+                  <span className="text-[11px] text-slate-200 ml-1">agentic_orchestrator.ts</span>
+                </div>
+                <span className="text-[9px] text-sky-300 bg-sky-950/80 px-2 py-0.5 rounded border border-sky-800/60 font-semibold flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  LIVE TELEMETRY
+                </span>
+              </div>
+
+              <pre className="text-sky-300 overflow-x-auto text-[10.5px] leading-relaxed py-1 max-h-[190px] scrollbar-thin">
+                <code>{currentStep.codeSnippet}</code>
+              </pre>
+
+              <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[10px] text-slate-400">
+                <span>Latency: 280ms</span>
+                <span className="text-emerald-400">Authenticated ✓</span>
+              </div>
+            </div>
+
           </div>
-
-          {/* Micro Bottom CTA - Dual Engine: Test in Sandbox or Book Demo */}
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-4 text-center">
-            <a
-              href="https://cxq360.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold bg-sky-700 hover:bg-sky-800 text-white shadow-md transition-all whitespace-nowrap cursor-pointer"
-            >
-              <span>Test Agentic Workflows in CXQ360.ai</span>
-              <ExternalLink className="w-4 h-4 shrink-0" />
-            </a>
-
-            <Link
-              href="/contact-us#quote"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-xs sm:text-sm font-semibold bg-white text-slate-900 hover:bg-slate-100 shadow-md transition-all whitespace-nowrap"
-            >
-              <span>Book an Architecture Walkthrough</span>
-              <ArrowRight className="w-4 h-4 shrink-0" />
-            </Link>
-          </div>
-
         </div>
+
+        {/* Bottom Action CTAs */}
+        <div className="flex flex-wrap items-center justify-center gap-3.5 pt-1 text-center">
+          <a
+            href="https://cxq360.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-sky-700 hover:bg-sky-800 text-white shadow-md transition-all whitespace-nowrap cursor-pointer"
+          >
+            <span>Test Agentic Workflows in CXQ360.ai</span>
+            <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+          </a>
+
+          <Link
+            href="/contact-us#quote"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-white text-slate-900 hover:bg-slate-100 shadow-md transition-all whitespace-nowrap"
+          >
+            <span>Book an Architecture Walkthrough</span>
+            <ArrowRight className="w-3.5 h-3.5 shrink-0" />
+          </Link>
+        </div>
+
       </div>
     </section>
   );

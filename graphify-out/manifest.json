@@ -66,8 +66,8 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1793887568.2844837,
-    "seen": 1793887831.4142969,
+    "mtime": 1793891221.484224,
+    "seen": 1793902192.339455,
     "ast_hash": "7164e6923f8df9f82918049a429ef336",
     "semantic_hash": ""
   },
@@ -108,20 +108,20 @@
     "semantic_hash": ""
   },
   "src/components/CallbackSection.tsx": {
-    "mtime": 1793887461.8308754,
-    "seen": 1793887831.414313,
+    "mtime": 1793891221.7609646,
+    "seen": 1793902192.3394682,
     "ast_hash": "d8f08622c0a4123501f2ba9f16cbca86",
     "semantic_hash": ""
   },
   "src/components/CalmFooter.tsx": {
-    "mtime": 1793887524.8386164,
-    "seen": 1793887831.414314,
+    "mtime": 1793891221.843183,
+    "seen": 1793902192.3394692,
     "ast_hash": "74454c192c3e88b1b0ec8fecdd9fd85e",
     "semantic_hash": ""
   },
   "src/components/CalmHero.tsx": {
-    "mtime": 1793887364.3965294,
-    "seen": 1793887831.414315,
+    "mtime": 1793891221.8920379,
+    "seen": 1793902192.3394704,
     "ast_hash": "5c9f2bbe2c8f0be0aa36f7b7075b881c",
     "semantic_hash": ""
   },
@@ -144,8 +144,8 @@
     "semantic_hash": ""
   },
   "src/components/Navbar.tsx": {
-    "mtime": 1793887437.900639,
-    "seen": 1793887831.4143212,
+    "mtime": 1793891221.9448519,
+    "seen": 1793902192.3394766,
     "ast_hash": "e89a8e3bea9e27ba69e0f185b3598ef9",
     "semantic_hash": ""
   },
@@ -156,8 +156,8 @@
     "semantic_hash": ""
   },
   "src/components/PlatformModesSection.tsx": {
-    "mtime": 1793887778.5737364,
-    "seen": 1793887831.4143245,
+    "mtime": 1793891222.0457022,
+    "seen": 1793902192.3394794,
     "ast_hash": "ae2294b1f979e55289aaf81026933c97",
     "semantic_hash": ""
   },
@@ -1512,32 +1512,32 @@
     "semantic_hash": ""
   },
   "src/components/AIQASection.tsx": {
-    "mtime": 1793887614.2788365,
-    "seen": 1793887831.4143047,
+    "mtime": 1793891221.5884616,
+    "seen": 1793902192.3394616,
     "ast_hash": "2fd59696ece23d2765ed9ce9e02dda27",
     "semantic_hash": ""
   },
   "src/components/AgenticAISection.tsx": {
-    "mtime": 1793887265.0812135,
-    "seen": 1793887831.4143076,
-    "ast_hash": "882a9776a41e2cbcba661672eaa9daa3",
+    "mtime": 1793902154.9229403,
+    "seen": 1793902192.3394642,
+    "ast_hash": "29fcd992306f87c334acb762bf12f977",
     "semantic_hash": ""
   },
   "src/components/CXAnalyticsSection.tsx": {
-    "mtime": 1793887703.543143,
-    "seen": 1793887831.41431,
+    "mtime": 1793891221.7065501,
+    "seen": 1793902192.3394663,
     "ast_hash": "0ec94853186e7d7ae2ae7dcef3c98cb3",
     "semantic_hash": ""
   },
   "src/components/OmnichannelSection.tsx": {
-    "mtime": 1793887738.6055455,
-    "seen": 1793887831.414323,
+    "mtime": 1793891221.99033,
+    "seen": 1793902192.3394785,
     "ast_hash": "2be284b9818cc4b9e5e78118fdb42c20",
     "semantic_hash": ""
   },
   "src/components/PreFooterDualCTA.tsx": {
-    "mtime": 1793887792.1887248,
-    "seen": 1793887831.4143257,
+    "mtime": 1793891222.072213,
+    "seen": 1793902192.3394806,
     "ast_hash": "22b628c120e01dd4c2e148f3e00de99a",
     "semantic_hash": ""
   },
@@ -1548,15 +1548,15 @@
     "semantic_hash": ""
   },
   "src/components/CXQ360TrialJourney.tsx": {
-    "mtime": 1793887331.1254318,
-    "seen": 1793887831.4143116,
-    "ast_hash": "12c6f6d5fadd36405a958c50708280d7",
+    "mtime": 1793887989.000059,
+    "seen": 1793902192.3394675,
+    "ast_hash": "1f8c180f9c46743491ba2a518d9b8215",
     "semantic_hash": ""
   },
   "src/components/HumanAIJourneySection.tsx": {
-    "mtime": 1793887304.2704833,
-    "seen": 1793887831.4143162,
-    "ast_hash": "60947c2be4ff540742e346965387a1cf",
+    "mtime": 1793887989.1495838,
+    "seen": 1793902192.3394718,
+    "ast_hash": "9c697c0a879d38fd5133de829d914077",
     "semantic_hash": ""
   },
   "plan/cxdynamiq_antigravity_production_spec_agents.md": {

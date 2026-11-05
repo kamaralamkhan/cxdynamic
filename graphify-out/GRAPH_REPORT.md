@@ -1,7 +1,7 @@
 # Graph Report - cxdynamiq  (2026-11-05)
 
 ## Corpus Check
-- 105 files · ~141,554 words
+- 105 files · ~141,395 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 8 file(s) not represented in the graph (top: (none) 3, .ico 3, .xml 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `64acc292`
+- Built from commit: `ba715e1a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -50,16 +50,16 @@
 10. `compilerOptions` - 16 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Home()` --calls--> `AboutSection()`  [EXTRACTED]
-  src/app/page.tsx → src/components/AboutSection.tsx
-- `Home()` --calls--> `BusinessChallengesSection()`  [EXTRACTED]
-  src/app/page.tsx → src/components/BusinessChallengesSection.tsx
-- `Home()` --calls--> `CalmFooter()`  [EXTRACTED]
-  src/app/page.tsx → src/components/CalmFooter.tsx
-- `Home()` --calls--> `CalmHero()`  [EXTRACTED]
-  src/app/page.tsx → src/components/CalmHero.tsx
-- `Home()` --calls--> `Navbar()`  [EXTRACTED]
-  src/app/page.tsx → src/components/Navbar.tsx
+- `ProductPageLayoutProps` --references--> `PageData`  [EXTRACTED]
+  src/components/ProductPageLayout.tsx → src/lib/content.ts
+- `ServicePageProps` --references--> `PageData`  [EXTRACTED]
+  src/components/ServicePage.tsx → src/lib/content.ts
+- `ProductsPage()` --calls--> `ProductsClientView()`  [EXTRACTED]
+  src/app/products/page.tsx → src/app/products/ProductsClientView.tsx
+- `ProductsClientView()` --calls--> `CalmFooter()`  [EXTRACTED]
+  src/app/products/ProductsClientView.tsx → src/components/CalmFooter.tsx
+- `ProductsClientView()` --calls--> `InteractiveDemoModal()`  [EXTRACTED]
+  src/app/products/ProductsClientView.tsx → src/components/InteractiveDemoModal.tsx
 
 ## Import Cycles
 - None detected.
