@@ -89,7 +89,7 @@ export default function CalmFooter() {
               <Link href="/" className="inline-block">
                 <Image
                   src="/images/logo.png"
-                  alt="CXDYNAMIQ Cloud Contact Center"
+                  alt="CXdynamIQ Cloud Contact Center"
                   width={190}
                   height={40}
                   className="h-8 sm:h-9 w-auto object-contain brightness-0 invert filter"
@@ -271,7 +271,7 @@ export default function CalmFooter() {
                     Company
                   </h4>
                   <ul className="space-y-2 text-xs text-slate-300">
-                    <li><Link href="/about-us" className="hover:text-cyan-300 transition-colors">About CXDYNAMIQ</Link></li>
+                    <li><Link href="/about-us" className="hover:text-cyan-300 transition-colors">About CXdynamIQ</Link></li>
                     <li><Link href="/who-we-are" className="hover:text-cyan-300 transition-colors">Who We Are</Link></li>
                     <li><Link href="/blogs" className="hover:text-cyan-300 transition-colors">Our Blog &amp; Guides</Link></li>
                     <li><Link href="/contact-us" className="hover:text-cyan-300 transition-colors">Contact Us</Link></li>
@@ -289,21 +289,21 @@ export default function CalmFooter() {
               
               {/* Fine Print / Disclaimer (Matching reference screenshot) */}
               <p className="text-[11px] text-slate-300/80 leading-relaxed text-center sm:text-left">
-                Images and platform previews are for illustrative purposes. CXDYNAMIQ delivers high-availability carrier telephony, automated failover routing, and native CRM integrations.
+                Images and platform previews are for illustrative purposes. CXdynamIQ delivers high-availability carrier telephony, automated failover routing, and native CRM integrations.
               </p>
 
               {/* Bottom Bar: Copyright & Legal Links */}
               <div className="pt-4 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
                 <div className="text-center sm:text-left">
-                  Copyright © {new Date().getFullYear()} CXDYNAMIQ Global Inc. All rights reserved.
+                  Copyright © {new Date().getFullYear()} CXdynamIQ Global Inc. All rights reserved.
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-300">
-                  <Link href="/privacy-policy" className="hover:text-white transition-colors">Legal</Link>
-                  <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                  <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-                  <Link href="/contact-us" className="hover:text-white transition-colors">Security &amp; Compliance</Link>
-                  <span className="hover:text-white transition-colors cursor-pointer">Cookie Preferences</span>
+                  <Link href="/privacy-policy" className="hover:text-white transition-colors whitespace-nowrap">Legal</Link>
+                  <Link href="/privacy-policy" className="hover:text-white transition-colors whitespace-nowrap">Privacy Policy</Link>
+                  <Link href="/terms" className="hover:text-white transition-colors whitespace-nowrap">Terms of Service</Link>
+                  <Link href="/contact-us" className="hover:text-white transition-colors whitespace-nowrap">Security &amp; Compliance</Link>
+                  <span className="hover:text-white transition-colors cursor-pointer whitespace-nowrap shrink-0">Cookie Preferences</span>
                 </div>
               </div>
 

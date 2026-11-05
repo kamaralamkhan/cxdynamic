@@ -169,17 +169,17 @@ export default function OmnichannelSection() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-[#012635]">
-            <span className="w-2 h-2 rounded-full bg-[#069bd8] animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-slate-700">
+            <span className="w-2 h-2 rounded-full bg-sky-600 animate-pulse" />
             <span className="mono-label">UNIFIED OMNICHANNEL FABRIC</span>
           </div>
 
-          <h2 className="heading-fluid-section font-display font-extrabold text-[#002620] tracking-tight">
+          <h2 className="heading-fluid-section font-display font-semibold text-slate-900 tracking-tight">
             One Unified Context.{" "}
             <span className="text-sky-700">Every Voice &amp; Digital Channel.</span>
           </h2>
 
-          <p className="text-base text-[#012635] leading-relaxed font-normal">
+          <p className="text-base text-slate-600 leading-relaxed font-normal">
             Customers switch channels effortlessly. CXdynamIQ preserves every conversation thread, 
             ticket status, and sentiment so neither customer nor agent ever has to repeat a single word.
           </p>
@@ -261,7 +261,7 @@ export default function OmnichannelSection() {
         </div>
 
         {/* The Key Message: Context Preservation Journey (Interactive 3-Day Simulation) */}
-        <div className="rounded-3xl bg-[#012635] text-white p-6 sm:p-10 lg:p-12 shadow-xl border border-slate-800">
+        <div className="rounded-3xl bg-slate-900 text-white p-6 sm:p-10 lg:p-12 shadow-xl border border-slate-800">
           <div className="max-w-3xl mb-10 space-y-3">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800/50 text-cyan-300 text-xs font-semibold">
               <History className="w-3.5 h-3.5 text-cyan-400" />

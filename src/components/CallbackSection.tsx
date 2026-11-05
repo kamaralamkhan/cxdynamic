@@ -19,21 +19,28 @@ export default function CallbackSection() {
   // Auto-scroll to the quote form when navigated to with #quote or #quote-form
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const checkHash = () => {
+      const scrollToForm = () => {
         const hash = window.location.hash;
         if (hash === "#quote" || hash === "#quote-form" || hash === "#contact") {
-          const el = document.getElementById("quote") || document.getElementById("quote-form");
+          const el = document.getElementById("quote-form") || document.getElementById("quote") || document.getElementById("contact");
           if (el) {
-            setTimeout(() => {
-              el.scrollIntoView({ behavior: "smooth", block: "start" });
-            }, 100);
+            const yOffset = -90; // Space for sticky navbar
+            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
           }
         }
       };
 
-      checkHash();
-      window.addEventListener("hashchange", checkHash);
-      return () => window.removeEventListener("hashchange", checkHash);
+      // Multiple triggers to ensure hydration and image rendering are accounted for
+      const timer1 = setTimeout(scrollToForm, 100);
+      const timer2 = setTimeout(scrollToForm, 400);
+
+      window.addEventListener("hashchange", scrollToForm);
+      return () => {
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+        window.removeEventListener("hashchange", scrollToForm);
+      };
     }
   }, []);
 

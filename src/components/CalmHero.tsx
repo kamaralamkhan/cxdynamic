@@ -145,26 +145,36 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             One cloud platform for voice, WhatsApp and digital channels, with AI that helps your agents resolve more, faster.
           </p>
 
-          {/* 4 & 5. Action Buttons (Primary Book a Demo + Secondary See how it works) */}
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          {/* 4 & 5. Action Buttons (Primary Trial on CXQ360.ai + Secondary Book a Demo + Anchor) */}
+          <div className="mt-8 flex flex-wrap items-center gap-3.5">
+            <a
+              href="https://cxq360.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-sm font-semibold bg-sky-700 text-white hover:bg-sky-800 shadow-sm transition-colors cursor-pointer whitespace-nowrap"
+            >
+              <span>Experience CXdynamIQ Free</span>
+              <span aria-hidden="true">→</span>
+            </a>
+
             <Link
               href="/contact-us#quote"
-              className="btn-tactile inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-semibold bg-sky-700 text-white hover:bg-sky-800 shadow-sm transition-colors cursor-pointer whitespace-nowrap"
+              className="btn-tactile inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-semibold bg-white text-slate-900 border border-slate-300 hover:bg-slate-50 shadow-2xs transition-colors cursor-pointer whitespace-nowrap"
             >
               Book a Demo
             </Link>
 
             <a
-              href="#how-it-works"
-              className="btn-tactile inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-semibold bg-white text-slate-900 border border-slate-300 hover:bg-slate-50 shadow-2xs transition-colors cursor-pointer whitespace-nowrap"
+              href="#agentic-ai"
+              className="text-xs sm:text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors ml-1"
             >
-              See how it works
+              See how it works ↓
             </a>
           </div>
 
           {/* 6. Proof Line (One single line, text-sm text-slate-500) */}
           <p className="mt-6 text-sm text-slate-500">
-            Go live in a day · Native CRM integrations
+            Go live in a day · Native CRM integrations · 21-day trial on CXQ360.ai
           </p>
 
         </div>

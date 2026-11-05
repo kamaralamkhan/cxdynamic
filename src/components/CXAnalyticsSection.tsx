@@ -37,17 +37,17 @@ export default function CXAnalyticsSection() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-[#012635]">
-            <BarChart3 className="w-3.5 h-3.5 text-[#069bd8]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-slate-700">
+            <BarChart3 className="w-3.5 h-3.5 text-sky-700" />
             <span className="mono-label">REAL-TIME BUSINESS TELEMETRY</span>
           </div>
 
-          <h2 className="heading-fluid-section font-display font-extrabold text-[#002620] tracking-tight">
+          <h2 className="heading-fluid-section font-display font-semibold text-slate-900 tracking-tight">
             See the Metrics That{" "}
             <span className="text-sky-700">Actually Move the Bottom Line.</span>
           </h2>
 
-          <p className="text-base text-[#012635] leading-relaxed font-normal">
+          <p className="text-base text-slate-600 leading-relaxed font-normal">
             No vanity reports. CXdynamIQ surfaces real-time business telemetry: autonomous AI containment, 
             slashed handle times, and continuous First Contact Resolution (FCR).
           </p>
@@ -64,11 +64,11 @@ export default function CXAnalyticsSection() {
                 <TrendingUp className="w-3.5 h-3.5" /> +18.4%
               </span>
             </div>
-            <div className="font-display font-extrabold text-3xl sm:text-4xl text-[#012635]">
+            <div className="font-display font-semibold text-3xl sm:text-4xl text-slate-900">
               74.8%
             </div>
             <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
-              <div className="h-full bg-[#008f6d] rounded-full w-[74.8%]" />
+              <div className="h-full bg-emerald-500 rounded-full w-[74.8%]" />
             </div>
             <p className="text-xs text-slate-500">
               Resolved autonomously without human agent involvement.
@@ -102,7 +102,7 @@ export default function CXAnalyticsSection() {
                 <TrendingDown className="w-3.5 h-3.5" /> -44%
               </span>
             </div>
-            <div className="font-display font-extrabold text-3xl sm:text-4xl text-[#012635]">
+            <div className="font-display font-semibold text-3xl sm:text-4xl text-slate-900">
               2m 14s
             </div>
             <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
@@ -145,7 +145,7 @@ export default function CXAnalyticsSection() {
                   <Zap className="w-3.5 h-3.5 text-[#069bd8]" />
                   <span className="mono-label">ENTERPRISE ROI CALCULATOR</span>
                 </div>
-                <h3 className="text-2xl font-bold font-display text-[#002620]">
+                <h3 className="text-2xl font-bold font-display text-slate-900">
                   Calculate Your Projected Savings with Agentic AI
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600">
@@ -205,7 +205,7 @@ export default function CXAnalyticsSection() {
             </div>
 
             {/* Right: Projected Savings Display */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-[#012635] text-white space-y-6 shadow-xl border border-slate-800">
+            <div className="p-6 sm:p-8 rounded-2xl bg-slate-900 text-white space-y-6 shadow-xl border border-slate-800">
               <div className="space-y-1">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-cyan-400">
                   PROJECTED ANNUAL OPERATING SAVINGS

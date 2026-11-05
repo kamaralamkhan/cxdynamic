@@ -8,7 +8,7 @@ interface PreFooterDualCTAProps {
 
 export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) {
   return (
-    <section className="py-20 lg:py-24 bg-[#012635] text-white relative overflow-hidden border-t border-slate-800">
+    <section className="py-20 lg:py-24 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
       {/* Radial soft lighting */}
       <div
         aria-hidden="true"
@@ -126,7 +126,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
               <button
                 type="button"
                 onClick={onOpenDemo}
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-bold bg-white text-[#012635] hover:bg-slate-100 shadow-md transition-all cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-bold bg-white text-slate-900 hover:bg-slate-100 shadow-md transition-all cursor-pointer"
               >
                 <span>Book Enterprise Architecture Session</span>
                 <ArrowRight className="w-4 h-4" />

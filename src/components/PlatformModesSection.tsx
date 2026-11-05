@@ -323,7 +323,7 @@ export default function PlatformModesSection() {
                 <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 font-mono">
                   Platform Architecture
                 </span>
-                <h3 className="text-xl font-bold font-display text-[#012635] tracking-tight">
+                <h3 className="text-xl font-bold font-display text-slate-900 tracking-tight">
                   Three Operating Modes
                 </h3>
               </div>
@@ -426,7 +426,7 @@ export default function PlatformModesSection() {
                   </span>
                 </div>
                 
-                <h2 className="heading-fluid-section font-display font-bold text-[#002620] tracking-tight leading-[1.12]">
+                <h2 className="heading-fluid-section font-display font-semibold text-slate-900 tracking-tight leading-[1.12]">
                   {activeMode.headline}
                 </h2>
                 

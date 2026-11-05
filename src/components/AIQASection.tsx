@@ -84,17 +84,17 @@ export default function AIQASection() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-[#012635]">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#008f6d]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-slate-700">
+            <ShieldCheck className="w-3.5 h-3.5 text-sky-700" />
             <span className="mono-label">100% CONVERSATION INTELLIGENCE</span>
           </div>
 
-          <h2 className="heading-fluid-section font-display font-extrabold text-[#002620] tracking-tight">
+          <h2 className="heading-fluid-section font-display font-semibold text-slate-900 tracking-tight">
             Ditch the 2% Sample Audit.{" "}
             <span className="text-sky-700">Inspect 100% of Conversations.</span>
           </h2>
 
-          <p className="text-base text-[#012635] leading-relaxed font-normal">
+          <p className="text-base text-slate-600 leading-relaxed font-normal">
             Legacy contact centers manually grade 2 out of 100 calls and miss 98% of compliance breaches. 
             CXdynamIQ's Conversation Intelligence audits every voice, chat, and WhatsApp interaction automatically.
           </p>
@@ -111,7 +111,7 @@ export default function AIQASection() {
                 <div className="text-xs text-red-600 line-through font-medium">
                   {m.legacy}
                 </div>
-                <div className="text-base font-bold text-[#012635]">
+                <div className="text-base font-bold text-slate-900">
                   {m.cxdynamiq}
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function AIQASection() {
         </div>
 
         {/* Live Conversation Intelligence Inspection Console */}
-        <div className="rounded-3xl bg-[#012635] text-white p-6 sm:p-8 lg:p-10 border border-slate-800 shadow-xl">
+        <div className="rounded-3xl bg-slate-900 text-white p-6 sm:p-8 lg:p-10 border border-slate-800 shadow-xl">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-8">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 text-xs font-semibold mb-2">
