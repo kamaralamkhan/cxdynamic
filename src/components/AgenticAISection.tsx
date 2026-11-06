@@ -220,92 +220,57 @@ export default function AgenticAISection() {
   const handleTabFocus = () => setIsPlaying(false);
   const currentStep = AGENTIC_STEPS[activeStepIndex] ?? AGENTIC_STEPS[0];
   const StepIcon = currentStep.icon;
-  const isAutoplaying = isPlaying && isInView && pageIsVisible && !reduceMotion;
   const playbackLabel = reduceMotion ? "Autoplay disabled" : isPlaying ? "Pause sequence" : "Play sequence";
 
   return (
-    <section ref={sectionRef} id="agentic-ai" className="relative overflow-hidden border-b border-slate-800 bg-[#02131e] py-16 text-white sm:py-20 lg:py-24 scroll-mt-20">
-      <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/4 -z-10 h-[28rem] w-[55rem] -translate-x-1/2 bg-sky-400/10 blur-3xl" />
-
-      <div className="mx-auto w-full max-w-7xl space-y-8 px-4 sm:space-y-10 sm:px-6 lg:px-8">
-        <header className="mx-auto max-w-3xl text-center">
-          <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Beyond Static Chatbots: <span className="text-sky-300">True Agentic AI for Enterprise CX.</span>
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-200 sm:text-base">
-            Legacy bots only answer canned FAQs. CXdynamIQ&apos;s Agentic AI reasons through business rules, triggers real-time backend APIs, and autonomously resolves customer requests end to end.
+    <section ref={sectionRef} id="agentic-ai" className="relative overflow-hidden border-b border-slate-800 bg-[#02131e] py-20 text-white scroll-mt-20 sm:py-24 lg:py-32">
+      <div aria-hidden="true" className="pointer-events-none absolute right-[-12rem] top-[-8rem] h-[32rem] w-[32rem] rounded-full bg-sky-400/10 blur-3xl" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <span className="mono-label text-sky-300">AGENTIC EXECUTION LAYER</span>
+            <h2 className="mt-4 max-w-2xl font-display text-4xl font-semibold leading-[1.05] tracking-[-0.03em] text-white sm:text-5xl lg:text-6xl">
+              Beyond static chatbots. <span className="text-sky-300">AI that finishes the job.</span>
+            </h2>
+          </div>
+          <p className="max-w-xl text-base leading-8 text-slate-300 lg:justify-self-end">
+            True Agentic AI understands intent, reasons over policy, takes authenticated action, resolves across channels, and learns from every outcome.
           </p>
         </header>
 
-        <div className="overflow-hidden rounded-2xl border border-sky-900/70 bg-[#051928]">
-          <div className="flex flex-col gap-4 border-b border-white/10 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-            <div className="flex min-w-0 items-center gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-sky-400/10 text-sky-300"><Cpu className="h-5 w-5" aria-hidden="true" /></div>
-              <div>
-                <p className="text-sm font-semibold text-white">Follow one request through the autonomous workflow</p>
-                <p className="mt-0.5 text-xs text-slate-300">Select any phase or let the sequence demonstrate the handoffs.</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 self-start sm:self-auto">
-              <span className="hidden text-xs text-slate-300 sm:inline">{reduceMotion ? "Manual sequence" : isAutoplaying ? "Sequence running" : "Sequence paused"}</span>
-              <button type="button" onClick={() => setIsPlaying((playing) => !playing)} aria-pressed={isPlaying && !reduceMotion} disabled={reduceMotion} className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-sky-400/50 bg-sky-400/10 px-3 text-xs font-semibold text-sky-100 transition-colors hover:bg-sky-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 disabled:cursor-not-allowed disabled:opacity-50">
-                {isPlaying && !reduceMotion ? <Pause className="h-3.5 w-3.5" aria-hidden="true" /> : <Play className="h-3.5 w-3.5" aria-hidden="true" />}
-                {playbackLabel}
-              </button>
-            </div>
+        <div className="mt-12 overflow-hidden rounded-2xl border border-sky-900/70 bg-[#051928] shadow-[0_24px_60px_-24px_rgba(2,19,30,0.65)]">
+          <div className="flex flex-col gap-4 border-b border-white/10 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+            <div className="flex items-center gap-3"><Cpu className="h-5 w-5 text-sky-300" aria-hidden="true" /><div><p className="text-sm font-semibold text-white">One customer request. Five autonomous decisions.</p><p className="mt-1 text-xs text-slate-400">Explore each phase or let the execution trace run.</p></div></div>
+            <button type="button" onClick={() => setIsPlaying((playing) => !playing)} aria-pressed={isPlaying && !reduceMotion} disabled={reduceMotion} className="inline-flex min-h-10 items-center gap-2 self-start rounded-lg border border-sky-400/50 bg-sky-400/10 px-3 text-xs font-semibold text-sky-100 transition-colors hover:bg-sky-400/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 disabled:cursor-not-allowed disabled:opacity-50 sm:self-auto">{isPlaying && !reduceMotion ? <Pause className="h-3.5 w-3.5" aria-hidden="true" /> : <Play className="h-3.5 w-3.5" aria-hidden="true" />}{playbackLabel}</button>
           </div>
 
-          <div className="px-4 py-4 sm:px-6 sm:py-5">
-            <div className="mb-4 flex items-center justify-between gap-4 text-xs text-slate-300">
-              <span className="font-mono">PHASE {currentStep.step} / {AGENTIC_STEPS.length.toString().padStart(2, "0")}</span>
-              <span className="tabular-nums">{Math.round(progress)}% through current phase</span>
-            </div>
-            <div className="h-1 overflow-hidden rounded-full bg-white/10" aria-hidden="true"><div className="h-full rounded-full bg-sky-300 transition-[width] duration-100 ease-linear motion-reduce:transition-none" style={{ width: `${progress}%` }} /></div>
-
-            <div role="tablist" aria-label="Agentic AI workflow phases" className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-5">
-              {AGENTIC_STEPS.map((step, index) => {
-                const Icon = step.icon;
-                const isActive = activeStepIndex === index;
-                return (
-                  <button key={step.step} id={`agentic-tab-${index}`} type="button" role="tab" aria-selected={isActive} aria-controls="agentic-workflow-panel" tabIndex={isActive ? 0 : -1} onFocus={handleTabFocus} onClick={() => { setIsPlaying(false); selectStep(index); }} onKeyDown={(event) => handleStepKeyDown(event, index)} className={`group relative min-h-24 overflow-hidden rounded-xl border p-3 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 ${isActive ? "border-sky-300 bg-sky-400/10" : "border-white/10 bg-slate-950/35 hover:border-sky-300/45 hover:bg-white/[0.04]"}`}>
-                    <div className="flex items-center justify-between gap-2"><span className={`font-mono text-xs font-bold ${isActive ? "text-sky-200" : "text-slate-400"}`}>{step.step}</span><Icon className="h-4 w-4" style={{ color: step.color }} aria-hidden="true" /></div>
-                    <span className="mt-3 block text-sm font-semibold tracking-wide text-white">{step.title}</span>
-                    <span className="mt-1 block truncate text-[11px] text-slate-300">{step.shortBadge}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          <div id="agentic-workflow-panel" role="tabpanel" aria-labelledby={`agentic-tab-${activeStepIndex}`} className="grid lg:grid-cols-12">
-            <div className="border-t border-white/10 p-5 sm:p-6 lg:col-span-7 lg:border-r lg:p-8">
-              <div className="flex flex-wrap items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl" style={{ backgroundColor: `${currentStep.color}20`, color: currentStep.color }}><StepIcon className="h-5 w-5" aria-hidden="true" /></div>
-                  <div><p className="font-mono text-[11px] font-semibold tracking-[0.14em] text-sky-200">{currentStep.badge}</p><h3 className="mt-1 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">{currentStep.title}</h3></div>
-                </div>
-                <span className="rounded-full border border-emerald-400/35 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200">{currentStep.metric}</span>
+          <div className="grid lg:grid-cols-[15rem_1fr]">
+            <nav className="border-b border-white/10 p-3 lg:border-b-0 lg:border-r lg:p-4" aria-label="Agentic AI workflow phases">
+              <div role="tablist" className="flex gap-2 overflow-x-auto lg:block lg:space-y-2">
+                {AGENTIC_STEPS.map((step, index) => {
+                  const Icon = step.icon;
+                  const isActive = activeStepIndex === index;
+                  return <button key={step.step} id={`agentic-tab-${index}`} type="button" role="tab" aria-selected={isActive} aria-controls="agentic-workflow-panel" tabIndex={isActive ? 0 : -1} onFocus={handleTabFocus} onClick={() => { setIsPlaying(false); selectStep(index); }} onKeyDown={(event) => handleStepKeyDown(event, index)} className={`flex min-w-[8.5rem] items-center gap-3 rounded-xl border px-3 py-3 text-left transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 lg:w-full ${isActive ? "border-sky-300 bg-sky-400/10" : "border-transparent hover:border-white/10 hover:bg-white/[0.04]"}`}><span className={`font-mono text-xs font-bold ${isActive ? "text-sky-200" : "text-slate-500"}`}>{step.step}</span><Icon className="h-4 w-4 shrink-0" style={{ color: step.color }} aria-hidden="true" /><span className="min-w-0"><span className="block text-xs font-semibold text-white">{step.title}</span><span className="mt-0.5 block truncate text-[10px] text-slate-400">{step.shortBadge}</span></span></button>;
+                })}
               </div>
-              <p className="mt-6 max-w-[68ch] text-sm leading-7 text-slate-200 sm:text-base">{currentStep.summary}</p>
-              <div className="mt-7 border-y border-white/10 py-5"><div className="flex items-center gap-2 text-sm font-semibold text-sky-200"><Zap className="h-4 w-4" aria-hidden="true" />Live workflow outcome</div><p className="mt-2 max-w-[68ch] text-sm leading-7 text-slate-100">{currentStep.actionDetails}</p></div>
-              <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3" aria-label="Execution checks">
-                {currentStep.signals.map((signal) => <span key={signal} className="inline-flex items-center gap-2 text-xs text-slate-200"><CheckCircle2 className="h-4 w-4 text-emerald-300" aria-hidden="true" />{signal}</span>)}
-              </div>
-              <div className="mt-7 flex items-center gap-2 border-t border-white/10 pt-5 text-xs text-slate-300"><ShieldCheck className="h-4 w-4 shrink-0 text-emerald-300" aria-hidden="true" />SOC 2 Type II and HIPAA guardrails are enforced at every phase.</div>
-            </div>
+              <div className="mt-5 hidden border-t border-white/10 pt-5 lg:block"><span className="font-mono text-[10px] text-slate-500">WORKFLOW PROGRESS</span><div className="mt-3 h-1 overflow-hidden rounded-full bg-white/10"><div className="h-full rounded-full bg-sky-300 transition-[width] duration-100 ease-linear motion-reduce:transition-none" style={{ width: `${((activeStepIndex + progress / 100) / AGENTIC_STEPS.length) * 100}%` }} /></div><p className="mt-2 text-xs text-slate-400">{Math.round(progress)}% through {currentStep.title.toLowerCase()}</p></div>
+            </nav>
 
-            <div className="border-t border-white/10 bg-[#010912] p-5 sm:p-6 lg:col-span-5 lg:border-t-0 lg:p-8">
-              <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-3"><div className="flex items-center gap-2" aria-hidden="true"><span className="h-2.5 w-2.5 rounded-full bg-red-400/90" /><span className="h-2.5 w-2.5 rounded-full bg-amber-300/90" /><span className="h-2.5 w-2.5 rounded-full bg-emerald-400/90" /></div><span className="inline-flex items-center gap-1.5 font-mono text-[10px] font-semibold tracking-wide text-sky-200"><span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />AUTHENTICATED TRACE</span></div>
-              <pre className="mt-5 max-h-[18rem] overflow-auto whitespace-pre-wrap font-mono text-[11px] leading-6 text-sky-200 sm:text-xs"><code>{currentStep.codeSnippet}</code></pre>
-              <div className="mt-6 border-t border-white/10 pt-4"><p className="font-mono text-[10px] font-semibold tracking-[0.14em] text-slate-400">EXECUTION LOG</p><ol className="mt-3 space-y-3">{currentStep.signals.map((signal, index) => <li key={signal} className="flex items-center gap-3 text-xs text-slate-200"><span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-sky-400/35 text-[10px] text-sky-200">{index + 1}</span><span>{signal}</span>{index < currentStep.signals.length - 1 && <ChevronRight className="ml-auto h-3.5 w-3.5 text-slate-500" aria-hidden="true" />}</li>)}</ol></div>
+            <div id="agentic-workflow-panel" role="tabpanel" aria-labelledby={`agentic-tab-${activeStepIndex}`} className="grid lg:grid-cols-[1.1fr_0.9fr]">
+              <div className="p-6 sm:p-8 lg:p-10">
+                <div className="flex flex-wrap items-start justify-between gap-4"><div className="flex items-center gap-3"><div className="flex h-12 w-12 items-center justify-center rounded-xl" style={{ backgroundColor: `${currentStep.color}20`, color: currentStep.color }}><StepIcon className="h-5 w-5" aria-hidden="true" /></div><div><p className="font-mono text-[10px] font-semibold tracking-[0.14em] text-sky-200">{currentStep.badge}</p><h3 className="mt-1 font-display text-3xl font-bold tracking-tight text-white">{currentStep.title}</h3></div></div><span className="rounded-full border border-emerald-400/35 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200">{currentStep.metric}</span></div>
+                <p className="mt-7 max-w-[68ch] text-base leading-8 text-slate-200">{currentStep.summary}</p>
+                <div className="mt-8 rounded-xl border border-white/10 bg-white/[0.04] p-5"><div className="flex items-center gap-2 text-sm font-semibold text-sky-200"><Zap className="h-4 w-4" aria-hidden="true" />Live workflow outcome</div><p className="mt-3 text-sm leading-7 text-slate-100">{currentStep.actionDetails}</p></div>
+                <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3">{currentStep.signals.map((signal) => <span key={signal} className="inline-flex items-center gap-2 text-xs text-slate-200"><CheckCircle2 className="h-4 w-4 text-emerald-300" aria-hidden="true" />{signal}</span>)}</div>
+                <div className="mt-7 flex items-center gap-2 border-t border-white/10 pt-5 text-xs text-slate-400"><ShieldCheck className="h-4 w-4 shrink-0 text-emerald-300" aria-hidden="true" />Guardrails and permissions stay active at every phase.</div>
+              </div>
+
+              <div className="border-t border-white/10 bg-[#010912] p-6 sm:p-8 lg:border-l lg:border-t-0 lg:p-10"><div className="flex items-center justify-between border-b border-white/10 pb-4"><span className="font-mono text-[10px] font-semibold tracking-[0.14em] text-sky-200">EXECUTION TRACE</span><span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-emerald-300"><span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />AUTHENTICATED</span></div><div className="mt-6 space-y-4"><div><p className="font-mono text-[10px] text-slate-500">CURRENT SIGNAL</p><p className="mt-2 text-sm leading-6 text-white">{currentStep.shortBadge} is active for this customer request.</p></div><div className="border-y border-white/10 py-4"><p className="font-mono text-[10px] text-slate-500">SYSTEM ACTION</p><p className="mt-2 text-sm leading-6 text-slate-200">{currentStep.actionDetails}</p></div><details className="group"><summary className="flex cursor-pointer list-none items-center justify-between text-xs font-semibold text-sky-200"><span>View implementation trace</span><ChevronRight className="h-4 w-4 transition-transform group-open:rotate-90" aria-hidden="true" /></summary><pre className="mt-4 max-h-56 overflow-auto whitespace-pre-wrap rounded-lg border border-white/10 bg-black/20 p-4 font-mono text-[11px] leading-6 text-sky-200"><code>{currentStep.codeSnippet}</code></pre></details></div><ol className="mt-8 space-y-3 border-t border-white/10 pt-5">{currentStep.signals.map((signal, index) => <li key={signal} className="flex items-center gap-3 text-xs text-slate-200"><span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-sky-400/35 text-[10px] text-sky-200">{index + 1}</span>{signal}</li>)}</ol></div>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-3.5 text-center">
-          <a href="https://cxq360.ai/" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex min-h-11 items-center gap-2 rounded-lg px-5 py-2.5 text-sm">Test Agentic Workflows in CXQ360.ai<ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" /></a>
-          <Link href="/contact-us#quote" className="btn-inverse inline-flex min-h-11 items-center gap-2 rounded-lg px-5 py-2.5 text-sm">Book an architecture walkthrough<ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden="true" /></Link>
-        </div>
+        <div className="mt-8 flex flex-wrap items-center gap-3.5"><a href="https://cxq360.ai/" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex min-h-11 items-center gap-2 rounded-lg px-5 py-2.5 text-sm">Test Agentic Workflows in CXQ360.ai<ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" /></a><Link href="/contact-us#quote" className="btn-inverse inline-flex min-h-11 items-center gap-2 rounded-lg px-5 py-2.5 text-sm">Book an architecture walkthrough<ArrowRight className="h-3.5 w-3.5 shrink-0" aria-hidden="true" /></Link></div>
       </div>
     </section>
   );

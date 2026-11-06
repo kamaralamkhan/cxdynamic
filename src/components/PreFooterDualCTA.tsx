@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Sparkles, Building2, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, Building2, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 
 interface PreFooterDualCTAProps {
   onOpenDemo?: () => void;
@@ -8,7 +8,7 @@ interface PreFooterDualCTAProps {
 
 export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) {
   return (
-    <section className="py-20 lg:py-24 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
+    <section className="py-14 lg:py-16 bg-slate-900 text-white relative overflow-hidden border-t border-slate-800">
       {/* Radial soft lighting */}
       <div
         aria-hidden="true"
@@ -18,7 +18,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <div className="max-w-3xl mx-auto text-center space-y-4 mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800/60 text-cyan-300 text-xs font-semibold">
             <Zap className="w-3.5 h-3.5 text-cyan-400" />
             <span className="mono-label">LAUNCH YOUR TRANSFORMATION</span>
@@ -36,10 +36,10 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
         </div>
 
         {/* Dual Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
 
           {/* Card 1: Self-Serve SaaS Sandbox (CXQ360.ai) */}
-          <div className="bg-slate-900/90 rounded-3xl p-8 border border-cyan-500/30 shadow-2xl flex flex-col justify-between space-y-6 relative group hover:border-cyan-400/60 transition-all">
+          <div className="bg-slate-900/90 rounded-2xl p-6 sm:p-7 border border-cyan-500/30 shadow-xl flex flex-col justify-between space-y-5 relative group hover:border-cyan-400/60 transition-all">
             <div className="absolute top-0 right-8 -translate-y-1/2 bg-sky-700 text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
               Instant Access
             </div>
@@ -61,7 +61,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
               <div className="space-y-2 pt-2 text-xs text-slate-300">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Free 14-day interactive trial environment</span>
+                  <span>Guided trial environment on CXQ360.ai</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -69,7 +69,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>No credit card required to start</span>
+                  <span>Scale from selected features to a commercial license</span>
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
           </div>
 
           {/* Card 2: Enterprise Whitelisting & Custom Telecom */}
-          <div className="bg-slate-900/60 rounded-3xl p-8 border border-white/10 shadow-xl flex flex-col justify-between space-y-6 hover:border-white/20 transition-all">
+          <div className="bg-slate-900/60 rounded-2xl p-6 sm:p-7 border border-white/10 shadow-xl flex flex-col justify-between space-y-5 hover:border-white/20 transition-all">
             <div className="space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-slate-800 border border-white/10 flex items-center justify-center text-white">
                 <Building2 className="w-6 h-6" />
@@ -117,7 +117,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
                 </div>
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-cyan-400 shrink-0" />
-                  <span>Enterprise SLA with 99.99% uptime guarantee</span>
+                  <span>Enterprise SLA options aligned to your deployment</span>
                 </div>
               </div>
             </div>
@@ -143,4 +143,3 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
     </section>
   );
 }
-

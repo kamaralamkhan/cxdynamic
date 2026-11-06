@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import CalmHero from "@/components/CalmHero";
 import ProofAndMarquee from "@/components/ProofAndMarquee";
+import IntegrationsSection from "@/components/IntegrationsSection";
 import PlatformModesSection from "@/components/PlatformModesSection";
 import AgenticAISection from "@/components/AgenticAISection";
 import HumanAIJourneySection from "@/components/HumanAIJourneySection";
@@ -13,7 +14,6 @@ import AIQASection from "@/components/AIQASection";
 import CXAnalyticsSection from "@/components/CXAnalyticsSection";
 import BusinessChallengesSection from "@/components/BusinessChallengesSection";
 import CXQ360TrialJourney from "@/components/CXQ360TrialJourney";
-import AboutSection from "@/components/AboutSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import KnowledgeCentre from "@/components/KnowledgeCentre";
 import CallbackSection from "@/components/CallbackSection";
@@ -59,7 +59,13 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-[#069bd8]/20 selection:text-[#069bd8]">
+    <main className="relative min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-[#069bd8]/20 selection:text-[#069bd8]">
+      <a
+        href="#homepage-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-slate-900 focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg"
+      >
+        Skip to main content
+      </a>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
@@ -67,6 +73,8 @@ export default function Home() {
 
       {/* 1. Sticky Nav with Start Free Trial (CXQ360.ai) and Book a Demo */}
       <Navbar onRequestQuote={() => setDemoOpen(true)} />
+
+      <div id="homepage-content" tabIndex={-1}>
 
       {/* Fold 1 — Hero: AI-First Positioning + Dual CTAs (CXQ360.ai Trial + Book a Demo) */}
       <CalmHero onOpenDemo={() => setDemoOpen(true)} />
@@ -82,6 +90,9 @@ export default function Home() {
 
       {/* Fold 5 — Human + AI Collaboration Journey: Core Banner + 6-Stage Lifecycle + Copilot Desktop UI */}
       <HumanAIJourneySection />
+
+      {/* Fold 5.5 — Enterprise Ecosystem Integrations: CRM, service, ERP, APIs, webhooks, apps, and AI/LLM */}
+      <IntegrationsSection />
 
       {/* Fold 6 — Omnichannel Engagement & Cross-Channel Context Preservation */}
       <OmnichannelSection />
@@ -101,8 +112,7 @@ export default function Home() {
       {/* Fold 11 — The 5-Step CXQ360.ai Trial-to-License Journey */}
       <CXQ360TrialJourney />
 
-      {/* Fold 12 — About CXdynamIQ & Why Choose Us */}
-      <AboutSection />
+      {/* Fold 12 — Trust and operating principles */}
       <WhyChooseUs />
 
       {/* Fold 13 — Knowledge Centre / Technical Guides */}
@@ -118,6 +128,8 @@ export default function Home() {
       <CalmFooter />
 
       {/* Fold 17 — Interactive Call Flow Demo Modal */}
+      </div>
+
       <InteractiveDemoModal isOpen={demoOpen} onClose={() => setDemoOpen(false)} />
     </main>
   );

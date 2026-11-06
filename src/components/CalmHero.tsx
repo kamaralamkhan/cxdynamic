@@ -10,7 +10,7 @@ import {
   Bot, 
   Workflow, 
   CheckCircle2, 
-  UserCheck 
+  UserCheck
 } from "lucide-react";
 import { 
   SalesforceLogo, 
@@ -117,32 +117,25 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
   const currentFlow = FLOW_DATA[activeTab];
 
   return (
-    <section id="home" className="relative bg-white overflow-hidden">
+    <section id="home" className="relative overflow-hidden bg-[#f8fafc]">
       {/* Soft sky-50 radial glow top-right */}
       <div 
         aria-hidden="true" 
-        className="pointer-events-none absolute top-0 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-sky-50 via-sky-50/40 to-transparent rounded-full blur-3xl -z-10" 
+        className="pointer-events-none absolute top-0 right-0 z-0 h-[400px] w-[500px] rounded-full bg-gradient-to-bl from-sky-100/80 via-sky-50/40 to-transparent blur-3xl"
       />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-12 lg:gap-16 lg:py-24">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-12 lg:gap-16 lg:py-28">
         
         {/* Left Column (6 cols): 7 Elements Above The Fold */}
         <div className="lg:col-span-6">
           
-          {/* 1. Eyebrow */}
-          <p className="inline-flex items-center gap-2 text-sm font-medium text-slate-600">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            <span>AI-powered cloud contact center</span>
-          </p>
-
-          {/* 2. H1 Headline (max 2 lines at 1280px, weight 600, single color slate-900 with sky-700 accent) */}
-          <h1 className="mt-5 text-balance text-[40px] font-semibold leading-[1.08] tracking-[-0.025em] text-slate-900 sm:text-5xl lg:text-[52px] xl:text-[56px]">
-            Resolve customer inquiries <span className="text-sky-700">in real time.</span>
+          <h1 className="heading-fluid-hero max-w-2xl text-balance text-slate-950">
+            AI-powered CX that <span className="text-sky-700">resolves in real time.</span>
           </h1>
 
           {/* 3. Sub-headline (<= 22 words, 18px, slate-600, max 34rem) */}
-          <p className="mt-5 max-w-[34rem] text-lg leading-7 text-slate-600 font-normal">
-            One cloud platform for voice, WhatsApp and digital channels, with AI that helps your agents resolve more, faster.
+          <p className="mt-6 max-w-[36rem] text-lg leading-8 text-slate-600 font-normal">
+            Unify voice, WhatsApp, and digital channels with Agentic AI that handles routine work and gives human agents the context to resolve complex conversations faster.
           </p>
 
           {/* 4 & 5. Action Buttons (Primary Trial on CXQ360.ai + Secondary Book a Demo + Anchor) */}
@@ -157,12 +150,13 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
               <span aria-hidden="true">→</span>
             </a>
 
-            <Link
-              href="/contact-us#quote"
+            <button
+              type="button"
+              onClick={onOpenDemo}
               className="btn-tactile inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-semibold bg-white text-slate-900 border border-slate-300 hover:bg-slate-50 shadow-2xs transition-colors cursor-pointer whitespace-nowrap"
             >
               Book a Demo
-            </Link>
+            </button>
 
             <a
               href="#agentic-ai"
@@ -187,11 +181,11 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           onFocus={() => setIsPaused(true)}
           onBlur={() => setIsPaused(false)}
         >
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm space-y-4">
+          <div className="rounded-2xl border border-slate-800 bg-[#02131e] p-5 shadow-[0_24px_60px_-24px_rgba(2,19,30,0.55)] space-y-4">
             
             {/* Header: Segmented Control Tabs (Voice | WhatsApp | AI assistant) + Sample Data Label */}
-            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-              <div className="inline-flex p-1 bg-slate-100 rounded-lg text-xs font-semibold gap-1">
+            <div className="flex items-center justify-between pb-3 border-b border-white/10">
+              <div className="inline-flex p-1 bg-white/10 rounded-lg text-xs font-semibold gap-1">
                 {(["voice", "whatsapp", "ai"] as TabType[]).map((tabKey) => {
                   const isCurrent = activeTab === tabKey;
                   return (
@@ -203,8 +197,8 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                       }}
                       className={`px-3 py-1.5 rounded-md transition-colors cursor-pointer text-xs font-medium ${
                         isCurrent
-                          ? "bg-white text-slate-900 shadow-2xs font-semibold"
-                          : "text-slate-600 hover:text-slate-900"
+                          ? "bg-cyan-400 text-slate-950 shadow-2xs font-semibold"
+                          : "text-slate-300 hover:text-white"
                       }`}
                     >
                       {FLOW_DATA[tabKey].label}
@@ -213,7 +207,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                 })}
               </div>
 
-              <span className="text-xs text-slate-500">
+              <span className="mono-label text-slate-400">
                 Sample data
               </span>
             </div>
@@ -230,19 +224,19 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                     onClick={() => setActiveStep(idx)}
                     className={`w-full text-left p-3.5 rounded-xl transition-colors cursor-pointer flex items-center gap-3.5 ${
                       isCurrent
-                        ? "bg-slate-50 border-l-2 border-sky-600"
-                        : "bg-white hover:bg-slate-50/70 border-l-2 border-transparent"
+                        ? "bg-white/10 border-l-2 border-cyan-400"
+                        : "bg-transparent hover:bg-white/[0.06] border-l-2 border-transparent"
                     }`}
                   >
-                    <div className="w-9 h-9 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0">
-                      <Icon className="w-4 h-4 text-slate-700" />
+                    <div className="w-9 h-9 rounded-full bg-cyan-400/15 text-cyan-300 flex items-center justify-center shrink-0">
+                      <Icon className="w-4 h-4 text-cyan-300" />
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <h4 className="text-[15px] font-semibold text-slate-900 truncate">
+                      <h4 className="text-sm font-semibold text-white line-clamp-2">
                         {step.title}
                       </h4>
-                      <p className="text-sm text-slate-600 truncate mt-0.5">
+                      <p className="text-sm text-slate-300 line-clamp-2 mt-0.5">
                         {step.desc}
                       </p>
                     </div>
@@ -257,7 +251,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
       </div>
 
       {/* LogoStrip: Separate row below "Works with" + 5 greyscale logos (24px high) */}
-      <div className="border-t border-slate-100 py-8 px-6 bg-slate-50/50">
+      <div className="border-t border-slate-200 py-8 px-6 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
           <span className="text-xs font-medium uppercase tracking-wider text-slate-500">
             Works with

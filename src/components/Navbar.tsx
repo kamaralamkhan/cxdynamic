@@ -162,7 +162,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
           </Link>
 
           {/* Desktop Navigation with Smooth Transitions */}
-          <nav className="hidden lg:flex items-center h-full gap-7 xl:gap-8">
+          <nav className="hidden xl:flex items-center h-full gap-7 xl:gap-8">
 
             {/* Level 1: Home */}
             <Link
@@ -731,7 +731,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             </div>
 
             {/* Mobile Hamburger (visible on mobile) */}
-            <div className="flex lg:hidden items-center">
+            <div className="flex xl:hidden items-center">
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className="p-2 text-slate-700 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition-colors"
@@ -746,7 +746,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
       </div>
 
       {/* Mobile Drawer with Full 3-Level Hierarchy Accordions */}
-      <div className={`lg:hidden border-t border-slate-200 bg-white px-4 pt-4 pb-8 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto ${mobileOpen ? "block animate-in slide-in-from-top-2" : "hidden"
+      <div className={`xl:hidden border-t border-slate-200 bg-white px-4 pt-4 pb-8 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto ${mobileOpen ? "block animate-in slide-in-from-top-2" : "hidden"
         }`}>
 
         <div className="space-y-1 font-semibold text-sm">
