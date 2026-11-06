@@ -114,7 +114,7 @@ export default function IntegrationsSection() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" role="tabpanel">
+            <div id="integration-results" className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" role="tabpanel" aria-live="polite" aria-label="Available integrations">
           {visible.map((item) => {
             const Icon = item.logo ?? item.icon;
             const card = (

@@ -6,6 +6,7 @@ import { siteConfig } from "@/lib/site";
 
 export default function CallbackSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState<"confirmed" | "fallback" | null>(null);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -52,14 +53,18 @@ export default function CallbackSection() {
     const endpoint = process.env.NEXT_PUBLIC_FORM_ENDPOINT;
     if (endpoint) {
       try {
-        await fetch(endpoint, {
+        const response = await fetch(endpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
         });
+        setSubmissionStatus(response.ok ? "confirmed" : "fallback");
       } catch (err) {
         console.warn("Form submission fallback", err);
+        setSubmissionStatus("fallback");
       }
+    } else {
+      setSubmissionStatus("fallback");
     }
     setLoading(false);
     setSubmitted(true);
@@ -241,10 +246,12 @@ export default function CallbackSection() {
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <h4 className="font-display font-bold text-xl text-slate-900">
-                    Request Received Successfully!
+                    {submissionStatus === "confirmed" ? "Request received" : "Request prepared"}
                   </h4>
                   <p className="text-xs text-slate-600 max-w-sm mx-auto">
-                    Thank you, <strong>{formData.name}</strong>. A CXDYNAMIQ deployment specialist will contact you at <strong>{formData.phone}</strong> shortly to discuss your custom rollout.
+                    {submissionStatus === "confirmed"
+                      ? <>Thank you, <strong>{formData.name}</strong>. A CXdynamIQ deployment specialist will contact you at <strong>{formData.phone}</strong> shortly to discuss your custom rollout.</>
+                      : <>Thank you, <strong>{formData.name}</strong>. The form endpoint is not currently available, so please contact <a className="font-semibold text-sky-700 underline underline-offset-2" href={`mailto:${siteConfig.emails.sales}`}>{siteConfig.emails.sales}</a> or call <a className="font-semibold text-sky-700 underline underline-offset-2" href={`tel:${siteConfig.phones.primaryRaw}`}>{siteConfig.phones.primary}</a> to complete your request.</>}
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}

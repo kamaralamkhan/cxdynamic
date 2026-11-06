@@ -133,10 +133,10 @@ export default function HumanAIJourneySection() {
                     <span className="text-xs font-mono font-bold text-sky-400">{stage.step}</span>
                     <span className="text-[10px] text-slate-400 font-mono uppercase tracking-wider">{stage.metric}</span>
                   </div>
-                  <h4 className="text-xs sm:text-sm font-semibold text-white truncate">
+                  <h4 className="text-xs sm:text-sm font-semibold text-white line-clamp-2">
                     {stage.title}
                   </h4>
-                  <p className="text-[11px] text-slate-300 truncate mt-0.5">
+                  <p className="text-[11px] text-slate-300 line-clamp-2 mt-0.5">
                     {stage.role}
                   </p>
                 </button>
@@ -221,11 +221,11 @@ export default function HumanAIJourneySection() {
                 <div className="space-y-2.5 text-xs text-slate-200 max-h-48 overflow-y-auto pr-1">
                   <div>
                     <span className="text-slate-400 font-semibold">Caller (14:22:04): </span>
-                    <span>"Hi, I spoke to the WhatsApp bot earlier. I need my package sent to Suite 400 instead of the front lobby."</span>
+                    <span>&quot;Hi, I spoke to the WhatsApp bot earlier. I need my package sent to Suite 400 instead of the front lobby.&quot;</span>
                   </div>
                   <div>
                     <span className="text-sky-400 font-semibold">Agent (14:22:10): </span>
-                    <span>"Hello Marcus! I see your WhatsApp ticket for Order #CX-88492 right here on my screen. Let me confirm that re-route immediately."</span>
+                    <span>&quot;Hello Marcus! I see your WhatsApp ticket for Order #CX-88492 right here on my screen. Let me confirm that re-route immediately.&quot;</span>
                   </div>
                   <div>
                     <span className="text-slate-400 font-semibold">Caller (14:22:18): </span>
@@ -251,7 +251,7 @@ export default function HumanAIJourneySection() {
                   </span>
                 </div>
                 <p className="text-xs text-slate-200 leading-relaxed">
-                  Recommended response: <em>"Marcus, I have updated the drop coordinates in our logistics dispatch portal. Courier slot confirmed for tomorrow between 9:00 AM and 12:00 PM."</em>
+                  Recommended response: <em>&quot;Marcus, I have updated the drop coordinates in our logistics dispatch portal. Courier slot confirmed for tomorrow between 9:00 AM and 12:00 PM.&quot;</em>
                 </p>
                 <div className="pt-1 flex items-center gap-3">
                   <button className="text-[11px] font-semibold text-white bg-sky-700 hover:bg-sky-800 px-3 py-1 rounded-md transition-colors cursor-pointer">
@@ -341,4 +341,3 @@ export default function HumanAIJourneySection() {
     </section>
   );
 }
-
