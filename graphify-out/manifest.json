@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1793891221.484224,
-    "seen": 1793902192.339455,
-    "ast_hash": "7164e6923f8df9f82918049a429ef336",
+    "mtime": 1793991384.3503392,
+    "seen": 1793991444.9891593,
+    "ast_hash": "aef828dad78a1072edf1f4e2653008d4",
     "semantic_hash": ""
   },
   "src/app/page/[slug]/page.tsx": {
@@ -108,9 +108,9 @@
     "semantic_hash": ""
   },
   "src/components/CallbackSection.tsx": {
-    "mtime": 1793891221.7609646,
-    "seen": 1793902192.3394682,
-    "ast_hash": "d8f08622c0a4123501f2ba9f16cbca86",
+    "mtime": 1793992037.7408497,
+    "seen": 1793992115.8941197,
+    "ast_hash": "23e0e33ec647661bf55bcfbef089e553",
     "semantic_hash": ""
   },
   "src/components/CalmFooter.tsx": {
@@ -120,9 +120,9 @@
     "semantic_hash": ""
   },
   "src/components/CalmHero.tsx": {
-    "mtime": 1793891221.8920379,
-    "seen": 1793902192.3394704,
-    "ast_hash": "5c9f2bbe2c8f0be0aa36f7b7075b881c",
+    "mtime": 1793990218.9284837,
+    "seen": 1793991444.9891803,
+    "ast_hash": "e9d6a4927d4068a2165f96971b9db0f5",
     "semantic_hash": ""
   },
   "src/components/IntegrationLogos.tsx": {
@@ -144,9 +144,9 @@
     "semantic_hash": ""
   },
   "src/components/Navbar.tsx": {
-    "mtime": 1793891221.9448519,
-    "seen": 1793902192.3394766,
-    "ast_hash": "e89a8e3bea9e27ba69e0f185b3598ef9",
+    "mtime": 1793990147.873285,
+    "seen": 1793991444.9891903,
+    "ast_hash": "cde70062e890dd844e17a0dbc0a75e3d",
     "semantic_hash": ""
   },
   "src/components/NetworkBackground.tsx": {
@@ -1518,9 +1518,9 @@
     "semantic_hash": ""
   },
   "src/components/AgenticAISection.tsx": {
-    "mtime": 1793987850.8179379,
-    "seen": 1793988199.1229644,
-    "ast_hash": "49c4e6cfea3bc80384694a800da002c7",
+    "mtime": 1793990686.4333425,
+    "seen": 1793991444.9891715,
+    "ast_hash": "c86b006bcf1a74972faa09d4cdb96b4d",
     "semantic_hash": ""
   },
   "src/components/CXAnalyticsSection.tsx": {
@@ -1536,9 +1536,9 @@
     "semantic_hash": ""
   },
   "src/components/PreFooterDualCTA.tsx": {
-    "mtime": 1793891222.072213,
-    "seen": 1793902192.3394806,
-    "ast_hash": "22b628c120e01dd4c2e148f3e00de99a",
+    "mtime": 1793991421.965111,
+    "seen": 1793991444.9891963,
+    "ast_hash": "84e483b181819081ed16aa24eedada21",
     "semantic_hash": ""
   },
   "scripts/check-button-colors.js": {
@@ -1554,9 +1554,9 @@
     "semantic_hash": ""
   },
   "src/components/HumanAIJourneySection.tsx": {
-    "mtime": 1793887989.1495838,
-    "seen": 1793902192.3394718,
-    "ast_hash": "9c697c0a879d38fd5133de829d914077",
+    "mtime": 1793992061.7540221,
+    "seen": 1793992115.894124,
+    "ast_hash": "32d90919bf314eaa83f56bd7581c893f",
     "semantic_hash": ""
   },
   "plan/cxdynamiq_antigravity_production_spec_agents.md": {
@@ -1923,6 +1923,24 @@
     "mtime": 1793987900.2423317,
     "seen": 1793988199.1315365,
     "ast_hash": "b1a94f701461d2b7a1a0e9c7805eb699",
+    "semantic_hash": ""
+  },
+  ".agents/skills/impeccable/scripts/data/font-index.json": {
+    "mtime": 1793983830.8867238,
+    "seen": 1793991444.989118,
+    "ast_hash": "4a4426c85ec12df1d9a487a39d656ff4",
+    "semantic_hash": ""
+  },
+  "src/components/IntegrationsSection.tsx": {
+    "mtime": 1793991966.0735767,
+    "seen": 1793992115.8941264,
+    "ast_hash": "ebd4739f0b6aea730e0f38895be39edc",
+    "semantic_hash": ""
+  },
+  "designgpt.md": {
+    "mtime": 1793989869.397409,
+    "seen": 1793991444.9893734,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "package-lock.json": {
