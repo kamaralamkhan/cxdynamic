@@ -1,0 +1,88 @@
+@theme static {
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-display-s: clamp(2.25rem, 3.5vw + 0.5rem, 3.25rem);
+  --text-display: clamp(2.5rem, 4.5vw + 0.5rem, 4rem);
+  --text-section: clamp(1.875rem, 2.5vw + 0.75rem, 2.75rem);
+  --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.5rem);
+  --text-lead: clamp(1.0625rem, 0.35vw + 0.95rem, 1.25rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --color-error: #ef4444;
+  --color-success: #059669;
+  --color-paper: #ffffff;
+  --color-paper-2: #f8fafc;
+  --color-paper-3: #f1f5f9;
+  --color-ink: #0f172a;
+  --color-ink-2: #334155;
+  --color-muted: #64748b;
+  --color-rule: #e2e8f0;
+  --color-accent: #0284c7;
+  --color-accent-hover: #0369a1;
+  --color-accent-ink: #ffffff;
+  --color-focus: #0284c7;
+  --font-display: var(--font-jakarta), var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-outlier: var(--font-body);
+  --radius-card: 12px;
+  --radius-pill: 9999px;
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+  --shadow-hover: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+  --tracking-display: -0.025em;
+}
+
+:root {
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --dur-micro: 120ms;
+  --dur-short: 200ms;
+  --dur-long: 350ms;
+  --container: 1280px;
+  --gutter: 32px;
+  --gap-columns: 24px;
+  --section-gap-s: 64px;
+  --section-gap: 88px;
+  --section-gap-l: 112px;
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sticky-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+  --rule-hair: 1px;
+}
+
+@media (max-width: 64rem) {
+  :root {
+    --gutter: 20px;
+    --section-gap-s: 48px;
+    --section-gap: 64px;
+    --section-gap-l: 80px;
+  }
+}
+
+@media (max-width: 40rem) {
+  :root {
+    --gutter: 16px;
+    --section-gap-s: 40px;
+    --section-gap: 48px;
+    --section-gap-l: 64px;
+    --gap-columns: 16px;
+  }
+}

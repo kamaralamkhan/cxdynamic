@@ -143,7 +143,7 @@ export default async function Page({
 
         <article className="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 flex-1">
           <div className="space-y-3 pb-8 border-b border-slate-200">
-            <span className="text-xs font-semibold uppercase tracking-wider text-cyan-700">Legal &amp; Compliance</span>
+            <span className="text-xs font-semibold text-sky-700">Legal &amp; Compliance</span>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
               {seo.h1}
             </h1>
@@ -184,7 +184,7 @@ export default async function Page({
 
         <section className="bg-white border-b border-slate-200 pt-12 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-cyan-700">Official Blog</span>
+            <span className="text-xs font-semibold text-sky-700">Official Blog</span>
             <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">
               Knowledge Centre &amp; Telephony Insights
             </h1>
@@ -246,7 +246,7 @@ export default async function Page({
 
         <section className="bg-white border-b border-slate-200 pt-12 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <span className="text-xs font-semibold uppercase tracking-wider text-cyan-700">VIP Support 24/7</span>
+            <span className="text-xs font-semibold text-sky-700">VIP Support 24/7</span>
             <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">
               Connect with CXDYNAMIQ VIP Support &amp; Sales
             </h1>

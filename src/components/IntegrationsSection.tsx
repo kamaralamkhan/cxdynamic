@@ -72,12 +72,11 @@ export default function IntegrationsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div className="max-w-xl">
-            <span className="mono-label text-cyan-700">ENTERPRISE ECOSYSTEM</span>
-            <h2 className="heading-fluid-section mt-3 font-display font-semibold tracking-tight text-slate-950">
+            <h2 className="heading-fluid-section font-display font-semibold tracking-tight text-slate-950">
               Integrate with the systems your teams already trust.
             </h2>
-            <p className="mt-5 text-base leading-relaxed text-slate-600">
-              CXdynamIQ connects CRM, service, operational, and AI systems into one customer context layer—so modernization does not require a rip-and-replace.
+            <p className="mt-4 text-base leading-relaxed text-slate-600">
+              CXdynamIQ connects CRM, service, operational, and AI systems into one customer context layer, so modernization does not require a rip-and-replace.
             </p>
             <div className="mt-7 flex flex-wrap gap-2" role="tablist" aria-label="Integration categories">
               {FILTERS.map((item) => (
@@ -87,7 +86,7 @@ export default function IntegrationsSection() {
                   role="tab"
                   aria-selected={filter === item.id}
                   onClick={() => setFilter(item.id)}
-                  className={`min-h-11 rounded-lg border px-3.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 ${filter === item.id ? "border-sky-700 bg-sky-700 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-sky-300 hover:text-sky-800"}`}
+                  className={`min-h-11 rounded-lg border px-3.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 ${filter === item.id ? "border-sky-700 bg-sky-700 text-white" : "border-slate-200 bg-white text-slate-700 hover:border-sky-300 hover:text-sky-800"}`}
                 >
                   {item.label}
                 </button>
@@ -98,10 +97,10 @@ export default function IntegrationsSection() {
           <div className="rounded-2xl border border-slate-200 bg-slate-950 p-5 text-white shadow-sm sm:p-6">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div className="flex items-center gap-2.5">
-                <Network className="h-5 w-5 text-cyan-400" aria-hidden="true" />
+                <Network className="h-5 w-5 text-sky-400" aria-hidden="true" />
                 <span className="text-sm font-semibold">Unified context layer</span>
               </div>
-              <span className="mono-label text-cyan-300">LIVE SYNC</span>
+              <span className="text-xs font-semibold text-emerald-400">Live Sync</span>
             </div>
             <div className="mt-5 grid gap-3 sm:grid-cols-3">
               {["Customer context", "Conversation history", "Workflow actions"].map((label) => (
@@ -118,7 +117,7 @@ export default function IntegrationsSection() {
           {visible.map((item) => {
             const Icon = item.logo ?? item.icon;
             const card = (
-              <div className="group flex h-full min-h-[156px] flex-col rounded-2xl border border-slate-200 bg-slate-50/70 p-5 transition-all hover:-translate-y-0.5 hover:border-sky-300 hover:bg-white hover:shadow-[0_6px_16px_-4px_rgba(15,23,42,0.08)]">
+              <div className="group flex h-full min-h-[156px] flex-col rounded-2xl border border-slate-200 bg-slate-50/70 p-5 transition-colors hover:border-sky-400 hover:bg-white shadow-2xs">
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-sky-700">
                     <Icon className="h-5 w-5" aria-hidden="true" />

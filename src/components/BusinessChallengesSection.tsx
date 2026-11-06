@@ -214,9 +214,9 @@ export default function BusinessChallengesSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-cyan-800 border border-sky-100 text-xs font-bold uppercase tracking-wider">
-            <Zap className="w-3.5 h-3.5 text-[#069bd8]" />
-            <span>SOLVE REAL BUSINESS CHALLENGES</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-sky-800 border border-sky-100 text-xs font-semibold">
+            <Zap className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
+            <span>Solve real business challenges</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Built for High-Stakes Customer Conversations
@@ -230,8 +230,9 @@ export default function BusinessChallengesSection() {
         <div className="flex justify-center">
           <div className="inline-flex p-1.5 bg-slate-200/80 rounded-2xl border border-slate-300/80 shadow-2xs gap-1">
             <button
+              type="button"
               onClick={() => handleCategoryChange("sales")}
-              className={`px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all cursor-pointer ${
+              className={`px-6 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-colors cursor-pointer ${
                 activeCategory === "sales"
                   ? "bg-slate-900 text-white shadow-xs"
                   : "text-slate-700 hover:text-slate-900 hover:bg-slate-300/50"
@@ -240,8 +241,9 @@ export default function BusinessChallengesSection() {
               Sales
             </button>
             <button
+              type="button"
               onClick={() => handleCategoryChange("support")}
-              className={`px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all cursor-pointer ${
+              className={`px-6 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-colors cursor-pointer ${
                 activeCategory === "support"
                   ? "bg-slate-900 text-white shadow-xs"
                   : "text-slate-700 hover:text-slate-900 hover:bg-slate-300/50"
@@ -250,8 +252,9 @@ export default function BusinessChallengesSection() {
               Support
             </button>
             <button
+              type="button"
               onClick={() => handleCategoryChange("collection")}
-              className={`px-6 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all cursor-pointer ${
+              className={`px-6 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-colors cursor-pointer ${
                 activeCategory === "collection"
                   ? "bg-slate-900 text-white shadow-xs"
                   : "text-slate-700 hover:text-slate-900 hover:bg-slate-300/50"
@@ -266,11 +269,12 @@ export default function BusinessChallengesSection() {
         <div className="flex items-center justify-center gap-2 overflow-x-auto pb-2">
           {workflows.map((wf, idx) => (
             <button
+              type="button"
               key={wf.id}
               onClick={() => setActiveWorkflowIndex(idx)}
-              className={`px-4 py-2 text-xs font-semibold rounded-lg transition-all cursor-pointer shrink-0 border ${
+              className={`px-4 py-2 text-xs font-semibold rounded-lg transition-colors cursor-pointer shrink-0 border ${
                 activeWorkflowIndex === idx
-                  ? "bg-white text-[#069bd8] border-cyan-200 shadow-2xs font-bold"
+                  ? "bg-white text-sky-700 border-sky-200 shadow-2xs font-bold"
                   : "bg-transparent text-slate-600 border-transparent hover:text-slate-900 hover:bg-slate-200/60"
               }`}
             >
@@ -280,7 +284,7 @@ export default function BusinessChallengesSection() {
         </div>
 
         {/* Challenge Matrix Card: Left Problem/Solution/Impact | Right Flow & Metrics */}
-        <div className="bg-white rounded-3xl border border-slate-200/90 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.08),0_0_0_1px_rgba(226,232,240,0.8)] overflow-hidden">
+        <div className="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 p-6 sm:p-10 items-stretch">
             
             {/* Left Column: Problem, Solution, Impact (6 cols) */}
@@ -294,8 +298,8 @@ export default function BusinessChallengesSection() {
 
                 {/* 🔴 Problem Card */}
                 <div className="p-4 rounded-2xl bg-rose-50/60 border border-rose-100 space-y-1.5">
-                  <div className="flex items-center gap-2 text-rose-700 font-bold text-xs uppercase tracking-wider">
-                    <span className="w-2 h-2 rounded-full bg-rose-500" />
+                  <div className="flex items-center gap-2 text-rose-700 font-semibold text-xs">
+                    <span className="w-2 h-2 rounded-full bg-rose-500" aria-hidden="true" />
                     Problem
                   </div>
                   <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
@@ -305,8 +309,8 @@ export default function BusinessChallengesSection() {
 
                 {/* 🟢 Solution Card */}
                 <div className="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100 space-y-1.5">
-                  <div className="flex items-center gap-2 text-emerald-800 font-bold text-xs uppercase tracking-wider">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                  <div className="flex items-center gap-2 text-emerald-800 font-semibold text-xs">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true" />
                     CXDYNAMIQ Solution
                   </div>
                   <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
@@ -316,11 +320,11 @@ export default function BusinessChallengesSection() {
 
                 {/* ⚡ Impact Card */}
                 <div className="p-4 rounded-2xl bg-sky-50/70 border border-sky-100 flex items-start gap-3">
-                  <div className="p-2 rounded-xl bg-white text-[#069bd8] shadow-2xs shrink-0">
-                    <Zap className="w-4 h-4 fill-[#069bd8]" />
+                  <div className="p-2 rounded-xl bg-white text-sky-600 shadow-2xs shrink-0">
+                    <Zap className="w-4 h-4 fill-sky-600" aria-hidden="true" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-bold uppercase tracking-wider text-cyan-800">
+                    <div className="text-[10px] font-semibold text-sky-800">
                       Measurable Business Impact
                     </div>
                     <p className="text-xs sm:text-sm text-slate-900 font-bold mt-0.5 leading-snug">
@@ -334,22 +338,22 @@ export default function BusinessChallengesSection() {
               <div className="pt-2">
                 <Link
                   href={activeWorkflow.linkHref}
-                  className="btn-tactile inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold transition-all shadow-xs"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold transition-colors shadow-xs"
                 >
                   <span>{activeWorkflow.linkText}</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
                 </Link>
               </div>
             </div>
 
             {/* Right Column: Interactive Flow Architecture & Validated Metrics (6 cols) */}
-            <div className="lg:col-span-6 bg-gradient-to-br from-slate-50 via-cyan-50/30 to-white rounded-2xl border border-slate-200/90 p-6 flex flex-col justify-between space-y-6">
+            <div className="lg:col-span-6 bg-gradient-to-br from-slate-50 via-sky-50/30 to-white rounded-2xl border border-slate-200 p-6 flex flex-col justify-between space-y-6">
               
-              {/* Flow Architecture Diagram (Like Convin flow cards in Images 3 & 4) */}
+              {/* Flow Architecture Diagram */}
               <div className="space-y-4">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-slate-700 border-b border-slate-200 pb-2 flex items-center justify-between">
+                <div className="text-xs font-semibold text-slate-700 border-b border-slate-200 pb-2 flex items-center justify-between">
                   <span>Architecture &amp; Data Pipeline</span>
-                  <span className="text-[10px] text-cyan-700 font-semibold font-mono">Live Routing</span>
+                  <span className="text-[11px] text-sky-700 font-medium">Live Routing</span>
                 </div>
 
                 {/* Vertical Process Steps */}
@@ -366,17 +370,17 @@ export default function BusinessChallengesSection() {
                   </div>
 
                   {/* Step 2 */}
-                  <div className="p-3 bg-sky-50/80 rounded-xl border border-sky-200/90 shadow-2xs flex items-center justify-between text-xs">
+                  <div className="p-3 bg-sky-50/80 rounded-xl border border-sky-200 shadow-2xs flex items-center justify-between text-xs">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-6 h-6 rounded-lg bg-[#069bd8] text-white font-bold text-[10px] flex items-center justify-center">
+                      <div className="w-6 h-6 rounded-lg bg-sky-600 text-white font-bold text-[10px] flex items-center justify-center">
                         02
                       </div>
-                      <span className="font-bold text-cyan-950 flex items-center gap-1.5">
-                        <Bot className="w-3.5 h-3.5 text-[#069bd8]" />
+                      <span className="font-bold text-sky-950 flex items-center gap-1.5">
+                        <Bot className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
                         {activeWorkflow.flowAgent}
                       </span>
                     </div>
-                    <span className="text-[10px] font-bold text-cyan-700 bg-white px-2 py-0.5 rounded">Autonomous</span>
+                    <span className="text-[10px] font-semibold text-sky-700 bg-white px-2 py-0.5 rounded">Autonomous</span>
                   </div>
 
                   {/* Step 3 */}
@@ -387,7 +391,7 @@ export default function BusinessChallengesSection() {
                       </div>
                       <span className="font-semibold text-slate-800">{activeWorkflow.flowProcess}</span>
                     </div>
-                    <span className="text-[10px] font-medium text-emerald-600 font-semibold">Sub-second</span>
+                    <span className="text-[10px] text-emerald-600 font-medium">Sub-second</span>
                   </div>
 
                   {/* Step 4 */}
@@ -397,24 +401,24 @@ export default function BusinessChallengesSection() {
                         04
                       </div>
                       <span className="font-bold text-emerald-950 flex items-center gap-1.5">
-                        <Headphones className="w-3.5 h-3.5 text-emerald-600" />
+                        <Headphones className="w-3.5 h-3.5 text-emerald-600" aria-hidden="true" />
                         {activeWorkflow.flowOutcome}
                       </span>
                     </div>
-                    <span className="text-[10px] font-bold text-emerald-700 bg-white px-2 py-0.5 rounded">Resolved</span>
+                    <span className="text-[10px] font-semibold text-emerald-700 bg-white px-2 py-0.5 rounded">Resolved</span>
                   </div>
                 </div>
               </div>
 
-              {/* Checkmark Badges (Convin style) */}
+              {/* Checkmark Badges */}
               <div className="pt-4 border-t border-slate-200 space-y-2">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                <div className="text-xs font-semibold text-slate-500">
                   Standard Enterprise Capabilities
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {activeWorkflow.checkmarks.map((chk, i) => (
                     <div key={i} className="flex items-center gap-2 text-xs font-semibold text-slate-800">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" aria-hidden="true" />
                       <span className="text-[11px]">{chk}</span>
                     </div>
                   ))}

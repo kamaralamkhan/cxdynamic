@@ -1,7 +1,7 @@
 "use client";
 
 import { claims, getDisplayClaim } from "@/content/claims";
-import { ShieldCheck, Clock, Zap, Headphones, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Clock, Zap, Headphones } from "lucide-react";
 
 export default function TrustStrip() {
   const items = [
@@ -9,25 +9,25 @@ export default function TrustStrip() {
       icon: Clock,
       label: claims.freeTrial.label,
       val: getDisplayClaim(claims.freeTrial),
-      color: "text-emerald-600 bg-emerald-50 border-emerald-100",
+      iconStyle: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
     },
     {
       icon: Zap,
       label: claims.goLive.label,
       val: getDisplayClaim(claims.goLive),
-      color: "text-cyan-700 bg-cyan-50 border-cyan-100",
+      iconStyle: "text-sky-400 bg-sky-500/10 border-sky-500/20",
     },
     {
       icon: Headphones,
       label: claims.supportHours.label,
       val: getDisplayClaim(claims.supportHours),
-      color: "text-blue-700 bg-blue-50 border-blue-100",
+      iconStyle: "text-sky-300 bg-sky-400/10 border-sky-400/20",
     },
     {
       icon: ShieldCheck,
       label: claims.uptimeSla.label,
       val: getDisplayClaim(claims.uptimeSla),
-      color: "text-purple-700 bg-purple-50 border-purple-100",
+      iconStyle: "text-indigo-400 bg-indigo-500/10 border-indigo-500/20",
     },
   ];
 
@@ -39,14 +39,14 @@ export default function TrustStrip() {
             const Icon = item.icon;
             return (
               <div key={idx} className="flex items-center gap-3.5">
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border ${item.color}`}>
-                  <Icon className="w-5 h-5" />
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 border ${item.iconStyle}`}>
+                  <Icon className="w-5 h-5" aria-hidden="true" />
                 </div>
                 <div>
-                  <div className="text-[10px] uppercase font-bold tracking-wider text-slate-400">
+                  <div className="text-xs font-medium text-slate-400">
                     {item.label}
                   </div>
-                  <div className="text-xs sm:text-sm font-bold text-white mt-0.5">
+                  <div className="text-sm font-semibold text-white mt-0.5">
                     {item.val}
                   </div>
                 </div>

@@ -31,8 +31,8 @@ export default function KnowledgeCentre() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
           <div className="space-y-2">
-            <span className="text-xs font-semibold uppercase tracking-wider text-cyan-700">
-              <BookOpen className="w-3.5 h-3.5 inline mr-1" />
+            <span className="text-xs font-semibold text-sky-700 flex items-center gap-1.5">
+              <BookOpen className="w-3.5 h-3.5" aria-hidden="true" />
               Knowledge Centre
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -44,34 +44,34 @@ export default function KnowledgeCentre() {
           </div>
           <Link
             href="/blogs"
-            className="text-xs font-bold text-cyan-700 hover:text-cyan-800 inline-flex items-center gap-1.5"
+            className="text-xs font-semibold text-sky-700 hover:text-sky-800 inline-flex items-center gap-1.5 transition-colors"
           >
             <span>View all articles</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
           </Link>
         </div>
 
-        {/* 2 Verified Real Articles Cards (Spans Container, 3-Line Excerpt) */}
+        {/* 2 Verified Real Articles Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
           {posts.map((post, idx) => (
             <article
               key={idx}
-              className="calm-card p-7 sm:p-8 bg-white border border-slate-200 flex flex-col justify-between group hover:border-slate-300 transition-all"
+              className="p-7 sm:p-8 bg-white border border-slate-200 rounded-2xl flex flex-col justify-between group hover:border-slate-300 shadow-sm transition-colors"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-xs text-slate-500 font-medium">
                   <Link
                     href={idx === 0 ? "/category/business" : "/category/Customer%20Experience%20management"}
-                    className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 hover:text-cyan-700 hover:border-cyan-300 font-semibold border border-slate-200 transition-colors"
+                    className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 hover:text-sky-700 hover:border-sky-300 font-semibold border border-slate-200 transition-colors"
                   >
                     {post.category}
                   </Link>
                   <span className="flex items-center gap-1.5 text-xs">
-                    <Calendar className="w-3.5 h-3.5 text-slate-400" /> {post.date}
+                    <Calendar className="w-3.5 h-3.5 text-slate-400" aria-hidden="true" /> {post.date}
                   </span>
                 </div>
 
-                <h3 className="font-display font-bold text-xl sm:text-2xl text-slate-900 group-hover:text-[#069bd8] transition-colors leading-snug">
+                <h3 className="font-display font-bold text-xl sm:text-2xl text-slate-900 group-hover:text-sky-700 transition-colors leading-snug">
                   <Link href={post.slug}>
                     {post.title}
                   </Link>
@@ -82,24 +82,22 @@ export default function KnowledgeCentre() {
                 </p>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
+              <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between text-xs font-semibold">
                 <span className="text-slate-500 font-normal text-xs flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5" /> {post.readTime}
+                  <Clock className="w-3.5 h-3.5" aria-hidden="true" /> {post.readTime}
                 </span>
 
-                {/* Read Article always visible on touch, hover animation on desktop */}
                 <Link
                   href={post.slug}
-                  className="text-cyan-700 group-hover:text-cyan-800 group-hover:translate-x-0.5 transition-transform inline-flex items-center gap-1 text-xs font-bold"
+                  className="text-sky-700 group-hover:text-sky-800 transition-colors inline-flex items-center gap-1 text-xs font-semibold"
                 >
                   <span>Read Article</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
                 </Link>
               </div>
             </article>
           ))}
         </div>
-
       </div>
     </section>
   );

@@ -59,7 +59,7 @@ export default function Home() {
   };
 
   return (
-    <main className="relative min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-[#069bd8]/20 selection:text-[#069bd8]">
+    <main className="relative min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans selection:bg-sky-500/20 selection:text-sky-900">
       <a
         href="#homepage-content"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-slate-900 focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg"

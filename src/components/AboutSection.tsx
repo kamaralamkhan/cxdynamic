@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Shield, Globe, Award } from "lucide-react";
+import { ArrowRight, CheckCircle, Globe } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -9,14 +9,14 @@ export default function AboutSection() {
           
           {/* Left Column: Visual Card */}
           <div className="lg:col-span-5">
-            <div className="calm-card p-8 bg-slate-50 border border-slate-200 relative overflow-hidden">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-cyan-700 border border-sky-100 text-xs font-bold uppercase mb-6">
-                <Globe className="w-3.5 h-3.5" /> Global Reach
+            <div className="p-8 rounded-2xl bg-slate-50 border border-slate-200 relative overflow-hidden shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-100 text-xs font-semibold mb-6">
+                <Globe className="w-3.5 h-3.5" aria-hidden="true" /> Global reach
               </div>
 
               <div className="space-y-4">
                 <h3 className="font-display font-bold text-2xl text-slate-900 leading-tight">
-                  Virtual Call Center Ensuring Ultimate Customer Experience
+                  Virtual call center ensuring ultimate customer experience
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
                   CXDYNAMIQ offers an enterprise-ready, cloud-based contact center solution that eliminates costly telephony hardware while giving your team high-availability reliability and intelligence.
@@ -26,11 +26,11 @@ export default function AboutSection() {
               <div className="mt-8 pt-6 border-t border-slate-200 grid grid-cols-2 gap-4">
                 <div>
                   <div className="font-display font-extrabold text-2xl text-slate-900 tabular-nums">15+</div>
-                  <div className="text-xs text-slate-500 font-medium">Products &amp; Solutions</div>
+                  <div className="text-xs text-slate-500 font-medium">Products &amp; solutions</div>
                 </div>
                 <div>
-                  <div className="font-display font-extrabold text-2xl text-[#069bd8] tabular-nums">24/7</div>
-                  <div className="text-xs text-slate-500 font-medium">VIP Engineer Support</div>
+                  <div className="font-display font-extrabold text-2xl text-sky-600 tabular-nums">24/7</div>
+                  <div className="text-xs text-slate-500 font-medium">VIP engineer support</div>
                 </div>
               </div>
             </div>
@@ -38,12 +38,12 @@ export default function AboutSection() {
 
           {/* Right Column: Copy & Value Points */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-cyan-700">
+            <div className="inline-flex items-center gap-2 text-xs font-semibold text-sky-700">
               About CXDYNAMIQ
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Build strong connections with your customers across the globe!
+              Build strong connections with your customers across the globe
             </h2>
 
             <p className="text-base text-slate-600 leading-relaxed">
@@ -52,30 +52,30 @@ export default function AboutSection() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
               <div className="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
-                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span>Call Center Solutions (Inbound, Outbound, Blended)</span>
+                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" aria-hidden="true" />
+                <span>Call center solutions (inbound, outbound, blended)</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
-                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span>Business Phone Systems & Virtual Auto Attendant</span>
+                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" aria-hidden="true" />
+                <span>Business phone systems &amp; virtual auto attendant</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
-                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span>Sales Dialer Solutions (Auto, Click-to-Call, Power)</span>
+                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" aria-hidden="true" />
+                <span>Sales dialer solutions (auto, click-to-call, power)</span>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-slate-700 font-medium">
-                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span>Omnichannel CX Hub & Speech Intelligence</span>
+                <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" aria-hidden="true" />
+                <span>Omnichannel CX hub &amp; speech intelligence</span>
               </div>
             </div>
 
             <div className="pt-4 flex items-center gap-4">
               <Link
                 href="/who-we-are"
-                className="btn-tactile inline-flex items-center gap-2 text-sm font-bold text-cyan-700 hover:text-cyan-800"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-sky-700 hover:text-sky-800 transition-colors"
               >
                 <span>Read more about our company</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
             </div>
           </div>

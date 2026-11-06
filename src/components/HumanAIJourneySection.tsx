@@ -89,19 +89,13 @@ export default function HumanAIJourneySection() {
   return (
     <section id="human-ai-collaboration" className="py-20 lg:py-28 bg-slate-900 text-white relative overflow-hidden border-b border-slate-800">
       
-      {/* Subtle Ambient Radial Lighting */}
-      <div 
-        aria-hidden="true" 
-        className="pointer-events-none absolute top-1/3 right-10 w-[700px] h-[500px] bg-gradient-to-bl from-sky-500/15 via-cyan-500/10 to-transparent rounded-full blur-3xl -z-10" 
-      />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
-        {/* Core Mandatory Positioning Banner (Client Brief Section 6) */}
+        {/* Core Positioning Banner */}
         <div className="max-w-4xl mx-auto text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-950/90 border border-sky-500/40 text-sky-300 text-xs font-semibold shadow-inner">
             <Users className="w-3.5 h-3.5 text-sky-400" />
-            <span className="mono-label">HUMAN + AI COLLABORATION JOURNEY</span>
+            <span>Human and AI Collaboration Journey</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white tracking-tight leading-snug font-display">
@@ -110,7 +104,7 @@ export default function HumanAIJourneySection() {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Never force customers into cold robotic dead-ends. CXdynamIQ creates a seamless continuum where autonomous AI agents resolve routine volume and empower human specialists with real-time in-call intelligence.
+            Never force customers into cold robotic dead-ends. CXdynamIQ creates an integrated continuum where autonomous AI agents resolve routine volume and assist human specialists with real-time in-call intelligence.
           </p>
         </div>
 
@@ -123,15 +117,15 @@ export default function HumanAIJourneySection() {
                 <button
                   key={stage.id}
                   onClick={() => setActiveStageIndex(idx)}
-                  className={`p-4 rounded-xl text-left border transition-all cursor-pointer relative ${
+                  className={`p-4 rounded-xl text-left border transition-colors cursor-pointer relative focus-visible:outline-2 focus-visible:outline-sky-400 ${
                     isCurrent
-                      ? "bg-sky-950/80 border-sky-400 shadow-lg ring-1 ring-sky-400/50 -translate-y-0.5"
+                      ? "bg-sky-950/80 border-sky-400 shadow-md ring-1 ring-sky-400/50"
                       : "bg-slate-950/60 border-slate-800 hover:bg-slate-800/60 hover:border-slate-700"
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-mono font-bold text-sky-400">{stage.step}</span>
-                    <span className="text-[10px] text-slate-400 font-mono uppercase tracking-wider">{stage.metric}</span>
+                    <span className="text-xs font-semibold text-sky-400">{stage.step}</span>
+                    <span className="text-[10px] text-slate-400 font-medium">{stage.metric}</span>
                   </div>
                   <h4 className="text-xs sm:text-sm font-semibold text-white line-clamp-2">
                     {stage.title}
@@ -147,37 +141,37 @@ export default function HumanAIJourneySection() {
           {/* Active Stage Detail Banner */}
           <div className="p-4 sm:p-5 rounded-2xl bg-slate-950/90 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-sky-400">
+              <span className="text-xs font-semibold text-sky-400">
                 Phase {activeStage.step}: {activeStage.title} ({activeStage.role})
               </span>
               <p className="text-xs sm:text-sm text-slate-200 max-w-3xl leading-relaxed">
                 {activeStage.description}
               </p>
             </div>
-            <div className="shrink-0 bg-sky-950/90 border border-sky-500/40 px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold text-sky-300">
+            <div className="shrink-0 bg-sky-950/90 border border-sky-500/40 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-sky-300">
               {activeStage.metric}
             </div>
           </div>
         </div>
 
-        {/* Live Agent Experience & AI Copilot Desktop UI (Brief Section 4 #6 & Blueprint Fold 4) */}
-        <div className="bg-slate-950 rounded-3xl border border-slate-800 shadow-2xl p-6 sm:p-8 lg:p-10 space-y-6">
+        {/* Live Agent Experience & AI Copilot Desktop UI */}
+        <div className="bg-slate-950 rounded-3xl border border-slate-800 shadow-lg p-6 sm:p-8 lg:p-10 space-y-6">
           
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
             <div className="space-y-1">
               <div className="inline-flex items-center gap-2 text-xs font-semibold text-sky-400">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>ACTIVE CALL · AGENT COPILOT DESKTOP</span>
+                <span className="w-2 h-2 rounded-full bg-emerald-400 motion-safe:animate-pulse motion-reduce:animate-none" />
+                <span>Active Call · Agent Copilot Desktop</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold font-display text-white">
                 Live In-Call Assistance, Knowledge Suggestions &amp; Auto-ACW
               </h3>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+              <span className="text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
                 Caller: Marcus Vance (+1 415 ••• ••89)
               </span>
-              <span className="text-xs font-mono font-bold text-emerald-400 bg-emerald-950/80 px-3 py-1.5 rounded-lg border border-emerald-500/40">
+              <span className="text-xs font-semibold text-emerald-400 bg-emerald-950/80 px-3 py-1.5 rounded-lg border border-emerald-500/40">
                 Sentiment: +0.86 Positive
               </span>
             </div>
@@ -201,7 +195,7 @@ export default function HumanAIJourneySection() {
                 <p className="text-xs text-slate-200 leading-relaxed">
                   Customer attempted automated address change on WhatsApp. Transit rule cutoff required voice confirmation. Identity verified via 2FA token (#9942).
                 </p>
-                <div className="flex items-center gap-2 text-[11px] text-slate-300 font-mono">
+                <div className="flex items-center gap-2 text-[11px] text-slate-300">
                   <span className="bg-slate-800 px-2 py-0.5 rounded">Tier: Enterprise Gold</span>
                   <span className="bg-slate-800 px-2 py-0.5 rounded">Order #CX-88492</span>
                   <span className="bg-emerald-950/70 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30">Verified</span>
@@ -209,7 +203,7 @@ export default function HumanAIJourneySection() {
               </div>
 
               {/* Live Audio Transcript with PII Masking */}
-              <div className="p-4 rounded-xl bg-[#030910] border border-slate-800 space-y-3 font-mono text-xs">
+              <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-3 text-xs">
                 <div className="flex items-center justify-between text-slate-400 border-b border-slate-800 pb-2">
                   <span className="flex items-center gap-2">
                     <Headphones className="w-3.5 h-3.5 text-sky-400" />
@@ -229,7 +223,7 @@ export default function HumanAIJourneySection() {
                   </div>
                   <div>
                     <span className="text-slate-400 font-semibold">Caller (14:22:18): </span>
-                    <span>"Perfect, thank you! My card ending in <span className="bg-slate-800 text-sky-300 px-1.5 py-0.5 rounded">•••• 4210</span> is on file for any delivery adjustment."</span>
+                    <span>&quot;Perfect, thank you! My card ending in <span className="bg-slate-800 text-sky-300 px-1.5 py-0.5 rounded">•••• 4210</span> is on file for any delivery adjustment.&quot;</span>
                   </div>
                 </div>
               </div>
@@ -246,7 +240,7 @@ export default function HumanAIJourneySection() {
                     <Sparkles className="w-3.5 h-3.5 text-sky-400" />
                     AI Live Coach Card: Logistics Address Update
                   </span>
-                  <span className="text-[10px] font-mono text-emerald-300 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40">
+                  <span className="text-[10px] tabular-nums font-semibold text-emerald-300 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40">
                     Confidence: 99.4%
                   </span>
                 </div>
@@ -265,7 +259,7 @@ export default function HumanAIJourneySection() {
               <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2.5">
                 <div className="flex items-center justify-between text-xs font-semibold text-white">
                   <span>Adherence Playbook: Tier-1 Logistics Inbound</span>
-                  <span className="text-xs font-mono text-sky-400">3 of 4 Completed</span>
+                  <span className="text-xs tabular-nums font-semibold text-sky-400">3 of 4 Completed</span>
                 </div>
 
                 <div className="space-y-1.5 text-xs text-slate-200">
@@ -299,7 +293,7 @@ export default function HumanAIJourneySection() {
                     Pre-compiled structured summary &amp; CRM disposition synced in 0.4s.
                   </p>
                 </div>
-                <span className="text-xs font-mono font-bold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-500/40 shrink-0">
+                <span className="text-xs tabular-nums font-semibold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-500/40 shrink-0">
                   -50% ACW
                 </span>
               </div>

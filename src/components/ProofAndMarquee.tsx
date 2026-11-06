@@ -122,7 +122,7 @@ export default function ProofAndMarquee() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center mb-8">
-            <span className="text-xs font-semibold uppercase tracking-wider text-cyan-700">
+            <span className="text-xs font-semibold text-sky-700">
               Native Enterprise Ecosystem
             </span>
             <p className="text-xs text-slate-500 mt-1">
@@ -137,20 +137,20 @@ export default function ProofAndMarquee() {
             {/* Right Edge Mask (48px) */}
             <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
-            <div className="animate-marquee flex items-center gap-8">
+            <div className="motion-safe:animate-marquee motion-reduce:animate-none flex items-center gap-8">
               {[...brandList, ...brandList, ...brandList, ...brandList].map((item, idx) => {
                 const Logo = item.logo;
                 return (
                   <Link
                     key={idx}
                     href={item.path}
-                    className="calm-card min-w-[168px] px-5 py-3.5 flex items-center gap-3 shrink-0 bg-white border border-slate-200 hover:border-[#069bd8] transition-all group"
+                    className="min-w-[168px] px-5 py-3.5 flex items-center gap-3 shrink-0 bg-white border border-slate-200 rounded-xl hover:border-sky-500 transition-colors group shadow-2xs"
                   >
                     <div className={`w-6 h-6 text-slate-400 ${item.hoverColor} transition-colors shrink-0`}>
                       <Logo className="w-full h-full" />
                     </div>
                     <div>
-                      <span className="text-xs font-bold text-slate-800 group-hover:text-slate-950 transition-colors block">
+                      <span className="text-xs font-semibold text-slate-800 group-hover:text-slate-950 transition-colors block">
                         {item.name}
                       </span>
                     </div>

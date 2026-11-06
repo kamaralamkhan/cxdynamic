@@ -139,8 +139,8 @@ const JOURNEY_STEPS: JourneyStep[] = [
     day: "Day 3 · 01:10 PM",
     channel: "Voice Call (Hotline)",
     channelIcon: Phone,
-    channelColor: "#069bd8",
-    sender: "Customer calls +63 906 098 6036",
+    channelColor: "#0284c7",
+    sender: "Customer calls from +1 (415) ••• ••89",
     message: "Hi, I'm heading to the airport now. Just want to confirm baggage drop time for my 4 PM flight.",
     systemAction: "Agent Sarah's screen pops up INSTANTLY with full WhatsApp + Web Chat history. Sarah greets: 'Hi David! For your 4 PM flight with seat 14A, baggage drop closes at 3:15 PM.'",
     badge: "Human Agent Screen-Pop (0s Hold Time)",
@@ -154,33 +154,24 @@ export default function OmnichannelSection() {
   const activeChannelData = CHANNELS.find((c) => c.id === selectedChannel) || CHANNELS[0];
 
   return (
-    <section id="omnichannel" className="py-20 lg:py-28 bg-[#fbfbfa] border-b border-slate-200/90 relative overflow-hidden">
-      {/* Decorative gradient blur */}
-      <div 
-        aria-hidden="true" 
-        className="pointer-events-none absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-sky-100/50 rounded-full blur-3xl -z-10" 
-      />
-      <div 
-        aria-hidden="true" 
-        className="pointer-events-none absolute bottom-0 right-0 w-96 h-96 bg-emerald-100/40 rounded-full blur-3xl -z-10" 
-      />
+    <section id="omnichannel" className="py-16 lg:py-24 bg-slate-50 border-b border-slate-200 relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs font-semibold text-slate-700">
-            <span className="w-2 h-2 rounded-full bg-sky-600 animate-pulse" />
-            <span className="mono-label">UNIFIED OMNICHANNEL FABRIC</span>
+        <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-slate-700">
+            <span className="w-2 h-2 rounded-full bg-sky-600 motion-safe:animate-pulse motion-reduce:animate-none" />
+            <span>Unified Omnichannel Fabric</span>
           </div>
 
-          <h2 className="heading-fluid-section font-display font-semibold text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
             One Unified Context.{" "}
             <span className="text-sky-700">Every Voice &amp; Digital Channel.</span>
           </h2>
 
           <p className="text-base text-slate-600 leading-relaxed font-normal">
-            Customers switch channels effortlessly. CXdynamIQ preserves every conversation thread, 
+            Customers switch channels across their journey. CXdynamIQ preserves every conversation thread, 
             ticket status, and sentiment so neither customer nor agent ever has to repeat a single word.
           </p>
         </div>
@@ -194,14 +185,14 @@ export default function OmnichannelSection() {
               <button
                 key={ch.id}
                 onClick={() => setSelectedChannel(ch.id)}
-                className={`flex flex-col items-center text-center p-3.5 rounded-xl border transition-all cursor-pointer ${
+                className={`flex flex-col items-center text-center p-3.5 rounded-xl border transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-sky-600 ${
                   isSelected 
-                    ? "bg-white border-[#069bd8] shadow-md ring-2 ring-[#069bd8]/20 translate-y-[-2px]" 
-                    : "bg-white/80 border-slate-200/90 hover:bg-white hover:border-slate-300 shadow-2xs"
+                    ? "bg-white border-sky-600 shadow-sm ring-1 ring-sky-600/30" 
+                    : "bg-white/80 border-slate-200 hover:bg-white hover:border-slate-300 shadow-2xs"
                 }`}
               >
                 <div 
-                  className="w-10 h-10 rounded-lg flex items-center justify-center mb-2 transition-transform"
+                  className="w-10 h-10 rounded-lg flex items-center justify-center mb-2"
                   style={{ backgroundColor: `${ch.color}15`, color: ch.color }}
                 >
                   <Icon className="w-5 h-5" />
@@ -214,7 +205,7 @@ export default function OmnichannelSection() {
         </div>
 
         {/* Channel Details Card */}
-        <div className="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-8 shadow-sm mb-16">
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 items-center">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold border" style={{ borderColor: `${activeChannelData.color}40`, backgroundColor: `${activeChannelData.color}10`, color: activeChannelData.color }}>
@@ -230,26 +221,26 @@ export default function OmnichannelSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
                 {activeChannelData.capabilities.map((cap, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-xs font-medium text-slate-700">
-                    <CheckCircle2 className="w-4 h-4 text-[#008f6d] shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span>{cap}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="p-5 rounded-xl bg-slate-900 text-white space-y-3 font-mono text-xs border border-slate-800 shadow-inner">
+            <div className="p-5 rounded-xl bg-slate-900 text-white space-y-3 text-xs border border-slate-800 shadow-inner">
               <div className="flex items-center justify-between text-slate-400 border-b border-white/10 pb-2">
-                <span className="text-cyan-400 font-bold">API CONTEXT PAYLOAD</span>
-                <span className="text-[10px] bg-white/10 px-2 py-0.5 rounded text-emerald-400">ACTIVE SYNC</span>
+                <span className="text-sky-400 font-semibold">API Context Payload</span>
+                <span className="text-[10px] bg-white/10 px-2 py-0.5 rounded text-emerald-400">Active Sync</span>
               </div>
-              <pre className="text-slate-300 overflow-x-auto text-[11px] leading-relaxed">
+              <pre className="text-slate-300 overflow-x-auto text-[11px] font-mono leading-relaxed">
 {`{
   "customer_id": "cust_99428",
   "channel": "${activeChannelData.id}",
   "session_status": "synced",
   "history_thread_id": "th_omni_8812",
   "cross_channel_memory": {
-    "verified_phone": "+63 906 098 6036",
+    "caller_phone": "+1 415 ••• ••89",
     "open_intent": "priority_service",
     "sentiment_score": "+0.88",
     "last_touchpoint": "whatsapp"
@@ -285,14 +276,14 @@ export default function OmnichannelSection() {
                 <button
                   key={idx}
                   onClick={() => setActiveJourneyIndex(idx)}
-                  className={`text-left p-4 rounded-xl border transition-all cursor-pointer ${
+                  className={`text-left p-4 rounded-xl border transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-sky-400 ${
                     isActive 
-                      ? "bg-slate-800/90 border-cyan-400 shadow-md ring-1 ring-cyan-400/50" 
+                      ? "bg-slate-800/90 border-sky-400 shadow-md ring-1 ring-sky-400/50" 
                       : "bg-slate-900/60 border-white/10 hover:bg-slate-800/50 hover:border-white/20"
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-400">
+                    <span className="text-xs font-semibold text-sky-400">
                       {step.day}
                     </span>
                     <span 
@@ -329,8 +320,8 @@ export default function OmnichannelSection() {
                     </div>
                   </div>
 
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800/60 text-xs font-semibold">
-                    <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-950 text-sky-300 border border-sky-800/60 text-xs font-semibold">
+                    <ShieldCheck className="w-3.5 h-3.5 text-sky-400" />
                     <span>{current.badge}</span>
                   </span>
                 </div>
@@ -338,18 +329,18 @@ export default function OmnichannelSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   {/* Left: What the customer experienced */}
                   <div className="p-4 rounded-xl bg-slate-900 border border-white/10 space-y-2">
-                    <span className="text-[11px] font-bold uppercase text-slate-400 tracking-wider">
+                    <span className="text-xs font-semibold text-slate-400">
                       Customer Inquiry
                     </span>
                     <p className="text-sm text-slate-200 leading-relaxed italic">
-                      "{current.message}"
+                      &quot;{current.message}&quot;
                     </p>
                   </div>
 
                   {/* Right: How CXdynamIQ resolved with zero repetition */}
-                  <div className="p-4 rounded-xl bg-cyan-950/40 border border-cyan-800/40 space-y-2">
-                    <span className="text-[11px] font-bold uppercase text-cyan-300 tracking-wider flex items-center gap-1.5">
-                      <Zap className="w-3.5 h-3.5 text-cyan-400" />
+                  <div className="p-4 rounded-xl bg-sky-950/40 border border-sky-800/40 space-y-2">
+                    <span className="text-xs font-semibold text-sky-300 flex items-center gap-1.5">
+                      <Zap className="w-3.5 h-3.5 text-sky-400" />
                       CXdynamIQ Context Engine Resolution
                     </span>
                     <p className="text-sm text-slate-200 leading-relaxed">

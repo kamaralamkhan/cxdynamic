@@ -9,14 +9,8 @@ import {
   RotateCcw, 
   ChevronRight, 
   ChevronLeft, 
-  PhoneCall, 
-  Layers, 
-  Users, 
-  Cpu, 
   Activity, 
-  CheckCircle2, 
-  ArrowRight,
-  ShieldCheck
+  ArrowRight
 } from "lucide-react";
 
 interface InteractiveDemoModalProps {
@@ -35,7 +29,7 @@ const steps = [
       type: "incoming",
       status: "Ringing (0.8s latency)",
       caller: "Enterprise Client (Manila / Global)",
-      channel: "SIP Inbound • Priority Routing",
+      channel: "SIP Inbound · Priority Routing",
     },
   },
   {
@@ -59,7 +53,7 @@ const steps = [
     visual: {
       type: "acd",
       queue: "VIP Tech Support Queue",
-      matchedAgent: "Priya S. (Senior Cloud Architect • Available)",
+      matchedAgent: "Priya S. (Senior Cloud Architect · Available)",
       waitScore: "0s Queue Wait Time",
     },
   },
@@ -71,9 +65,9 @@ const steps = [
     desc: "Before Priya says 'Hello', her browser screen pops the full customer profile, past support tickets, and open deals.",
     visual: {
       type: "crm",
-      account: "Apex Global Enterprises • Tier 1 VIP",
+      account: "Apex Global Enterprises · Tier 1 VIP",
       activeDeals: "50 Seats Cloud Contact Center Renewal",
-      tickets: "0 Open Escalations • CSAT History 5/5",
+      tickets: "0 Open Escalations · CSAT History 5/5",
     },
   },
   {
@@ -122,7 +116,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
   const active = steps[currentStep];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs animate-in fade-in duration-150">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 animate-in fade-in duration-150">
       <div
         ref={modalRef}
         role="dialog"
@@ -133,20 +127,21 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-100">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-cyan-700">
-              <Activity className="w-3.5 h-3.5 text-[#069bd8]" />
-              <span>Interactive Workflow Simulation</span>
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-700">
+              <Activity className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
+              <span>Interactive workflow simulation</span>
             </div>
             <h3 id="demo-title" className="font-display font-extrabold text-xl text-slate-900 mt-0.5">
-              See a Call Flow in 30 Seconds
+              See a call flow in 30 seconds
             </h3>
           </div>
           <button
+            type="button"
             onClick={onClose}
             className="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors"
             aria-label="Close modal"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5" aria-hidden="true" />
           </button>
         </div>
 
@@ -154,6 +149,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
         <div className="grid grid-cols-5 gap-2">
           {steps.map((st, i) => (
             <button
+              type="button"
               key={i}
               onClick={() => {
                 setCurrentStep(i);
@@ -162,15 +158,15 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
               className="text-left group cursor-pointer focus:outline-none"
             >
               <div
-                className={`h-1.5 rounded-full transition-all duration-300 ${
+                className={`h-1.5 rounded-full transition-colors duration-300 ${
                   i === currentStep
-                    ? "bg-[#069bd8]"
+                    ? "bg-sky-600"
                     : i < currentStep
                     ? "bg-slate-300"
                     : "bg-slate-100"
                 }`}
               />
-              <span className="text-xs font-bold text-slate-500 mt-1 block group-hover:text-slate-900">
+              <span className="text-xs font-semibold text-slate-500 mt-1 block group-hover:text-slate-900 transition-colors">
                 0{st.step}
               </span>
             </button>
@@ -178,12 +174,12 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
         </div>
 
         {/* Step Details Stage */}
-        <div className="calm-card p-6 bg-slate-50 border border-slate-200 space-y-4">
+        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
           <div className="flex items-center justify-between">
-            <span className="px-2.5 py-1 rounded-md bg-sky-50 text-cyan-700 font-bold text-xs border border-sky-100">
+            <span className="px-2.5 py-1 rounded-md bg-sky-50 text-sky-700 font-semibold text-xs border border-sky-100">
               Step {active.step}: {active.badge}
             </span>
-            <span className="text-xs font-mono font-bold text-slate-500">{active.time} elapsed</span>
+            <span className="text-xs font-semibold text-slate-500 tabular-nums">{active.time} elapsed</span>
           </div>
 
           <h4 className="font-display font-bold text-lg text-slate-900">
@@ -200,10 +196,10 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
               <div className="space-y-1.5">
                 <div className="flex justify-between font-semibold text-slate-700">
                   <span>Inbound PSTN Stream</span>
-                  <span className="text-emerald-600 font-mono font-bold">{active.visual.status}</span>
+                  <span className="text-emerald-600 font-semibold tabular-nums">{active.visual.status}</span>
                 </div>
                 <div className="text-slate-500">Caller: {active.visual.caller}</div>
-                <div className="text-[11px] text-[#069bd8] font-medium">{active.visual.channel}</div>
+                <div className="text-[11px] text-sky-600 font-medium">{active.visual.channel}</div>
               </div>
             )}
 
@@ -211,7 +207,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
               <div className="space-y-1.5">
                 <div className="flex justify-between font-semibold text-slate-700">
                   <span>Virtual IVR Receptionist</span>
-                  <span className="text-[#069bd8] font-bold">DTMF Tone Recognized</span>
+                  <span className="text-sky-600 font-semibold">DTMF Tone Recognized</span>
                 </div>
                 <div className="p-2 rounded bg-slate-50 font-mono text-[11px] text-slate-800">
                   {active.visual.selection}
@@ -224,7 +220,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
               <div className="space-y-1.5">
                 <div className="flex justify-between font-semibold text-slate-700">
                   <span>ACD Queue Distribution</span>
-                  <span className="text-emerald-600 font-bold">{active.visual.waitScore}</span>
+                  <span className="text-emerald-600 font-semibold">{active.visual.waitScore}</span>
                 </div>
                 <div className="text-slate-800 font-medium">Assigned Rep: {active.visual.matchedAgent}</div>
                 <div className="text-[11px] text-slate-500">Routing Logic: Multi-Skill Matrix Algorithm</div>
@@ -235,7 +231,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
               <div className="space-y-1.5">
                 <div className="flex justify-between font-semibold text-slate-700">
                   <span>CTI Screen-Pop Triggered</span>
-                  <span className="text-[#069bd8] font-bold">Instant Sync</span>
+                  <span className="text-sky-600 font-semibold">Instant Sync</span>
                 </div>
                 <div className="text-slate-800 font-medium">{active.visual.account}</div>
                 <div className="text-[11px] text-slate-500">{active.visual.activeDeals}</div>
@@ -246,7 +242,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
               <div className="space-y-1.5">
                 <div className="flex justify-between font-semibold text-slate-700">
                   <span>Speech Analytics &amp; QA Dossier</span>
-                  <span className="text-emerald-600 font-bold">{active.visual.score}</span>
+                  <span className="text-emerald-600 font-semibold">{active.visual.score}</span>
                 </div>
                 <div className="text-slate-800 font-medium">Customer Sentiment: {active.visual.sentiment}</div>
                 <div className="text-[11px] text-emerald-600 font-semibold">{active.visual.acwStatus}</div>
@@ -259,21 +255,23 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
         <div className="flex items-center justify-between pt-2">
           <div className="flex items-center gap-2">
             <button
+              type="button"
               onClick={() => setIsPlaying(!isPlaying)}
               className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
             >
-              {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+              {isPlaying ? <Pause className="w-3.5 h-3.5" aria-hidden="true" /> : <Play className="w-3.5 h-3.5" aria-hidden="true" />}
               <span>{isPlaying ? "Pause" : "Play"}</span>
             </button>
 
             <button
+              type="button"
               onClick={() => {
                 setCurrentStep(0);
                 setIsPlaying(true);
               }}
               className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
             >
-              <RotateCcw className="w-3.5 h-3.5" />
+              <RotateCcw className="w-3.5 h-3.5" aria-hidden="true" />
               <span>Replay</span>
             </button>
           </div>
@@ -281,28 +279,30 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
           <div className="flex items-center gap-2">
             {currentStep > 0 && (
               <button
+                type="button"
                 onClick={() => setCurrentStep((prev) => prev - 1)}
-                className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1 cursor-pointer"
+                className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold flex items-center gap-1 cursor-pointer transition-colors"
               >
-                <ChevronLeft className="w-3.5 h-3.5" /> Back
+                <ChevronLeft className="w-3.5 h-3.5" aria-hidden="true" /> Back
               </button>
             )}
 
             {currentStep < steps.length - 1 ? (
               <button
+                type="button"
                 onClick={() => setCurrentStep((prev) => prev + 1)}
-                className="btn-tactile px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 flex items-center gap-1 cursor-pointer"
+                className="px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 flex items-center gap-1 cursor-pointer transition-colors"
               >
-                Next Step <ChevronRight className="w-3.5 h-3.5" />
+                Next Step <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
               </button>
             ) : (
               <Link
-                href="/contact-us"
+                href="/contact-us#quote"
                 onClick={onClose}
-                className="btn-tactile px-5 py-2 rounded-lg text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white inline-flex items-center gap-1.5 shadow-sm transition-colors"
+                className="px-5 py-2 rounded-lg text-xs font-semibold bg-sky-700 hover:bg-sky-800 text-white inline-flex items-center gap-1.5 shadow-sm transition-colors"
               >
                 <span>Book a Demo</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
               </Link>
             )}
           </div>

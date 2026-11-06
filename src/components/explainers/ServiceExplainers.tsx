@@ -177,11 +177,11 @@ function InboundCallingExplainer() {
           <div className="space-y-6">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-cyan-100 text-cyan-800 flex items-center justify-center animate-pulse">
+                <div className="w-10 h-10 rounded-full bg-cyan-100 text-sky-800 flex items-center justify-center animate-pulse">
                   <PhoneCall className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-slate-800">Incoming Call: +63 906 098 6036</div>
+                  <div className="text-xs font-bold text-slate-800">Incoming Call: +63 917 ••• ••42</div>
                   <div className="text-[11px] text-slate-500">Caller: Enterprise Partner • Ortigas (Account: Apex Global)</div>
                 </div>
               </div>
@@ -195,7 +195,7 @@ function InboundCallingExplainer() {
                       setSelectedQueue(q);
                       setAgentConnected(true);
                     }}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-bold capitalize transition-all cursor-pointer ${
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold capitalize transition-colors cursor-pointer ${
                       selectedQueue === q
                         ? "bg-slate-900 text-white shadow-xs"
                         : "bg-white text-slate-700 border border-slate-200 hover:bg-slate-100"
@@ -210,7 +210,7 @@ function InboundCallingExplainer() {
             {/* Visual routing result */}
             <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
               <div className="space-y-2">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-cyan-700">
+                <div className="text-[10px] font-semibold text-sky-700">
                   Target Destination: {selectedQueue.toUpperCase()} QUEUE
                 </div>
                 <div className="text-sm font-bold text-slate-900 flex items-center gap-2">
@@ -277,7 +277,7 @@ function OutboundCallingExplainer() {
             </div>
             <button
               onClick={() => setRunning(!running)}
-              className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer transition-all ${
+              className={`px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer transition-colors ${
                 running ? "bg-amber-100 text-amber-900 border border-amber-200" : "bg-sky-700 hover:bg-sky-800 text-white shadow-sm"
               }`}
             >
@@ -288,7 +288,7 @@ function OutboundCallingExplainer() {
 
           <div className="grid grid-cols-3 gap-3">
             <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center">
-              <div className="text-[10px] font-bold text-slate-400 uppercase">Leads Dialed</div>
+              <div className="text-xs font-semibold text-slate-500">Leads Dialed</div>
               <div className="text-2xl font-extrabold text-slate-900 tabular-nums">{dialed}</div>
             </div>
             <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-100 text-center">
@@ -296,7 +296,7 @@ function OutboundCallingExplainer() {
               <div className="text-2xl font-extrabold text-emerald-800 tabular-nums">{connected}</div>
             </div>
             <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-center">
-              <div className="text-[10px] font-bold text-slate-400 uppercase">Voicemails Skipped</div>
+              <div className="text-xs font-semibold text-slate-500">Voicemails Skipped</div>
               <div className="text-2xl font-extrabold text-slate-600 tabular-nums">{voicemails}</div>
             </div>
           </div>
@@ -327,7 +327,7 @@ function BlendedCallCentreExplainer() {
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs font-bold text-slate-800">
               <span>Traffic Distribution Slider</span>
-              <span className="font-mono text-cyan-700">{inboundLoad}% Inbound / {outboundLoad}% Outbound</span>
+              <span className="font-mono text-sky-700">{inboundLoad}% Inbound / {outboundLoad}% Outbound</span>
             </div>
             <input
               type="range"
@@ -335,14 +335,14 @@ function BlendedCallCentreExplainer() {
               max="80"
               value={inboundLoad}
               onChange={(e) => setInboundLoad(Number(e.target.value))}
-              className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#069bd8]"
+              className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600"
             />
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div className="p-4 rounded-xl bg-sky-50 border border-sky-100 space-y-1">
-              <div className="text-xs font-bold text-cyan-800 flex items-center gap-1.5">
-                <PhoneCall className="w-4 h-4 text-[#069bd8]" />
+              <div className="text-xs font-bold text-sky-800 flex items-center gap-1.5">
+                <PhoneCall className="w-4 h-4 text-sky-600" />
                 <span>Inbound Allocation</span>
               </div>
               <div className="text-2xl font-extrabold text-slate-900 tabular-nums">{inboundAgents} Agents</div>
@@ -382,21 +382,21 @@ function CtiIntegrationsExplainer({ brand }: { brand: string }) {
           <div
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-            className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between cursor-pointer hover:border-[#069bd8] transition-all"
+            className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between cursor-pointer hover:border-sky-600 transition-colors"
           >
             <div className="flex items-center gap-3">
               <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
               <div>
-                <span className="text-xs font-bold text-slate-900">Incoming Call: +63 906 098 6036</span>
+                <span className="text-xs font-bold text-slate-900">Incoming Call: +63 917 ••• ••42</span>
                 <span className="text-[11px] text-slate-500 block">Hover to test {brand} CTI Screen-Pop</span>
               </div>
             </div>
-            <span className="text-xs font-bold text-cyan-700 bg-sky-50 px-2.5 py-1 rounded border border-sky-100">
+            <span className="text-xs font-bold text-sky-700 bg-sky-50 px-2.5 py-1 rounded border border-sky-100">
               {hovered ? "Screen-Pop Active ✓" : "Hover Me"}
             </span>
           </div>
 
-          <div className={`p-5 rounded-xl border transition-all duration-300 ${
+          <div className={`p-5 rounded-xl border transition-colors duration-300 ${
             hovered ? "bg-white border-slate-300 shadow-md translate-y-0 opacity-100" : "bg-slate-50/50 border-dashed border-slate-200 opacity-60"
           }`}>
             <div className="flex items-center justify-between pb-3 border-b border-slate-100 text-xs">
@@ -444,7 +444,7 @@ function AutoAttendantExplainer() {
               <button
                 key={mode}
                 onClick={() => setSchedule(mode)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
                   schedule === mode
                     ? "bg-slate-900 text-white"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
@@ -464,7 +464,7 @@ function AutoAttendantExplainer() {
               {schedule === "after" && '"Thank you for calling. Our offices are currently closed. For emergency support, press 0 to forward to our on-call engineer."'}
               {schedule === "holiday" && '"Our teams are celebrating the national holiday. Please leave a voicemail or press 1 to schedule an automated callback tomorrow."'}
             </div>
-            <div className="text-[11px] font-semibold text-cyan-700">
+            <div className="text-[11px] font-semibold text-sky-700">
               Routing Destination: {schedule === "hours" ? "Live Agent Ring Pool (48 Seats)" : schedule === "after" ? "Mobile Forwarding + Voicemail Transcription" : "Automated Ticket Creation"}
             </div>
           </div>
@@ -480,7 +480,7 @@ function AutoAttendantExplainer() {
 function ContactManagerExplainer() {
   const [query, setQuery] = useState("");
   const contacts = [
-    { name: "Carlos Mendoza", company: "Apex Global", phone: "+63 906 098 6036", tags: "Enterprise, VIP" },
+    { name: "Carlos Mendoza", company: "Apex Global", phone: "+63 917 ••• ••42", tags: "Enterprise, VIP" },
     { name: "Sarah Jenkins", company: "Finserve Ltd", phone: "+1 415 555 0192", tags: "Renewal, Inbound" },
     { name: "David Chen", company: "Metro Telecom", phone: "+63 906 123 4567", tags: "BPO Closer" },
   ];
@@ -505,13 +505,13 @@ function ContactManagerExplainer() {
               placeholder="Search contacts by name, company, or phone..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 text-xs bg-slate-50 focus:bg-white focus:outline-none focus:border-[#069bd8]"
+              className="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 text-xs bg-slate-50 focus:bg-white focus:outline-none focus:border-sky-600"
             />
           </div>
 
           <div className="space-y-2">
             {filtered.map((c, i) => (
-              <div key={i} className="p-3 rounded-xl bg-white border border-slate-200 flex items-center justify-between text-xs hover:border-[#069bd8] transition-all">
+              <div key={i} className="p-3 rounded-xl bg-white border border-slate-200 flex items-center justify-between text-xs hover:border-sky-600 transition-colors">
                 <div>
                   <div className="font-bold text-slate-900">{c.name} — <span className="font-normal text-slate-500">{c.company}</span></div>
                   <div className="text-[11px] text-slate-400">{c.phone} • Tags: {c.tags}</div>
@@ -563,7 +563,7 @@ function ClickToCallExplainer() {
           <div className="flex items-center gap-3">
             <button
               onClick={() => setCalling(!calling)}
-              className={`px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer transition-all ${
+              className={`px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer transition-colors ${
                 calling ? "bg-red-500 text-white hover:bg-red-600" : "bg-sky-700 hover:bg-sky-800 text-white shadow-sm"
               }`}
             >
@@ -615,12 +615,12 @@ function AutoDialerExplainer() {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-center">
-              <div className="text-[10px] uppercase font-bold text-slate-400">Remaining Queue</div>
+              <div className="text-[10px] font-semibold text-slate-400">Remaining Queue</div>
               <div className="text-3xl font-extrabold text-slate-900 tabular-nums">{queueCount}</div>
             </div>
             <div className="p-4 rounded-xl bg-sky-50 border border-sky-100 text-center">
-              <div className="text-[10px] uppercase font-bold text-cyan-700">Dialing Ratio</div>
-              <div className="text-3xl font-extrabold text-[#069bd8] tabular-nums">2.5 : 1</div>
+              <div className="text-[10px] font-semibold text-sky-700">Dialing Ratio</div>
+              <div className="text-3xl font-extrabold text-sky-600 tabular-nums">2.5 : 1</div>
             </div>
           </div>
         </div>
@@ -655,7 +655,7 @@ function PowerDialerExplainer() {
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-4">
           <div className="flex items-center justify-between text-xs">
             <span className="font-bold text-slate-800">Active Lead #{leadNum}: Marcus Vance</span>
-            <span className={`px-2 py-0.5 rounded font-bold uppercase text-[10px] ${
+            <span className={`px-2 py-0.5 rounded font-semibold text-[10px] ${
               state === "talking" ? "bg-emerald-100 text-emerald-800" : "bg-sky-100 text-sky-800"
             }`}>
               {state}
@@ -698,7 +698,7 @@ function PredictiveDialerExplainer() {
         <div className="space-y-5">
           <div className="space-y-2">
             <div className="flex items-center justify-between text-xs font-bold text-slate-800">
-              <span>Lines Dialed Per Agent: <span className="font-mono text-cyan-700">{ratio}:1</span></span>
+              <span>Lines Dialed Per Agent: <span className="font-mono text-sky-700">{ratio}:1</span></span>
               <span className="text-[11px] text-slate-500">Legal Threshold: &lt; 3.0% Abandon Rate</span>
             </div>
             <input
@@ -708,19 +708,19 @@ function PredictiveDialerExplainer() {
               step="0.5"
               value={ratio}
               onChange={(e) => setRatio(Number(e.target.value))}
-              className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#069bd8]"
+              className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600"
             />
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-100 text-center">
-              <div className="text-[10px] uppercase font-bold text-emerald-700">Agent Wait Time</div>
+              <div className="text-[10px] font-semibold text-emerald-700">Agent Wait Time</div>
               <div className="text-2xl font-extrabold text-emerald-800 tabular-nums">{idleTime}s</div>
             </div>
             <div className={`p-4 rounded-xl border text-center ${
               dropRisk > 3 ? "bg-amber-50 border-amber-200" : "bg-slate-50 border-slate-200"
             }`}>
-              <div className="text-[10px] uppercase font-bold text-slate-500">Estimated Abandon Rate</div>
+              <div className="text-[10px] font-semibold text-slate-500">Estimated Abandon Rate</div>
               <div className={`text-2xl font-extrabold tabular-nums ${dropRisk > 3 ? "text-amber-800" : "text-slate-800"}`}>
                 {dropRisk.toFixed(1)}%
               </div>
@@ -811,7 +811,7 @@ function AcdExplainer() {
             <button
               onClick={() => setTier("vip")}
               className={`px-3.5 py-1.5 rounded-lg text-xs font-bold cursor-pointer ${
-                tier === "vip" ? "bg-[#069bd8] text-white" : "bg-slate-100 text-slate-700"
+                tier === "vip" ? "bg-sky-600 text-white" : "bg-slate-100 text-slate-700"
               }`}
             >
               Tier 1 VIP Account
@@ -821,7 +821,7 @@ function AcdExplainer() {
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
             <div className="flex items-center justify-between font-bold text-slate-800">
               <span>Queue Status:</span>
-              <span className="text-cyan-700">{tier === "vip" ? "Priority #1 (Instant Dispatch)" : "Position #4 (Est: 45s)"}</span>
+              <span className="text-sky-700">{tier === "vip" ? "Priority #1 (Instant Dispatch)" : "Position #4 (Est: 45s)"}</span>
             </div>
             <div className="text-[11px] text-slate-500">
               Matched Agent: <span className="font-bold text-slate-800">{tier === "vip" ? "Priya S. (Senior Specialist • Available)" : "Next Available Generalist"}</span>
@@ -873,7 +873,7 @@ function OmnichannelRoutingExplainer() {
             <div className="font-bold text-slate-800">Active Channel Stream: {activeChannel.toUpperCase()}</div>
             <div className="p-3 rounded-lg bg-white border border-slate-200 text-slate-600">
               {activeChannel === "whatsapp" && "Customer on WhatsApp: 'Can you confirm my tracking ID for order #8921?' → Bot verified → Handed to agent."}
-              {activeChannel === "voice" && "Incoming SIP Call from +63 906 098 6036: 'I need to upgrade our contact center seats.'"}
+              {activeChannel === "voice" && "Incoming SIP Call from +63 917 ••• ••42: 'I need to upgrade our contact center seats.'"}
               {activeChannel === "email" && "Email from support@apexglobal.com: 'Requesting SLA addendum review.'"}
             </div>
           </div>
@@ -899,7 +899,7 @@ function ConversationalAiExplainer() {
       {() => (
         <div className="space-y-4">
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
-            <div className="flex items-center gap-2 text-cyan-700 font-bold">
+            <div className="flex items-center gap-2 text-sky-700 font-bold">
               <Bot className="w-4 h-4" />
               <span>CXDYNAMIQ GenAI Voice Bot</span>
             </div>
@@ -971,7 +971,7 @@ function SpeechAnalyticsExplainer() {
                 ? 'Caller: "Thank you so much Priya, that completely solved our routing issue!" [Tags: Resolved, High CSAT]' 
                 : 'Caller: "We noticed some latency on the trunk lines earlier today." [Tags: Investigation]'}
             </div>
-            <div className="text-[11px] text-cyan-700 font-semibold">
+            <div className="text-[11px] text-sky-700 font-semibold">
               QA Compliance Score: 98/100 (Pass) • Agent Script Adherence: 100%
             </div>
           </div>
@@ -1021,7 +1021,7 @@ function IntercomExplainer() {
         <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-3">
           <div className="flex items-center justify-between font-bold text-slate-800">
             <span>Intercom Live Web Session</span>
-            <span className="text-cyan-700">Online • Website Visitor</span>
+            <span className="text-sky-700">Online • Website Visitor</span>
           </div>
           <div className="p-3 rounded-lg bg-white border border-slate-200 text-slate-600">
             &quot;I am looking at your enterprise pricing and need a custom quotation for 100 agents.&quot;
@@ -1069,15 +1069,15 @@ function EnterpriseExplainer() {
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs grid grid-cols-3 gap-3 text-center">
             <div className="p-3 bg-white rounded-lg border border-slate-200">
-              <div className="text-[10px] uppercase font-bold text-slate-400">Active Trunks</div>
+              <div className="text-[10px] font-semibold text-slate-400">Active Trunks</div>
               <div className="text-xl font-bold text-slate-900">{site === "india" ? "24 E1 SIP" : "12 Carrier"}</div>
             </div>
             <div className="p-3 bg-white rounded-lg border border-slate-200">
-              <div className="text-[10px] uppercase font-bold text-slate-400">Active Agents</div>
-              <div className="text-xl font-bold text-[#069bd8]">{site === "india" ? "120 Seats" : "45 Seats"}</div>
+              <div className="text-[10px] font-semibold text-slate-400">Active Agents</div>
+              <div className="text-xl font-bold text-sky-600">{site === "india" ? "120 Seats" : "45 Seats"}</div>
             </div>
             <div className="p-3 bg-white rounded-lg border border-slate-200">
-              <div className="text-[10px] uppercase font-bold text-slate-400">Latency</div>
+              <div className="text-[10px] font-semibold text-slate-400">Latency</div>
               <div className="text-xl font-bold text-emerald-600">&lt; 15ms</div>
             </div>
           </div>
@@ -1123,7 +1123,7 @@ function BpoExplainer() {
 
           <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
             <div className="font-bold text-slate-800">
-              Dedicated Outbound CLI: <span className="text-cyan-700 font-mono">{campaign === "clientA" ? "+63 2 8846 1200" : "+63 2 8877 3400"}</span>
+              Dedicated Outbound CLI: <span className="text-sky-700 font-mono">{campaign === "clientA" ? "+63 2 8846 1200" : "+63 2 8877 3400"}</span>
             </div>
             <div className="p-3 rounded-lg bg-white border border-slate-200 text-slate-600">
               Script: {campaign === "clientA" ? '"Thank you for calling FinTech Alpha Support. Have your account ID ready."' : '"Welcome to Healthcare Beta. Discover personalized care plans."'}
@@ -1181,8 +1181,8 @@ function SmallBusinessExplainer() {
               <button
                 key={s}
                 onClick={() => setStep(s)}
-                className={`p-2.5 rounded-xl text-center text-xs font-bold transition-all cursor-pointer ${
-                  step === s ? "bg-[#069bd8] text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                className={`p-2.5 rounded-xl text-center text-xs font-bold transition-colors cursor-pointer ${
+                  step === s ? "bg-sky-600 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                 }`}
               >
                 Step 0{s}
@@ -1223,7 +1223,7 @@ function UnifiedRoutingExplainer({ title }: { title: string }) {
     >
       {() => (
         <div className="p-6 rounded-xl bg-slate-50 border border-slate-200 text-center space-y-3">
-          <div className="w-12 h-12 rounded-2xl bg-sky-50 text-[#069bd8] flex items-center justify-center mx-auto">
+          <div className="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center mx-auto">
             <Layers className="w-6 h-6" />
           </div>
           <div className="text-sm font-bold text-slate-800 capitalize">{title} Active Engine</div>
