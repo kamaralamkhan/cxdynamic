@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-06T23:19:59.7768310+05:30",
+  "title": "Design System: CXdynamIQ",
+  "extensions": {
+    "colorMeta": {
+      "canvas": { "role": "neutral", "displayName": "Cloud Canvas", "canonical": "#f8fafc", "tonalRamp": ["#0f172a", "#1e293b", "#334155", "#64748b", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f8fafc"] },
+      "foreground": { "role": "neutral", "displayName": "Cobalt Ink", "canonical": "#012635", "tonalRamp": ["#01171f", "#012635", "#06415a", "#0a5d7e", "#21799e", "#5da3c1", "#9dc9dd", "#d9edf5"] },
+      "surface": { "role": "neutral", "displayName": "Crisp Surface", "canonical": "#ffffff", "tonalRamp": ["#0f172a", "#1e293b", "#475569", "#94a3b8", "#cbd5e1", "#e2e8f0", "#f8fafc", "#ffffff"] },
+      "cyan": { "role": "primary", "displayName": "Signal Cyan", "canonical": "#069bd8", "tonalRamp": ["#082f49", "#0c4a6e", "#075985", "#0369a1", "#069bd8", "#38bdf8", "#7dd3fc", "#e0f2fe"] },
+      "action": { "role": "primary", "displayName": "Operational Blue", "canonical": "#0369a1", "tonalRamp": ["#082f49", "#0c4a6e", "#075985", "#0369a1", "#0284c7", "#38bdf8", "#7dd3fc", "#e0f2fe"] },
+      "reason-indigo": { "role": "secondary", "displayName": "Reason Indigo", "canonical": "#818cf8", "tonalRamp": ["#1e1b4b", "#312e81", "#4338ca", "#6366f1", "#818cf8", "#a5b4fc", "#c7d2fe", "#e0e7ff"] },
+      "success-emerald": { "role": "secondary", "displayName": "Success Emerald", "canonical": "#34d399", "tonalRamp": ["#022c22", "#064e3b", "#047857", "#10b981", "#34d399", "#6ee7b7", "#a7f3d0", "#d1fae5"] },
+      "learning-violet": { "role": "secondary", "displayName": "Learning Violet", "canonical": "#c084fc", "tonalRamp": ["#3b0764", "#581c87", "#7e22ce", "#a855f7", "#c084fc", "#d8b4fe", "#e9d5ff", "#f3e8ff"] },
+      "deep-teal": { "role": "secondary", "displayName": "Deep Teal", "canonical": "#002620", "tonalRamp": ["#001615", "#002620", "#06453c", "#17665a", "#39877a", "#74afa4", "#b4d9d1", "#e3f3ef"] },
+      "dark-surface": { "role": "neutral", "displayName": "Night Operations", "canonical": "#02131e", "tonalRamp": ["#010912", "#02131e", "#051928", "#0f2834", "#29434d", "#5b737b", "#a9bcc1", "#e5edef"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Jakarta Display", "purpose": "Hero value propositions and high-emphasis section statements." },
+      "headline": { "displayName": "Jakarta Headline", "purpose": "Primary section divisions and large module headings." },
+      "body": { "displayName": "Inter Body", "purpose": "Product explanation, descriptive copy, navigation, and forms." },
+      "label": { "displayName": "JetBrains Mono Label", "purpose": "Status, telemetry, metadata, metrics, and technical traces only." },
+      "micro": { "displayName": "JetBrains Mono Micro", "purpose": "Compact authenticated traces and dense technical metadata." }
+    },
+    "shadows": [
+      { "name": "calm-card", "value": "0 1px 3px 0 rgba(15, 23, 42, 0.05)", "purpose": "Resting lift for light cards." },
+      { "name": "calm-card-hover", "value": "0 6px 16px -4px rgba(15, 23, 42, 0.08)", "purpose": "Modest hover lift for interactive cards." },
+      { "name": "primary-action", "value": "0 1px 2px 0 rgba(3, 105, 161, 0.2)", "purpose": "Grounds primary blue actions." },
+      { "name": "nav-flyout", "value": "0 24px 60px -15px rgba(0, 0, 0, 0.14)", "purpose": "Separates desktop navigation flyouts from page content." }
+    ],
+    "motion": [
+      { "name": "tactile", "value": "150ms ease-out", "purpose": "Buttons transition color, shadow, and small press feedback." },
+      { "name": "calm-card", "value": "200ms cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Cards change elevation and border treatment on hover." },
+      { "name": "page-transition", "value": "90ms exit / 210ms entry", "purpose": "Brief view-transition continuity between routes." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary conversion or completion action on light and dark surfaces.",
+      "html": "<button class=\"ds-btn-primary\">BOOK A DEMO</button>",
+      "css": ".ds-btn-primary { background:#0369a1; color:#fff; padding:10px 20px; border:0; border-radius:8px; box-shadow:0 1px 2px rgba(3,105,161,.2); font:600 14px Inter,system-ui,sans-serif; cursor:pointer; transition:background-color 150ms ease,box-shadow 150ms ease,transform 150ms ease; } .ds-btn-primary:hover { background:#075985; transform:translateY(-1px); } .ds-btn-primary:active { transform:scale(.97); } .ds-btn-primary:focus-visible { outline:2px solid #069bd8; outline-offset:2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Quiet alternative action for light surfaces.",
+      "html": "<button class=\"ds-btn-secondary\">LEARN MORE</button>",
+      "css": ".ds-btn-secondary { background:#fff; color:#0f172a; padding:10px 20px; border:1px solid #cbd5e1; border-radius:8px; box-shadow:0 1px 2px rgba(0,0,0,.05); font:600 14px Inter,system-ui,sans-serif; cursor:pointer; transition:background-color 150ms ease,border-color 150ms ease,transform 150ms ease; } .ds-btn-secondary:hover { background:#f8fafc; border-color:#94a3b8; transform:translateY(-1px); } .ds-btn-secondary:focus-visible { outline:2px solid #069bd8; outline-offset:2px; }"
+    },
+    {
+      "name": "Inverse Outline Button",
+      "kind": "button",
+      "refersTo": "button-inverse-outline",
+      "description": "Secondary action for a dark operational surface.",
+      "html": "<button class=\"ds-btn-inverse-outline\">VIEW PLATFORM</button>",
+      "css": ".ds-btn-inverse-outline { background:transparent; color:#fff; padding:10px 20px; border:1px solid #334155; border-radius:8px; font:600 14px Inter,system-ui,sans-serif; cursor:pointer; transition:border-color 150ms ease,background-color 150ms ease; } .ds-btn-inverse-outline:hover { border-color:#64748b; background:rgba(255,255,255,.05); } .ds-btn-inverse-outline:focus-visible { outline:2px solid #069bd8; outline-offset:2px; }"
+    },
+    {
+      "name": "Calm Card",
+      "kind": "card",
+      "refersTo": "card-calm",
+      "description": "Default light-surface container for related content and product options.",
+      "html": "<article class=\"ds-card\"><p class=\"ds-card-label\">CX PLATFORM</p><h3>Composable customer operations</h3><p>Keep related information clear, calm, and easy to scan.</p></article>",
+      "css": ".ds-card { width:260px; padding:24px; background:#fff; color:#012635; border:1px solid #e2e8f0; border-radius:16px; box-shadow:0 1px 3px rgba(15,23,42,.05); font:400 14px/1.6 Inter,system-ui,sans-serif; transition:transform 200ms cubic-bezier(.23,1,.32,1),box-shadow 200ms cubic-bezier(.23,1,.32,1),border-color 200ms cubic-bezier(.23,1,.32,1); } .ds-card:hover { transform:translateY(-2px); border-color:#cbd5e1; box-shadow:0 6px 16px -4px rgba(15,23,42,.08); } .ds-card h3 { margin:6px 0; font:700 18px/1.25 'Plus Jakarta Sans',Inter,sans-serif; letter-spacing:-.02em; } .ds-card p { margin:0; color:#475569; } .ds-card-label { color:#069bd8 !important; font:600 11px/1.2 'JetBrains Mono',monospace !important; letter-spacing:.06em; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field-default",
+      "description": "Form field for contact and product search surfaces.",
+      "html": "<label class=\"ds-field\"><span>WORK EMAIL</span><input placeholder=\"you@company.com\" type=\"email\"></label>",
+      "css": ".ds-field { display:grid; gap:7px; width:260px; color:#012635; font:600 11px/1.2 'JetBrains Mono',monospace; letter-spacing:.06em; } .ds-field input { box-sizing:border-box; width:100%; padding:10px 14px; background:#f8fafc; color:#0f172a; border:1px solid #cbd5e1; border-radius:12px; font:400 14px Inter,system-ui,sans-serif; outline:none; transition:background-color 150ms ease,border-color 150ms ease,box-shadow 150ms ease; } .ds-field input::placeholder { color:#64748b; } .ds-field input:focus { background:#fff; border-color:#069bd8; box-shadow:0 0 0 2px rgba(6,155,216,.16); }"
+    },
+    {
+      "name": "Workflow Phase Tab",
+      "kind": "custom",
+      "refersTo": "workflow-phase-tab",
+      "description": "Selectable phase control for dark operational walkthroughs.",
+      "html": "<button class=\"ds-workflow-tab\"><span class=\"ds-workflow-number\">01</span><strong>UNDERSTAND</strong><small>Multilingual NLU</small></button>",
+      "css": ".ds-workflow-tab { display:grid; gap:8px; min-width:150px; padding:12px; color:#fff; text-align:left; background:rgba(56,189,248,.1); border:1px solid #7dd3fc; border-radius:12px; font-family:Inter,system-ui,sans-serif; cursor:pointer; } .ds-workflow-number { color:#bae6fd; font:700 12px 'JetBrains Mono',monospace; } .ds-workflow-tab strong { font-size:14px; letter-spacing:.02em; } .ds-workflow-tab small { overflow:hidden; color:#cbd5e1; font-size:11px; text-overflow:ellipsis; white-space:nowrap; } .ds-workflow-tab:hover { background:rgba(56,189,248,.17); } .ds-workflow-tab:focus-visible { outline:2px solid #7dd3fc; outline-offset:2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Calm Command Center",
+    "overview": "CXdynamIQ presents complex, AI-led customer-experience operations as assured and legible. The system pairs cool white work surfaces with deep navy and teal operational zones, then uses a clear sky-blue action color to direct attention. It should feel like a dependable control plane: technical enough to communicate capability, but never noisy or intimidating. The implementation favors generous whitespace, stable containers, low-contrast dividers, and intentional information density.",
+    "keyCharacteristics": ["Calm, high-trust enterprise SaaS with an operational edge.", "Sky-blue actions against clean slate, white, and deep-teal surfaces.", "Human-readable Jakarta headings, efficient Inter body copy, and monospace only for labels, metrics, and technical traces.", "Rounded, softly elevated surfaces with borders doing most of the separation work."],
+    "rules": [
+      { "name": "The Blue Has a Job Rule", "body": "Use the bright blue family to indicate action, selection, focus, or system signal—not as a large decorative field.", "section": "colors" },
+      { "name": "The Night Operations Rule", "body": "Dark surfaces are for platform depth, telemetry, navigation, and high-context demonstrations. Routine content remains on calm light surfaces.", "section": "colors" },
+      { "name": "The Human-First Type Rule", "body": "Monospace communicates measurement or execution context; it never replaces reading typography or becomes a decorative brand voice.", "section": "typography" },
+      { "name": "The Quiet Elevation Rule", "body": "Borders establish grouping; shadows appear only when a surface must sit above another surface or acknowledge interaction.", "section": "elevation" }
+    ],
+    "dos": ["Do place core content in the established max-w-7xl responsive container rhythm.", "Do use Operational Blue for the primary decision on a surface and Signal Cyan for active, focused, or technical states.", "Do keep cards light, bordered, and softly elevated; use dark panels only when they carry operational or platform context.", "Do preserve a visible cyan focus outline and respect reduced-motion preferences.", "Do use JetBrains Mono only for labels, metadata, metrics, and code or workflow traces."],
+    "donts": ["Don't use emerald or teal as a primary button background; primary actions use the established blue treatment.", "Don't substitute heavy gradients, hard shadows, or noisy decoration for hierarchy.", "Don't turn every container into a card; use whitespace, grouping, and subtle dividers first.", "Don't introduce new corner radii or ad-hoc accent colors when an established surface, blue, cyan, or slate treatment applies."]
+  }
+}
