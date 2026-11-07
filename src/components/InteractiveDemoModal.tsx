@@ -89,6 +89,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
   const [currentStep, setCurrentStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const modalRef = useRef<HTMLDivElement>(null);
+  const previouslyFocused = useRef<HTMLElement | null>(null);
 
   // Auto-advance steps
   useEffect(() => {
@@ -102,13 +103,33 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
   // Handle escape key and focus trap
   useEffect(() => {
     if (!isOpen) return;
+    previouslyFocused.current = document.activeElement as HTMLElement | null;
+    document.body.style.overflow = "hidden";
+    requestAnimationFrame(() => modalRef.current?.querySelector<HTMLButtonElement>("button")?.focus());
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
       if (e.key === "ArrowRight") setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1));
       if (e.key === "ArrowLeft") setCurrentStep((prev) => Math.max(prev - 1, 0));
+      if (e.key === "Tab" && modalRef.current) {
+        const focusable = Array.from(modalRef.current.querySelectorAll<HTMLElement>("button, a[href], [tabindex]:not([tabindex='-1'])"));
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+      previouslyFocused.current?.focus();
+    };
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
@@ -116,12 +137,13 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
   const active = steps[currentStep];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 animate-in fade-in duration-150">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 animate-in fade-in duration-150" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
       <div
         ref={modalRef}
         role="dialog"
         aria-modal="true"
         aria-labelledby="demo-title"
+        aria-describedby="demo-description"
         className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-2xl shadow-2xl p-5 sm:p-8 space-y-5 sm:space-y-6 text-slate-900 max-h-[90vh] overflow-y-auto"
       >
         {/* Header */}
@@ -134,6 +156,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
             <h3 id="demo-title" className="font-display font-extrabold text-xl text-slate-900 mt-0.5">
               See a call flow in 30 seconds
             </h3>
+            <p id="demo-description" className="sr-only">An interactive five-step simulation of a customer support call.</p>
           </div>
           <button
             type="button"
@@ -155,6 +178,8 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
                 setCurrentStep(i);
                 setIsPlaying(false);
               }}
+              aria-label={`View step ${st.step}: ${st.title}`}
+              aria-current={i === currentStep ? "step" : undefined}
               className="text-left group cursor-pointer focus:outline-none"
             >
               <div
@@ -174,7 +199,7 @@ export default function InteractiveDemoModal({ isOpen, onClose }: InteractiveDem
         </div>
 
         {/* Step Details Stage */}
-        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
+        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4" aria-live="polite">
           <div className="flex items-center justify-between">
             <span className="px-2.5 py-1 rounded-md bg-sky-50 text-sky-700 font-semibold text-xs border border-sky-100">
               Step {active.step}: {active.badge}

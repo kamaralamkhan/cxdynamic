@@ -32,6 +32,11 @@ const journey = [
 export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
   const [activeId, setActiveId] = useState<(typeof journey)[number]["id"]>("ai");
   const active = journey.find((item) => item.id === activeId) ?? journey[3];
+  const moveJourney = (currentId: (typeof journey)[number]["id"], direction: 1 | -1) => {
+    const currentIndex = journey.findIndex((item) => item.id === currentId);
+    const nextIndex = (currentIndex + direction + journey.length) % journey.length;
+    setActiveId(journey[nextIndex].id);
+  };
 
   return (
     <section id="home" className="relative isolate w-full max-w-full overflow-x-clip border-b border-slate-200 bg-[#f8fbfd]">
@@ -69,7 +74,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
 
           <div className="relative min-w-0 min-h-[430px] lg:min-h-[520px]">
             <div className="absolute left-0 top-1/2 hidden h-px w-full -translate-y-1/2 bg-sky-100 sm:block" aria-hidden="true" />
-            <div className="relative grid gap-3 sm:grid-cols-2 lg:absolute lg:inset-0 lg:grid-cols-4 lg:gap-5">
+            <div role="tablist" aria-label="Connected CX journey" className="relative grid gap-3 sm:grid-cols-2 lg:absolute lg:inset-0 lg:grid-cols-4 lg:gap-5">
               {journey.map(({ id, label, Icon }, index) => {
                 const selected = activeId === id;
                 const position = index < 4
@@ -92,6 +97,17 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                     role="tab"
                     aria-selected={selected}
                     aria-controls={`journey-panel-${id}`}
+                    tabIndex={selected ? 0 : -1}
+                    onKeyDown={(event) => {
+                      if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+                        event.preventDefault();
+                        moveJourney(id, 1);
+                      }
+                      if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+                        event.preventDefault();
+                        moveJourney(id, -1);
+                      }
+                    }}
                     onClick={() => setActiveId(id)}
                     className={`group relative flex min-h-24 items-center gap-3 rounded-2xl border bg-white/95 p-4 text-left shadow-[0_12px_36px_-28px_rgba(8,56,87,.55)] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#069bd8] focus-visible:ring-offset-2 sm:min-h-28 lg:absolute lg:w-[190px] ${position} ${selected ? "border-[#069bd8] ring-4 ring-[#069bd8]/10" : "border-slate-200 hover:border-sky-300"}`}
                   >
@@ -112,7 +128,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                 <p className="text-xs font-semibold uppercase tracking-[.14em] text-cyan-200">{active.label}</p>
                 <CheckCircle2 className="h-4 w-4 text-[#a8d23a]" aria-hidden="true" />
               </div>
-              <p id={`journey-panel-${active.id}`} role="tabpanel" className="mt-3 text-sm leading-6 text-slate-200">{active.detail}</p>
+              <p id={`journey-panel-${active.id}`} role="tabpanel" aria-live="polite" className="mt-3 text-sm leading-6 text-slate-200">{active.detail}</p>
               <Link href="#agentic-ai" className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-200 hover:text-white">
                 See the journey <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
               </Link>
