@@ -66,49 +66,46 @@ export default function ProofAndMarquee() {
 
   return (
     <>
-      {/* 1. Dark Contrast Stats Strip */}
+      {/* 1. Light SaaS Stats Strip */}
       <section
         ref={statsRef}
-        className="bg-slate-950 text-white py-12 relative overflow-hidden border-y border-white/10"
+        className="bg-slate-50 text-slate-900 py-12 relative overflow-hidden border-b border-slate-200"
       >
-        {/* Subtle slow drifting background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 opacity-80 pointer-events-none" />
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-slate-200">
             
             <div className="pt-4 lg:pt-0 lg:px-4">
-              <div className="font-display font-extrabold text-3xl sm:text-4xl text-cyan-400 tracking-tight tabular-nums">
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-sky-700 tracking-tight tabular-nums">
                 {hasAnimated ? counts[0] : 72}%
               </div>
-              <div className="text-sm text-slate-200 font-medium mt-1.5">
+              <div className="text-sm text-slate-600 font-medium mt-1.5">
                 Average AI containment rate
               </div>
             </div>
 
             <div className="pt-4 lg:pt-0 lg:px-4">
-              <div className="font-display font-extrabold text-3xl sm:text-4xl text-emerald-400 tracking-tight tabular-nums">
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-sky-700 tracking-tight tabular-nums">
                 3.8x
               </div>
-              <div className="text-sm text-slate-200 font-medium mt-1.5">
+              <div className="text-sm text-slate-600 font-medium mt-1.5">
                 Faster First Contact Resolution (FCR)
               </div>
             </div>
 
             <div className="pt-4 lg:pt-0 lg:px-4">
-              <div className="font-display font-extrabold text-3xl sm:text-4xl text-cyan-400 tracking-tight tabular-nums">
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-sky-700 tracking-tight tabular-nums">
                 {hasAnimated ? counts[2] : 100}%
               </div>
-              <div className="text-sm text-slate-200 font-medium mt-1.5">
+              <div className="text-sm text-slate-600 font-medium mt-1.5">
                 Automated conversation QA coverage
               </div>
             </div>
 
             <div className="pt-4 lg:pt-0 lg:px-4">
-              <div className="font-display font-extrabold text-3xl sm:text-4xl text-emerald-400 tracking-tight tabular-nums">
+              <div className="font-display font-extrabold text-3xl sm:text-4xl text-sky-700 tracking-tight tabular-nums">
                 -{hasAnimated ? counts[3] : 44}%
               </div>
-              <div className="text-sm text-slate-200 font-medium mt-1.5">
+              <div className="text-sm text-slate-600 font-medium mt-1.5">
                 Lower cost per contact
               </div>
             </div>

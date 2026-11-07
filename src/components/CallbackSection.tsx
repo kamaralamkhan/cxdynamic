@@ -68,74 +68,54 @@ export default function CallbackSection() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-slate-950 text-white relative overflow-hidden border-t border-white/10 scroll-mt-12">
+    <section id="contact" className="py-20 lg:py-28 bg-slate-50 text-slate-900 relative overflow-hidden border-t border-slate-200 scroll-mt-12">
       <div id="callback-section" className="sr-only" aria-hidden="true" />
       <div id="contact-form" className="sr-only" aria-hidden="true" />
-      {/* Slow-drifting low-contrast gradient navy -> slate-900 */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 opacity-90 pointer-events-none" />
-
-      {/* Floating call-waveform lines in background */}
-      <div className="absolute inset-0 pointer-events-none opacity-10 flex items-center justify-between px-10">
-        <svg aria-hidden="true" className="w-full h-48" viewBox="0 0 1200 200" fill="none">
-          <path
-            d="M0 100 C 150 40, 300 160, 450 100 C 600 40, 750 160, 900 100 C 1050 40, 1200 160, 1350 100"
-            stroke="#38bdf8"
-            strokeWidth="2"
-            strokeDasharray="4 8"
-          />
-          <path
-            d="M0 120 C 180 180, 360 60, 540 120 C 720 180, 900 60, 1080 120"
-            stroke="#34d399"
-            strokeWidth="1.5"
-            strokeDasharray="6 6"
-          />
-        </svg>
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column: Direct Outreach & SLA on Dark Section */}
+          {/* Left Column: Direct Outreach & SLA */}
           <div className="lg:col-span-5 space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight leading-tight">
               Have a Question? <br />
-              <span className="text-sky-400">Get a Callback Now.</span>
+              <span className="text-sky-700">Get a Callback Now.</span>
             </h2>
 
-            <p className="text-sm text-slate-300 leading-relaxed">
+            <p className="text-sm text-slate-600 leading-relaxed">
               Connect directly with a CXdynamIQ deployment specialist. We evaluate your active seat count, current phone architecture, and configure custom pricing in minutes.
             </p>
 
             <div className="space-y-3 pt-2">
               <a
                 href={`tel:${siteConfig.phones.primaryRaw}`}
-                className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400/50 hover:bg-white/10 transition-colors text-xs font-semibold text-white group"
+                className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-sky-500 shadow-2xs transition-colors text-xs font-semibold text-slate-900 group"
               >
-                <div className="p-2 rounded-lg bg-sky-500/20 text-sky-400 motion-safe:group-hover:scale-105 motion-reduce:group-hover:scale-100 transition-transform">
+                <div className="p-2 rounded-lg bg-sky-100 text-sky-700 motion-safe:group-hover:scale-105 motion-reduce:group-hover:scale-100 transition-transform">
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-medium">Immediate Hotline</div>
-                  <div className="text-slate-100">{siteConfig.phones.label}</div>
+                  <div className="text-xs text-slate-500 font-medium">Immediate Hotline</div>
+                  <div className="text-slate-900">{siteConfig.phones.label}</div>
                 </div>
               </a>
 
               <a
                 href={`mailto:${siteConfig.emails.info}`}
-                className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-sky-400/50 hover:bg-white/10 transition-colors text-xs font-semibold text-white group"
+                className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-sky-500 shadow-2xs transition-colors text-xs font-semibold text-slate-900 group"
               >
-                <div className="p-2 rounded-lg bg-emerald-500/20 text-emerald-400 motion-safe:group-hover:scale-105 motion-reduce:group-hover:scale-100 transition-transform">
+                <div className="p-2 rounded-lg bg-emerald-100 text-emerald-700 motion-safe:group-hover:scale-105 motion-reduce:group-hover:scale-100 transition-transform">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-medium">Enterprise Inquiries</div>
-                  <div className="text-slate-100">{siteConfig.emails.info} / {siteConfig.emails.sales}</div>
+                  <div className="text-xs text-slate-500 font-medium">Enterprise Inquiries</div>
+                  <div className="text-slate-900">{siteConfig.emails.info} / {siteConfig.emails.sales}</div>
                 </div>
               </a>
             </div>
 
-            <div className="pt-2 flex items-center gap-2 text-xs text-slate-400 font-medium">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+            <div className="pt-2 flex items-center gap-2 text-xs text-slate-500 font-medium">
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>Zero hardware commitment · Free trial available</span>
             </div>
           </div>

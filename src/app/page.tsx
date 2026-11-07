@@ -7,8 +7,6 @@ import ProofAndMarquee from "@/components/ProofAndMarquee";
 import ModernVsLegacySection from "@/components/ModernVsLegacySection";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import PlatformModesSection from "@/components/PlatformModesSection";
-import AgenticAISection from "@/components/AgenticAISection";
-import HumanAIJourneySection from "@/components/HumanAIJourneySection";
 import OmnichannelSection from "@/components/OmnichannelSection";
 import ProductsBento from "@/components/ProductsBento";
 import AIQASection from "@/components/AIQASection";
@@ -18,7 +16,6 @@ import CXQ360TrialJourney from "@/components/CXQ360TrialJourney";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import KnowledgeCentre from "@/components/KnowledgeCentre";
 import CallbackSection from "@/components/CallbackSection";
-import PreFooterDualCTA from "@/components/PreFooterDualCTA";
 import CalmFooter from "@/components/CalmFooter";
 import InteractiveDemoModal from "@/components/InteractiveDemoModal";
 import { siteConfig } from "@/lib/site";
@@ -89,13 +86,7 @@ export default function Home() {
       {/* Fold 3 — Three Operating Modes: Team-Led, AI-Assisted, AI-Led Continuum */}
       <PlatformModesSection />
 
-      {/* Fold 4 — Dedicated Agentic AI Stepper: Understand → Reason → Act → Resolve → Learn */}
-      <AgenticAISection />
-
-      {/* Fold 5 — Human + AI Collaboration Journey: Core Banner + 6-Stage Lifecycle + Copilot Desktop UI */}
-      <HumanAIJourneySection />
-
-      {/* Fold 5.5 — Enterprise Ecosystem Integrations: CRM, service, ERP, APIs, webhooks, apps, and AI/LLM */}
+      {/* Fold 4 — Enterprise Ecosystem Integrations: CRM, service, ERP, APIs, webhooks, apps, and AI/LLM */}
       <IntegrationsSection />
 
       {/* Fold 6 — Omnichannel Engagement & Cross-Channel Context Preservation */}
@@ -119,13 +110,10 @@ export default function Home() {
       {/* Fold 12 — Trust and operating principles */}
       <WhyChooseUs />
 
-      {/* Fold 13 — Knowledge Centre / Technical Guides */}
+      {/* Fold 12 — Knowledge Centre / Technical Guides */}
       <KnowledgeCentre />
 
-      {/* Fold 14 — Pre-Footer Dual CTA: Self-Serve CXQ360.ai Sandbox vs Enterprise Whitelisting */}
-      <PreFooterDualCTA onOpenDemo={() => setDemoOpen(true)} />
-
-      {/* Fold 15 — Quick Callback & Demo Form */}
+      {/* Fold 13 — Quick Callback & Demo Form */}
       <CallbackSection />
 
       {/* Fold 16 — Calm Footer with Full Sitemap, Security Badges & WhatsApp Float */}

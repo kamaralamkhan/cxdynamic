@@ -177,6 +177,7 @@ export default function PlatformModesSection() {
       className="relative bg-white border-b border-slate-200 py-16 sm:py-20 lg:py-24 scroll-mt-16"
     >
       <div id="platform-modes" className="sr-only" aria-hidden="true" />
+      <div id="modes" className="sr-only" aria-hidden="true" />
       
       <div className="max-w-7xl mx-auto px-6">
         
