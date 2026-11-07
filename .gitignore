@@ -25,6 +25,7 @@
 *.pem
 /scrapper/
 /scratch/
+/stitch-out/
 *.png
 *.zip
 !public/**/*.png

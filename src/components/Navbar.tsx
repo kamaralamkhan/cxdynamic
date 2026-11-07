@@ -211,8 +211,20 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileAccordion, setMobileAccordion] = useState<string | null>("platform");
+  const [scrollProgress, setScrollProgress] = useState(0);
   const navRef = useRef<HTMLElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      setScrollProgress(progress);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -353,6 +365,13 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
           </nav>
         </div>
       ) : null}
+      {/* Reading / Scroll Progress Bar Indicator */}
+      <div className="w-full h-[2.5px] bg-slate-100 overflow-hidden" aria-hidden="true">
+        <div 
+          className="h-full bg-gradient-to-r from-sky-700 via-sky-600 to-sky-400 transition-[width] duration-75 ease-out" 
+          style={{ width: `${scrollProgress}%` }}
+        />
+      </div>
     </header>
   );
 }

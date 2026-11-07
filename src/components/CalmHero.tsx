@@ -18,7 +18,8 @@ import {
   ShieldCheck,
   Sparkles,
   PhoneForwarded,
-  Check
+  Check,
+  Zap
 } from "lucide-react";
 import { 
   SalesforceLogo, 
@@ -37,8 +38,25 @@ type HeroTab = "voice" | "copilot" | "whatsapp";
 export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
   const [activeTab, setActiveTab] = useState<HeroTab>("voice");
   const [isPaused, setIsPaused] = useState(false);
+  const [timerSeconds, setTimerSeconds] = useState(222);
+  const [isMuted, setIsMuted] = useState(false);
+  const [isOnHold, setIsOnHold] = useState(false);
 
-  // Auto-advance tabs every 4 seconds unless hovered/focused
+  // Live call timer ticker
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimerSeconds((prev) => prev + 1);
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTimer = (totalSecs: number) => {
+    const mins = Math.floor(totalSecs / 60);
+    const secs = totalSecs % 60;
+    return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+  };
+
+  // Auto-advance tabs every 4.5 seconds unless hovered/focused
   useEffect(() => {
     if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
@@ -51,7 +69,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
         if (prev === "copilot") return "whatsapp";
         return "voice";
       });
-    }, 4200);
+    }, 4500);
 
     return () => clearInterval(timer);
   }, [isPaused]);
@@ -64,9 +82,9 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
         {/* Left Column (6 cols): Headline + Actions + Proof */}
         <div className="lg:col-span-6">
           
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-800">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-xs font-semibold text-sky-800">
             <span className="w-2 h-2 rounded-full bg-emerald-500 motion-safe:animate-pulse motion-reduce:animate-none" aria-hidden="true" />
-            <span>AI-Powered Omnichannel Contact Center</span>
+            <span>Ultrafast implementation · VIP engineering support</span>
           </div>
 
           <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.08] tracking-[-0.03em] text-slate-900 sm:text-5xl lg:text-[54px]">
@@ -74,7 +92,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           </h1>
 
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-600">
-            Unify cloud voice, WhatsApp, agentic AI, and native CRM integrations. Resolve customer inquiries in real time with human and AI collaboration.
+            Calling, IVR, WhatsApp and CRM integrations on one cloud platform, set up by our engineers and backed by people who pick up.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3.5">
@@ -97,43 +115,56 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             </a>
 
             <a
-              href="#how-it-works"
+              href="#products"
               className="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors ml-1 focus-visible:outline-2 focus-visible:outline-sky-600"
             >
-              See how it works
+              Explore products
             </a>
           </div>
 
           <div className="mt-7 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm text-slate-500 font-medium">
-            <span>Go live in hours</span>
+            <span>24-hour setup</span>
             <span className="h-3 w-px bg-slate-300" aria-hidden="true" />
-            <span>Native Salesforce, Zoho and Zendesk integrations</span>
+            <span>Native Salesforce, Zoho and Zendesk sync</span>
             <span className="h-3 w-px bg-slate-300" aria-hidden="true" />
-            <span>21-day trial on CXQ360.ai</span>
+            <span>99.99% carrier-grade SLA</span>
           </div>
 
         </div>
 
-        {/* Right Column (6 cols): Dialpad / Aircall Style Interactive Telephony & Copilot Card */}
+        {/* Right Column (6 cols): Modern Interactive Agent Workspace Preview */}
         <div 
-          className="lg:col-span-6 w-full max-w-xl mx-auto lg:max-w-none"
+          className="lg:col-span-6 w-full max-w-xl mx-auto lg:max-w-none relative"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           onFocus={() => setIsPaused(true)}
           onBlur={() => setIsPaused(false)}
         >
-          <div className="rounded-2xl border border-slate-200 bg-slate-900 p-5 shadow-lg text-white">
+          {/* Pastel Wash Backing Frame */}
+          <div className="w-full rounded-3xl bg-gradient-to-br from-sky-50/70 via-slate-50 to-slate-100/80 p-4 sm:p-6 border border-slate-200/80 shadow-xl shadow-slate-900/5 relative">
             
-            {/* Header: Segmented Control Tabs */}
-            <div className="flex items-center justify-between pb-3.5 border-b border-slate-800">
-              <div className="inline-flex p-1 bg-slate-800/80 rounded-xl gap-1">
+            {/* Top Telephony Status Bar */}
+            <div className="flex items-center justify-between pb-3.5 mb-3.5 border-b border-slate-200/80">
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 motion-safe:animate-pulse motion-reduce:animate-none" aria-hidden="true" />
+                <span className="text-xs font-semibold text-emerald-700 tracking-wide">SIP TRUNK: CONNECTED (14ms)</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-xs text-slate-500 font-medium">
+                <Headphones className="w-3.5 h-3.5 text-slate-400" aria-hidden="true" />
+                <span>Agent: Elena Vance · Queue 01</span>
+              </div>
+            </div>
+
+            {/* Segmented Control Tabs */}
+            <div className="flex items-center justify-between pb-3 border-b border-slate-200/80">
+              <div className="inline-flex p-1 bg-slate-200/70 rounded-xl gap-1">
                 <button
                   type="button"
                   onClick={() => setActiveTab("voice")}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-sky-400 ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-sky-600 ${
                     activeTab === "voice"
-                      ? "bg-sky-600 text-white shadow-2xs"
-                      : "text-slate-400 hover:text-white"
+                      ? "bg-white text-sky-800 shadow-2xs"
+                      : "text-slate-600 hover:text-slate-900"
                   }`}
                 >
                   Voice Call
@@ -141,10 +172,10 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                 <button
                   type="button"
                   onClick={() => setActiveTab("copilot")}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-sky-400 ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-sky-600 ${
                     activeTab === "copilot"
-                      ? "bg-sky-600 text-white shadow-2xs"
-                      : "text-slate-400 hover:text-white"
+                      ? "bg-white text-sky-800 shadow-2xs"
+                      : "text-slate-600 hover:text-slate-900"
                   }`}
                 >
                   AI Copilot Assist
@@ -152,173 +183,260 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                 <button
                   type="button"
                   onClick={() => setActiveTab("whatsapp")}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-sky-400 ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-sky-600 ${
                     activeTab === "whatsapp"
-                      ? "bg-sky-600 text-white shadow-2xs"
-                      : "text-slate-400 hover:text-white"
+                      ? "bg-white text-sky-800 shadow-2xs"
+                      : "text-slate-600 hover:text-slate-900"
                   }`}
                 >
                   WhatsApp Hub
                 </button>
               </div>
 
-              <div className="flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <div className="flex items-center gap-1.5 text-xs text-emerald-700 font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
                 <span>Live System</span>
               </div>
             </div>
 
-            {/* TAB 1: Voice Call (Aircall/Dialpad Live Call Simulator) */}
-            {activeTab === "voice" && (
-              <div className="mt-4 space-y-4">
-                
-                {/* Caller Info Banner */}
-                <div className="flex items-center justify-between p-3 rounded-xl bg-slate-800/60 border border-slate-700/60">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center font-semibold text-sm">
-                      PS
+            {/* Main Surface Card */}
+            <div className="mt-3.5 bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm space-y-4 text-slate-900">
+              
+              {/* TAB 1: Voice Call (Aircall/Dialpad Live Call Simulator) */}
+              {activeTab === "voice" && (
+                <div className="space-y-3.5">
+                  
+                  {/* Caller Info Banner */}
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200/70">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center font-bold text-sm">
+                        PS
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <p className="text-sm font-semibold text-slate-900">Priya Sharma</p>
+                          <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800">Enterprise VIP</span>
+                        </div>
+                        <p className="text-xs text-slate-500">+91 98••• ••210 · Priority Inbound</p>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <span className="inline-flex items-center gap-1 text-xs font-semibold tabular-nums text-emerald-700">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
+                        {formatTimer(timerSeconds)}
+                      </span>
+                      <p className="text-[11px] text-slate-400">Carrier SIP HD</p>
+                    </div>
+                  </div>
+
+                  {/* CRM Context Card Inside Call */}
+                  <div className="rounded-xl bg-slate-50 p-3 border border-slate-200/70 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                    <div>
+                      <span className="text-slate-400 block text-[11px]">Account</span>
+                      <span className="font-semibold text-slate-800 truncate block">Sterling APAC</span>
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-white">Priya Sharma</p>
-                      <p className="text-xs text-slate-400">Enterprise Tier · +91 98••• ••210</p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-400">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                      01:42
-                    </span>
-                    <p className="text-[11px] text-slate-400">Inbound SIP</p>
-                  </div>
-                </div>
-
-                {/* Live Real-Time Transcription Box */}
-                <div className="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 space-y-2.5">
-                  <div className="flex items-center justify-between text-xs text-slate-400 border-b border-slate-800/80 pb-2">
-                    <span className="font-semibold text-sky-400 flex items-center gap-1.5">
-                      <Mic className="w-3.5 h-3.5" />
-                      Live Transcription
-                    </span>
-                    <span className="text-emerald-400 text-[11px]">Sentiment: +94% Positive</span>
-                  </div>
-
-                  <div className="space-y-2 text-xs">
-                    <p className="text-slate-300">
-                      <strong className="text-slate-100">Caller:</strong> “Hi, we need to adjust our delivery window for shipment #CX-88492 before end of day.”
-                    </p>
-                    <p className="text-sky-300">
-                      <strong className="text-sky-200">AI Copilot:</strong> “Order #CX-88492 is at the regional hub. Address update rule is eligible before 6 PM.”
-                    </p>
-                  </div>
-                </div>
-
-                {/* Copilot 1-Click Action Suggestion */}
-                <div className="p-3 rounded-xl bg-sky-950/40 border border-sky-800/60 flex items-center justify-between">
-                  <div>
-                    <p className="text-xs font-semibold text-sky-200">Recommended Action</p>
-                    <p className="text-xs text-slate-300 mt-0.5">Reschedule to 2:00 PM tomorrow & sync CRM</p>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => setActiveTab("whatsapp")}
-                    className="px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold transition-colors cursor-pointer"
-                  >
-                    1-Click Execute
-                  </button>
-                </div>
-
-                {/* Telephony Controls */}
-                <div className="grid grid-cols-4 gap-2 pt-1">
-                  <button type="button" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 font-medium transition-colors text-center">
-                    Mute
-                  </button>
-                  <button type="button" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 font-medium transition-colors text-center">
-                    Hold
-                  </button>
-                  <button type="button" className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 font-medium transition-colors text-center">
-                    Transfer
-                  </button>
-                  <button type="button" className="p-2 rounded-lg bg-red-950/70 hover:bg-red-900 border border-red-800/80 text-xs text-red-200 font-medium transition-colors text-center">
-                    End Call
-                  </button>
-                </div>
-
-              </div>
-            )}
-
-            {/* TAB 2: AI Copilot Assist (Dialpad Style Agent Intelligence) */}
-            {activeTab === "copilot" && (
-              <div className="mt-4 space-y-4">
-                
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60">
-                    <p className="text-xs text-slate-400">Predicted CSAT</p>
-                    <p className="text-xl font-bold text-emerald-400 mt-1">4.9 / 5.0</p>
-                  </div>
-                  <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60">
-                    <p className="text-xs text-slate-400">Script Adherence</p>
-                    <p className="text-xl font-bold text-sky-400 mt-1">100% Verified</p>
-                  </div>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 space-y-2">
-                  <p className="text-xs font-semibold text-slate-200">Compliance Checklist</p>
-                  <div className="space-y-1.5 text-xs">
-                    <div className="flex items-center gap-2 text-slate-300">
-                      <Check className="w-3.5 h-3.5 text-emerald-400" />
-                      <span>Caller identity authenticated via two-factor OTP</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-slate-300">
-                      <Check className="w-3.5 h-3.5 text-emerald-400" />
-                      <span>Payment card PII automatically redacted from recording</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-slate-300">
-                      <Check className="w-3.5 h-3.5 text-emerald-400" />
-                      <span>SOC2 & HIPAA security guardrails enforced</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-3 rounded-xl bg-slate-800/40 border border-slate-700/60 flex items-center justify-between text-xs">
-                  <span className="text-slate-300">CRM Auto-Disposition ready for Salesforce</span>
-                  <span className="text-emerald-400 font-semibold">Synced</span>
-                </div>
-
-              </div>
-            )}
-
-            {/* TAB 3: WhatsApp Hub (Aircall Omnichannel Style) */}
-            {activeTab === "whatsapp" && (
-              <div className="mt-4 space-y-4">
-                
-                <div className="p-3 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-                      <MessageSquare className="w-4 h-4" />
+                      <span className="text-slate-400 block text-[11px]">Open Tickets</span>
+                      <span className="font-semibold text-slate-800 block">0 (Resolved)</span>
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-white">CXdynamIQ Support</p>
-                      <p className="text-xs text-emerald-400">Official Meta Verified Channel</p>
+                      <span className="text-slate-400 block text-[11px]">CSAT History</span>
+                      <span className="font-semibold text-emerald-700 block">4.9 / 5.0</span>
+                    </div>
+                    <div>
+                      <span className="text-slate-400 block text-[11px]">Annual LTV</span>
+                      <span className="font-semibold text-slate-800 block">$48,000</span>
                     </div>
                   </div>
-                  <span className="text-xs text-slate-400">Delivered</span>
-                </div>
 
-                <div className="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 space-y-2 text-xs">
-                  <div className="p-2.5 rounded-lg bg-emerald-950/40 border border-emerald-800/50 text-slate-200">
-                    <p className="font-semibold text-emerald-300 mb-1">Delivery Rescheduled Confirmed</p>
-                    <p>Order #CX-88492 is rescheduled for tomorrow between 2:00 PM and 4:00 PM.</p>
-                    <p className="text-slate-400 mt-1">Tracking ID: cxd.link/tr-88492</p>
+                  {/* Audio Waveform Visualizer */}
+                  <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70">
+                    <div className="flex items-center justify-between text-xs text-slate-500 mb-1.5">
+                      <span className="flex items-center gap-1.5 font-semibold text-slate-700 text-[11px]">
+                        <Activity className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
+                        Carrier HD Audio Stream
+                      </span>
+                      <span className="text-[11px] font-medium text-emerald-700">48kHz Opus · 1.2ms Jitter</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-1.5 h-6 py-0.5" aria-hidden="true">
+                      {[40, 75, 100, 50, 90, 60, 85, 95, 45, 80, 65, 35].map((height, i) => (
+                        <span
+                          key={i}
+                          className="w-1 rounded-full bg-sky-600 motion-safe:animate-pulse"
+                          style={{
+                            height: `${height}%`,
+                            animationDelay: `${(i * 120) % 900}ms`,
+                            animationDuration: "900ms",
+                          }}
+                        />
+                      ))}
+                    </div>
                   </div>
-                </div>
 
-                <div className="p-3 rounded-xl bg-slate-800/40 border border-slate-700/60 flex items-center justify-between text-xs">
-                  <span className="text-slate-300">Customer acknowledged confirmation</span>
-                  <span className="text-emerald-400 font-semibold">Closed</span>
-                </div>
+                  {/* Live Real-Time Transcription Box */}
+                  <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 space-y-1.5 text-xs">
+                    <div className="flex items-center justify-between text-slate-500 border-b border-slate-200 pb-1.5">
+                      <span className="font-semibold text-sky-800 flex items-center gap-1.5">
+                        <Mic className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
+                        Live Transcription
+                      </span>
+                      <span className="text-emerald-700 text-[11px] font-medium">Sentiment: +94% Positive</span>
+                    </div>
+                    <div className="space-y-1 text-xs">
+                      <p className="text-slate-600">
+                        <strong className="text-slate-900 font-semibold">Caller:</strong> “Hi, we need to adjust our delivery window for shipment #CX-88492 before end of day.”
+                      </p>
+                      <p className="text-sky-900 bg-sky-50/70 p-1.5 rounded-lg border border-sky-100">
+                        <strong className="text-sky-800 font-semibold">AI Copilot:</strong> “Order #CX-88492 is at the regional hub. Address update rule is eligible before 6 PM.”
+                      </p>
+                    </div>
+                  </div>
 
-              </div>
-            )}
+                  {/* Copilot 1-Click Action Suggestion */}
+                  <div className="p-3 rounded-xl bg-sky-50 border border-sky-200/80 flex items-center justify-between gap-3">
+                    <div className="min-w-0">
+                      <p className="text-xs font-semibold text-sky-900 flex items-center gap-1">
+                        <Sparkles className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
+                        AI Recommended Action
+                      </p>
+                      <p className="text-xs text-slate-600 mt-0.5 truncate">Reschedule to 2:00 PM tomorrow & auto-sync CRM</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setActiveTab("whatsapp")}
+                      className="shrink-0 px-3 py-1.5 rounded-lg bg-sky-700 hover:bg-sky-800 text-white text-xs font-semibold transition-colors cursor-pointer"
+                    >
+                      1-Click Execute
+                    </button>
+                  </div>
+
+                  {/* Telephony Controls */}
+                  <div className="grid grid-cols-4 gap-2 pt-1 text-xs">
+                    <button 
+                      type="button" 
+                      onClick={() => setIsMuted(!isMuted)}
+                      className={`p-2 rounded-lg font-medium transition-colors text-center border ${
+                        isMuted 
+                          ? "bg-amber-50 text-amber-900 border-amber-300" 
+                          : "bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200"
+                      }`}
+                    >
+                      {isMuted ? "Unmute" : "Mute"}
+                    </button>
+                    <button 
+                      type="button" 
+                      onClick={() => setIsOnHold(!isOnHold)}
+                      className={`p-2 rounded-lg font-medium transition-colors text-center border ${
+                        isOnHold 
+                          ? "bg-amber-50 text-amber-900 border-amber-300" 
+                          : "bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200"
+                      }`}
+                    >
+                      {isOnHold ? "Resume" : "Hold"}
+                    </button>
+                    <button 
+                      type="button" 
+                      className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium transition-colors text-center border border-slate-200"
+                    >
+                      Transfer
+                    </button>
+                    <button 
+                      type="button" 
+                      className="p-2 rounded-lg bg-red-50 hover:bg-red-100 text-red-700 font-medium transition-colors text-center border border-red-200"
+                    >
+                      End Call
+                    </button>
+                  </div>
+
+                </div>
+              )}
+
+              {/* TAB 2: AI Copilot Assist (Dialpad Style Agent Intelligence) */}
+              {activeTab === "copilot" && (
+                <div className="space-y-3.5">
+                  
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70">
+                      <p className="text-xs text-slate-500">Predicted CSAT</p>
+                      <p className="text-xl font-bold text-emerald-700 mt-1">4.9 / 5.0</p>
+                    </div>
+                    <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70">
+                      <p className="text-xs text-slate-500">Script Adherence</p>
+                      <p className="text-xl font-bold text-sky-700 mt-1">100% Verified</p>
+                    </div>
+                  </div>
+
+                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/70 space-y-2">
+                    <p className="text-xs font-semibold text-slate-800">Compliance & Security Guardrails</p>
+                    <div className="space-y-1.5 text-xs">
+                      <div className="flex items-center gap-2 text-slate-700">
+                        <Check className="w-3.5 h-3.5 text-emerald-600" aria-hidden="true" />
+                        <span>Caller identity authenticated via two-factor OTP</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-slate-700">
+                        <Check className="w-3.5 h-3.5 text-emerald-600" aria-hidden="true" />
+                        <span>Payment card PII automatically redacted from recording</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-slate-700">
+                        <Check className="w-3.5 h-3.5 text-emerald-600" aria-hidden="true" />
+                        <span>SOC2 & HIPAA security guardrails enforced</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-sky-50 border border-sky-200/80 flex items-center justify-between text-xs">
+                    <span className="text-sky-900 font-medium">CRM Auto-Disposition ready for Salesforce / Zoho</span>
+                    <span className="text-emerald-700 font-semibold">Synced</span>
+                  </div>
+
+                </div>
+              )}
+
+              {/* TAB 3: WhatsApp Hub (Aircall Omnichannel Style) */}
+              {activeTab === "whatsapp" && (
+                <div className="space-y-3.5">
+                  
+                  <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center justify-between">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center">
+                        <MessageSquare className="w-4 h-4" aria-hidden="true" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-slate-900">CXdynamIQ Support</p>
+                        <p className="text-xs text-emerald-700">Official Meta Verified Channel</p>
+                      </div>
+                    </div>
+                    <span className="text-xs text-slate-500 font-medium">Delivered</span>
+                  </div>
+
+                  <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/70 space-y-2 text-xs">
+                    <div className="p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-slate-800">
+                      <p className="font-semibold text-emerald-800 mb-1">Delivery Rescheduled Confirmed</p>
+                      <p>Order #CX-88492 is rescheduled for tomorrow between 2:00 PM and 4:00 PM.</p>
+                      <p className="text-slate-500 mt-1">Tracking ID: cxd.link/tr-88492</p>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-sky-50 border border-sky-200/80 flex items-center justify-between text-xs">
+                    <span className="text-sky-900 font-medium">Customer acknowledged confirmation</span>
+                    <span className="text-emerald-700 font-semibold">Closed</span>
+                  </div>
+
+                </div>
+              )}
+
+            </div>
+
+            {/* Satellite Floating Badges */}
+            <div className="hidden sm:flex absolute -top-3 -right-2 z-20 items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-md text-xs font-semibold text-slate-800">
+              <Zap className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
+              <span>Sub-120ms CTI Screen-Pop</span>
+            </div>
+
+            <div className="hidden sm:flex absolute -bottom-3 -left-2 z-20 items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-md text-xs font-semibold text-slate-800">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true" />
+              <span>WhatsApp Synced · #CX-88492</span>
+            </div>
 
           </div>
         </div>
@@ -333,23 +451,23 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           </span>
           <div className="flex items-center flex-wrap justify-center gap-8 sm:gap-12 opacity-80 hover:opacity-100 transition-opacity">
             <Link href="/salesforce" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <SalesforceLogo className="h-5 w-auto" />
+              <SalesforceLogo className="h-5 w-auto" aria-hidden="true" />
               <span className="text-sm font-semibold">Salesforce</span>
             </Link>
             <Link href="/zoho" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <ZohoLogo className="h-5 w-auto" />
+              <ZohoLogo className="h-5 w-auto" aria-hidden="true" />
               <span className="text-sm font-semibold">Zoho CRM</span>
             </Link>
             <Link href="/zendesk" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <ZendeskLogo className="h-5 w-auto" />
+              <ZendeskLogo className="h-5 w-auto" aria-hidden="true" />
               <span className="text-sm font-semibold">Zendesk</span>
             </Link>
             <Link href="/whatsapp-business" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <WhatsAppLogo className="h-5 w-auto" />
+              <WhatsAppLogo className="h-5 w-auto" aria-hidden="true" />
               <span className="text-sm font-semibold">WhatsApp</span>
             </Link>
             <Link href="/freshdesk" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <FreshdeskLogo className="h-5 w-auto" />
+              <FreshdeskLogo className="h-5 w-auto" aria-hidden="true" />
               <span className="text-sm font-semibold">Freshdesk</span>
             </Link>
           </div>

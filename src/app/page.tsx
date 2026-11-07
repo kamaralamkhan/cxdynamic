@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import CalmHero from "@/components/CalmHero";
 import ProofAndMarquee from "@/components/ProofAndMarquee";
+import ModernVsLegacySection from "@/components/ModernVsLegacySection";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import PlatformModesSection from "@/components/PlatformModesSection";
 import AgenticAISection from "@/components/AgenticAISection";
@@ -81,6 +82,9 @@ export default function Home() {
 
       {/* Fold 2 — Proof Strip: 4 Core AI SaaS Metrics (72% Containment, 3.8x FCR, 100% QA, -44% Cost) */}
       <ProofAndMarquee />
+
+      {/* Fold 2.5 — Architecture Comparison: Modern Cloud Voice vs Yesterday's PBX */}
+      <ModernVsLegacySection />
 
       {/* Fold 3 — Three Operating Modes: Team-Led, AI-Assisted, AI-Led Continuum */}
       <PlatformModesSection />
