@@ -240,14 +240,12 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
 
         {/* Minimal Font-to-Text Ratio Headline & Subhead */}
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-headline font-semibold text-3xl sm:text-4xl lg:text-[46px] tracking-[-0.02em] text-slate-900 leading-[1.16]">
+          <h1 className="font-headline font-semibold text-3xl sm:text-4xl lg:text-5xl tracking-[-0.02em] text-slate-900 leading-[1.16]">
             The cloud contact center platform built for{" "}
-            <span className="text-sky-700 bg-gradient-to-r from-sky-700 via-sky-600 to-sky-500 bg-clip-text text-transparent">
-              effortless customer conversations.
-            </span>
+            <span className="text-sky-700">effortless customer conversations.</span>
           </h1>
 
-          <p className="mt-4 text-sm sm:text-base lg:text-[17px] text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base lg:text-lg text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
             Connect voice, SMS, WhatsApp, and your CRM in one unified workspace. Deployed in hours, zero PBX maintenance, and 99.999% global voice reliability.
           </p>
 
@@ -548,7 +546,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                             <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "1.1s", animationDelay: "0.4s" }} />
                             <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "0.8s", animationDelay: "0.15s" }} />
                             <span className="text-[10px] text-slate-400 ml-1 font-mono">HD Opus</span>
-                            <span className="text-[9px] font-semibold text-emerald-800 bg-emerald-50 px-1 py-0.2 rounded border border-emerald-100 font-mono ml-1">
+                            <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-1 py-0.2 rounded border border-emerald-100 font-mono ml-1">
                               SIP 100%
                             </span>
                           </div>
@@ -612,7 +610,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                             className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white text-sky-800 hover:bg-slate-100 font-medium border border-slate-200 shadow-2xs transition-colors cursor-pointer"
                           >
                             <span>Insert Script</span>
-                            <kbd className="text-[9px] px-1 bg-slate-100 rounded border border-slate-200 text-slate-500 font-mono">⌘K</kbd>
+                            <kbd className="text-[10px] px-1 bg-slate-100 rounded border border-slate-200 text-slate-500 font-mono">⌘K</kbd>
                           </button>
                           <button
                             type="button"

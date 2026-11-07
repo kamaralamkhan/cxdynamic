@@ -16,7 +16,7 @@ export default function StitchTabsSection() {
           <span className="text-xs font-semibold uppercase tracking-wider text-sky-800 font-headline">
             Built For Everyday Mastery
           </span>
-          <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-[34px] text-slate-900 mt-2 tracking-tight leading-snug">
+          <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 mt-2 tracking-tight leading-snug">
             One system. <span className="text-sky-700">Infinite control.</span>
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-2.5 max-w-2xl font-normal leading-relaxed">

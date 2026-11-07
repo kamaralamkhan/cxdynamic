@@ -115,7 +115,7 @@ export default function StitchInfrastructureSection() {
             <Radio className="w-3.5 h-3.5 text-sky-700 animate-pulse" />
             <span>Sub-Millisecond Edge Telephony</span>
           </div>
-          <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-[34px] text-slate-900 tracking-tight leading-snug">
+          <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
             Global Voice Telephony Infrastructure
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
@@ -253,11 +253,11 @@ export default function StitchInfrastructureSection() {
                 <div className="flex flex-col text-left leading-none">
                   <span className="text-[11px] font-bold text-slate-900 flex items-center gap-1">
                     Manila HQ
-                    <span className="text-[9px] px-1 py-0.2 bg-emerald-100 text-emerald-800 rounded font-mono font-semibold uppercase">
+                    <span className="text-[10px] px-1 py-0.2 bg-emerald-100 text-emerald-800 rounded font-mono font-semibold uppercase">
                       Primary
                     </span>
                   </span>
-                  <span className="text-[9px] text-emerald-700 font-mono font-semibold mt-0.5">11.8ms • Ortigas Hub</span>
+                  <span className="text-[10px] text-emerald-700 font-mono font-semibold mt-0.5">11.8ms • Ortigas Hub</span>
                 </div>
               </div>
             </div>
@@ -276,7 +276,7 @@ export default function StitchInfrastructureSection() {
               }`}>
                 <div className="flex flex-col text-left leading-none">
                   <span className="text-[10px] font-bold text-slate-900">Singapore</span>
-                  <span className="text-[9px] text-sky-700 font-mono font-semibold">18ms • Peering</span>
+                  <span className="text-[10px] text-sky-700 font-mono font-semibold">18ms • Peering</span>
                 </div>
               </div>
             </div>
@@ -295,7 +295,7 @@ export default function StitchInfrastructureSection() {
               }`}>
                 <div className="flex flex-col text-left leading-none">
                   <span className="text-[10px] font-bold text-slate-900">Tokyo</span>
-                  <span className="text-[9px] text-sky-700 font-mono font-semibold">28ms • Edge</span>
+                  <span className="text-[10px] text-sky-700 font-mono font-semibold">28ms • Edge</span>
                 </div>
               </div>
             </div>
@@ -315,9 +315,9 @@ export default function StitchInfrastructureSection() {
                 <div className="flex flex-col text-left leading-none">
                   <span className="text-[10px] font-bold text-slate-900 flex items-center gap-1">
                     Frankfurt
-                    <span className="text-[8px] px-1 rounded bg-slate-100 text-sky-800 font-semibold">GDPR</span>
+                    <span className="text-[10px] px-1 rounded bg-slate-100 text-sky-800 font-semibold">GDPR</span>
                   </span>
-                  <span className="text-[9px] text-sky-700 font-mono font-semibold mt-0.5">68ms • Core SIP</span>
+                  <span className="text-[10px] text-sky-700 font-mono font-semibold mt-0.5">68ms • Core SIP</span>
                 </div>
               </div>
             </div>
@@ -336,7 +336,7 @@ export default function StitchInfrastructureSection() {
               }`}>
                 <div className="flex flex-col text-left leading-none">
                   <span className="text-[10px] font-bold text-slate-900">US-East (VA)</span>
-                  <span className="text-[9px] text-sky-700 font-mono font-semibold mt-0.5">42ms • Tier-1 Peering</span>
+                  <span className="text-[10px] text-sky-700 font-mono font-semibold mt-0.5">42ms • Tier-1 Peering</span>
                 </div>
               </div>
             </div>
@@ -355,7 +355,7 @@ export default function StitchInfrastructureSection() {
               }`}>
                 <div className="flex flex-col text-left leading-none">
                   <span className="text-[10px] font-bold text-slate-900">Sydney</span>
-                  <span className="text-[9px] text-sky-700 font-mono font-semibold">45ms • Edge</span>
+                  <span className="text-[10px] text-sky-700 font-mono font-semibold">45ms • Edge</span>
                 </div>
               </div>
             </div>

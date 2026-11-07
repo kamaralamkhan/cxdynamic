@@ -25,7 +25,7 @@ export default function ModernVsLegacySection() {
             <ShieldCheck className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
             <span>Architecture Comparison</span>
           </div>
-          <h2 className="mt-3 font-headline font-semibold text-2xl sm:text-3xl lg:text-[34px] text-slate-900 tracking-tight leading-snug">
+          <h2 className="mt-3 font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
             Modern Cloud Voice vs. <span className="text-sky-700">Yesterday&apos;s PBX</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">

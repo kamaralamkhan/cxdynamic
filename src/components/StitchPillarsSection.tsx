@@ -24,7 +24,7 @@ export default function StitchPillarsSection() {
         <span className="text-xs font-semibold text-sky-800 font-headline uppercase tracking-wider">
           Enterprise Cloud Voice
         </span>
-        <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-[34px] text-slate-900 mt-2 tracking-tight leading-snug">
+        <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 mt-2 tracking-tight leading-snug">
           Engineered for speed, built for <span className="text-sky-700">flawless operations</span>.
         </h2>
         <p className="text-sm sm:text-base text-slate-600 mt-2.5 max-w-2xl font-normal leading-relaxed">
