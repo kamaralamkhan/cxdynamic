@@ -1,46 +1,210 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import type { ComponentType } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
-  ChevronDown,
-  Menu,
-  X,
-  PhoneCall,
-  PhoneOutgoing,
-  Shuffle,
-  Cpu,
-  Phone,
-  Building2,
-  ArrowRight,
-  Layers,
-  Sparkles,
-  MessageSquare,
-  Headphones,
-  Bot,
-  Zap,
-  Globe2,
-  GraduationCap,
-  Store,
-  BarChart3,
-  Activity,
-  Mic,
-  MessageCircle,
-  ShieldCheck,
-  Workflow
+  Activity, ArrowRight, BarChart3, Blend, Bot, Boxes, Braces, BrainCircuit,
+  Building2, ChevronDown, CircleDollarSign, CloudCog, Database, GraduationCap,
+  Headphones, HeartPulse, Landmark, LifeBuoy, ListTree, Menu, MessageCircle,
+  MessagesSquare, MousePointerClick, Network, Phone, PhoneCall, PhoneIncoming,
+  PhoneOutgoing, Plane, RadioTower, Route, ShieldCheck, ShoppingBag, Shuffle,
+  Sparkles, Store, Truck, UserCheck, UsersRound, Webhook, Workflow, Wrench, X,
 } from "lucide-react";
 import {
-  SalesforceLogo,
-  ZohoLogo,
-  ZendeskLogo,
-  FreshdeskLogo,
-  HubSpotLogo,
-  WhatsAppLogo
+  FreshdeskLogo, HubSpotLogo, IntercomLogo, SalesforceLogo, WhatsAppLogo,
+  ZendeskLogo, ZohoLogo,
 } from "@/components/IntegrationLogos";
 
-interface NavbarProps {
-  onRequestQuote?: () => void;
+interface NavbarProps { onRequestQuote?: () => void }
+type NavIcon = ComponentType<{ className?: string }>;
+interface MegaLink { label: string; href: string; icon: NavIcon }
+interface MegaGroup { title: string; description?: string; links: MegaLink[] }
+interface MenuConfig { title: string; groups: MegaGroup[]; browseHref: string; browseLabel: string }
+
+const PLATFORM_GROUPS: MegaGroup[] = [
+  {
+    title: "AI-powered CX",
+    description: "Automate, assist, analyse, and improve every conversation.",
+    links: [
+      { label: "AI Voice & Chat Agents", href: "/conversational-ai", icon: Bot },
+      { label: "Agentic AI", href: "/#agentic-ai", icon: BrainCircuit },
+      { label: "AI Self-Service", href: "/conversational-ai", icon: Sparkles },
+      { label: "Agent Assist & Copilot", href: "/#human-ai-collaboration", icon: Headphones },
+      { label: "Conversation Intelligence", href: "/speech-analytics", icon: Activity },
+      { label: "AI Quality Assurance", href: "/#ai-qa", icon: ShieldCheck },
+      { label: "CX Analytics", href: "/#analytics", icon: BarChart3 },
+      { label: "Omnichannel Engagement", href: "/#omnichannel", icon: MessagesSquare },
+    ],
+  },
+  {
+    title: "Contact center core",
+    description: "Route inbound and outbound work across one cloud platform.",
+    links: [
+      { label: "Inbound Calling", href: "/inbound-calling", icon: PhoneIncoming },
+      { label: "Outbound Calling", href: "/outbound-calling", icon: PhoneOutgoing },
+      { label: "Blended Contact Center", href: "/blended-call-centre", icon: Blend },
+      { label: "Interactive Voice Response", href: "/ivr", icon: ListTree },
+      { label: "ACD & Smart Routing", href: "/acd", icon: Route },
+      { label: "Auto Attendant", href: "/auto-attendant", icon: PhoneCall },
+      { label: "Omnichannel Routing", href: "/omnichannel-routing", icon: Shuffle },
+      { label: "WhatsApp Business", href: "/whatsapp-business", icon: MessageCircle },
+    ],
+  },
+  {
+    title: "Sales & agent tools",
+    description: "Give teams the right calling mode and customer context.",
+    links: [
+      { label: "Click to Call", href: "/click-to-call", icon: MousePointerClick },
+      { label: "Auto Dialer", href: "/auto-dialer", icon: Phone },
+      { label: "Power Dialer", href: "/power-dialer", icon: PhoneOutgoing },
+      { label: "Predictive Dialer", href: "/predictive-dialer", icon: Activity },
+      { label: "Contact Manager", href: "/contact-manager", icon: UsersRound },
+      { label: "CTI Integrations", href: "/cti-integrations", icon: Network },
+      { label: "CRM Integrations", href: "/crm-integrations", icon: CloudCog },
+    ],
+  },
+];
+
+const SOLUTION_GROUPS: MegaGroup[] = [
+  {
+    title: "Enterprise industries",
+    links: [
+      { label: "Banking & Financial Services", href: "/enterprise", icon: Landmark },
+      { label: "Insurance", href: "/enterprise", icon: ShieldCheck },
+      { label: "Telecom", href: "/enterprise", icon: RadioTower },
+      { label: "Healthcare", href: "/enterprise", icon: HeartPulse },
+      { label: "BPO & Contact Centers", href: "/bpo", icon: Building2 },
+    ],
+  },
+  {
+    title: "Customer-facing industries",
+    links: [
+      { label: "E-commerce", href: "/small-business", icon: ShoppingBag },
+      { label: "Logistics", href: "/#challenges", icon: Truck },
+      { label: "Travel & Hospitality", href: "/#challenges", icon: Plane },
+      { label: "Retail", href: "/small-business", icon: Store },
+      { label: "Education", href: "/education", icon: GraduationCap },
+    ],
+  },
+  {
+    title: "High-value use cases",
+    links: [
+      { label: "Collections", href: "/page/Customer%20Experience%20management", icon: CircleDollarSign },
+      { label: "Sales & Lead Qualification", href: "/#challenges", icon: UserCheck },
+      { label: "Customer Support", href: "/#challenges", icon: LifeBuoy },
+      { label: "Human + AI Collaboration", href: "/#human-ai-collaboration", icon: Workflow },
+      { label: "AI QA & Compliance", href: "/#ai-qa", icon: ShieldCheck },
+    ],
+  },
+];
+
+const INTEGRATION_GROUPS: MegaGroup[] = [
+  {
+    title: "CRM",
+    description: "Put live customer context inside every interaction.",
+    links: [
+      { label: "Salesforce", href: "/salesforce", icon: SalesforceLogo },
+      { label: "HubSpot", href: "/hubspot", icon: HubSpotLogo },
+      { label: "Zoho CRM", href: "/zoho", icon: ZohoLogo },
+      { label: "Microsoft Dynamics", href: "/crm-integrations", icon: CloudCog },
+    ],
+  },
+  {
+    title: "Helpdesk & channels",
+    description: "Keep tickets, calls, and digital conversations connected.",
+    links: [
+      { label: "Zendesk", href: "/zendesk", icon: ZendeskLogo },
+      { label: "Freshdesk", href: "/freshdesk", icon: FreshdeskLogo },
+      { label: "ServiceNow", href: "/cti-integrations", icon: Wrench },
+      { label: "Intercom", href: "/intercom-integration", icon: IntercomLogo },
+      { label: "WhatsApp Business", href: "/whatsapp-business", icon: WhatsAppLogo },
+    ],
+  },
+  {
+    title: "Enterprise ecosystem",
+    description: "Connect operational and AI systems without replacing them.",
+    links: [
+      { label: "ERP & Enterprise Apps", href: "/crm-integrations", icon: Database },
+      { label: "REST APIs", href: "/crm-integrations", icon: Braces },
+      { label: "Real-time Webhooks", href: "/crm-integrations", icon: Webhook },
+      { label: "Custom Applications", href: "/cti-integrations", icon: Boxes },
+      { label: "AI / LLM Connectors", href: "/conversational-ai", icon: BrainCircuit },
+    ],
+  },
+];
+
+const MENUS: Record<string, MenuConfig> = {
+  platform: {
+    title: "One platform for AI, digital, and human-led CX",
+    groups: PLATFORM_GROUPS,
+    browseHref: "/products",
+    browseLabel: "Explore all products and services",
+  },
+  solutions: {
+    title: "CX solutions shaped around your industry and workflow",
+    groups: SOLUTION_GROUPS,
+    browseHref: "/contact-us#quote",
+    browseLabel: "Discuss your use case",
+  },
+  integrations: {
+    title: "Connect the customer technology you already use",
+    groups: INTEGRATION_GROUPS,
+    browseHref: "/#integrations",
+    browseLabel: "View the integration ecosystem",
+  },
+};
+
+const NAV_ITEMS = [
+  { id: "platform", label: "Platform" },
+  { id: "solutions", label: "Solutions" },
+  { id: "integrations", label: "Integrations" },
+] as const;
+
+function idFor(value: string) {
+  return value.toLowerCase().replaceAll("&", "and").replaceAll(" ", "-");
+}
+
+function DesktopMegaMenu({ menuId, onNavigate, onEnter, onLeave }: {
+  menuId: string; onNavigate: () => void; onEnter: () => void; onLeave: () => void;
+}) {
+  const menu = MENUS[menuId];
+  return (
+    <div id={`${menuId}-mega-menu`} className="absolute inset-x-0 top-full z-50 pt-2" onMouseEnter={onEnter} onMouseLeave={onLeave}>
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="max-h-[calc(100dvh-7.5rem)] overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-[0_24px_64px_-24px_rgba(15,23,42,0.32)]">
+          <div className="flex items-center justify-between gap-6 border-b border-slate-200 px-6 py-4">
+            <p className="text-base font-semibold text-slate-950">{menu.title}</p>
+            <Link href={menu.browseHref} onClick={onNavigate} className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-lg px-3 text-sm font-semibold text-sky-700 transition-colors hover:bg-sky-50 hover:text-sky-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">
+              {menu.browseLabel}<ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-3 gap-7 p-6">
+            {menu.groups.map((group) => (
+              <section key={group.title} aria-labelledby={`${menuId}-${idFor(group.title)}`}>
+                <h2 id={`${menuId}-${idFor(group.title)}`} className="text-sm font-bold text-slate-950">{group.title}</h2>
+                {group.description ? <p className="mt-1 max-w-sm text-xs leading-relaxed text-slate-500">{group.description}</p> : null}
+                <ul className="mt-3 grid gap-1 xl:grid-cols-2">
+                  {group.links.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <li key={`${group.title}-${item.label}`}>
+                        <Link href={item.href} onClick={onNavigate} className="flex min-h-11 items-center gap-3 rounded-xl px-2.5 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-1">
+                          <Icon className="h-5 w-5 shrink-0 text-sky-700" aria-hidden="true" />
+                          <span className="min-w-0 leading-snug">{item.label}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function Navbar({ onRequestQuote }: NavbarProps) {
@@ -50,14 +214,11 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
   const navRef = useRef<HTMLElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Close dropdown on click outside
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        if (timeoutRef.current) {
-          clearTimeout(timeoutRef.current);
-          timeoutRef.current = null;
-        }
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
         setOpenDropdown(null);
       }
     };
@@ -65,515 +226,133 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Cleanup timeout
+  useEffect(() => () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); }, []);
+
   useEffect(() => {
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, []);
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [mobileOpen]);
 
   const handleMouseEnter = (name: string) => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = null;
     setOpenDropdown(name);
   };
-
   const handleMouseLeave = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    timeoutRef.current = setTimeout(() => {
-      setOpenDropdown(null);
-    }, 220);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => setOpenDropdown(null), 220);
   };
-
   const toggleDropdown = (name: string) => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-    setOpenDropdown(openDropdown === name ? null : name);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = null;
+    setOpenDropdown((current) => current === name ? null : name);
   };
-
-  const toggleMobileAccordion = (name: string) => {
-    setMobileAccordion(mobileAccordion === name ? null : name);
-  };
-
   const closeAll = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = null;
     setOpenDropdown(null);
     setMobileOpen(false);
   };
 
   return (
-    <header ref={navRef} className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs">
-      {/* Utility Top Bar (36px, bg-slate-900, hidden on <md) */}
-      <div className="hidden md:flex h-9 items-center bg-slate-900 text-slate-300 px-6 text-xs border-b border-slate-800">
-        <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2 text-slate-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <span>VIP support: </span>
-              <a href="tel:+639060986036" className="hover:text-white transition-colors font-medium">
-                +63 906 098 6036
-              </a>
-            </span>
-          </div>
-          <div className="flex items-center gap-5 text-xs text-slate-400">
-            <Link href="/about-us" className="hover:text-white transition-colors">About Us</Link>
-            <span className="text-slate-700" aria-hidden="true">|</span>
-            <Link href="/blogs" className="hover:text-white transition-colors">Blog</Link>
-            <span className="text-slate-700" aria-hidden="true">|</span>
-            <Link href="/contact-us" className="hover:text-white transition-colors">Support</Link>
+    <header ref={navRef} className="sticky top-0 z-50 w-full overflow-x-clip border-b border-slate-200 bg-white/95 backdrop-blur-md">
+      <div className="hidden h-9 items-center border-b border-slate-800 bg-slate-950 px-6 text-xs text-slate-300 md:flex">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+          <a href="tel:+639060986036" className="inline-flex items-center gap-2 font-medium transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400">
+            <PhoneCall className="h-3.5 w-3.5 text-sky-400" aria-hidden="true" />VIP support: +63 906 098 6036
+          </a>
+          <div className="flex items-center gap-5 text-slate-400">
+            <Link href="/about-us" className="transition-colors hover:text-white">About Us</Link>
+            <Link href="/blogs" className="transition-colors hover:text-white">Knowledge Centre</Link>
+            <Link href="/contact-us" className="transition-colors hover:text-white">Support</Link>
           </div>
         </div>
       </div>
 
-      {/* Main Navbar Bar (Height 64px, max-w-7xl px-6) */}
-      <div className="relative max-w-7xl mx-auto px-6">
-        <div className="flex h-16 items-center justify-between">
-
-          {/* Authentic Brand Logo */}
-          <Link href="/" onClick={closeAll} className="flex items-center shrink-0 pr-6">
-            <Image
-              src="/images/logo.png"
-              alt="CXDYNAMIQ Cloud Contact Center"
-              width={180}
-              height={36}
-              priority
-              className="h-8 w-auto object-contain"
-            />
+      <div className="relative mx-auto w-[100dvw] max-w-7xl px-4 sm:px-6">
+        <div className="flex h-16 items-center justify-between gap-2 lg:gap-5">
+          <Link href="/" onClick={closeAll} className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2" aria-label="CXdynamIQ home">
+            <Image src="/images/logo.png" alt="CXdynamIQ" width={180} height={36} priority className="h-7 w-auto object-contain sm:h-8" />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center h-full gap-7 xl:gap-8" aria-label="Main Navigation">
-
-            {/* Platform Dropdown */}
-            <div
-              className="group h-full flex items-center"
-              onMouseEnter={() => handleMouseEnter("platform")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                type="button"
-                onClick={() => toggleDropdown("platform")}
-                aria-expanded={openDropdown === "platform"}
-                className={`whitespace-nowrap inline-flex items-center gap-1.5 text-[15px] font-medium transition-colors cursor-pointer ${
-                  openDropdown === "platform"
-                    ? "text-sky-700 font-semibold"
-                    : "text-slate-600 hover:text-slate-900"
-                }`}
-              >
-                <span>Platform</span>
-                <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${
-                  openDropdown === "platform" ? "rotate-180 text-sky-700" : "group-hover:rotate-180"
-                }`} />
-              </button>
-
-              {openDropdown === "platform" && (
-                <div 
-                  className="absolute top-full left-0 right-0 pt-2 z-50 motion-safe:animate-in fade-in-50 duration-150 motion-reduce:animate-none"
-                  onMouseEnter={() => handleMouseEnter("platform")}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div className="max-w-7xl mx-auto px-6">
-                    <div className="bg-white rounded-2xl border border-slate-200 shadow-md p-6 grid grid-cols-3 gap-6">
-                      
-                      <div className="space-y-4">
-                        <span className="text-xs font-semibold text-slate-500 block">AI Engagement</span>
-                        <Link href="/conversational-ai" onClick={closeAll} className="group/item block p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
-                          <div className="flex items-center gap-3">
-                            <Bot className="w-5 h-5 text-sky-600 shrink-0" />
-                            <div>
-                              <p className="text-sm font-semibold text-slate-900 group-hover/item:text-sky-700 transition-colors">AI Voice & Chat Agents</p>
-                              <p className="text-xs text-slate-500 mt-0.5">Autonomous natural conversation on voice and messaging</p>
-                            </div>
-                          </div>
-                        </Link>
-
-                        <Link href="/omnichannel-routing" onClick={closeAll} className="group/item block p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
-                          <div className="flex items-center gap-3">
-                            <Shuffle className="w-5 h-5 text-sky-600 shrink-0" />
-                            <div>
-                              <p className="text-sm font-semibold text-slate-900 group-hover/item:text-sky-700 transition-colors">Omnichannel Routing</p>
-                              <p className="text-xs text-slate-500 mt-0.5">Persistent context across Voice, WhatsApp, SMS, and Web</p>
-                            </div>
-                          </div>
-                        </Link>
-                      </div>
-
-                      <div className="space-y-4">
-                        <span className="text-xs font-semibold text-slate-500 block">Contact Center Core</span>
-                        <Link href="/inbound-calling" onClick={closeAll} className="group/item block p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
-                          <div className="flex items-center gap-3">
-                            <PhoneCall className="w-5 h-5 text-sky-600 shrink-0" />
-                            <div>
-                              <p className="text-sm font-semibold text-slate-900 group-hover/item:text-sky-700 transition-colors">Inbound Calling & IVR</p>
-                              <p className="text-xs text-slate-500 mt-0.5">Multi-level IVR, skill-based ACD, and cloud SIP trunking</p>
-                            </div>
-                          </div>
-                        </Link>
-
-                        <Link href="/auto-dialer" onClick={closeAll} className="group/item block p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
-                          <div className="flex items-center gap-3">
-                            <PhoneOutgoing className="w-5 h-5 text-sky-600 shrink-0" />
-                            <div>
-                              <p className="text-sm font-semibold text-slate-900 group-hover/item:text-sky-700 transition-colors">Outbound Sales Dialers</p>
-                              <p className="text-xs text-slate-500 mt-0.5">Predictive, progressive, and power campaign dialing</p>
-                            </div>
-                          </div>
-                        </Link>
-                      </div>
-
-                      <div className="space-y-4">
-                        <span className="text-xs font-semibold text-slate-500 block">Intelligence & Quality</span>
-                        <Link href="/speech-analytics" onClick={closeAll} className="group/item block p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
-                          <div className="flex items-center gap-3">
-                            <Activity className="w-5 h-5 text-sky-600 shrink-0" />
-                            <div>
-                              <p className="text-sm font-semibold text-slate-900 group-hover/item:text-sky-700 transition-colors">Conversation Intelligence</p>
-                              <p className="text-xs text-slate-500 mt-0.5">100% automated QA, transcription, and compliance scoring</p>
-                            </div>
-                          </div>
-                        </Link>
-
-                        <Link href="/contact-manager" onClick={closeAll} className="group/item block p-2.5 rounded-xl hover:bg-slate-50 transition-colors">
-                          <div className="flex items-center gap-3">
-                            <BarChart3 className="w-5 h-5 text-sky-600 shrink-0" />
-                            <div>
-                              <p className="text-sm font-semibold text-slate-900 group-hover/item:text-sky-700 transition-colors">Real-Time CX Analytics</p>
-                              <p className="text-xs text-slate-500 mt-0.5">Live queue metrics, SLA alerts, and supervisor dashboards</p>
-                            </div>
-                          </div>
-                        </Link>
-                      </div>
-
-                    </div>
-                  </div>
+          <nav className="hidden h-full items-center gap-5 lg:flex xl:gap-7" aria-label="Main navigation">
+            {NAV_ITEMS.map((item) => {
+              const active = openDropdown === item.id;
+              return (
+                <div key={item.id} className="flex h-full items-center" onMouseEnter={() => handleMouseEnter(item.id)} onMouseLeave={handleMouseLeave}>
+                  <button type="button" onClick={() => toggleDropdown(item.id)} aria-expanded={active} aria-controls={`${item.id}-mega-menu`} className={`inline-flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-lg px-1 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 ${active ? "text-sky-700" : "text-slate-700 hover:text-slate-950"}`}>
+                    {item.label}<ChevronDown className={`h-4 w-4 transition-transform duration-200 ${active ? "rotate-180 text-sky-700" : "text-slate-400"}`} aria-hidden="true" />
+                  </button>
+                  {active ? <DesktopMegaMenu menuId={item.id} onNavigate={closeAll} onEnter={() => handleMouseEnter(item.id)} onLeave={handleMouseLeave} /> : null}
                 </div>
-              )}
-            </div>
-
-            {/* Solutions Dropdown */}
-            <div
-              className="group h-full flex items-center"
-              onMouseEnter={() => handleMouseEnter("solutions")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                type="button"
-                onClick={() => toggleDropdown("solutions")}
-                aria-expanded={openDropdown === "solutions"}
-                className={`whitespace-nowrap inline-flex items-center gap-1.5 text-[15px] font-medium transition-colors cursor-pointer ${
-                  openDropdown === "solutions"
-                    ? "text-sky-700 font-semibold"
-                    : "text-slate-600 hover:text-slate-900"
-                }`}
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${
-                  openDropdown === "solutions" ? "rotate-180 text-sky-700" : "group-hover:rotate-180"
-                }`} />
-              </button>
-
-              {openDropdown === "solutions" && (
-                <div 
-                  className="absolute top-full left-0 right-0 pt-2 z-50 motion-safe:animate-in fade-in-50 duration-150 motion-reduce:animate-none"
-                  onMouseEnter={() => handleMouseEnter("solutions")}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div className="max-w-7xl mx-auto px-6">
-                    <div className="bg-white rounded-2xl border border-slate-200 shadow-md p-6 grid grid-cols-3 gap-6">
-                      
-                      <div className="space-y-3">
-                        <span className="text-xs font-semibold text-slate-500 block">By Industry</span>
-                        <Link href="/bpo" onClick={closeAll} className="block p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                          <p className="text-sm font-semibold text-slate-900 hover:text-sky-700">BPO & Contact Centers</p>
-                          <p className="text-xs text-slate-500">Multi-tenant, high-concurrency telephony with granular billing</p>
-                        </Link>
-                        <Link href="/enterprise" onClick={closeAll} className="block p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                          <p className="text-sm font-semibold text-slate-900 hover:text-sky-700">Banking & Financial Services</p>
-                          <p className="text-xs text-slate-500">Secure PCI-DSS & SOC2 compliant transactions and verification</p>
-                        </Link>
-                      </div>
-
-                      <div className="space-y-3">
-                        <span className="text-xs font-semibold text-slate-500 block">Growth Markets</span>
-                        <Link href="/education" onClick={closeAll} className="block p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                          <p className="text-sm font-semibold text-slate-900 hover:text-sky-700">Education & Admissions</p>
-                          <p className="text-xs text-slate-500">Multi-channel student inquiries, reminders, and enrollment</p>
-                        </Link>
-                        <Link href="/small-business" onClick={closeAll} className="block p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                          <p className="text-sm font-semibold text-slate-900 hover:text-sky-700">E-commerce & Retail</p>
-                          <p className="text-xs text-slate-500">Automated order updates, delivery tracking via WhatsApp</p>
-                        </Link>
-                      </div>
-
-                      <div className="p-4 bg-slate-50 rounded-xl flex flex-col justify-between">
-                        <div>
-                          <p className="text-sm font-semibold text-slate-900">Custom Enterprise Solutions</p>
-                          <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">
-                            Need custom SIP interconnection, hybrid on-prem bridges, or dedicated private AI models?
-                          </p>
-                        </div>
-                        <Link
-                          href="/contact-us#quote"
-                          onClick={closeAll}
-                          className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-sky-700 hover:text-sky-800"
-                        >
-                          <span>Speak with an engineer</span>
-                          <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
-                        </Link>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Integrations Dropdown */}
-            <div
-              className="group h-full flex items-center"
-              onMouseEnter={() => handleMouseEnter("integrations")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                type="button"
-                onClick={() => toggleDropdown("integrations")}
-                aria-expanded={openDropdown === "integrations"}
-                className={`whitespace-nowrap inline-flex items-center gap-1.5 text-[15px] font-medium transition-colors cursor-pointer ${
-                  openDropdown === "integrations"
-                    ? "text-sky-700 font-semibold"
-                    : "text-slate-600 hover:text-slate-900"
-                }`}
-              >
-                <span>Integrations</span>
-                <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${
-                  openDropdown === "integrations" ? "rotate-180 text-sky-700" : "group-hover:rotate-180"
-                }`} />
-              </button>
-
-              {openDropdown === "integrations" && (
-                <div 
-                  className="absolute top-full left-0 right-0 pt-2 z-50 motion-safe:animate-in fade-in-50 duration-150 motion-reduce:animate-none"
-                  onMouseEnter={() => handleMouseEnter("integrations")}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div className="max-w-7xl mx-auto px-6">
-                    <div className="bg-white rounded-2xl border border-slate-200 shadow-md p-6 grid grid-cols-4 gap-5">
-                      
-                      <Link href="/salesforce" onClick={closeAll} className="group/int flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
-                        <SalesforceLogo className="w-7 h-7 shrink-0" />
-                        <div>
-                          <p className="text-sm font-semibold text-slate-900 group-hover/int:text-sky-700">Salesforce</p>
-                          <p className="text-xs text-slate-500">Native CTI screen-pop</p>
-                        </div>
-                      </Link>
-
-                      <Link href="/zoho" onClick={closeAll} className="group/int flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
-                        <ZohoLogo className="w-7 h-7 shrink-0" />
-                        <div>
-                          <p className="text-sm font-semibold text-slate-900 group-hover/int:text-sky-700">Zoho CRM</p>
-                          <p className="text-xs text-slate-500">PhoneBridge sync</p>
-                        </div>
-                      </Link>
-
-                      <Link href="/zendesk" onClick={closeAll} className="group/int flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
-                        <ZendeskLogo className="w-7 h-7 shrink-0" />
-                        <div>
-                          <p className="text-sm font-semibold text-slate-900 group-hover/int:text-sky-700">Zendesk</p>
-                          <p className="text-xs text-slate-500">Embedded softphone</p>
-                        </div>
-                      </Link>
-
-                      <Link href="/whatsapp-business" onClick={closeAll} className="group/int flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
-                        <WhatsAppLogo className="w-7 h-7 shrink-0" />
-                        <div>
-                          <p className="text-sm font-semibold text-slate-900 group-hover/int:text-sky-700">WhatsApp</p>
-                          <p className="text-xs text-slate-500">Official Cloud API</p>
-                        </div>
-                      </Link>
-
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Direct Links */}
-            <Link
-              href="/about-us"
-              className="whitespace-nowrap text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              About
-            </Link>
-
-            <Link
-              href="/blogs"
-              className="whitespace-nowrap text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              Blog
-            </Link>
-
-            <Link
-              href="/contact-us"
-              className="whitespace-nowrap text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors"
-            >
-              Contact
-            </Link>
-
+              );
+            })}
+            <Link href="/blogs" className="whitespace-nowrap text-sm font-semibold text-slate-700 transition-colors hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500">Resources</Link>
+            <Link href="/about-us" className="whitespace-nowrap text-sm font-semibold text-slate-700 transition-colors hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500">About</Link>
           </nav>
 
-          {/* Right Action Buttons */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Link
-              href="/contact-us#quote"
-              onClick={onRequestQuote}
-              className="whitespace-nowrap text-sm font-semibold text-slate-700 hover:text-slate-900 px-3 py-2 transition-colors cursor-pointer"
-            >
-              Book a Demo
-            </Link>
-
-            <a
-              href="https://cxq360.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="whitespace-nowrap inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold bg-sky-700 text-white hover:bg-sky-800 shadow-2xs transition-colors cursor-pointer"
-            >
-              <span>Start Free Trial</span>
-              <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+          <div className="hidden shrink-0 items-center gap-2 lg:flex">
+            <Link href="/contact-us#quote" onClick={onRequestQuote} className="inline-flex min-h-11 items-center rounded-lg px-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500">Book a Demo</Link>
+            <a href="https://cxq360.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-sky-700 px-4 text-sm font-semibold text-white transition-colors hover:bg-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">
+              Start Free Trial<ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <div className="flex lg:hidden items-center gap-3">
-            <a
-              href="https://cxq360.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-semibold px-3 py-1.5 rounded-md bg-sky-700 text-white"
-            >
-              Free Trial
-            </a>
-            <button
-              type="button"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle Navigation Menu"
-              className="p-2 text-slate-700 hover:text-slate-900 focus:outline-none"
-            >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <div className="flex shrink-0 items-center gap-1.5 lg:hidden">
+            <a href="https://cxq360.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center rounded-lg bg-sky-700 px-3 text-xs font-semibold text-white transition-colors hover:bg-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">Free Trial</a>
+            <button type="button" onClick={() => setMobileOpen((current) => !current)} aria-expanded={mobileOpen} aria-controls="mobile-navigation" aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"} className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500">
+              {mobileOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
           </div>
-
         </div>
       </div>
 
-      {/* Mobile Drawer */}
-      {mobileOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white px-6 py-6 space-y-4 max-h-[85vh] overflow-y-auto">
-          <div className="space-y-2">
-            <Link
-              href="/"
-              onClick={closeAll}
-              className="block py-2 text-base font-semibold text-slate-900"
-            >
-              Home
-            </Link>
-
-            {/* Mobile Platform Accordion */}
-            <div>
-              <button
-                type="button"
-                onClick={() => toggleMobileAccordion("platform")}
-                className="w-full flex items-center justify-between py-2 text-base font-semibold text-slate-900"
-              >
-                <span>Platform</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileAccordion === "platform" ? "rotate-180" : ""}`} />
-              </button>
-              {mobileAccordion === "platform" && (
-                <div className="pl-4 space-y-2 pt-1 pb-2">
-                  <Link href="/conversational-ai" onClick={closeAll} className="block text-sm text-slate-600 py-1">AI Voice & Chat Agents</Link>
-                  <Link href="/omnichannel-routing" onClick={closeAll} className="block text-sm text-slate-600 py-1">Omnichannel Routing</Link>
-                  <Link href="/inbound-calling" onClick={closeAll} className="block text-sm text-slate-600 py-1">Inbound Calling & IVR</Link>
-                  <Link href="/auto-dialer" onClick={closeAll} className="block text-sm text-slate-600 py-1">Outbound Sales Dialers</Link>
-                  <Link href="/speech-analytics" onClick={closeAll} className="block text-sm text-slate-600 py-1">Conversation Intelligence</Link>
-                  <Link href="/contact-manager" onClick={closeAll} className="block text-sm text-slate-600 py-1">Real-Time CX Analytics</Link>
+      {mobileOpen ? (
+        <div id="mobile-navigation" className="fixed inset-x-0 bottom-0 top-16 z-50 overflow-y-auto border-t border-slate-200 bg-white px-4 pb-10 pt-4 sm:px-6 md:top-[6.25rem] lg:hidden">
+          <nav aria-label="Mobile navigation" className="mx-auto max-w-2xl">
+            <Link href="/" onClick={closeAll} className="flex min-h-12 items-center border-b border-slate-200 text-base font-bold text-slate-950">Home</Link>
+            {NAV_ITEMS.map((item) => {
+              const menu = MENUS[item.id];
+              const active = mobileAccordion === item.id;
+              return (
+                <div key={item.id} className="border-b border-slate-200">
+                  <button type="button" onClick={() => setMobileAccordion((current) => current === item.id ? null : item.id)} aria-expanded={active} aria-controls={`mobile-${item.id}`} className="flex min-h-14 w-full items-center justify-between text-left text-base font-bold text-slate-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-sky-500">
+                    {item.label}<ChevronDown className={`h-5 w-5 transition-transform duration-200 ${active ? "rotate-180 text-sky-700" : "text-slate-400"}`} aria-hidden="true" />
+                  </button>
+                  {active ? (
+                    <div id={`mobile-${item.id}`} className="pb-5">
+                      {menu.groups.map((group) => (
+                        <section key={group.title} className="pt-3">
+                          <h2 className="text-sm font-bold text-slate-950">{group.title}</h2>
+                          <ul className="mt-2 grid grid-cols-1 gap-1 sm:grid-cols-2">
+                            {group.links.map((link) => {
+                              const Icon = link.icon;
+                              return <li key={`${group.title}-${link.label}`}><Link href={link.href} onClick={closeAll} className="flex min-h-11 items-center gap-3 rounded-lg px-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500"><Icon className="h-5 w-5 shrink-0 text-sky-700" aria-hidden="true" />{link.label}</Link></li>;
+                            })}
+                          </ul>
+                        </section>
+                      ))}
+                      <Link href={menu.browseHref} onClick={closeAll} className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg px-2 text-sm font-bold text-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500">{menu.browseLabel}<ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+                    </div>
+                  ) : null}
                 </div>
-              )}
+              );
+            })}
+            <div className="grid grid-cols-2 gap-2 py-4">
+              <Link href="/blogs" onClick={closeAll} className="flex min-h-11 items-center rounded-lg px-2 text-sm font-bold text-slate-800">Resources</Link>
+              <Link href="/about-us" onClick={closeAll} className="flex min-h-11 items-center rounded-lg px-2 text-sm font-bold text-slate-800">About Us</Link>
+              <Link href="/contact-us" onClick={closeAll} className="flex min-h-11 items-center rounded-lg px-2 text-sm font-bold text-slate-800">Contact</Link>
+              <a href="tel:+639060986036" className="flex min-h-11 items-center rounded-lg px-2 text-sm font-bold text-slate-800">Call support</a>
             </div>
-
-            {/* Mobile Solutions Accordion */}
-            <div>
-              <button
-                type="button"
-                onClick={() => toggleMobileAccordion("solutions")}
-                className="w-full flex items-center justify-between py-2 text-base font-semibold text-slate-900"
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileAccordion === "solutions" ? "rotate-180" : ""}`} />
-              </button>
-              {mobileAccordion === "solutions" && (
-                <div className="pl-4 space-y-2 pt-1 pb-2">
-                  <Link href="/bpo" onClick={closeAll} className="block text-sm text-slate-600 py-1">BPO & Contact Centers</Link>
-                  <Link href="/enterprise" onClick={closeAll} className="block text-sm text-slate-600 py-1">Banking & Financial Services</Link>
-                  <Link href="/education" onClick={closeAll} className="block text-sm text-slate-600 py-1">Education & Admissions</Link>
-                  <Link href="/small-business" onClick={closeAll} className="block text-sm text-slate-600 py-1">E-commerce & Retail</Link>
-                </div>
-              )}
+            <div className="grid gap-3 border-t border-slate-200 pt-5 sm:grid-cols-2">
+              <Link href="/contact-us#quote" onClick={() => { closeAll(); onRequestQuote?.(); }} className="inline-flex min-h-12 items-center justify-center rounded-lg border border-slate-300 text-sm font-bold text-slate-900 transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500">Book a Demo</Link>
+              <a href="https://cxq360.ai/" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-sky-700 px-4 text-sm font-bold text-white transition-colors hover:bg-sky-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2">Start Free Trial<ArrowRight className="h-4 w-4" aria-hidden="true" /></a>
             </div>
-
-            {/* Mobile Integrations */}
-            <div>
-              <button
-                type="button"
-                onClick={() => toggleMobileAccordion("integrations")}
-                className="w-full flex items-center justify-between py-2 text-base font-semibold text-slate-900"
-              >
-                <span>Integrations</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${mobileAccordion === "integrations" ? "rotate-180" : ""}`} />
-              </button>
-              {mobileAccordion === "integrations" && (
-                <div className="pl-4 space-y-2 pt-1 pb-2">
-                  <Link href="/salesforce" onClick={closeAll} className="block text-sm text-slate-600 py-1">Salesforce CTI</Link>
-                  <Link href="/zoho" onClick={closeAll} className="block text-sm text-slate-600 py-1">Zoho PhoneBridge</Link>
-                  <Link href="/zendesk" onClick={closeAll} className="block text-sm text-slate-600 py-1">Zendesk Softphone</Link>
-                  <Link href="/whatsapp-business" onClick={closeAll} className="block text-sm text-slate-600 py-1">WhatsApp Cloud API</Link>
-                </div>
-              )}
-            </div>
-
-            <Link href="/about-us" onClick={closeAll} className="block py-2 text-base font-semibold text-slate-900">About Us</Link>
-            <Link href="/blogs" onClick={closeAll} className="block py-2 text-base font-semibold text-slate-900">Blog</Link>
-            <Link href="/contact-us" onClick={closeAll} className="block py-2 text-base font-semibold text-slate-900">Contact Us</Link>
-          </div>
-
-          <div className="pt-4 border-t border-slate-200 space-y-3">
-            <Link
-              href="/contact-us#quote"
-              onClick={closeAll}
-              className="block w-full text-center py-2.5 rounded-lg border border-slate-300 text-sm font-semibold text-slate-800"
-            >
-              Book a Demo
-            </Link>
-            <a
-              href="https://cxq360.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full text-center py-2.5 rounded-lg bg-sky-700 text-white text-sm font-semibold"
-            >
-              Start Free Trial (CXQ360.ai)
-            </a>
-          </div>
+          </nav>
         </div>
-      )}
+      ) : null}
     </header>
   );
 }
