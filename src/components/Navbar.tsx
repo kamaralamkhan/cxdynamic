@@ -123,27 +123,6 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
 
   return (
     <header ref={navRef} className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-2xs transition-shadow">
-      {/* Top Utility Bar (36px, bg-slate-900, hidden on <md) */}
-      <div className="hidden md:flex h-9 items-center bg-slate-900 text-slate-300 px-6 text-xs border-b border-slate-800">
-        <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2 text-slate-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <span>VIP support · </span>
-              <a href="tel:+639060986036" className="hover:text-white transition-colors font-medium">
-                +63 906 098 6036
-              </a>
-            </span>
-          </div>
-          <div className="flex items-center gap-4 text-xs text-slate-400">
-            <Link href="/about-us" className="hover:text-white transition-colors">About Us</Link>
-            <span className="text-slate-700">•</span>
-            <Link href="/blogs" className="hover:text-white transition-colors">Blog</Link>
-            <span className="text-slate-700">•</span>
-            <Link href="/contact-us" className="hover:text-white transition-colors">Support</Link>
-          </div>
-        </div>
-      </div>
 
       {/* Main Navbar Container (Height 64px, max-w-7xl px-6) */}
       <div className="relative max-w-7xl mx-auto px-6">

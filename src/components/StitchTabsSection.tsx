@@ -101,7 +101,7 @@ export default function StitchTabsSection() {
           </div>
 
           {/* Right Active Showcase Display */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 shadow-md border border-slate-200 min-h-[380px] flex flex-col justify-center relative overflow-hidden">
+          <div className="lg:col-span-7 bg-white rounded-3xl p-4 sm:p-8 shadow-md border border-slate-200 min-h-[340px] flex flex-col justify-center relative overflow-hidden">
             
             {/* Panel 1 */}
             {activeTab === "tab-1" && (
@@ -118,7 +118,7 @@ export default function StitchTabsSection() {
                 <p className="text-sm text-slate-600 leading-relaxed">
                   When an inbound customer dials in, CXDYNAMIQ looks up their caller ID in your CRM within 150 milliseconds. The agent answers already knowing who is calling, what plan they are on, and the status of their open tickets.
                 </p>
-                <div className="grid grid-cols-2 gap-4 pt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2">
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
                     <span className="text-xs text-slate-500 font-medium">First Call Resolution (FCR)</span>
                     <p className="font-headline font-bold text-2xl text-slate-900">+28%</p>
@@ -148,7 +148,7 @@ export default function StitchTabsSection() {
                 <p className="text-sm text-slate-600 leading-relaxed">
                   Skip dead tones and busy signals entirely. The dialer paces out outbound attempts based on agent wrap-up rates and only connects calls that have a live human on the other end.
                 </p>
-                <div className="grid grid-cols-2 gap-4 pt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2">
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
                     <span className="text-xs text-slate-500 font-medium">Talk Time per Hour</span>
                     <p className="font-headline font-bold text-2xl text-slate-900">46 mins</p>
@@ -178,7 +178,7 @@ export default function StitchTabsSection() {
                 <p className="text-sm text-slate-600 leading-relaxed">
                   Every detail is written back instantly: recordings, disposition codes, timestamped call transcripts, and AI sentiment grades are synced without your team having to type a single summary manually.
                 </p>
-                <div className="grid grid-cols-2 gap-4 pt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-2">
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1">
                     <span className="text-xs text-slate-500 font-medium">Data Accuracy</span>
                     <p className="font-headline font-bold text-2xl text-slate-900">99.9%</p>

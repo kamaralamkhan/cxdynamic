@@ -257,7 +257,7 @@ export default function StitchInfrastructureSection() {
                       Primary
                     </span>
                   </span>
-                  <span className="text-[10px] text-emerald-700 font-mono font-semibold mt-0.5">11.8ms • Ortigas Hub</span>
+                  <span className="text-[10px] text-emerald-700 font-mono font-semibold mt-0.5 hidden sm:inline-block">11.8ms • Ortigas Hub</span>
                 </div>
               </div>
             </div>
@@ -276,7 +276,7 @@ export default function StitchInfrastructureSection() {
               }`}>
                 <div className="flex flex-col text-left leading-none">
                   <span className="text-[10px] font-bold text-slate-900">Singapore</span>
-                  <span className="text-[10px] text-sky-700 font-mono font-semibold">18ms • Peering</span>
+                  <span className="text-[10px] text-sky-700 font-mono font-semibold hidden sm:inline-block">18ms • Peering</span>
                 </div>
               </div>
             </div>
@@ -295,7 +295,7 @@ export default function StitchInfrastructureSection() {
               }`}>
                 <div className="flex flex-col text-left leading-none">
                   <span className="text-[10px] font-bold text-slate-900">Tokyo</span>
-                  <span className="text-[10px] text-sky-700 font-mono font-semibold">28ms • Edge</span>
+                  <span className="text-[10px] text-sky-700 font-mono font-semibold hidden sm:inline-block">28ms • Edge</span>
                 </div>
               </div>
             </div>
@@ -317,7 +317,7 @@ export default function StitchInfrastructureSection() {
                     Frankfurt
                     <span className="text-[10px] px-1 rounded bg-slate-100 text-sky-800 font-semibold">GDPR</span>
                   </span>
-                  <span className="text-[10px] text-sky-700 font-mono font-semibold mt-0.5">68ms • Core SIP</span>
+                  <span className="text-[10px] text-sky-700 font-mono font-semibold mt-0.5 hidden sm:inline-block">68ms • Core SIP</span>
                 </div>
               </div>
             </div>
@@ -336,7 +336,7 @@ export default function StitchInfrastructureSection() {
               }`}>
                 <div className="flex flex-col text-left leading-none">
                   <span className="text-[10px] font-bold text-slate-900">US-East (VA)</span>
-                  <span className="text-[10px] text-sky-700 font-mono font-semibold mt-0.5">42ms • Tier-1 Peering</span>
+                  <span className="text-[10px] text-sky-700 font-mono font-semibold mt-0.5 hidden sm:inline-block">42ms • Tier-1 Peering</span>
                 </div>
               </div>
             </div>
@@ -355,7 +355,7 @@ export default function StitchInfrastructureSection() {
               }`}>
                 <div className="flex flex-col text-left leading-none">
                   <span className="text-[10px] font-bold text-slate-900">Sydney</span>
-                  <span className="text-[10px] text-sky-700 font-mono font-semibold">45ms • Edge</span>
+                  <span className="text-[10px] text-sky-700 font-mono font-semibold hidden sm:inline-block">45ms • Edge</span>
                 </div>
               </div>
             </div>

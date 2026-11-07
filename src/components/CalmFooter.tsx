@@ -300,7 +300,7 @@ export default function CalmFooter() {
           href={siteConfig.social.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 z-40 p-3.5 rounded-full bg-emerald-600 text-white shadow-md hover:bg-emerald-700 transition-colors flex items-center justify-center cursor-pointer border-2 border-white/20 focus-visible:outline-2 focus-visible:outline-emerald-400"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 p-2.5 sm:p-3.5 rounded-full bg-emerald-600 text-white shadow-md hover:bg-emerald-700 transition-colors flex items-center justify-center cursor-pointer border-2 border-white/20 focus-visible:outline-2 focus-visible:outline-emerald-400"
           aria-label="Chat with CXdynamIQ on WhatsApp"
         >
           <WhatsAppIcon className="w-6 h-6" />

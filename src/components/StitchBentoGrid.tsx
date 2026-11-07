@@ -22,7 +22,7 @@ export default function StitchBentoGrid() {
           <span className="text-xs font-semibold uppercase tracking-wider text-sky-800 font-headline">
             Orchestration &amp; Intelligence
           </span>
-          <h2 className="mt-2.5 font-headline font-semibold text-2xl sm:text-3xl lg:text-[34px] text-slate-900 tracking-tight leading-snug">
+          <h2 className="mt-2.5 font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
             Everything your modern revenue &amp; support teams need to conquer call volume.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl font-normal leading-relaxed">
@@ -34,7 +34,7 @@ export default function StitchBentoGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           {/* Bento Card 1: 2-Columns Wide - Intelligent ACD & Multi-Level IVR */}
-          <div className="lg:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
+          <div className="lg:col-span-2 bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <GitBranch className="w-6 h-6" aria-hidden="true" />
@@ -75,7 +75,7 @@ export default function StitchBentoGrid() {
           </div>
 
           {/* Bento Card 2: Real-Time CTI Screen-Pop */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
+          <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <FileText className="w-6 h-6" aria-hidden="true" />
@@ -96,7 +96,7 @@ export default function StitchBentoGrid() {
           </div>
 
           {/* Bento Card 3: Automated Sales & Power Dialer */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
+          <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <Zap className="w-6 h-6" aria-hidden="true" />
@@ -115,7 +115,7 @@ export default function StitchBentoGrid() {
           </div>
 
           {/* Bento Card 4: AI Whisper & Live Coaching */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
+          <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <Sparkles className="w-6 h-6" aria-hidden="true" />
@@ -132,7 +132,7 @@ export default function StitchBentoGrid() {
           </div>
 
           {/* Bento Card 5: Omnichannel CX Hub */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
+          <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <MessageSquare className="w-6 h-6" aria-hidden="true" />
@@ -151,7 +151,7 @@ export default function StitchBentoGrid() {
           </div>
 
           {/* Bento Card 6: Enterprise Analytics & Lossless Recording */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
+          <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-sm border border-slate-200/90 flex flex-col justify-between">
             <div>
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <BarChart3 className="w-6 h-6" aria-hidden="true" />

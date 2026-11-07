@@ -84,7 +84,7 @@ export default function StitchIntegrationsSection() {
             <span className="text-emerald-700 font-medium">100+ Live Connectors</span>
           </div>
 
-          <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-[34px] text-slate-900 tracking-tight leading-snug">
+          <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
             Seamless Bi-directional Integration Across Your Entire Stack
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed font-normal">
@@ -117,7 +117,7 @@ export default function StitchIntegrationsSection() {
         </div>
 
         {/* Central Orchestration Mesh Canvas with Parabolic Drifting Nodes */}
-        <div className="relative w-full min-h-[460px] sm:min-h-[500px] rounded-3xl bg-white border border-slate-200/90 shadow-xl overflow-hidden p-6 sm:p-10 flex flex-col justify-between select-none">
+        <div className="relative w-full rounded-2xl sm:rounded-3xl bg-white border border-slate-200/90 shadow-xl overflow-hidden p-6 sm:p-10 flex flex-col justify-between select-none">
           
           {/* Subtle Mesh Grid */}
           <div 

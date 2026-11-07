@@ -240,7 +240,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
 
         {/* Minimal Font-to-Text Ratio Headline & Subhead */}
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-headline font-semibold text-3xl sm:text-4xl lg:text-5xl tracking-[-0.02em] text-slate-900 leading-[1.16]">
+          <h1 className="font-headline font-semibold text-2xl sm:text-4xl lg:text-5xl tracking-[-0.02em] text-slate-900 leading-[1.2] sm:leading-[1.16]">
             The cloud contact center platform built for{" "}
             <span className="text-sky-700">effortless customer conversations.</span>
           </h1>
@@ -285,7 +285,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
         <div className="mt-10 relative max-w-5xl mx-auto">
           
           {/* Ambient Holographic Global Telemetry Globe Vector Canvas */}
-          <div aria-hidden="true" className="pointer-events-none absolute -inset-x-20 -top-24 -bottom-16 flex items-center justify-center overflow-visible z-0 opacity-85">
+          <div aria-hidden="true" className="pointer-events-none absolute -inset-x-20 -top-24 -bottom-16 hidden sm:flex items-center justify-center overflow-hidden z-0 opacity-85">
             <div className="relative w-[860px] h-[580px] max-w-none flex items-center justify-center">
               <div className="absolute w-[620px] h-[440px] rounded-[100%] bg-gradient-to-r from-sky-200/25 via-blue-200/15 to-emerald-200/20 blur-3xl opacity-70" />
               <div className="absolute w-[500px] h-[340px] rounded-[100%] bg-sky-100/30 blur-2xl" />
@@ -427,30 +427,30 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xl overflow-hidden relative z-10">
             
             {/* Top Window Titlebar */}
-            <div className="bg-slate-100/90 backdrop-blur-md px-5 py-3 flex items-center justify-between border-b border-slate-200/80">
-              <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-rose-400/90 inline-block" aria-hidden="true" />
-                <span className="w-3 h-3 rounded-full bg-amber-400/90 inline-block" aria-hidden="true" />
-                <span className="w-3 h-3 rounded-full bg-emerald-400/90 inline-block" aria-hidden="true" />
-                <span className="ml-3 text-xs font-semibold text-slate-700 font-headline tracking-wide flex items-center gap-1.5">
-                  <Headphones className="w-3.5 h-3.5 text-sky-700" aria-hidden="true" />
-                  CXDYNAMIQ Unified Softphone • Agent Workspace v3.0
+            <div className="bg-slate-100/90 backdrop-blur-md px-3 sm:px-5 py-2.5 sm:py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200/80 gap-2">
+              <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-rose-400/90 inline-block shrink-0" aria-hidden="true" />
+                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-400/90 inline-block shrink-0" aria-hidden="true" />
+                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400/90 inline-block shrink-0" aria-hidden="true" />
+                <span className="ml-1 sm:ml-3 text-xs font-semibold text-slate-700 font-headline tracking-wide flex items-center gap-1.5 truncate">
+                  <Headphones className="w-3.5 h-3.5 text-sky-700 shrink-0" aria-hidden="true" />
+                  <span className="truncate">CXDYNAMIQ <span className="hidden sm:inline">Unified Softphone • </span>Workspace</span>
                 </span>
               </div>
-              <div className="flex items-center gap-3">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-                  {activeTab === "voice" && "SIP Ready • HD Lossless (Opus)"}
-                  {activeTab === "whatsapp" && "Meta Business Cloud • Live 4 Chats"}
-                  {activeTab === "dialer" && "Power Dialer Active • 1.8x Rate"}
-                  {activeTab === "analytics" && "ASR Whisper Engine • 100% QA"}
+              <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+                <span className="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" aria-hidden="true" />
+                  {activeTab === "voice" && <span>SIP Ready<span className="hidden sm:inline"> • HD Opus</span></span>}
+                  {activeTab === "whatsapp" && <span>Live 4<span className="hidden sm:inline"> Chats • Meta Cloud</span></span>}
+                  {activeTab === "dialer" && <span>Dialer Active<span className="hidden sm:inline"> • 1.8x Rate</span></span>}
+                  {activeTab === "analytics" && <span>Speech QA<span className="hidden sm:inline"> • 100% Coverage</span></span>}
                 </span>
-                <span className="text-xs text-slate-400 font-mono hidden sm:inline">ID: 8820-AGENT</span>
+                <span className="text-[10px] sm:text-xs text-slate-400 font-mono hidden md:inline">ID: 8820-AGENT</span>
               </div>
             </div>
 
             {/* Interactive Service Tab Switcher (Fully Interactive Dynamic Tab Switcher) */}
-            <div className="bg-slate-50 border-b border-slate-200 px-4 pt-2 flex items-center gap-1 sm:gap-2 overflow-x-auto scrollbar-none">
+            <div className="bg-slate-50 border-b border-slate-200 px-2 sm:px-4 pt-2 flex items-center gap-1 sm:gap-2 overflow-x-auto scrollbar-none flex-nowrap">
               <button
                 type="button"
                 onClick={() => setActiveTab("voice")}
@@ -507,7 +507,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             </div>
 
             {/* DYNAMIC WORKSPACE CONTENT BASED ON ACTIVETAB */}
-            <div className="p-6 lg:p-7 bg-slate-50/40 min-h-[460px]">
+            <div className="p-3.5 sm:p-5 lg:p-7 bg-slate-50/40">
               
               {/* TAB 1: AI VOICE & INBOUND ACD */}
               {activeTab === "voice" && (
@@ -516,7 +516,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   <div className="lg:col-span-7 bg-white rounded-xl p-5 lg:p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
                     <div>
                       {/* Caller Identity Header */}
-                      <div className="flex items-center justify-between">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                         <div className="flex items-center gap-3">
                           <div className="w-12 h-12 rounded-full bg-slate-200 ring-2 ring-slate-100 flex items-center justify-center font-headline font-bold text-slate-700 text-sm">
                             MS
@@ -574,7 +574,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
 
                       {/* Real-Time Speech Transcription */}
                       <div className="mt-4 space-y-2">
-                        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 flex items-center justify-between">
+                        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                           <span>Live Bi-directional Transcript</span>
                           <span className="text-[10px] text-emerald-800 font-mono font-medium flex items-center gap-1">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
@@ -627,7 +627,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                         </span>
                       </div>
 
-                      <div className="pt-2 flex items-center justify-between bg-slate-100/80 px-4 py-3 rounded-xl border border-slate-200">
+                      <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-100/80 px-4 py-3 rounded-xl border border-slate-200">
                         <div className="flex items-center gap-2">
                           <button
                             type="button"
@@ -704,7 +704,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                     </div>
 
                     <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-2.5">
-                      <div className="flex items-center justify-between pb-1.5 border-b border-slate-100">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1.5 border-b border-slate-100">
                         <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
                           <Zap className="w-3.5 h-3.5 text-blue-600" aria-hidden="true" />
                           Salesforce &amp; HubSpot Dossier
@@ -743,7 +743,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                     </div>
 
                     <div className="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
-                      <div className="text-xs font-semibold text-slate-900 mb-2 flex items-center justify-between">
+                      <div className="text-xs font-semibold text-slate-900 mb-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                         <span>Recent Omnichannel Touchpoints</span>
                         <span className="text-[11px] text-sky-700 cursor-pointer hover:underline font-medium">View 34 total</span>
                       </div>
@@ -775,7 +775,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   {/* Left: WhatsApp Messenger Interface (7 Columns) */}
                   <div className="lg:col-span-7 bg-white rounded-xl border border-slate-200/80 shadow-xs flex flex-col justify-between overflow-hidden">
                     {/* WhatsApp Header */}
-                    <div className="p-4 bg-emerald-50/70 border-b border-emerald-100 flex items-center justify-between">
+                    <div className="p-4 bg-emerald-50/70 border-b border-emerald-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-sm shadow-2xs">
                           ER
@@ -831,7 +831,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                     </div>
 
                     {/* AI Smart Suggestion Pill */}
-                    <div className="px-4 py-2 bg-sky-50/80 border-t border-sky-100 flex items-center justify-between text-xs">
+                    <div className="px-4 py-2 bg-sky-50/80 border-t border-sky-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
                       <div className="flex items-center gap-2 text-sky-900">
                         <Sparkles className="w-3.5 h-3.5 text-sky-700 shrink-0" />
                         <span className="text-[11px]">
@@ -877,7 +877,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   {/* Right: Meta Cloud API Telemetry & CRM Dossier (5 Columns) */}
                   <div className="lg:col-span-5 space-y-3.5">
                     <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-3">
-                      <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-100">
                         <span className="text-xs font-semibold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
                           <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
                           Meta Cloud API Telemetry
@@ -910,7 +910,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                     </div>
 
                     <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-2.5">
-                      <div className="flex items-center justify-between pb-1.5 border-b border-slate-100">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-1.5 border-b border-slate-100">
                         <span className="text-xs font-semibold text-slate-800">HubSpot Contact Record</span>
                         <span className="text-[10px] font-semibold text-sky-800 bg-sky-50 px-1.5 py-0.2 rounded font-mono">Synced</span>
                       </div>
@@ -942,7 +942,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   <div className="lg:col-span-7 bg-white rounded-xl p-5 lg:p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
                     <div>
                       {/* Campaign Header */}
-                      <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
                         <div>
                           <span className="text-[10px] font-semibold uppercase tracking-wider text-sky-800 bg-sky-50 px-2 py-0.5 rounded">
                             Active Campaign
@@ -958,7 +958,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
 
                       {/* Current Lead Dossier */}
                       <div className="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-                        <div className="flex items-center justify-between">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                           <div>
                             <span className="text-[11px] text-slate-500 font-mono">Lead #48 of 120 in Queue</span>
                             <h4 className="font-headline font-bold text-base text-slate-900">Alexander Vance</h4>
@@ -1046,7 +1046,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   {/* Right: Dialer Performance Velocity & Queue (5 Columns) */}
                   <div className="lg:col-span-5 space-y-3.5">
                     <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-3">
-                      <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-100">
                         <span className="text-xs font-semibold uppercase tracking-wider text-slate-700">
                           Dialer Session Metrics
                         </span>
@@ -1085,14 +1085,14 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                     <div className="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
                       <span className="text-xs font-semibold text-slate-900 mb-2 block">Next In Dialing Queue</span>
                       <div className="space-y-2 text-xs">
-                        <div className="p-2 rounded-lg bg-slate-50 flex items-center justify-between">
+                        <div className="p-2 rounded-lg bg-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                           <div>
                             <span className="font-semibold text-slate-800 block">Priya Sharma</span>
                             <span className="text-[10px] text-slate-500">VP CX · RetailPulse</span>
                           </div>
                           <span className="text-[10px] text-sky-700 font-mono font-semibold">Queue #49</span>
                         </div>
-                        <div className="p-2 rounded-lg bg-slate-50 flex items-center justify-between">
+                        <div className="p-2 rounded-lg bg-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                           <div>
                             <span className="font-semibold text-slate-800 block">Michael Chen</span>
                             <span className="text-[10px] text-slate-500">Dir IT · BioHealth APAC</span>
@@ -1112,7 +1112,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   <div className="lg:col-span-7 bg-white rounded-xl p-5 lg:p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
                     <div>
                       {/* Floor Header */}
-                      <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
                         <div className="flex items-center gap-2">
                           <Activity className="w-5 h-5 text-sky-700" />
                           <h3 className="font-headline font-semibold text-base text-slate-900">
@@ -1126,7 +1126,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
 
                       {/* Talk-to-Listen Ratio Visualizer */}
                       <div className="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-                        <div className="flex items-center justify-between text-xs font-semibold text-slate-700 mb-2">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-semibold text-slate-700 mb-2">
                           <span>Talk-to-Listen Ratio (Optimal Empathy Zone)</span>
                           <span className="text-emerald-700 font-mono">Ideal Balance</span>
                         </div>
@@ -1170,7 +1170,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                       </div>
                     </div>
 
-                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                    <div className="mt-4 pt-3 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-500">
                       <span>ASR Engine: Deepgram Whisper Nova-2</span>
                       <span className="font-mono text-emerald-700 font-semibold">Accuracy: 99.4%</span>
                     </div>
@@ -1179,7 +1179,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   {/* Right: Automated QA Scorecard & CSAT Predictor (5 Columns) */}
                   <div className="lg:col-span-5 space-y-3.5">
                     <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-3">
-                      <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-100">
                         <span className="text-xs font-semibold uppercase tracking-wider text-slate-700">
                           Automated QA Scorecard
                         </span>
@@ -1189,23 +1189,23 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                       </div>
 
                       <div className="space-y-2 text-xs">
-                        <div className="flex items-center justify-between">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                           <span className="text-slate-600">Recording Consent Disclosed</span>
                           <span className="text-emerald-700 font-semibold flex items-center gap-1">
                             <CheckCircle2 className="w-3.5 h-3.5" /> Verified
                           </span>
                         </div>
-                        <div className="flex items-center justify-between">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                           <span className="text-slate-600">Identity &amp; Account Verified</span>
                           <span className="text-emerald-700 font-semibold flex items-center gap-1">
                             <CheckCircle2 className="w-3.5 h-3.5" /> Passed
                           </span>
                         </div>
-                        <div className="flex items-center justify-between">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                           <span className="text-slate-600">Product Script Adherence</span>
                           <span className="text-emerald-700 font-semibold font-mono">100%</span>
                         </div>
-                        <div className="flex items-center justify-between">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                           <span className="text-slate-600">Sentiment Trajectory</span>
                           <span className="text-emerald-700 font-semibold">Positive (+94%)</span>
                         </div>
@@ -1229,9 +1229,9 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             </div>
 
             {/* Integration Ribbon Bottom Strip */}
-            <div className="bg-slate-50 border-t border-slate-200/80 px-6 py-3 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
-              <span className="font-medium text-slate-600">Zero-latency sync with your stack:</span>
-              <div className="flex items-center gap-5 sm:gap-7 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+            <div className="bg-slate-50 border-t border-slate-200/80 px-4 sm:px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-slate-500">
+              <span className="font-medium text-slate-600 text-center sm:text-left">Zero-latency sync with your stack:</span>
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-7 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
                 <SalesforceLogo className="h-4 w-auto" />
                 <HubSpotLogo className="h-4 w-auto" />
                 <ZohoLogo className="h-4 w-auto" />

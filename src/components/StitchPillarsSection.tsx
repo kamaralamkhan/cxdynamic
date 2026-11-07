@@ -17,7 +17,7 @@ import {
 
 export default function StitchPillarsSection() {
   return (
-    <section className="w-full py-20 lg:py-28 max-w-7xl mx-auto px-6 lg:px-12 space-y-28 bg-white" id="products">
+    <section className="w-full py-20 lg:py-28 max-w-7xl mx-auto px-6 lg:px-12 space-y-16 sm:space-y-24 lg:space-y-28 bg-white" id="products">
       
       {/* Section Heading Intro */}
       <div className="max-w-2xl">
@@ -83,7 +83,7 @@ export default function StitchPillarsSection() {
             </div>
             
             {/* Live Queue Cards */}
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3">
               <div className="p-3 rounded-xl bg-white border border-slate-200">
                 <span className="text-[11px] text-slate-500 font-medium">Calls in Queue</span>
                 <p className="font-headline font-bold text-xl text-slate-900 mt-0.5">7</p>

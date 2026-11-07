@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import CalmHero from "@/components/CalmHero";
+import AnimatedServiceGrid from "@/components/AnimatedServiceGrid";
 import StitchIntegrationsSection from "@/components/StitchIntegrationsSection";
 import StitchBentoGrid from "@/components/StitchBentoGrid";
 import StitchInfrastructureSection from "@/components/StitchInfrastructureSection";
@@ -78,7 +79,10 @@ export default function Home() {
         {/* Section 1: Hero — Exact Design from Stitch Zip (Centered Headline, Ambient Globe, macOS Agent Workspace v3.0) */}
         <CalmHero onOpenDemo={() => setDemoOpen(true)} />
 
-        {/* Section 2: Seamless Bi-directional Integration Across Your Entire Stack (Stitch Parabolic Drifting Nodes) */}
+        {/* Section 2: Animated Service Grid (4-Column Responsive Module Suite) */}
+        <AnimatedServiceGrid />
+
+        {/* Section 3: Seamless Bi-directional Integration Across Your Entire Stack (Stitch Parabolic Drifting Nodes) */}
         <StitchIntegrationsSection />
 
         {/* Section 4: Feature Bento Grid — "Everything your modern revenue & support teams need to conquer call volume" */}
