@@ -68,7 +68,7 @@ export default function CallbackSection() {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-slate-50 text-slate-900 relative overflow-hidden border-t border-slate-200 scroll-mt-12">
+    <section id="contact" className="py-20 lg:py-24 bg-slate-50 text-slate-900 relative overflow-hidden border-t border-slate-200 scroll-mt-12">
       <div id="callback-section" className="sr-only" aria-hidden="true" />
       <div id="contact-form" className="sr-only" aria-hidden="true" />
 
@@ -89,7 +89,7 @@ export default function CallbackSection() {
             <div className="space-y-3 pt-2">
               <a
                 href={`tel:${siteConfig.phones.primaryRaw}`}
-                className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-sky-500 shadow-2xs transition-colors text-xs font-semibold text-slate-900 group"
+                className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-sky-500 hover:bg-slate-50 transition-colors text-xs font-semibold text-slate-900 group shadow-2xs"
               >
                 <div className="p-2 rounded-lg bg-sky-100 text-sky-700 motion-safe:group-hover:scale-105 motion-reduce:group-hover:scale-100 transition-transform">
                   <Phone className="w-4 h-4" />
@@ -102,7 +102,7 @@ export default function CallbackSection() {
 
               <a
                 href={`mailto:${siteConfig.emails.info}`}
-                className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-sky-500 shadow-2xs transition-colors text-xs font-semibold text-slate-900 group"
+                className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-slate-200 hover:border-sky-500 hover:bg-slate-50 transition-colors text-xs font-semibold text-slate-900 group shadow-2xs"
               >
                 <div className="p-2 rounded-lg bg-emerald-100 text-emerald-700 motion-safe:group-hover:scale-105 motion-reduce:group-hover:scale-100 transition-transform">
                   <Mail className="w-4 h-4" />
@@ -120,7 +120,7 @@ export default function CallbackSection() {
             </div>
           </div>
 
-          {/* Right Column: White Form Card (Crisp Contrast!) */}
+          {/* Right Column: White Form Card */}
           <div id="quote" className="lg:col-span-7 scroll-mt-28">
             <div id="quote-form" className="p-6 sm:p-9 bg-white text-slate-900 border border-slate-200 shadow-md rounded-2xl scroll-mt-28">
               {!submitted ? (

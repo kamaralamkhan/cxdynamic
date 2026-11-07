@@ -5,16 +5,17 @@ import Navbar from "@/components/Navbar";
 import CalmHero from "@/components/CalmHero";
 import ProofAndMarquee from "@/components/ProofAndMarquee";
 import ModernVsLegacySection from "@/components/ModernVsLegacySection";
-import IntegrationsSection from "@/components/IntegrationsSection";
+import StitchPillarsSection from "@/components/StitchPillarsSection";
+import StitchTabsSection from "@/components/StitchTabsSection";
+import StitchCallFlowSection from "@/components/StitchCallFlowSection";
 import PlatformModesSection from "@/components/PlatformModesSection";
 import OmnichannelSection from "@/components/OmnichannelSection";
-import ProductsBento from "@/components/ProductsBento";
-import AIQASection from "@/components/AIQASection";
-import CXAnalyticsSection from "@/components/CXAnalyticsSection";
-import BusinessChallengesSection from "@/components/BusinessChallengesSection";
-import CXQ360TrialJourney from "@/components/CXQ360TrialJourney";
+import StitchIndustriesSection from "@/components/StitchIndustriesSection";
+import StitchTestimonialSection from "@/components/StitchTestimonialSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import CXQ360TrialJourney from "@/components/CXQ360TrialJourney";
 import KnowledgeCentre from "@/components/KnowledgeCentre";
+import PreFooterDualCTA from "@/components/PreFooterDualCTA";
 import CallbackSection from "@/components/CallbackSection";
 import CalmFooter from "@/components/CalmFooter";
 import InteractiveDemoModal from "@/components/InteractiveDemoModal";
@@ -69,59 +70,62 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
 
-      {/* 1. Sticky Nav with Start Free Trial (CXQ360.ai) and Book a Demo */}
+      {/* 1. Sticky Nav with 2.5px Live Reading Progress Bar */}
       <Navbar onRequestQuote={() => setDemoOpen(true)} />
 
       <div id="homepage-content" tabIndex={-1}>
 
-      {/* Fold 1 — Hero: AI-First Positioning + Dual CTAs (CXQ360.ai Trial + Book a Demo) */}
-      <CalmHero onOpenDemo={() => setDemoOpen(true)} />
+        {/* Section 1: Hero — Light-First Interactive Agent Workspace (Ticking Timer, Waveform, Screen-Pop, Mute/Hold, Copilot) */}
+        <CalmHero onOpenDemo={() => setDemoOpen(true)} />
 
-      {/* Fold 2 — Proof Strip: 4 Core AI SaaS Metrics (72% Containment, 3.8x FCR, 100% QA, -44% Cost) */}
-      <ProofAndMarquee />
+        {/* Section 2: Core Proof Metrics Strip + Enterprise Ecosystem Marquee (Light Theme) */}
+        <ProofAndMarquee />
 
-      {/* Fold 2.5 — Architecture Comparison: Modern Cloud Voice vs Yesterday's PBX */}
-      <ModernVsLegacySection />
+        {/* Section 3: Architecture Comparison — Modern Cloud Voice vs Yesterday's PBX */}
+        <ModernVsLegacySection />
 
-      {/* Fold 3 — Three Operating Modes: Team-Led, AI-Assisted, AI-Led Continuum */}
-      <PlatformModesSection />
+        {/* Section 4: Four Product Pillars with Interactive UI Mockups (Stitch Design) */}
+        <StitchPillarsSection />
 
-      {/* Fold 4 — Enterprise Ecosystem Integrations: CRM, service, ERP, APIs, webhooks, apps, and AI/LLM */}
-      <IntegrationsSection />
+        {/* Section 5: Interactive Feature Story — "One system. Infinite control." (Stitch Tabbed Demo) */}
+        <StitchTabsSection />
 
-      {/* Fold 6 — Omnichannel Engagement & Cross-Channel Context Preservation */}
-      <OmnichannelSection />
+        {/* Section 6: End-to-End Orchestration — "How a call moves through CXDYNAMIQ" (4-Step Loop) */}
+        <StitchCallFlowSection />
 
-      {/* Fold 7 — Intelligent Contact Center Core (Routing, IVR, Inbound/Outbound, Dialers) */}
-      <ProductsBento />
+        {/* Section 7: Three Operating Modes — Team-Led, AI-Assisted, AI-Led */}
+        <PlatformModesSection />
 
-      {/* Fold 8 — AI Quality Assurance & 100% Conversation Intelligence */}
-      <AIQASection />
+        {/* Section 8: Omnichannel Engagement & Cross-Channel Context Preservation */}
+        <OmnichannelSection />
 
-      {/* Fold 9 — Real-Time CX Analytics & Interactive Enterprise ROI Calculator */}
-      <CXAnalyticsSection />
+        {/* Section 9: Purpose-Built For Demanding Sectors — Global Enterprise, BPO, Education, Growing Businesses */}
+        <StitchIndustriesSection />
 
-      {/* Fold 10 — High-Stakes Industry & Workflow Solutions */}
-      <BusinessChallengesSection />
+        {/* Section 10: Verified High-Credibility Testimonial — Sarah Jenkins (+34% Queue Throughput) */}
+        <StitchTestimonialSection />
 
-      {/* Fold 11 — The 5-Step CXQ360.ai Trial-to-License Journey */}
-      <CXQ360TrialJourney />
+        {/* Section 11: Why Leaders Migrate to CXDYNAMIQ — 30+ Yrs, Carrier SLA, Zero Downtime */}
+        <WhyChooseUs />
 
-      {/* Fold 12 — Trust and operating principles */}
-      <WhyChooseUs />
+        {/* Section 12: 5-Step CXQ360.ai Trial-to-License Journey */}
+        <CXQ360TrialJourney />
 
-      {/* Fold 12 — Knowledge Centre / Technical Guides */}
-      <KnowledgeCentre />
+        {/* Section 13: Knowledge Centre / Technical Guides */}
+        <KnowledgeCentre />
 
-      {/* Fold 13 — Quick Callback & Demo Form */}
-      <CallbackSection />
+        {/* Section 14: Pre-Footer Dual CTA — CXQ360.ai Sandbox vs Enterprise Consultation (Light Theme) */}
+        <PreFooterDualCTA onOpenDemo={() => setDemoOpen(true)} />
 
-      {/* Fold 16 — Calm Footer with Full Sitemap, Security Badges & WhatsApp Float */}
-      <CalmFooter />
+        {/* Section 15: Quick Callback & Custom Demo Quote Form (Light Theme) */}
+        <CallbackSection />
 
-      {/* Fold 17 — Interactive Call Flow Demo Modal */}
+        {/* Section 16: Calm Footer with Full Sitemap, Security Badges & WhatsApp Float */}
+        <CalmFooter />
+
       </div>
 
+      {/* Interactive Call Flow Demo Modal */}
       <InteractiveDemoModal isOpen={demoOpen} onClose={() => setDemoOpen(false)} />
     </main>
   );
