@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import CalmHero from "@/components/CalmHero";
 import ProofAndMarquee from "@/components/ProofAndMarquee";
+import StitchIntegrationsSection from "@/components/StitchIntegrationsSection";
 import StitchBentoGrid from "@/components/StitchBentoGrid";
 import StitchInfrastructureSection from "@/components/StitchInfrastructureSection";
 import ModernVsLegacySection from "@/components/ModernVsLegacySection";
@@ -81,7 +82,10 @@ export default function Home() {
         {/* Section 2: Core Proof Metrics Strip + Enterprise Ecosystem Marquee (Light Theme) */}
         <ProofAndMarquee />
 
-        {/* Section 3: Feature Bento Grid — "Everything your modern revenue & support teams need to conquer call volume" */}
+        {/* Section 3: Seamless Bi-directional Integration Across Your Entire Stack (Stitch Parabolic Drifting Nodes) */}
+        <StitchIntegrationsSection />
+
+        {/* Section 4: Feature Bento Grid — "Everything your modern revenue & support teams need to conquer call volume" */}
         <StitchBentoGrid />
 
         {/* Section 4: Global Voice Telephony Infrastructure — Sub-Millisecond Edge Network Canvas */}

@@ -44,14 +44,14 @@ export default function StitchIndustriesSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-xs font-semibold text-sky-700 font-headline">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-xs font-semibold uppercase tracking-wider text-sky-800 font-headline">
             Tailored Architecture
           </span>
-          <h2 className="font-headline font-semibold text-3xl sm:text-4xl text-slate-900 mt-2 tracking-tight">
+          <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-[34px] text-slate-900 mt-2 tracking-tight leading-snug">
             Purpose-built for demanding sectors
           </h2>
-          <p className="text-base text-slate-600 mt-2">
+          <p className="text-sm sm:text-base text-slate-600 mt-2.5 max-w-2xl font-normal leading-relaxed">
             Discover how organizations across industries configure CXDYNAMIQ to outpace their competitors.
           </p>
         </div>

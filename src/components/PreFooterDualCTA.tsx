@@ -12,18 +12,18 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
+        <div className="max-w-3xl mx-auto text-center space-y-3 mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-800 text-xs font-semibold">
             <Zap className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
             <span>Launch Your Transformation</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-semibold text-slate-900 tracking-tight leading-snug">
             Ready to Modernize Your{" "}
             <span className="text-sky-700">Customer Experience?</span>
           </h2>
 
-          <p className="text-base text-slate-600 leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto">
             Whether you want to test-drive autonomous AI agents on our instant sandbox or need
             an enterprise telecom whitelisting consultation, we are ready.
           </p>
@@ -44,7 +44,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold text-slate-900">
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-900">
                   Test-Drive CXQ360.ai Sandbox
                 </h3>
                 <p className="text-sm text-slate-600 mt-2 leading-relaxed">
@@ -92,7 +92,7 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold text-slate-900">
+                <h3 className="text-lg sm:text-xl font-semibold text-slate-900">
                   Enterprise Architecture
                 </h3>
                 <p className="text-sm text-slate-600 mt-2 leading-relaxed">

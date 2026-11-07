@@ -37,14 +37,14 @@ export default function StitchCallFlowSection() {
   return (
     <section className="w-full py-20 lg:py-28 max-w-7xl mx-auto px-6 lg:px-12 relative overflow-hidden bg-white">
       {/* Section Header */}
-      <div className="text-center max-w-2xl mx-auto mb-16">
-        <span className="text-xs font-semibold text-sky-700 font-headline">
+      <div className="text-center max-w-2xl mx-auto mb-12">
+        <span className="text-xs font-semibold uppercase tracking-wider text-sky-800 font-headline">
           End-to-End Orchestration
         </span>
-        <h2 className="font-headline font-semibold text-3xl sm:text-4xl text-slate-900 mt-2 tracking-tight">
+        <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-[34px] text-slate-900 mt-2 tracking-tight leading-snug">
           How a call moves through <span className="text-sky-700">CXDYNAMIQ</span>
         </h2>
-        <p className="text-base text-slate-600 mt-2">
+        <p className="text-sm sm:text-base text-slate-600 mt-2.5 max-w-2xl font-normal leading-relaxed">
           A seamless 4-step loop that turns inbound chaos into measurable, recorded intelligence.
         </p>
       </div>

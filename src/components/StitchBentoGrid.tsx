@@ -18,14 +18,14 @@ export default function StitchBentoGrid() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-sky-700 font-headline">
+        <div className="max-w-3xl mb-12">
+          <span className="text-xs font-semibold uppercase tracking-wider text-sky-800 font-headline">
             Orchestration &amp; Intelligence
           </span>
-          <h2 className="mt-3 font-headline font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+          <h2 className="mt-2.5 font-headline font-semibold text-2xl sm:text-3xl lg:text-[34px] text-slate-900 tracking-tight leading-snug">
             Everything your modern revenue &amp; support teams need to conquer call volume.
           </h2>
-          <p className="mt-4 text-base text-slate-600 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl font-normal leading-relaxed">
             Built for scale, speed, and absolute clarity. CXDYNAMIQ eliminates PBX spaghetti and empowers every rep with context.
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function StitchBentoGrid() {
                 <GitBranch className="w-6 h-6" aria-hidden="true" />
               </div>
               <div className="flex items-center gap-2">
-                <h3 className="font-headline font-bold text-xl text-slate-900">Intelligent ACD &amp; Multi-Level IVR</h3>
+                <h3 className="font-headline font-semibold text-lg text-slate-900">Intelligent ACD &amp; Multi-Level IVR</h3>
                 <span className="px-2 py-0.5 rounded text-[11px] font-semibold bg-sky-100 text-sky-800">Visual Flow</span>
               </div>
               <p className="mt-2 text-sm text-slate-600 max-w-xl leading-relaxed">
@@ -80,7 +80,7 @@ export default function StitchBentoGrid() {
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <FileText className="w-6 h-6" aria-hidden="true" />
               </div>
-              <h3 className="font-headline font-bold text-xl text-slate-900">Sub-120ms CTI Screen-Pop</h3>
+              <h3 className="font-headline font-semibold text-lg text-slate-900">Sub-120ms CTI Screen-Pop</h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                 Match incoming calls against Salesforce, Zendesk, or HubSpot before the rep answers. Zero awkward identity confirmations.
               </p>
@@ -101,7 +101,7 @@ export default function StitchBentoGrid() {
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <Zap className="w-6 h-6" aria-hidden="true" />
               </div>
-              <h3 className="font-headline font-bold text-xl text-slate-900">Automated Power Dialer</h3>
+              <h3 className="font-headline font-semibold text-lg text-slate-900">Automated Power Dialer</h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                 Triple outbound rep velocity with predictive dialing, 1-click voicemail drops, and local presence caller IDs.
               </p>
@@ -120,7 +120,7 @@ export default function StitchBentoGrid() {
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <Sparkles className="w-6 h-6" aria-hidden="true" />
               </div>
-              <h3 className="font-headline font-bold text-xl text-slate-900">AI Whisper &amp; Sentiment</h3>
+              <h3 className="font-headline font-semibold text-lg text-slate-900">AI Whisper &amp; Sentiment</h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                 In-call agent copilot offering compliance verification, live objection handling hints, and instant escalation cues.
               </p>
@@ -137,7 +137,7 @@ export default function StitchBentoGrid() {
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <MessageSquare className="w-6 h-6" aria-hidden="true" />
               </div>
-              <h3 className="font-headline font-bold text-xl text-slate-900">Omnichannel CX Hub</h3>
+              <h3 className="font-headline font-semibold text-lg text-slate-900">Omnichannel CX Hub</h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                 Combine Voice, SMS, WhatsApp Business, and Web Chat in a unified collaborative inbox with shared customer threads.
               </p>
@@ -156,7 +156,7 @@ export default function StitchBentoGrid() {
               <div className="w-12 h-12 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700 mb-6">
                 <BarChart3 className="w-6 h-6" aria-hidden="true" />
               </div>
-              <h3 className="font-headline font-bold text-xl text-slate-900">Enterprise Analytics</h3>
+              <h3 className="font-headline font-semibold text-lg text-slate-900">Enterprise Analytics</h3>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                 Dual-channel lossless audio recordings, automated AI call summaries, and customizable real-time supervisor wallboards.
               </p>
@@ -173,3 +173,4 @@ export default function StitchBentoGrid() {
     </section>
   );
 }
+

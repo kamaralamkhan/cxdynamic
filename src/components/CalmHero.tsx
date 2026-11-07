@@ -9,19 +9,16 @@ import {
   Zap, 
   ArrowRight, 
   Calendar,
-  CheckCircle2, 
   Mic, 
-  Sparkles, 
-  Activity, 
-  ShieldCheck, 
-  PhoneForwarded, 
-  Users, 
-  Check, 
+  MicOff,
+  Pause,
+  Play,
   PhoneOff,
-  Cloud,
-  FileText,
-  BarChart3,
-  Bot
+  Activity, 
+  Sparkles,
+  CheckCircle2,
+  PhoneForwarded,
+  Volume2
 } from "lucide-react";
 import { 
   SalesforceLogo, 
@@ -44,11 +41,12 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
 
   // Real-time call timer incrementer
   useEffect(() => {
+    if (isOnHold) return;
     const timer = setInterval(() => {
       setTimerSeconds((prev) => prev + 1);
     }, 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isOnHold]);
 
   const formatTimer = (totalSecs: number) => {
     const mins = Math.floor(totalSecs / 60);
@@ -57,62 +55,158 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-slate-50/50 pt-12 pb-20 lg:pt-16 lg:pb-28 border-b border-slate-200" id="home">
+    <section className="relative w-full overflow-hidden bg-[#f8f9ff] py-14 lg:py-20 border-b border-slate-200" id="home">
       
-      {/* Ambient Atmospheric Glows Behind Hero */}
-      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[580px] rounded-full bg-gradient-to-b from-sky-100/40 via-sky-50/20 to-transparent blur-3xl opacity-80" aria-hidden="true" />
-      <div className="pointer-events-none absolute top-1/4 -left-36 w-80 h-80 rounded-full bg-sky-100/30 blur-3xl" aria-hidden="true" />
-      <div className="pointer-events-none absolute top-1/3 -right-36 w-80 h-80 rounded-full bg-blue-100/30 blur-3xl" aria-hidden="true" />
+      {/* 1. Ambient Atmospheric Glows Behind Hero (Stitch Design Tokens) */}
+      <div 
+        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[580px] rounded-full bg-gradient-to-b from-[#39b8fd]/15 via-[#cde5ff]/30 to-transparent blur-3xl opacity-75 ambient-glow-pulse" 
+        aria-hidden="true" 
+      />
+      <div 
+        className="pointer-events-none absolute top-1/4 -left-36 w-80 h-80 rounded-full bg-[#cde5ff]/25 blur-3xl" 
+        aria-hidden="true" 
+      />
+      <div 
+        className="pointer-events-none absolute top-1/3 -right-36 w-80 h-80 rounded-full bg-[#c9e6ff]/30 blur-3xl" 
+        aria-hidden="true" 
+      />
 
-      {/* Floating Ambient Telephony Nodes (Left and Right) */}
+      {/* 2. Background AI Telephony & Soundwave Processing Vector Layer */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center opacity-70 overflow-hidden">
+        <svg className="w-full h-full max-w-7xl max-h-[880px] text-sky-900/20" fill="none" viewBox="0 0 1200 700">
+          <defs>
+            <linearGradient id="voice-gradient-1" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#0369a1" stopOpacity="0.1" />
+              <stop offset="25%" stopColor="#0ea5e9" stopOpacity="0.65" />
+              <stop offset="60%" stopColor="#38bdf8" stopOpacity="0.8" />
+              <stop offset="85%" stopColor="#00724e" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#0369a1" stopOpacity="0.1" />
+            </linearGradient>
+            <linearGradient id="voice-gradient-2" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#0369a1" stopOpacity="0.05" />
+              <stop offset="35%" stopColor="#38bdf8" stopOpacity="0.5" />
+              <stop offset="70%" stopColor="#0ea5e9" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#38bdf8" stopOpacity="0.1" />
+            </linearGradient>
+          </defs>
+
+          {/* Flowing audio frequency arcs */}
+          <path 
+            className="audio-flow-line opacity-45" 
+            d="M-100 240 C 200 180, 380 340, 600 250 C 820 160, 1020 310, 1300 230" 
+            stroke="url(#voice-gradient-1)" 
+            strokeLinecap="round" 
+            strokeWidth="1.5" 
+          />
+          <path 
+            className="audio-flow-line opacity-35" 
+            d="M-50 290 C 220 230, 440 370, 620 300 C 800 230, 980 360, 1250 280" 
+            stroke="url(#voice-gradient-2)" 
+            strokeDasharray="4 8" 
+            strokeLinecap="round" 
+            strokeWidth="1.25" 
+          />
+          <path 
+            d="M-80 340 C 180 300, 360 410, 580 350 C 800 290, 1040 390, 1280 320" 
+            opacity="0.25" 
+            stroke="#0ea5e9" 
+            strokeWidth="0.8" 
+          />
+
+          {/* Left Ingress: Carrier SIP Ingress Node */}
+          <g className="hidden lg:block opacity-65" transform="translate(140, 210)">
+            <circle cx="0" cy="0" r="18" fill="#e0f2fe" fillOpacity="0.6" />
+            <circle cx="0" cy="0" r="7" fill="#0369a1" />
+            <circle cx="0" cy="0" r="28" stroke="#0ea5e9" strokeDasharray="3 3" strokeWidth="1" opacity="0.6" />
+          </g>
+
+          {/* Center Bridge: AI Speech & Whisper Synthesizer Node */}
+          <g className="hidden lg:block opacity-60" transform="translate(600, 250)">
+            <circle cx="0" cy="0" r="24" fill="#cde5ff" fillOpacity="0.45" />
+            <circle cx="0" cy="0" r="9" fill="#0ea5e9" />
+            <circle cx="0" cy="0" r="38" stroke="#006591" strokeDasharray="4 4" strokeWidth="1" opacity="0.45" />
+          </g>
+
+          {/* Right Egress: Real-time LLM CRM & Copilot Node */}
+          <g className="hidden lg:block opacity-65" transform="translate(1060, 270)">
+            <circle cx="0" cy="0" r="20" fill="#e0f2fe" fillOpacity="0.6" />
+            <circle cx="0" cy="0" r="7" fill="#00724e" />
+            <circle cx="0" cy="0" r="32" stroke="#4edea3" strokeDasharray="3 3" strokeWidth="1" opacity="0.5" />
+          </g>
+        </svg>
+      </div>
+
+      {/* 3. Subtle Floating Telemetry Badges (Placed in outer margins with ZERO headline overlap) */}
+      <div aria-hidden="true" className="hidden xl:block pointer-events-none absolute left-8 top-36 z-10 animate-float opacity-85">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 text-[11px] font-mono text-slate-700 shadow-xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+          <span>SIP Trunk: Nominal 0% Packet Loss</span>
+        </div>
+      </div>
+
+      <div aria-hidden="true" className="hidden xl:block pointer-events-none absolute right-8 top-40 z-10 animate-float-alt opacity-85" style={{ animationDelay: "1.2s" }}>
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 text-[11px] font-mono text-slate-700 shadow-xs">
+          <span className="w-1.5 h-1.5 rounded-full bg-sky-600" />
+          <span>Real-Time ASR: 42ms Latency</span>
+        </div>
+      </div>
+
+      <div aria-hidden="true" className="hidden 2xl:block pointer-events-none absolute left-12 bottom-40 z-10 animate-float-alt opacity-75" style={{ animationDelay: "2.1s" }}>
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 text-[11px] font-mono text-slate-700 shadow-xs">
+          <Volume2 className="w-3.5 h-3.5 text-emerald-700" />
+          <span>Audio Codec: Opus · 48kHz Stereo Lossless</span>
+        </div>
+      </div>
+
+      <div aria-hidden="true" className="hidden 2xl:block pointer-events-none absolute right-12 bottom-48 z-10 animate-float opacity-75" style={{ animationDelay: "0.8s" }}>
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 text-[11px] font-mono text-slate-700 shadow-xs">
+          <Sparkles className="w-3.5 h-3.5 text-sky-700" />
+          <span>Live AI Whisper Model: Ready</span>
+        </div>
+      </div>
+
+      {/* 4. Main Hero Content Container */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
-        {/* Top Announcement Pill */}
+        {/* Announcement Pill Badge */}
         <div className="flex justify-center mb-6">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs hover:border-sky-300 transition-colors">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 motion-safe:animate-pulse" aria-hidden="true" />
-            <span className="text-xs font-bold text-slate-800">CXDYNAMIQ 3.0 IS LIVE</span>
-            <span className="text-slate-300">|</span>
-            <Link href="/conversational-ai" className="text-xs font-semibold text-sky-700 hover:text-sky-800 flex items-center gap-1 transition-colors">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-xs hover:border-sky-300 transition-colors">
+            <span className="relative flex h-2 w-2">
+              <span aria-hidden="true" className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+            </span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-sky-800">CXDYNAMIQ 3.0 is live</span>
+            <span className="text-xs text-slate-300">•</span>
+            <Link 
+              href="/conversational-ai" 
+              className="text-xs font-medium text-slate-700 hover:text-sky-800 flex items-center gap-1 transition-colors"
+            >
               <span>Next-Gen Voice &amp; Omnichannel AI</span>
-              <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+              <ArrowRight className="w-3.5 h-3.5 text-sky-700" aria-hidden="true" />
             </Link>
           </div>
         </div>
 
-        {/* Main Catchphrase Headline & Subcopy (Centered & Focused) */}
-        <div className="max-w-4xl mx-auto text-center relative">
-          
-          {/* Subtle Left Floating Node */}
-          <div className="hidden xl:flex absolute -left-20 top-8 items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 border border-slate-200/80 shadow-2xs text-[11px] font-medium text-slate-600">
-            <span className="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true" />
-            <span>SIP Trunk: Nominal 0% Packet Loss</span>
-          </div>
-
-          {/* Subtle Right Floating Node */}
-          <div className="hidden xl:flex absolute -right-20 top-8 items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 border border-slate-200/80 shadow-2xs text-[11px] font-medium text-slate-600">
-            <span className="w-2 h-2 rounded-full bg-sky-600" aria-hidden="true" />
-            <span>Real-Time ASR: 62ms latency</span>
-          </div>
-
-          <h1 className="font-headline font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-slate-900 leading-[1.12]">
+        {/* Minimal Font-to-Text Ratio Headline & Subhead (Disciplined Enterprise Hierarchy) */}
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="font-headline font-semibold text-3xl sm:text-4xl lg:text-[46px] tracking-[-0.02em] text-slate-900 leading-[1.16]">
             The cloud contact center platform built for{" "}
             <span className="text-sky-700 bg-gradient-to-r from-sky-700 via-sky-600 to-sky-500 bg-clip-text text-transparent">
               effortless customer conversations.
             </span>
           </h1>
 
-          <p className="mt-5 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base lg:text-[17px] text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
             Connect voice, SMS, WhatsApp, and your CRM in one unified workspace. Deployed in hours, zero PBX maintenance, and 99.999% global voice reliability.
           </p>
 
           {/* Action CTAs */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
             <a
               href="https://cxq360.ai/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-sky-700 text-white font-semibold text-sm hover:bg-sky-800 transition-colors shadow-sm active:scale-[0.98]"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-sky-700 text-white font-semibold text-sm hover:bg-sky-800 transition-colors shadow-sm active:scale-[0.98]"
             >
               <span>Start Free Trial</span>
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -121,7 +215,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             <button
               type="button"
               onClick={onOpenDemo}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white text-slate-900 border border-slate-300 font-semibold text-sm hover:bg-slate-50 transition-colors shadow-2xs cursor-pointer active:scale-[0.98]"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-white text-slate-900 border border-slate-300 font-semibold text-sm hover:bg-slate-50 transition-colors shadow-2xs cursor-pointer active:scale-[0.98]"
             >
               <Calendar className="w-4 h-4 text-sky-700" aria-hidden="true" />
               <span>Talk to Sales</span>
@@ -129,51 +223,171 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           </div>
 
           {/* Micro Trust Guarantee */}
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs text-slate-500 font-medium">
+          <div className="mt-3.5 flex flex-wrap items-center justify-center gap-2.5 text-xs text-slate-500 font-medium">
             <span>No credit card required</span>
             <span>•</span>
             <span>14-day free trial</span>
             <span>•</span>
             <span>Instant SIP trunk provisioning</span>
           </div>
-
         </div>
 
-        {/* Hero Dashboard Visual Cockpit: macOS App Window */}
-        <div className="mt-12 relative max-w-5xl mx-auto">
+        {/* 5. Hero Dashboard Cockpit with Holographic Global Telemetry Globe Background */}
+        <div className="mt-10 relative max-w-5xl mx-auto">
           
-          {/* Floating Satellite Card Left: Average Queue Wait */}
-          <div className="hidden sm:flex absolute -top-6 -left-4 sm:-left-8 z-30 bg-white p-3.5 rounded-2xl shadow-xl border border-slate-200/90 items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-sky-50 flex items-center justify-center text-sky-700">
+          {/* Ambient Holographic Global Telemetry Globe Vector Canvas */}
+          <div aria-hidden="true" className="pointer-events-none absolute -inset-x-20 -top-24 -bottom-16 flex items-center justify-center overflow-visible z-0 opacity-85">
+            <div className="relative w-[860px] h-[580px] max-w-none flex items-center justify-center">
+              {/* Concentric Soft Glow Rings */}
+              <div className="absolute w-[620px] h-[440px] rounded-[100%] bg-gradient-to-r from-sky-200/25 via-blue-200/15 to-emerald-200/20 blur-3xl opacity-70" />
+              <div className="absolute w-[500px] h-[340px] rounded-[100%] bg-sky-100/30 blur-2xl" />
+
+              <svg className="w-full h-full text-sky-700/35" fill="none" viewBox="0 0 860 560" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="globeCoreGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stopColor="#0369a1" stopOpacity="0.12" />
+                    <stop offset="60%" stopColor="#38bdf8" stopOpacity="0.04" />
+                    <stop offset="100%" stopColor="#f8f9ff" stopOpacity="0" />
+                  </radialGradient>
+                  <linearGradient id="globeArcGrad1" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stopColor="#0369a1" stopOpacity="0.1" />
+                    <stop offset="35%" stopColor="#0ea5e9" stopOpacity="0.75" />
+                    <stop offset="70%" stopColor="#00724e" stopOpacity="0.8" />
+                    <stop offset="100%" stopColor="#0369a1" stopOpacity="0.1" />
+                  </linearGradient>
+                  <linearGradient id="globeArcGrad2" x1="0" y1="1" x2="1" y2="0">
+                    <stop offset="0%" stopColor="#0284c7" stopOpacity="0.2" />
+                    <stop offset="50%" stopColor="#38bdf8" stopOpacity="0.7" />
+                    <stop offset="100%" stopColor="#4edea3" stopOpacity="0.3" />
+                  </linearGradient>
+                </defs>
+
+                {/* Globe Sphere Base Silhouette */}
+                <ellipse cx="430" cy="280" rx="340" ry="210" fill="url(#globeCoreGlow)" />
+                <ellipse cx="430" cy="280" rx="340" ry="210" stroke="#0369a1" strokeDasharray="6 6" strokeOpacity="0.25" strokeWidth="1.2" />
+                
+                {/* Concentric Latitudinal Rings */}
+                <ellipse cx="430" cy="280" rx="320" ry="160" stroke="#0ea5e9" strokeOpacity="0.28" strokeWidth="1" />
+                <ellipse cx="430" cy="280" rx="280" ry="105" stroke="#00724e" strokeDasharray="4 4" strokeOpacity="0.25" strokeWidth="0.9" />
+                <ellipse cx="430" cy="280" rx="220" ry="50" stroke="#0369a1" strokeOpacity="0.2" strokeWidth="0.8" />
+
+                {/* Longitude Elliptical Meridians */}
+                <ellipse cx="430" cy="280" rx="100" ry="210" stroke="#0ea5e9" strokeOpacity="0.28" strokeWidth="1" />
+                <ellipse cx="430" cy="280" rx="210" ry="210" stroke="#0369a1" strokeDasharray="5 5" strokeOpacity="0.22" strokeWidth="0.9" />
+                <path d="M 430 70 L 430 490" stroke="#0369a1" strokeDasharray="4 4" strokeOpacity="0.2" strokeWidth="1" />
+                <path d="M 90 280 L 770 280" stroke="#0ea5e9" strokeOpacity="0.2" strokeWidth="1" />
+
+                {/* Great-Circle Interconnect Telemetry Arcs */}
+                <path className="audio-flow-line" d="M 210 220 Q 285 130 365 170" stroke="url(#globeArcGrad1)" strokeLinecap="round" strokeWidth="1.8" />
+                <path d="M 365 170 Q 395 175 420 195" stroke="#38bdf8" strokeDasharray="3 3" strokeWidth="1.8" />
+                <path className="audio-flow-line" d="M 420 195 Q 510 225 560 310" stroke="url(#globeArcGrad1)" strokeLinecap="round" strokeWidth="2" />
+                <path d="M 560 310 Q 590 295 625 290" stroke="#00724e" strokeWidth="2.2" />
+                <path className="audio-flow-line" d="M 625 290 Q 648 245 655 205" stroke="url(#globeArcGrad2)" strokeLinecap="round" strokeWidth="1.8" />
+                <path className="audio-flow-line" d="M 625 290 Q 665 340 690 385" stroke="url(#globeArcGrad1)" strokeLinecap="round" strokeWidth="1.8" />
+                <path d="M 655 205 C 750 170, 780 140, 770 140" stroke="#0ea5e9" strokeDasharray="4 4" strokeOpacity="0.5" strokeWidth="1.2" />
+                <path d="M 90 250 C 130 220, 170 220, 210 220" stroke="#0ea5e9" strokeDasharray="4 4" strokeOpacity="0.5" strokeWidth="1.2" />
+
+                {/* Labeled Global Nodes */}
+                <g transform="translate(210, 220)">
+                  <circle fill="#0284c7" fillOpacity="0.25" r="9" />
+                  <circle fill="#0369a1" r="4" />
+                  <circle fill="#ffffff" r="2" />
+                  <text fill="#00507d" fontFamily="Inter" fontSize="9" fontWeight="600" opacity="0.85" x="-8" y="-12">SFO (US-West)</text>
+                </g>
+                <g transform="translate(365, 170)">
+                  <circle fill="#0284c7" fillOpacity="0.2" r="7" />
+                  <circle fill="#0284c7" r="3.5" />
+                  <circle fill="#ffffff" r="1.5" />
+                  <text fill="#00507d" fontFamily="Inter" fontSize="8.5" fontWeight="600" opacity="0.8" x="-6" y="-10">Dublin</text>
+                </g>
+                <g transform="translate(420, 195)">
+                  <circle fill="#0369a1" fillOpacity="0.25" r="8" />
+                  <circle fill="#0369a1" r="4" />
+                  <circle fill="#ffffff" r="1.5" />
+                  <text fill="#00507d" fontFamily="Inter" fontSize="8.5" fontWeight="600" opacity="0.85" x="7" y="-7">Frankfurt (GDPR)</text>
+                </g>
+                <g transform="translate(560, 310)">
+                  <circle fill="#00724e" fillOpacity="0.25" r="8" />
+                  <circle fill="#00724e" r="4" />
+                  <circle fill="#ffffff" r="1.5" />
+                  <text fill="#00573a" fontFamily="Inter" fontSize="8.5" fontWeight="600" opacity="0.85" x="-32" y="16">Singapore (APAC)</text>
+                </g>
+                {/* Manila HQ Node */}
+                <g transform="translate(625, 290)">
+                  <circle fill="#00724e" fillOpacity="0.2" r="14" className="animate-ping" />
+                  <circle fill="#00724e" fillOpacity="0.3" r="7" />
+                  <circle fill="#00724e" r="4.5" />
+                  <circle fill="#ffffff" r="2" />
+                  <text fill="#00573a" fontFamily="Plus Jakarta Sans" fontSize="9.5" fontWeight="700" x="9" y="4">Manila HQ • 11ms</text>
+                </g>
+                <g transform="translate(655, 205)">
+                  <circle fill="#0ea5e9" fillOpacity="0.25" r="8" />
+                  <circle fill="#0284c7" r="3.5" />
+                  <circle fill="#ffffff" r="1.5" />
+                  <text fill="#00507d" fontFamily="Inter" fontSize="8.5" fontWeight="600" opacity="0.85" x="8" y="-4">Tokyo</text>
+                </g>
+                <g transform="translate(690, 385)">
+                  <circle fill="#006591" fillOpacity="0.2" r="7.5" />
+                  <circle fill="#006591" r="3.5" />
+                  <circle fill="#ffffff" r="1.5" />
+                  <text fill="#006591" fontFamily="Inter" fontSize="8.5" fontWeight="600" opacity="0.8" x="8" y="4">Sydney</text>
+                </g>
+
+                {/* Animated Low-Latency Voice Packets */}
+                <circle fill="#38bdf8" r="3">
+                  <animateMotion dur="2.4s" path="M 210 220 Q 285 130 365 170" repeatCount="indefinite" />
+                </circle>
+                <circle fill="#00724e" r="3.5">
+                  <animateMotion dur="3s" path="M 420 195 Q 510 225 560 310" repeatCount="indefinite" />
+                </circle>
+                <circle fill="#4edea3" r="3">
+                  <animateMotion dur="1.2s" path="M 560 310 Q 590 295 625 290" repeatCount="indefinite" />
+                </circle>
+                <circle fill="#0ea5e9" r="3">
+                  <animateMotion dur="1.8s" path="M 625 290 Q 648 245 655 205" repeatCount="indefinite" />
+                </circle>
+                <circle fill="#0284c7" r="3">
+                  <animateMotion dur="2.1s" path="M 625 290 Q 665 340 690 385" repeatCount="indefinite" />
+                </circle>
+              </svg>
+            </div>
+          </div>
+
+          {/* Floating Satellite Card Left: Average Queue Wait (Positioned safely beside workspace with ZERO overlap) */}
+          <div className="hidden lg:flex absolute -left-10 top-28 z-30 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-slate-200/90 shadow-lg max-w-xs items-center gap-3.5 animate-float-alt">
+            <div className="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center text-sky-700 shrink-0">
               <Activity className="w-5 h-5" aria-hidden="true" />
             </div>
             <div>
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Average Queue Wait</span>
-              <div className="flex items-center gap-1.5">
-                <span className="font-headline font-bold text-lg text-slate-900">3.8s</span>
-                <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-100">
+              <div className="text-[11px] font-semibold uppercase tracking-wider text-slate-500">Average Queue Wait</div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-xl font-bold font-headline text-slate-900">3.8s</span>
+                <span className="text-xs font-semibold text-emerald-800 bg-emerald-100/70 px-1.5 py-0.5 rounded">
                   -42% vs ind.
                 </span>
               </div>
+              <svg className="w-24 h-4 mt-1 text-emerald-600" fill="none" viewBox="0 0 100 20" aria-hidden="true">
+                <path d="M0 16 L20 14 L40 18 L60 9 L80 12 L100 4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" />
+              </svg>
             </div>
           </div>
 
-          {/* Floating Satellite Card Right: WhatsApp Synced */}
-          <div className="hidden sm:flex absolute -top-6 -right-4 sm:-right-8 z-30 bg-white p-3.5 rounded-2xl shadow-xl border border-slate-200/90 items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-700">
-              <Check className="w-5 h-5" aria-hidden="true" />
+          {/* Floating Satellite Card Right: WhatsApp Synced (Positioned safely on right side with ZERO overlap) */}
+          <div className="hidden lg:flex absolute -right-8 top-16 z-30 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200/90 shadow-lg items-center gap-3 animate-float">
+            <div className="w-9 h-9 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
+              <CheckCircle2 className="w-5 h-5" aria-hidden="true" />
             </div>
             <div>
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">WhatsApp Synced</span>
-              <span className="text-xs font-semibold text-slate-800">HubSpot &amp; Salesforce updated in 94ms</span>
+              <div className="text-xs font-bold text-slate-900">WhatsApp Synced</div>
+              <div className="text-[11px] text-slate-500 font-medium">HubSpot CRM contact updated in 94ms</div>
             </div>
           </div>
 
-          {/* Main Workspace Window Container */}
-          <div className="relative z-10 rounded-2xl bg-white shadow-2xl border border-slate-200/90 overflow-hidden text-slate-900">
+          {/* Main Cockpit Window Frame */}
+          <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xl overflow-hidden relative z-10">
             
-            {/* Window Titlebar */}
-            <div className="bg-slate-100/90 border-b border-slate-200 px-4 py-3 flex items-center justify-between">
+            {/* Top Window Titlebar */}
+            <div className="bg-slate-100/90 backdrop-blur-md px-5 py-3 flex items-center justify-between border-b border-slate-200/80">
               <div className="flex items-center gap-2">
                 <span className="w-3 h-3 rounded-full bg-rose-400/90 inline-block" aria-hidden="true" />
                 <span className="w-3 h-3 rounded-full bg-amber-400/90 inline-block" aria-hidden="true" />
@@ -184,7 +398,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
                   SIP Ready • HD Lossless (Opus)
                 </span>
@@ -193,14 +407,14 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             </div>
 
             {/* Interactive Service Tab Switcher */}
-            <div className="bg-slate-50 border-b border-slate-200 px-4 pt-2 flex items-center gap-1 sm:gap-2 overflow-x-auto">
+            <div className="bg-slate-50 border-b border-slate-200 px-4 pt-2 flex items-center gap-1 sm:gap-2 overflow-x-auto scrollbar-none">
               <button
                 type="button"
                 onClick={() => setActiveTab("voice")}
                 className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 ${
                   activeTab === "voice"
                     ? "bg-white border-t-2 border-sky-700 text-sky-800 shadow-2xs"
-                    : "text-slate-600 hover:text-slate-900"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                 }`}
               >
                 <PhoneCall className="w-3.5 h-3.5 text-sky-700" aria-hidden="true" />
@@ -214,7 +428,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                 className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 ${
                   activeTab === "whatsapp"
                     ? "bg-white border-t-2 border-sky-700 text-sky-800 shadow-2xs"
-                    : "text-slate-600 hover:text-slate-900"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                 }`}
               >
                 <MessageSquare className="w-3.5 h-3.5 text-emerald-600" aria-hidden="true" />
@@ -228,7 +442,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                 className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 ${
                   activeTab === "dialer"
                     ? "bg-white border-t-2 border-sky-700 text-sky-800 shadow-2xs"
-                    : "text-slate-600 hover:text-slate-900"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                 }`}
               >
                 <Zap className="w-3.5 h-3.5 text-slate-500" aria-hidden="true" />
@@ -241,201 +455,238 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                 className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 ${
                   activeTab === "analytics"
                     ? "bg-white border-t-2 border-sky-700 text-sky-800 shadow-2xs"
-                    : "text-slate-600 hover:text-slate-900"
+                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                 }`}
               >
-                <BarChart3 className="w-3.5 h-3.5 text-slate-500" aria-hidden="true" />
-                <span>Real-Time Analytics</span>
+                <Activity className="w-3.5 h-3.5 text-sky-700" aria-hidden="true" />
+                <span>Real-Time Speech Analytics</span>
               </button>
             </div>
 
-            {/* Window Content Body (2 Columns) */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 p-5 sm:p-6 bg-slate-50/40">
+            {/* Inside Softphone Dashboard Workspace */}
+            <div className="p-6 lg:p-7 grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-50/40">
               
-              {/* Left Column (7 cols): Active Caller & Bi-Directional Transcript */}
-              <div className="lg:col-span-7 bg-white p-5 rounded-xl border border-slate-200/90 shadow-2xs flex flex-col justify-between space-y-4">
-                
+              {/* Left: Live Inbound Call & Controller (7 Columns) */}
+              <div className="lg:col-span-7 bg-white rounded-xl p-5 lg:p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
                 <div>
-                  {/* Top Caller Row */}
-                  <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                  
+                  {/* Caller Identity Header */}
+                  <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-sky-100 text-sky-800 font-bold flex items-center justify-center text-sm shadow-2xs">
+                      <div className="w-12 h-12 rounded-full bg-slate-200 ring-2 ring-slate-100 flex items-center justify-center font-headline font-bold text-slate-700 text-sm">
                         MS
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <h3 className="font-headline font-bold text-base text-slate-900">Marcus Sterling</h3>
+                          <h3 className="font-headline font-semibold text-base text-slate-900">Marcus Sterling</h3>
                           <span className="text-[11px] font-semibold uppercase px-2 py-0.5 rounded bg-sky-100 text-sky-800">
                             Enterprise VP
                           </span>
                         </div>
-                        <p className="text-xs text-slate-500 font-mono">+1 (415) 890-4421 • CloudCorp Global</p>
+                        <p className="text-xs text-slate-500 font-mono">+1 (415) ••• ••41 • CloudCorp Global</p>
                       </div>
                     </div>
 
+                    {/* Active Call Timer + Animated Audio Waveform */}
                     <div className="text-right">
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-rose-50 text-rose-700 font-mono text-sm font-semibold border border-rose-200">
-                        <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" aria-hidden="true" />
-                        {formatTimer(timerSeconds)}
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-red-50 text-red-600 font-mono text-sm font-semibold border border-red-100">
+                        <span className={`w-2 h-2 rounded-full bg-red-500 ${isOnHold ? "" : "animate-ping"}`} />
+                        {isOnHold ? "ON HOLD" : formatTimer(timerSeconds)}
                       </div>
-                      <div className="flex items-center justify-end gap-1 mt-1 text-[10px] text-slate-500 font-mono">
-                        <span>Live HD Opus</span>
-                        <span className="text-emerald-700 font-semibold bg-emerald-50 px-1 py-0.2 rounded border border-emerald-100">SIP 100%</span>
+
+                      {/* Live Voice Waveform Visualizer + Quality Metric */}
+                      <div className="flex items-center justify-end gap-1 mt-1.5 h-4" title="Live audio activity">
+                        <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "0.9s", animationDelay: "0.1s" }} />
+                        <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "1.3s", animationDelay: "0.3s" }} />
+                        <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "0.7s", animationDelay: "0.2s" }} />
+                        <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "1.1s", animationDelay: "0.4s" }} />
+                        <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "0.8s", animationDelay: "0.15s" }} />
+                        <span className="text-[10px] text-slate-400 ml-1 font-mono">HD Opus</span>
+                        <span className="text-[9px] font-semibold text-emerald-800 bg-emerald-50 px-1 py-0.2 rounded border border-emerald-100 font-mono ml-1">
+                          SIP 100%
+                        </span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Audio Waveform & Telemetry Meters */}
-                  <div className="mt-3.5 grid grid-cols-3 gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200/70 text-xs">
+                  {/* Live Sentiment & Telemetry Meters */}
+                  <div className="mt-5 grid grid-cols-3 gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200/60">
                     <div>
-                      <span className="text-[11px] text-slate-500 block">Sentiment</span>
-                      <span className="font-bold text-emerald-700 flex items-center gap-1 mt-0.5">
-                        <span className="w-2 h-2 rounded-full bg-emerald-500" aria-hidden="true" />
+                      <div className="text-[11px] text-slate-500 font-medium">Sentiment</div>
+                      <div className="text-xs font-semibold text-emerald-700 flex items-center gap-1 mt-0.5">
+                        <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
                         +94% Positive
-                      </span>
-                    </div>
-                    <div>
-                      <span className="text-[11px] text-slate-500 block">Intent Detected</span>
-                      <span className="font-bold text-sky-700 block mt-0.5">Tier 3 Renewal</span>
-                    </div>
-                    <div>
-                      <span className="text-[11px] text-slate-500 block">Audio Latency</span>
-                      <span className="font-bold text-slate-800 block mt-0.5 font-mono">11ms • 0% Loss</span>
-                    </div>
-                  </div>
-
-                  {/* Live Bi-Directional Transcript Box */}
-                  <div className="mt-3.5 p-3.5 rounded-xl bg-slate-50/80 border border-slate-200/80 space-y-2 text-xs">
-                    <div className="flex items-center justify-between pb-1.5 border-b border-slate-200 text-slate-500">
-                      <span className="font-semibold text-slate-700 flex items-center gap-1.5 text-[11px]">
-                        <Mic className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
-                        LIVE BI-DIRECTIONAL TRANSCRIPT
-                      </span>
-                      <span className="font-mono text-[10px] text-sky-700">DEEPGRAM WHISPER ASR • 42ms</span>
-                    </div>
-
-                    <div className="space-y-1.5 text-xs">
-                      <p className="text-slate-600">
-                        <strong className="text-slate-900 font-semibold">Marcus (04:02):</strong> “We need to scale our agents in Dublin and Tokyo this Friday. Can we dynamically add 45 SIP seats without restarting the queue?”
-                      </p>
-                      <p className="text-slate-700">
-                        <strong className="text-sky-800 font-semibold">Agent Sarah (04:08):</strong> “Absolutely Marcus, seat provisioning is hot-swapped in real-time with zero downtime.”
-                      </p>
-                    </div>
-
-                    {/* Copilot Live Suggestion */}
-                    <div className="p-2.5 rounded-lg bg-sky-50 border border-sky-200 text-sky-900 flex items-start gap-2 mt-2">
-                      <Sparkles className="w-4 h-4 text-sky-600 shrink-0 mt-0.5" aria-hidden="true" />
-                      <div className="text-xs">
-                        <strong>Copilot Live Suggestion:</strong> Confirm multi-region pooled concurrency discount; suggest bundling APAC recording storage.
                       </div>
                     </div>
+                    <div>
+                      <div className="text-[11px] text-slate-500 font-medium">Intent Detected</div>
+                      <div className="text-xs font-semibold text-slate-800 mt-0.5">Tier 3 Renewal</div>
+                    </div>
+                    <div>
+                      <div className="text-[11px] text-slate-500 font-medium">Audio Latency</div>
+                      <div className="text-xs font-semibold text-sky-700 mt-0.5">11ms • 0% Loss</div>
+                    </div>
                   </div>
 
-                  {/* Action Buttons Row */}
-                  <div className="mt-3 flex flex-wrap items-center justify-between gap-2 pt-1 text-xs">
-                    <div className="flex items-center gap-2">
-                      <button type="button" className="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium border border-slate-200 transition-colors">
-                        Insert Script TX
+                  {/* Real-Time Speech Transcription */}
+                  <div className="mt-4 space-y-2">
+                    <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 flex items-center justify-between">
+                      <span>Live Bi-directional Transcript</span>
+                      <span className="text-[10px] text-emerald-800 font-mono font-medium flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                        Deepgram Whisper ASR • 42ms
+                      </span>
+                    </div>
+                    <div className="text-xs leading-relaxed p-3 rounded-lg bg-slate-50 text-slate-900 border border-slate-200/60">
+                      <span className="font-semibold text-sky-800">Marcus (04:02):</span> &quot;We need to scale our agents in Dublin and Tokyo this Friday. Can we dynamically add 45 SIP seats without restarting the queue?&quot;
+                    </div>
+                    <div className="text-xs leading-relaxed p-3 rounded-lg bg-sky-50/40 text-slate-700 border border-sky-100">
+                      <span className="font-semibold text-slate-900">Agent Sarah (04:08):</span> &quot;Absolutely Marcus, seat provisioning is hot-swapped in real-time with zero downtime.&quot;
+                    </div>
+                  </div>
+
+                  {/* Dynamic Agent Copilot Recommendation Inline */}
+                  <div className="mt-3.5 p-3 rounded-lg bg-sky-50/60 border border-sky-200/80 flex items-start gap-2.5">
+                    <div className="w-5 h-5 rounded-md bg-sky-700 text-white flex items-center justify-center shrink-0 mt-0.5">
+                      <Sparkles className="w-3 h-3" aria-hidden="true" />
+                    </div>
+                    <div className="text-xs text-slate-700 leading-relaxed">
+                      <span className="font-semibold text-slate-900">Copilot Live Suggestion:</span> Confirm multi-region pooled concurrency discount; suggest bundling APAC recording storage.
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Interactive Agent Whisper Action Bar & Softphone Controls */}
+                <div className="mt-5 space-y-2.5">
+                  {/* Action Tools */}
+                  <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2 rounded-lg bg-slate-50 border border-slate-200/80 text-xs">
+                    <div className="flex items-center gap-1.5">
+                      <button
+                        type="button"
+                        onClick={() => alert("Script template loaded: Tier 3 Renewal Agreement")}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white text-sky-800 hover:bg-slate-100 font-medium border border-slate-200 shadow-2xs transition-colors cursor-pointer"
+                        title="Insert Pre-approved Contract Script"
+                      >
+                        <span>Insert Script</span>
+                        <kbd className="text-[9px] px-1 bg-slate-100 rounded border border-slate-200 text-slate-500 font-mono">⌘K</kbd>
                       </button>
-                      <button type="button" className="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium border border-slate-200 transition-colors">
-                        CRM Push
+                      <button
+                        type="button"
+                        onClick={() => alert("Notes pushed to Salesforce & HubSpot in 94ms")}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white text-slate-800 hover:text-sky-800 hover:bg-slate-100 font-medium border border-slate-200 shadow-2xs transition-colors cursor-pointer"
+                        title="Sync notes instantly to CRM"
+                      >
+                        <Zap className="w-3.5 h-3.5 text-blue-600" aria-hidden="true" />
+                        <span>CRM Push</span>
                       </button>
                     </div>
-                    <span className="text-[11px] font-semibold text-emerald-700 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
-                      Supervisor Listening (Silent)
-                    </span>
+
+                    <div className="flex items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 text-[11px] font-medium border border-emerald-100">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                        Supervisor Listening (Silent)
+                      </span>
+                    </div>
                   </div>
 
-                </div>
+                  {/* Softphone Dialpad / Telephony Control Bar */}
+                  <div className="pt-2 flex items-center justify-between bg-slate-100/80 px-4 py-3 rounded-xl border border-slate-200">
+                    <div className="flex items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setIsMuted(!isMuted)}
+                        className={`p-2.5 rounded-lg border transition-colors shadow-2xs cursor-pointer ${
+                          isMuted
+                            ? "bg-rose-50 text-rose-700 border-rose-300"
+                            : "bg-white text-slate-700 hover:text-sky-800 border-slate-200"
+                        }`}
+                        title={isMuted ? "Unmute Microphone" : "Mute Microphone"}
+                      >
+                        {isMuted ? <MicOff className="w-4 h-4 text-rose-600" /> : <Mic className="w-4 h-4" />}
+                      </button>
 
-                {/* Bottom Telephony Controls */}
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2 text-xs">
-                  <div className="flex items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setIsOnHold(!isOnHold)}
+                        className={`p-2.5 rounded-lg border transition-colors shadow-2xs cursor-pointer ${
+                          isOnHold
+                            ? "bg-amber-50 text-amber-700 border-amber-300"
+                            : "bg-white text-slate-700 hover:text-sky-800 border-slate-200"
+                        }`}
+                        title={isOnHold ? "Resume Call" : "Hold Call"}
+                      >
+                        {isOnHold ? <Play className="w-4 h-4 text-amber-600" /> : <Pause className="w-4 h-4" />}
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => alert("Initiating warm transfer to Tier 3 Account Director...")}
+                        className="p-2.5 rounded-lg bg-white text-slate-700 hover:text-sky-800 transition-colors border border-slate-200 shadow-2xs cursor-pointer"
+                        title="Warm Transfer"
+                      >
+                        <PhoneForwarded className="w-4 h-4" />
+                      </button>
+                    </div>
+
                     <button
                       type="button"
-                      onClick={() => setIsMuted(!isMuted)}
-                      className={`p-2 rounded-lg font-medium border transition-colors ${
-                        isMuted ? "bg-amber-50 text-amber-900 border-amber-300" : "bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200"
-                      }`}
+                      onClick={() => alert("Call ended. Call recording and transcript automatically synced to CRM.")}
+                      className="px-4 py-2 rounded-lg bg-rose-600 text-white text-xs font-semibold hover:bg-rose-700 transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer"
                     >
-                      {isMuted ? "Unmute" : "Mute"}
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setIsOnHold(!isOnHold)}
-                      className={`p-2 rounded-lg font-medium border transition-colors ${
-                        isOnHold ? "bg-amber-50 text-amber-900 border-amber-300" : "bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200"
-                      }`}
-                    >
-                      {isOnHold ? "Resume" : "Hold"}
-                    </button>
-                    <button type="button" className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium border border-slate-200 transition-colors">
-                      Transfer
-                    </button>
-                    <button type="button" className="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium border border-slate-200 transition-colors">
-                      Add Call
+                      <PhoneOff className="w-3.5 h-3.5" aria-hidden="true" />
+                      <span>End Call</span>
                     </button>
                   </div>
-
-                  <button
-                    type="button"
-                    className="px-4 py-2 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-semibold transition-colors flex items-center gap-1.5 shadow-2xs"
-                  >
-                    <PhoneOff className="w-3.5 h-3.5" aria-hidden="true" />
-                    <span>End Call</span>
-                  </button>
                 </div>
-
               </div>
 
-              {/* Right Column (5 cols): AI Whisper & CRM Dossier */}
-              <div className="lg:col-span-5 space-y-4">
+              {/* Right: AI Whisper Suggestion & CRM Dossier (5 Columns) */}
+              <div className="lg:col-span-5 space-y-3.5">
                 
-                {/* AI Real-Time Whisper Card */}
-                <div className="bg-sky-50 p-4 rounded-xl border border-sky-200/80 shadow-2xs space-y-2.5">
-                  <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-sky-600 text-white flex items-center justify-center">
-                      <Sparkles className="w-4 h-4" aria-hidden="true" />
+                {/* AI Whisper Box */}
+                <div className="bg-gradient-to-br from-sky-50 via-slate-50 to-slate-50 p-4 rounded-xl border border-sky-200/70 shadow-xs">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-6 h-6 rounded-md bg-sky-700 text-white flex items-center justify-center">
+                      <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
                     </div>
-                    <span className="text-xs font-bold text-slate-900">AI Real-time Whisper Assist</span>
+                    <span className="text-xs font-semibold font-headline text-slate-900">AI Real-time Whisper Assist</span>
                   </div>
-                  <p className="text-xs text-slate-700 leading-relaxed">
-                    Offer the <strong>Q3 Multi-Region Expansion Discount</strong> (Contract Tier IV). Marcus&apos;s organization renewed their SOC2 compliance last week.
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Offer the <strong className="text-slate-900">Q3 Multi-Region Expansion Discount</strong> (Contract Tier IV). Marcus&apos;s organization renewed their SOC2 compliance last week.
                   </p>
-                  <div className="mt-2 flex items-center gap-2">
+                  <div className="mt-3 flex items-center gap-2">
                     <button
                       type="button"
-                      className="text-[11px] font-semibold bg-white px-2.5 py-1.5 rounded-lg text-sky-800 hover:bg-sky-50 border border-sky-200 shadow-2xs transition-colors"
+                      onClick={() => alert("Quote inserted into call summary: $4,200/mo")}
+                      className="text-[11px] font-semibold bg-white px-2.5 py-1 rounded text-sky-800 hover:bg-sky-50 border border-slate-200 shadow-2xs transition-colors cursor-pointer"
                     >
                       Insert Deal Quote ($4,200/mo)
                     </button>
                     <button
                       type="button"
-                      className="text-[11px] text-slate-500 hover:text-slate-800 transition-colors"
+                      className="text-[11px] text-slate-400 hover:text-slate-700 cursor-pointer"
                     >
                       Dismiss
                     </button>
                   </div>
                 </div>
 
-                {/* Instant CRM Screen-Pop (Salesforce & HubSpot Dossier) */}
-                <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs space-y-2.5">
+                {/* Instant CRM Screen-Pop (Salesforce & HubSpot Synced Dossier) */}
+                <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-2.5">
                   <div className="flex items-center justify-between pb-1.5 border-b border-slate-100">
-                    <span className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
-                      <Cloud className="w-4 h-4 text-sky-600" aria-hidden="true" />
+                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                      <Zap className="w-3.5 h-3.5 text-blue-600" aria-hidden="true" />
                       Salesforce &amp; HubSpot Dossier
                     </span>
                     <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
                       Live 94ms
                     </span>
                   </div>
-
                   <div className="space-y-1.5 text-xs">
                     <div className="flex justify-between py-0.5">
                       <span className="text-slate-500">Contract Value</span>
-                      <span className="font-bold text-slate-900">$148,000 / yr</span>
+                      <span className="font-semibold text-slate-900">$148,000 / yr</span>
                     </div>
                     <div className="flex justify-between py-0.5">
                       <span className="text-slate-500">Deal Stage</span>
@@ -446,54 +697,60 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                     <div className="flex justify-between py-0.5">
                       <span className="text-slate-500">Open SLA Tickets</span>
                       <span className="font-semibold text-emerald-700 flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                         0 open (SLA 100%)
                       </span>
                     </div>
                     <div className="flex justify-between py-0.5">
                       <span className="text-slate-500">Account Executive</span>
-                      <span className="text-slate-800">David Vance (SF HQ)</span>
+                      <span className="text-slate-900">David Vance (SF HQ)</span>
                     </div>
                     <div className="flex justify-between py-0.5">
                       <span className="text-slate-500">Satisfaction Index (CSAT)</span>
-                      <span className="font-bold text-emerald-700">4.9 / 5.0 ★</span>
+                      <span className="font-semibold text-emerald-700">4.9 / 5.0 ★</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Omnichannel Quick Timeline */}
-                <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs space-y-2">
-                  <div className="flex items-center justify-between pb-1 border-b border-slate-100 text-xs">
-                    <span className="font-semibold text-slate-700">Recent Omnichannel Touchpoints</span>
-                    <span className="text-[11px] text-sky-700 font-semibold cursor-pointer">View 34 total</span>
+                <div className="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
+                  <div className="text-xs font-semibold text-slate-900 mb-2 flex items-center justify-between">
+                    <span>Recent Omnichannel Touchpoints</span>
+                    <span className="text-[11px] text-sky-700 cursor-pointer hover:underline font-medium">View 34 total</span>
                   </div>
                   <div className="space-y-1.5 text-[11px]">
-                    <div className="flex items-center justify-between text-slate-700">
-                      <span className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
-                        Inbound WhatsApp: “Scale SIP trunks”
-                      </span>
-                      <span className="text-slate-400">Today, 09:14 AM</span>
+                    <div className="flex items-center gap-2 text-slate-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      <span className="font-semibold text-slate-800">Inbound WhatsApp: &quot;Scale SIP trunks&quot;</span>
+                      <span className="ml-auto text-[10px]">Today, 09:14 AM</span>
                     </div>
-                    <div className="flex items-center justify-between text-slate-700">
-                      <span className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-sky-500" aria-hidden="true" />
-                        Stripe Invoice #884 Paid ($12.3k)
-                      </span>
-                      <span className="text-slate-400">Yesterday</span>
+                    <div className="flex items-center gap-2 text-slate-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                      <span className="font-semibold text-slate-800">Stripe Invoice #884 Paid ($12.3k)</span>
+                      <span className="ml-auto text-[10px]">Yesterday</span>
                     </div>
-                    <div className="flex items-center justify-between text-slate-700">
-                      <span className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-amber-400" aria-hidden="true" />
-                        Zendesk CSAT Rated 5-Stars
-                      </span>
-                      <span className="text-slate-400">May 12</span>
+                    <div className="flex items-center gap-2 text-slate-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                      <span className="font-semibold text-slate-800">Zendesk CSAT Rated 5-Stars</span>
+                      <span className="ml-auto text-[10px]">May 12</span>
                     </div>
                   </div>
                 </div>
 
               </div>
+            </div>
 
+            {/* Integration Ribbon Bottom Strip */}
+            <div className="bg-slate-50 border-t border-slate-200/80 px-6 py-3 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+              <span className="font-medium text-slate-600">Zero-latency sync with your stack:</span>
+              <div className="flex items-center gap-5 sm:gap-7 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
+                <SalesforceLogo className="h-4 w-auto" />
+                <HubSpotLogo className="h-4 w-auto" />
+                <ZohoLogo className="h-4 w-auto" />
+                <ZendeskLogo className="h-4 w-auto" />
+                <WhatsAppLogo className="h-4 w-auto" />
+                <FreshdeskLogo className="h-4 w-auto" />
+              </div>
             </div>
 
           </div>
@@ -501,42 +758,6 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
         </div>
 
       </div>
-
-      {/* Integration Logos Strip */}
-      <div className="mt-16 pt-8 border-t border-slate-200/80 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
-          <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-            Works natively with your existing stack
-          </span>
-          <div className="flex items-center flex-wrap justify-center gap-8 sm:gap-10 opacity-80 hover:opacity-100 transition-opacity">
-            <Link href="/salesforce" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <SalesforceLogo className="h-5 w-auto" aria-hidden="true" />
-              <span className="text-sm font-semibold">Salesforce</span>
-            </Link>
-            <Link href="/hubspot" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <HubSpotLogo className="h-5 w-auto" aria-hidden="true" />
-              <span className="text-sm font-semibold">HubSpot</span>
-            </Link>
-            <Link href="/zoho" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <ZohoLogo className="h-5 w-auto" aria-hidden="true" />
-              <span className="text-sm font-semibold">Zoho CRM</span>
-            </Link>
-            <Link href="/zendesk" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <ZendeskLogo className="h-5 w-auto" aria-hidden="true" />
-              <span className="text-sm font-semibold">Zendesk</span>
-            </Link>
-            <Link href="/whatsapp-business" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <WhatsAppLogo className="h-5 w-auto" aria-hidden="true" />
-              <span className="text-sm font-semibold">WhatsApp</span>
-            </Link>
-            <Link href="/freshdesk" className="flex items-center gap-2 text-slate-700 hover:text-slate-950 transition-colors">
-              <FreshdeskLogo className="h-5 w-auto" aria-hidden="true" />
-              <span className="text-sm font-semibold">Freshdesk</span>
-            </Link>
-          </div>
-        </div>
-      </div>
-
     </section>
   );
 }

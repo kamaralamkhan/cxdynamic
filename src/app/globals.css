@@ -365,3 +365,93 @@ html {
   to { opacity: 1; transform: scale(1); }
 }
 
+/* Stitch Dynamic Clarity Animations */
+@keyframes ambientGlowPulse {
+  0%, 100% { opacity: 0.65; transform: translate(-50%, 0) scale(1); }
+  50% { opacity: 0.85; transform: translate(-50%, -10px) scale(1.03); }
+}
+
+@keyframes floatSmooth {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes floatSmoothAlt {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes audioFlowDash {
+  0% { stroke-dashoffset: 200; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes audioWaveBarPulse {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
+@keyframes parabolicDrift1 {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  33% { transform: translate3d(18px, -16px, 0) rotate(1deg); }
+  66% { transform: translate3d(-14px, -26px, 0) rotate(-1deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+
+@keyframes parabolicDrift2 {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  35% { transform: translate3d(-20px, -22px, 0) rotate(-1.5deg); }
+  70% { transform: translate3d(16px, -12px, 0) rotate(1deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+
+@keyframes parabolicDrift3 {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  40% { transform: translate3d(22px, -14px, 0) rotate(1.5deg); }
+  75% { transform: translate3d(-12px, -20px, 0) rotate(-1deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+
+@keyframes signalPulseLine {
+  0% { stroke-dashoffset: 100; opacity: 0.2; }
+  50% { opacity: 0.85; }
+  100% { stroke-dashoffset: 0; opacity: 0.2; }
+}
+
+.ambient-glow-pulse {
+  animation: ambientGlowPulse 8s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: floatSmooth 6s ease-in-out infinite;
+}
+
+.animate-float-alt {
+  animation: floatSmoothAlt 7s ease-in-out infinite;
+}
+
+.audio-flow-line {
+  stroke-dasharray: 8 6;
+  animation: audioFlowDash 12s linear infinite;
+}
+
+.audio-wave-bar {
+  display: inline-block;
+  animation: audioWaveBarPulse ease-in-out infinite;
+}
+
+.parabolic-node-1 {
+  animation: parabolicDrift1 8.5s ease-in-out infinite;
+}
+.parabolic-node-2 {
+  animation: parabolicDrift2 10.2s ease-in-out infinite;
+}
+.parabolic-node-3 {
+  animation: parabolicDrift3 9.4s ease-in-out infinite;
+}
+.sync-glow-ray {
+  stroke-dasharray: 8 12;
+  animation: signalPulseLine 3.6s linear infinite;
+}
+
+

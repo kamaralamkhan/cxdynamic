@@ -20,15 +20,15 @@ export default function ModernVsLegacySection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-800">
             <ShieldCheck className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
             <span>Architecture Comparison</span>
           </div>
-          <h2 className="mt-4 font-headline font-semibold text-3xl sm:text-4xl text-slate-900 tracking-tight">
-            Modern Cloud Voice vs. <span className="text-sky-700">Yesterday's PBX</span>
+          <h2 className="mt-3 font-headline font-semibold text-2xl sm:text-3xl lg:text-[34px] text-slate-900 tracking-tight leading-snug">
+            Modern Cloud Voice vs. <span className="text-sky-700">Yesterday&apos;s PBX</span>
           </h2>
-          <p className="mt-4 text-base text-slate-600 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed">
             See why fast-moving revenue and support teams replace slow hardware telecommunications with CXDYNAMIQ.
           </p>
         </div>
