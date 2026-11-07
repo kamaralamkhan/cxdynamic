@@ -18,7 +18,18 @@ import {
   Sparkles,
   CheckCircle2,
   PhoneForwarded,
-  Volume2
+  Volume2,
+  Send,
+  Paperclip,
+  FileText,
+  Check,
+  BarChart3,
+  Clock,
+  Users,
+  ShieldCheck,
+  AlertCircle,
+  ThumbsUp,
+  ChevronRight
 } from "lucide-react";
 import { 
   SalesforceLogo, 
@@ -39,6 +50,30 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
   const [isOnHold, setIsOnHold] = useState(false);
   const [activeTab, setActiveTab] = useState<"voice" | "whatsapp" | "dialer" | "analytics">("voice");
 
+  // WhatsApp Tab state
+  const [whatsappInput, setWhatsappInput] = useState("");
+  const [whatsappMessages, setWhatsappMessages] = useState([
+    {
+      id: 1,
+      sender: "elena",
+      name: "Elena Rostova",
+      text: "Hi Sarah, we're planning to migrate 60 agents from our legacy PBX next week. Can we configure WhatsApp conversational bots to qualify inbound leads before routing to our support queue?",
+      time: "09:12 AM"
+    },
+    {
+      id: 2,
+      sender: "agent",
+      name: "Sarah (CXDYNAMIQ)",
+      text: "Hi Elena! Absolutely. CXDYNAMIQ provides turnkey WhatsApp bot flows with sub-120ms HubSpot & Salesforce matching. I've attached our FinTech migration blueprint below.",
+      time: "09:13 AM",
+      attachment: "CXDYNAMIQ_FinScale_Migration_Guide.pdf (2.4 MB)"
+    }
+  ]);
+
+  // Dialer Tab state
+  const [dialerStatus, setDialerStatus] = useState<"ready" | "calling" | "connected">("connected");
+  const [selectedDisposition, setSelectedDisposition] = useState<string | null>(null);
+
   // Real-time call timer incrementer
   useEffect(() => {
     if (isOnHold) return;
@@ -52,6 +87,22 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
     const mins = Math.floor(totalSecs / 60);
     const secs = totalSecs % 60;
     return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+  };
+
+  const handleSendWhatsapp = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    if (!whatsappInput.trim()) return;
+    setWhatsappMessages((prev) => [
+      ...prev,
+      {
+        id: prev.length + 1,
+        sender: "agent",
+        name: "Sarah (CXDYNAMIQ)",
+        text: whatsappInput.trim(),
+        time: "Just now"
+      }
+    ]);
+    setWhatsappInput("");
   };
 
   return (
@@ -136,7 +187,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
         </svg>
       </div>
 
-      {/* 3. Subtle Floating Telemetry Badges (Placed in outer margins with ZERO headline overlap) */}
+      {/* 3. Subtle Floating Telemetry Badges (Outer margins with zero overlap) */}
       <div aria-hidden="true" className="hidden xl:block pointer-events-none absolute left-8 top-36 z-10 animate-float opacity-85">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/90 text-[11px] font-mono text-slate-700 shadow-xs">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
@@ -187,7 +238,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           </div>
         </div>
 
-        {/* Minimal Font-to-Text Ratio Headline & Subhead (Disciplined Enterprise Hierarchy) */}
+        {/* Minimal Font-to-Text Ratio Headline & Subhead */}
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="font-headline font-semibold text-3xl sm:text-4xl lg:text-[46px] tracking-[-0.02em] text-slate-900 leading-[1.16]">
             The cloud contact center platform built for{" "}
@@ -238,7 +289,6 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           {/* Ambient Holographic Global Telemetry Globe Vector Canvas */}
           <div aria-hidden="true" className="pointer-events-none absolute -inset-x-20 -top-24 -bottom-16 flex items-center justify-center overflow-visible z-0 opacity-85">
             <div className="relative w-[860px] h-[580px] max-w-none flex items-center justify-center">
-              {/* Concentric Soft Glow Rings */}
               <div className="absolute w-[620px] h-[440px] rounded-[100%] bg-gradient-to-r from-sky-200/25 via-blue-200/15 to-emerald-200/20 blur-3xl opacity-70" />
               <div className="absolute w-[500px] h-[340px] rounded-[100%] bg-sky-100/30 blur-2xl" />
 
@@ -262,22 +312,17 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   </linearGradient>
                 </defs>
 
-                {/* Globe Sphere Base Silhouette */}
                 <ellipse cx="430" cy="280" rx="340" ry="210" fill="url(#globeCoreGlow)" />
                 <ellipse cx="430" cy="280" rx="340" ry="210" stroke="#0369a1" strokeDasharray="6 6" strokeOpacity="0.25" strokeWidth="1.2" />
-                
-                {/* Concentric Latitudinal Rings */}
                 <ellipse cx="430" cy="280" rx="320" ry="160" stroke="#0ea5e9" strokeOpacity="0.28" strokeWidth="1" />
                 <ellipse cx="430" cy="280" rx="280" ry="105" stroke="#00724e" strokeDasharray="4 4" strokeOpacity="0.25" strokeWidth="0.9" />
                 <ellipse cx="430" cy="280" rx="220" ry="50" stroke="#0369a1" strokeOpacity="0.2" strokeWidth="0.8" />
 
-                {/* Longitude Elliptical Meridians */}
                 <ellipse cx="430" cy="280" rx="100" ry="210" stroke="#0ea5e9" strokeOpacity="0.28" strokeWidth="1" />
                 <ellipse cx="430" cy="280" rx="210" ry="210" stroke="#0369a1" strokeDasharray="5 5" strokeOpacity="0.22" strokeWidth="0.9" />
                 <path d="M 430 70 L 430 490" stroke="#0369a1" strokeDasharray="4 4" strokeOpacity="0.2" strokeWidth="1" />
                 <path d="M 90 280 L 770 280" stroke="#0ea5e9" strokeOpacity="0.2" strokeWidth="1" />
 
-                {/* Great-Circle Interconnect Telemetry Arcs */}
                 <path className="audio-flow-line" d="M 210 220 Q 285 130 365 170" stroke="url(#globeArcGrad1)" strokeLinecap="round" strokeWidth="1.8" />
                 <path d="M 365 170 Q 395 175 420 195" stroke="#38bdf8" strokeDasharray="3 3" strokeWidth="1.8" />
                 <path className="audio-flow-line" d="M 420 195 Q 510 225 560 310" stroke="url(#globeArcGrad1)" strokeLinecap="round" strokeWidth="2" />
@@ -287,7 +332,6 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                 <path d="M 655 205 C 750 170, 780 140, 770 140" stroke="#0ea5e9" strokeDasharray="4 4" strokeOpacity="0.5" strokeWidth="1.2" />
                 <path d="M 90 250 C 130 220, 170 220, 210 220" stroke="#0ea5e9" strokeDasharray="4 4" strokeOpacity="0.5" strokeWidth="1.2" />
 
-                {/* Labeled Global Nodes */}
                 <g transform="translate(210, 220)">
                   <circle fill="#0284c7" fillOpacity="0.25" r="9" />
                   <circle fill="#0369a1" r="4" />
@@ -312,7 +356,6 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   <circle fill="#ffffff" r="1.5" />
                   <text fill="#00573a" fontFamily="Inter" fontSize="8.5" fontWeight="600" opacity="0.85" x="-32" y="16">Singapore (APAC)</text>
                 </g>
-                {/* Manila HQ Node */}
                 <g transform="translate(625, 290)">
                   <circle fill="#00724e" fillOpacity="0.2" r="14" className="animate-ping" />
                   <circle fill="#00724e" fillOpacity="0.3" r="7" />
@@ -333,7 +376,6 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                   <text fill="#006591" fontFamily="Inter" fontSize="8.5" fontWeight="600" opacity="0.8" x="8" y="4">Sydney</text>
                 </g>
 
-                {/* Animated Low-Latency Voice Packets */}
                 <circle fill="#38bdf8" r="3">
                   <animateMotion dur="2.4s" path="M 210 220 Q 285 130 365 170" repeatCount="indefinite" />
                 </circle>
@@ -353,7 +395,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             </div>
           </div>
 
-          {/* Floating Satellite Card Left: Average Queue Wait (Positioned safely beside workspace with ZERO overlap) */}
+          {/* Floating Satellite Card Left: Average Queue Wait */}
           <div className="hidden lg:flex absolute -left-10 top-28 z-30 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-slate-200/90 shadow-lg max-w-xs items-center gap-3.5 animate-float-alt">
             <div className="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center text-sky-700 shrink-0">
               <Activity className="w-5 h-5" aria-hidden="true" />
@@ -372,7 +414,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             </div>
           </div>
 
-          {/* Floating Satellite Card Right: WhatsApp Synced (Positioned safely on right side with ZERO overlap) */}
+          {/* Floating Satellite Card Right: WhatsApp Synced */}
           <div className="hidden lg:flex absolute -right-8 top-16 z-30 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200/90 shadow-lg items-center gap-3 animate-float">
             <div className="w-9 h-9 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
               <CheckCircle2 className="w-5 h-5" aria-hidden="true" />
@@ -400,18 +442,21 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
               <div className="flex items-center gap-3">
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true" />
-                  SIP Ready • HD Lossless (Opus)
+                  {activeTab === "voice" && "SIP Ready • HD Lossless (Opus)"}
+                  {activeTab === "whatsapp" && "Meta Business Cloud • Live 4 Chats"}
+                  {activeTab === "dialer" && "Power Dialer Active • 1.8x Rate"}
+                  {activeTab === "analytics" && "ASR Whisper Engine • 100% QA"}
                 </span>
                 <span className="text-xs text-slate-400 font-mono hidden sm:inline">ID: 8820-AGENT</span>
               </div>
             </div>
 
-            {/* Interactive Service Tab Switcher */}
+            {/* Interactive Service Tab Switcher (Fully Interactive Dynamic Tab Switcher) */}
             <div className="bg-slate-50 border-b border-slate-200 px-4 pt-2 flex items-center gap-1 sm:gap-2 overflow-x-auto scrollbar-none">
               <button
                 type="button"
                 onClick={() => setActiveTab("voice")}
-                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 ${
+                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 cursor-pointer ${
                   activeTab === "voice"
                     ? "bg-white border-t-2 border-sky-700 text-sky-800 shadow-2xs"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
@@ -425,9 +470,9 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
               <button
                 type="button"
                 onClick={() => setActiveTab("whatsapp")}
-                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 ${
+                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 cursor-pointer ${
                   activeTab === "whatsapp"
-                    ? "bg-white border-t-2 border-sky-700 text-sky-800 shadow-2xs"
+                    ? "bg-white border-t-2 border-emerald-600 text-emerald-800 shadow-2xs"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                 }`}
               >
@@ -439,7 +484,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
               <button
                 type="button"
                 onClick={() => setActiveTab("dialer")}
-                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 ${
+                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 cursor-pointer ${
                   activeTab === "dialer"
                     ? "bg-white border-t-2 border-sky-700 text-sky-800 shadow-2xs"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
@@ -452,7 +497,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
               <button
                 type="button"
                 onClick={() => setActiveTab("analytics")}
-                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 ${
+                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-t-lg text-xs font-semibold transition-colors shrink-0 cursor-pointer ${
                   activeTab === "analytics"
                     ? "bg-white border-t-2 border-sky-700 text-sky-800 shadow-2xs"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
@@ -463,281 +508,726 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
               </button>
             </div>
 
-            {/* Inside Softphone Dashboard Workspace */}
-            <div className="p-6 lg:p-7 grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-50/40">
+            {/* DYNAMIC WORKSPACE CONTENT BASED ON ACTIVETAB */}
+            <div className="p-6 lg:p-7 bg-slate-50/40 min-h-[460px]">
               
-              {/* Left: Live Inbound Call & Controller (7 Columns) */}
-              <div className="lg:col-span-7 bg-white rounded-xl p-5 lg:p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
-                <div>
-                  
-                  {/* Caller Identity Header */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-full bg-slate-200 ring-2 ring-slate-100 flex items-center justify-center font-headline font-bold text-slate-700 text-sm">
-                        MS
+              {/* TAB 1: AI VOICE & INBOUND ACD */}
+              {activeTab === "voice" && (
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                  {/* Left: Live Inbound Call & Controller (7 Columns) */}
+                  <div className="lg:col-span-7 bg-white rounded-xl p-5 lg:p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
+                    <div>
+                      {/* Caller Identity Header */}
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-12 h-12 rounded-full bg-slate-200 ring-2 ring-slate-100 flex items-center justify-center font-headline font-bold text-slate-700 text-sm">
+                            MS
+                          </div>
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <h3 className="font-headline font-semibold text-base text-slate-900">Marcus Sterling</h3>
+                              <span className="text-[11px] font-semibold uppercase px-2 py-0.5 rounded bg-sky-100 text-sky-800">
+                                Enterprise VP
+                              </span>
+                            </div>
+                            <p className="text-xs text-slate-500 font-mono">+1 (415) ••• ••41 • CloudCorp Global</p>
+                          </div>
+                        </div>
+
+                        {/* Active Call Timer + Waveform */}
+                        <div className="text-right">
+                          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-red-50 text-red-600 font-mono text-sm font-semibold border border-red-100">
+                            <span className={`w-2 h-2 rounded-full bg-red-500 ${isOnHold ? "" : "animate-ping"}`} />
+                            {isOnHold ? "ON HOLD" : formatTimer(timerSeconds)}
+                          </div>
+
+                          <div className="flex items-center justify-end gap-1 mt-1.5 h-4" title="Live audio activity">
+                            <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "0.9s", animationDelay: "0.1s" }} />
+                            <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "1.3s", animationDelay: "0.3s" }} />
+                            <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "0.7s", animationDelay: "0.2s" }} />
+                            <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "1.1s", animationDelay: "0.4s" }} />
+                            <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "0.8s", animationDelay: "0.15s" }} />
+                            <span className="text-[10px] text-slate-400 ml-1 font-mono">HD Opus</span>
+                            <span className="text-[9px] font-semibold text-emerald-800 bg-emerald-50 px-1 py-0.2 rounded border border-emerald-100 font-mono ml-1">
+                              SIP 100%
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <h3 className="font-headline font-semibold text-base text-slate-900">Marcus Sterling</h3>
-                          <span className="text-[11px] font-semibold uppercase px-2 py-0.5 rounded bg-sky-100 text-sky-800">
-                            Enterprise VP
+
+                      {/* Live Sentiment & Telemetry Meters */}
+                      <div className="mt-5 grid grid-cols-3 gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200/60">
+                        <div>
+                          <div className="text-[11px] text-slate-500 font-medium">Sentiment</div>
+                          <div className="text-xs font-semibold text-emerald-700 flex items-center gap-1 mt-0.5">
+                            <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
+                            +94% Positive
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-[11px] text-slate-500 font-medium">Intent Detected</div>
+                          <div className="text-xs font-semibold text-slate-800 mt-0.5">Tier 3 Renewal</div>
+                        </div>
+                        <div>
+                          <div className="text-[11px] text-slate-500 font-medium">Audio Latency</div>
+                          <div className="text-xs font-semibold text-sky-700 mt-0.5">11ms • 0% Loss</div>
+                        </div>
+                      </div>
+
+                      {/* Real-Time Speech Transcription */}
+                      <div className="mt-4 space-y-2">
+                        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 flex items-center justify-between">
+                          <span>Live Bi-directional Transcript</span>
+                          <span className="text-[10px] text-emerald-800 font-mono font-medium flex items-center gap-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                            Deepgram Whisper ASR • 42ms
                           </span>
                         </div>
-                        <p className="text-xs text-slate-500 font-mono">+1 (415) ••• ••41 • CloudCorp Global</p>
+                        <div className="text-xs leading-relaxed p-3 rounded-lg bg-slate-50 text-slate-900 border border-slate-200/60">
+                          <span className="font-semibold text-sky-800">Marcus (04:02):</span> &quot;We need to scale our agents in Dublin and Tokyo this Friday. Can we dynamically add 45 SIP seats without restarting the queue?&quot;
+                        </div>
+                        <div className="text-xs leading-relaxed p-3 rounded-lg bg-sky-50/40 text-slate-700 border border-sky-100">
+                          <span className="font-semibold text-slate-900">Agent Sarah (04:08):</span> &quot;Absolutely Marcus, seat provisioning is hot-swapped in real-time with zero downtime.&quot;
+                        </div>
+                      </div>
+
+                      {/* Copilot Recommendation Inline */}
+                      <div className="mt-3.5 p-3 rounded-lg bg-sky-50/60 border border-sky-200/80 flex items-start gap-2.5">
+                        <div className="w-5 h-5 rounded-md bg-sky-700 text-white flex items-center justify-center shrink-0 mt-0.5">
+                          <Sparkles className="w-3 h-3" aria-hidden="true" />
+                        </div>
+                        <div className="text-xs text-slate-700 leading-relaxed">
+                          <span className="font-semibold text-slate-900">Copilot Live Suggestion:</span> Confirm multi-region pooled concurrency discount; suggest bundling APAC recording storage.
+                        </div>
                       </div>
                     </div>
 
-                    {/* Active Call Timer + Animated Audio Waveform */}
-                    <div className="text-right">
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-red-50 text-red-600 font-mono text-sm font-semibold border border-red-100">
-                        <span className={`w-2 h-2 rounded-full bg-red-500 ${isOnHold ? "" : "animate-ping"}`} />
-                        {isOnHold ? "ON HOLD" : formatTimer(timerSeconds)}
+                    {/* Interactive Telephony Controls */}
+                    <div className="mt-5 space-y-2.5">
+                      <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2 rounded-lg bg-slate-50 border border-slate-200/80 text-xs">
+                        <div className="flex items-center gap-1.5">
+                          <button
+                            type="button"
+                            onClick={() => alert("Script template loaded: Tier 3 Renewal Agreement")}
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white text-sky-800 hover:bg-slate-100 font-medium border border-slate-200 shadow-2xs transition-colors cursor-pointer"
+                          >
+                            <span>Insert Script</span>
+                            <kbd className="text-[9px] px-1 bg-slate-100 rounded border border-slate-200 text-slate-500 font-mono">⌘K</kbd>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => alert("Notes pushed to Salesforce & HubSpot in 94ms")}
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white text-slate-800 hover:text-sky-800 hover:bg-slate-100 font-medium border border-slate-200 shadow-2xs transition-colors cursor-pointer"
+                          >
+                            <Zap className="w-3.5 h-3.5 text-blue-600" aria-hidden="true" />
+                            <span>CRM Push</span>
+                          </button>
+                        </div>
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 text-[11px] font-medium border border-emerald-100">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                          Supervisor Listening (Silent)
+                        </span>
                       </div>
 
-                      {/* Live Voice Waveform Visualizer + Quality Metric */}
-                      <div className="flex items-center justify-end gap-1 mt-1.5 h-4" title="Live audio activity">
-                        <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "0.9s", animationDelay: "0.1s" }} />
-                        <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "1.3s", animationDelay: "0.3s" }} />
-                        <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "0.7s", animationDelay: "0.2s" }} />
-                        <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "1.1s", animationDelay: "0.4s" }} />
-                        <span className="w-1 bg-sky-700 rounded-full audio-wave-bar" style={{ animationDuration: "0.8s", animationDelay: "0.15s" }} />
-                        <span className="text-[10px] text-slate-400 ml-1 font-mono">HD Opus</span>
-                        <span className="text-[9px] font-semibold text-emerald-800 bg-emerald-50 px-1 py-0.2 rounded border border-emerald-100 font-mono ml-1">
-                          SIP 100%
+                      <div className="pt-2 flex items-center justify-between bg-slate-100/80 px-4 py-3 rounded-xl border border-slate-200">
+                        <div className="flex items-center gap-2">
+                          <button
+                            type="button"
+                            onClick={() => setIsMuted(!isMuted)}
+                            className={`p-2.5 rounded-lg border transition-colors shadow-2xs cursor-pointer ${
+                              isMuted
+                                ? "bg-rose-50 text-rose-700 border-rose-300"
+                                : "bg-white text-slate-700 hover:text-sky-800 border-slate-200"
+                            }`}
+                            title={isMuted ? "Unmute Microphone" : "Mute Microphone"}
+                          >
+                            {isMuted ? <MicOff className="w-4 h-4 text-rose-600" /> : <Mic className="w-4 h-4" />}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setIsOnHold(!isOnHold)}
+                            className={`p-2.5 rounded-lg border transition-colors shadow-2xs cursor-pointer ${
+                              isOnHold
+                                ? "bg-amber-50 text-amber-700 border-amber-300"
+                                : "bg-white text-slate-700 hover:text-sky-800 border-slate-200"
+                            }`}
+                            title={isOnHold ? "Resume Call" : "Hold Call"}
+                          >
+                            {isOnHold ? <Play className="w-4 h-4 text-amber-600" /> : <Pause className="w-4 h-4" />}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => alert("Initiating warm transfer to Tier 3 Account Director...")}
+                            className="p-2.5 rounded-lg bg-white text-slate-700 hover:text-sky-800 transition-colors border border-slate-200 shadow-2xs cursor-pointer"
+                            title="Warm Transfer"
+                          >
+                            <PhoneForwarded className="w-4 h-4" />
+                          </button>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => alert("Call ended. Recording and transcript synced to CRM.")}
+                          className="px-4 py-2 rounded-lg bg-rose-600 text-white text-xs font-semibold hover:bg-rose-700 transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer"
+                        >
+                          <PhoneOff className="w-3.5 h-3.5" aria-hidden="true" />
+                          <span>End Call</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right: AI Whisper Suggestion & CRM Dossier (5 Columns) */}
+                  <div className="lg:col-span-5 space-y-3.5">
+                    <div className="bg-gradient-to-br from-sky-50 via-slate-50 to-slate-50 p-4 rounded-xl border border-sky-200/70 shadow-xs">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-6 h-6 rounded-md bg-sky-700 text-white flex items-center justify-center">
+                          <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
+                        </div>
+                        <span className="text-xs font-semibold font-headline text-slate-900">AI Real-time Whisper Assist</span>
+                      </div>
+                      <p className="text-xs text-slate-600 leading-relaxed">
+                        Offer the <strong className="text-slate-900">Q3 Multi-Region Expansion Discount</strong> (Contract Tier IV). Marcus&apos;s organization renewed their SOC2 compliance last week.
+                      </p>
+                      <div className="mt-3 flex items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => alert("Quote inserted into call summary: $4,200/mo")}
+                          className="text-[11px] font-semibold bg-white px-2.5 py-1 rounded text-sky-800 hover:bg-sky-50 border border-slate-200 shadow-2xs transition-colors cursor-pointer"
+                        >
+                          Insert Deal Quote ($4,200/mo)
+                        </button>
+                        <button
+                          type="button"
+                          className="text-[11px] text-slate-400 hover:text-slate-700 cursor-pointer"
+                        >
+                          Dismiss
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-2.5">
+                      <div className="flex items-center justify-between pb-1.5 border-b border-slate-100">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                          <Zap className="w-3.5 h-3.5 text-blue-600" aria-hidden="true" />
+                          Salesforce &amp; HubSpot Dossier
+                        </span>
+                        <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
+                          Live 94ms
+                        </span>
+                      </div>
+                      <div className="space-y-1.5 text-xs">
+                        <div className="flex justify-between py-0.5">
+                          <span className="text-slate-500">Contract Value</span>
+                          <span className="font-semibold text-slate-900">$148,000 / yr</span>
+                        </div>
+                        <div className="flex justify-between py-0.5">
+                          <span className="text-slate-500">Deal Stage</span>
+                          <span className="font-semibold text-sky-800 bg-sky-50 px-1.5 py-0.2 rounded text-[11px]">
+                            Negotiation · 85% Win
+                          </span>
+                        </div>
+                        <div className="flex justify-between py-0.5">
+                          <span className="text-slate-500">Open SLA Tickets</span>
+                          <span className="font-semibold text-emerald-700 flex items-center gap-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                            0 open (SLA 100%)
+                          </span>
+                        </div>
+                        <div className="flex justify-between py-0.5">
+                          <span className="text-slate-500">Account Executive</span>
+                          <span className="text-slate-900">David Vance (SF HQ)</span>
+                        </div>
+                        <div className="flex justify-between py-0.5">
+                          <span className="text-slate-500">Satisfaction Index (CSAT)</span>
+                          <span className="font-semibold text-emerald-700">4.9 / 5.0 ★</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
+                      <div className="text-xs font-semibold text-slate-900 mb-2 flex items-center justify-between">
+                        <span>Recent Omnichannel Touchpoints</span>
+                        <span className="text-[11px] text-sky-700 cursor-pointer hover:underline font-medium">View 34 total</span>
+                      </div>
+                      <div className="space-y-1.5 text-[11px]">
+                        <div className="flex items-center gap-2 text-slate-500">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                          <span className="font-semibold text-slate-800">Inbound WhatsApp: &quot;Scale SIP trunks&quot;</span>
+                          <span className="ml-auto text-[10px]">Today, 09:14 AM</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-slate-500">
+                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                          <span className="font-semibold text-slate-800">Stripe Invoice #884 Paid ($12.3k)</span>
+                          <span className="ml-auto text-[10px]">Yesterday</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-slate-500">
+                          <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                          <span className="font-semibold text-slate-800">Zendesk CSAT Rated 5-Stars</span>
+                          <span className="ml-auto text-[10px]">May 12</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* TAB 2: WHATSAPP & OMNICHANNEL CHAT */}
+              {activeTab === "whatsapp" && (
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                  {/* Left: WhatsApp Messenger Interface (7 Columns) */}
+                  <div className="lg:col-span-7 bg-white rounded-xl border border-slate-200/80 shadow-xs flex flex-col justify-between overflow-hidden">
+                    {/* WhatsApp Header */}
+                    <div className="p-4 bg-emerald-50/70 border-b border-emerald-100 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-sm shadow-2xs">
+                          ER
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-1.5">
+                            <span className="font-semibold text-sm text-slate-900">Elena Rostova</span>
+                            <span className="text-[10px] bg-emerald-100 text-emerald-800 font-semibold px-1.5 py-0.2 rounded flex items-center gap-0.5">
+                              <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                              Meta Verified
+                            </span>
+                          </div>
+                          <span className="text-[11px] text-slate-500 font-mono">+44 20 ••• ••89 • VP Operations, FinScale Ltd</span>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center gap-2 text-xs">
+                        <span className="px-2.5 py-1 rounded-full bg-white border border-emerald-200 text-emerald-800 font-medium text-[11px] flex items-center gap-1">
+                          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                          24h Session Active
                         </span>
                       </div>
                     </div>
+
+                    {/* Chat Messages Log */}
+                    <div className="p-4 space-y-3.5 max-h-[280px] overflow-y-auto bg-slate-50/30">
+                      {whatsappMessages.map((msg) => (
+                        <div
+                          key={msg.id}
+                          className={`flex flex-col ${msg.sender === "agent" ? "items-end" : "items-start"}`}
+                        >
+                          <div className="flex items-center gap-1 text-[10px] text-slate-400 mb-1">
+                            <span className="font-medium text-slate-600">{msg.name}</span>
+                            <span>• {msg.time}</span>
+                          </div>
+                          <div
+                            className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-xs leading-relaxed shadow-2xs ${
+                              msg.sender === "agent"
+                                ? "bg-emerald-700 text-white rounded-tr-none"
+                                : "bg-white border border-slate-200 text-slate-800 rounded-tl-none"
+                            }`}
+                          >
+                            <p>{msg.text}</p>
+                            {msg.attachment && (
+                              <div className="mt-2 p-2 rounded-lg bg-emerald-800/80 border border-emerald-600 text-[11px] flex items-center gap-2 text-emerald-50">
+                                <FileText className="w-4 h-4 text-emerald-200 shrink-0" />
+                                <span className="truncate">{msg.attachment}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* AI Smart Suggestion Pill */}
+                    <div className="px-4 py-2 bg-sky-50/80 border-t border-sky-100 flex items-center justify-between text-xs">
+                      <div className="flex items-center gap-2 text-sky-900">
+                        <Sparkles className="w-3.5 h-3.5 text-sky-700 shrink-0" />
+                        <span className="text-[11px]">
+                          <strong>Copilot Suggestion:</strong> Offer bundled 50k monthly WhatsApp message pack with 20% tier discount.
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setWhatsappInput("We also include 50,000 pooled WhatsApp conversations in our Enterprise plan with zero per-message markup.")}
+                        className="text-[10px] font-semibold text-sky-700 hover:text-sky-800 bg-white border border-sky-200 px-2 py-0.5 rounded cursor-pointer shrink-0 ml-2"
+                      >
+                        Insert Text
+                      </button>
+                    </div>
+
+                    {/* WhatsApp Message Input Bar */}
+                    <form onSubmit={handleSendWhatsapp} className="p-3 bg-white border-t border-slate-200 flex items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => alert("Pre-approved Meta Template library opened.")}
+                        className="p-2 text-slate-500 hover:text-slate-800 rounded-lg hover:bg-slate-100 transition-colors"
+                        title="Attach Media / Catalog"
+                      >
+                        <Paperclip className="w-4 h-4" />
+                      </button>
+                      <input
+                        type="text"
+                        value={whatsappInput}
+                        onChange={(e) => setWhatsappInput(e.target.value)}
+                        placeholder="Type WhatsApp reply or insert approved template..."
+                        className="flex-1 text-xs px-3 py-2 rounded-lg border border-slate-200 focus:outline-none focus:border-emerald-600"
+                      />
+                      <button
+                        type="submit"
+                        className="px-3.5 py-2 rounded-lg bg-emerald-700 text-white text-xs font-semibold hover:bg-emerald-800 transition-colors flex items-center gap-1 cursor-pointer"
+                      >
+                        <Send className="w-3.5 h-3.5" />
+                        <span>Send</span>
+                      </button>
+                    </form>
                   </div>
 
-                  {/* Live Sentiment & Telemetry Meters */}
-                  <div className="mt-5 grid grid-cols-3 gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200/60">
-                    <div>
-                      <div className="text-[11px] text-slate-500 font-medium">Sentiment</div>
-                      <div className="text-xs font-semibold text-emerald-700 flex items-center gap-1 mt-0.5">
-                        <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
-                        +94% Positive
+                  {/* Right: Meta Cloud API Telemetry & CRM Dossier (5 Columns) */}
+                  <div className="lg:col-span-5 space-y-3.5">
+                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-3">
+                      <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
+                          <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
+                          Meta Cloud API Telemetry
+                        </span>
+                        <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded font-mono">
+                          Live 99.99%
+                        </span>
+                      </div>
+
+                      <div className="space-y-2 text-xs">
+                        <div className="flex justify-between">
+                          <span className="text-slate-500">Phone Number Quality</span>
+                          <span className="font-semibold text-emerald-700 flex items-center gap-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> High (Tier 1)
+                          </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-slate-500">Webhook Latency</span>
+                          <span className="font-mono font-semibold text-slate-900">48ms to HubSpot</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-slate-500">Session Window</span>
+                          <span className="font-mono text-emerald-700 font-semibold">22h 45m Remaining</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-slate-500">Monthly Usage</span>
+                          <span className="font-semibold text-slate-900">12,480 / 50,000</span>
+                        </div>
                       </div>
                     </div>
+
+                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-2.5">
+                      <div className="flex items-center justify-between pb-1.5 border-b border-slate-100">
+                        <span className="text-xs font-semibold text-slate-800">HubSpot Contact Record</span>
+                        <span className="text-[10px] font-semibold text-sky-800 bg-sky-50 px-1.5 py-0.2 rounded font-mono">Synced</span>
+                      </div>
+                      <div className="space-y-1.5 text-xs">
+                        <div className="flex justify-between">
+                          <span className="text-slate-500">Company</span>
+                          <span className="font-semibold text-slate-900">FinScale Global Ltd</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-slate-500">Pipeline Stage</span>
+                          <span className="font-semibold text-sky-800 bg-sky-50 px-1.5 py-0.2 rounded text-[11px]">
+                            Technical Evaluation
+                          </span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-slate-500">Deal Value</span>
+                          <span className="font-bold text-slate-900">$64,000 / yr</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* TAB 3: SALES DIALER & CTI POP */}
+              {activeTab === "dialer" && (
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                  {/* Left: Active Lead Card & Power Dialer Interface (7 Columns) */}
+                  <div className="lg:col-span-7 bg-white rounded-xl p-5 lg:p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
                     <div>
-                      <div className="text-[11px] text-slate-500 font-medium">Intent Detected</div>
-                      <div className="text-xs font-semibold text-slate-800 mt-0.5">Tier 3 Renewal</div>
+                      {/* Campaign Header */}
+                      <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                        <div>
+                          <span className="text-[10px] font-semibold uppercase tracking-wider text-sky-800 bg-sky-50 px-2 py-0.5 rounded">
+                            Active Campaign
+                          </span>
+                          <h3 className="font-headline font-semibold text-base text-slate-900 mt-1">
+                            Q4 High-Yield Enterprise Outreach
+                          </h3>
+                        </div>
+                        <span className="text-xs font-mono font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">
+                          Dialer: 1.8x Pacing
+                        </span>
+                      </div>
+
+                      {/* Current Lead Dossier */}
+                      <div className="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <span className="text-[11px] text-slate-500 font-mono">Lead #48 of 120 in Queue</span>
+                            <h4 className="font-headline font-bold text-base text-slate-900">Alexander Vance</h4>
+                            <p className="text-xs text-slate-600">Chief Technology Officer • DataVanguard Inc</p>
+                          </div>
+                          <div className="text-right">
+                            <span className="text-xs font-mono font-bold text-sky-800 bg-white border border-slate-200 px-2 py-1 rounded">
+                              +1 (650) ••• ••38
+                            </span>
+                            <span className="text-[10px] text-emerald-700 block mt-1">Local Presence DID Match</span>
+                          </div>
+                        </div>
+
+                        <div className="mt-3 pt-3 border-t border-slate-200/60 grid grid-cols-3 gap-2 text-xs">
+                          <div>
+                            <span className="text-[10px] text-slate-400 block">Current Telecom</span>
+                            <span className="font-semibold text-slate-800">Legacy Cisco PBX</span>
+                          </div>
+                          <div>
+                            <span className="text-[10px] text-slate-400 block">Seat Requirement</span>
+                            <span className="font-semibold text-slate-800">140 Agents</span>
+                          </div>
+                          <div>
+                            <span className="text-[10px] text-slate-400 block">Contract Renewal</span>
+                            <span className="font-semibold text-rose-600">30 Days (Urgent)</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Live Pitch Script Helper */}
+                      <div className="mt-3.5 p-3 rounded-lg bg-sky-50/60 border border-sky-200 text-xs text-slate-700">
+                        <span className="font-semibold text-sky-900 block mb-1">Dynamic Pitch Cue:</span>
+                        &quot;Hi Alexander, I noticed DataVanguard is evaluating cloud telephony before your Cisco contract renews this month. We can cut your PBX maintenance by 60% with zero downtime migration...&quot;
+                      </div>
                     </div>
+
+                    {/* 1-Click Call Dispositions & Actions */}
+                    <div className="mt-5 space-y-3">
+                      <div className="text-xs font-semibold text-slate-700">Log Call Disposition &amp; Auto-Advance:</div>
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                        <button
+                          type="button"
+                          onClick={() => { setSelectedDisposition("demo"); alert("Outcome logged: Demo Booked. Next lead dialed in 3s."); }}
+                          className={`p-2.5 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
+                            selectedDisposition === "demo"
+                              ? "bg-emerald-700 text-white border-emerald-700"
+                              : "bg-white text-emerald-800 border-emerald-200 hover:bg-emerald-50"
+                          }`}
+                        >
+                          ✓ Demo Booked
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => { setSelectedDisposition("callback"); alert("Callback scheduled for tomorrow 2:00 PM."); }}
+                          className={`p-2.5 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
+                            selectedDisposition === "callback"
+                              ? "bg-sky-700 text-white border-sky-700"
+                              : "bg-white text-sky-800 border-sky-200 hover:bg-sky-50"
+                          }`}
+                        >
+                          Callback Requested
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => { setSelectedDisposition("vm"); alert("HD Voicemail dropped automatically. Moving to next lead."); }}
+                          className={`p-2.5 rounded-lg border text-xs font-semibold transition-all cursor-pointer ${
+                            selectedDisposition === "vm"
+                              ? "bg-amber-600 text-white border-amber-600"
+                              : "bg-white text-amber-800 border-amber-200 hover:bg-amber-50"
+                          }`}
+                        >
+                          Drop Voicemail
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => { setSelectedDisposition("skip"); alert("Lead skipped. Dialing next..."); }}
+                          className="p-2.5 rounded-lg border text-xs font-semibold bg-white text-slate-700 border-slate-200 hover:bg-slate-100 transition-colors cursor-pointer"
+                        >
+                          Skip / Busy
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right: Dialer Performance Velocity & Queue (5 Columns) */}
+                  <div className="lg:col-span-5 space-y-3.5">
+                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-3">
+                      <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-slate-700">
+                          Dialer Session Metrics
+                        </span>
+                        <span className="text-[10px] font-semibold text-sky-800 bg-sky-50 px-2 py-0.5 rounded font-mono">
+                          Live Shift
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-3 text-center">
+                        <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-200">
+                          <span className="text-[10px] text-slate-400 uppercase font-semibold">Calls Dialed</span>
+                          <p className="text-lg font-bold text-slate-900 mt-0.5">64</p>
+                        </div>
+                        <div className="p-2.5 rounded-lg bg-emerald-50 border border-emerald-100">
+                          <span className="text-[10px] text-emerald-700 uppercase font-semibold">Connect Rate</span>
+                          <p className="text-lg font-bold text-emerald-800 mt-0.5">39.2%</p>
+                        </div>
+                      </div>
+
+                      <div className="space-y-1.5 text-xs text-slate-600 pt-1">
+                        <div className="flex justify-between">
+                          <span>Average Talk Time</span>
+                          <span className="font-semibold text-slate-900 font-mono">3m 42s</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Demos Booked Today</span>
+                          <span className="font-semibold text-emerald-700">6 Demos</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Auto-Logged to CRM</span>
+                          <span className="font-semibold text-sky-800">100% Synced</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
+                      <span className="text-xs font-semibold text-slate-900 mb-2 block">Next In Dialing Queue</span>
+                      <div className="space-y-2 text-xs">
+                        <div className="p-2 rounded-lg bg-slate-50 flex items-center justify-between">
+                          <div>
+                            <span className="font-semibold text-slate-800 block">Priya Sharma</span>
+                            <span className="text-[10px] text-slate-500">VP CX · RetailPulse</span>
+                          </div>
+                          <span className="text-[10px] text-sky-700 font-mono font-semibold">Queue #49</span>
+                        </div>
+                        <div className="p-2 rounded-lg bg-slate-50 flex items-center justify-between">
+                          <div>
+                            <span className="font-semibold text-slate-800 block">Michael Chen</span>
+                            <span className="text-[10px] text-slate-500">Dir IT · BioHealth APAC</span>
+                          </div>
+                          <span className="text-[10px] text-slate-500 font-mono">Queue #50</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* TAB 4: REAL-TIME SPEECH ANALYTICS */}
+              {activeTab === "analytics" && (
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                  {/* Left: Live Floor Stream & Conversation Intelligence (7 Columns) */}
+                  <div className="lg:col-span-7 bg-white rounded-xl p-5 lg:p-6 border border-slate-200/80 shadow-xs flex flex-col justify-between">
                     <div>
-                      <div className="text-[11px] text-slate-500 font-medium">Audio Latency</div>
-                      <div className="text-xs font-semibold text-sky-700 mt-0.5">11ms • 0% Loss</div>
+                      {/* Floor Header */}
+                      <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+                        <div className="flex items-center gap-2">
+                          <Activity className="w-5 h-5 text-sky-700" />
+                          <h3 className="font-headline font-semibold text-base text-slate-900">
+                            Live Floor Speech Intelligence
+                          </h3>
+                        </div>
+                        <span className="text-xs font-mono font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">
+                          28 Active Calls Monitored
+                        </span>
+                      </div>
+
+                      {/* Talk-to-Listen Ratio Visualizer */}
+                      <div className="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200/80">
+                        <div className="flex items-center justify-between text-xs font-semibold text-slate-700 mb-2">
+                          <span>Talk-to-Listen Ratio (Optimal Empathy Zone)</span>
+                          <span className="text-emerald-700 font-mono">Ideal Balance</span>
+                        </div>
+                        <div className="h-3 w-full bg-slate-200 rounded-full overflow-hidden flex">
+                          <div className="bg-sky-700 h-full" style={{ width: "38%" }} title="Customer Speaking 38%" />
+                          <div className="bg-emerald-600 h-full" style={{ width: "62%" }} title="Agent Speaking 62%" />
+                        </div>
+                        <div className="flex justify-between text-[11px] text-slate-500 mt-1.5 font-mono">
+                          <span>Caller Talk: 38%</span>
+                          <span>Agent Talk: 62%</span>
+                        </div>
+                      </div>
+
+                      {/* Real-time Keyword Triggers Cloud */}
+                      <div className="mt-4 space-y-2">
+                        <span className="text-xs font-semibold text-slate-700 block">
+                          Real-Time Keyword &amp; Compliance Detection:
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          <span className="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-semibold border border-emerald-200 flex items-center gap-1">
+                            <Check className="w-3.5 h-3.5" /> &quot;SLA 99.999%&quot; (Detected 02:14)
+                          </span>
+                          <span className="px-2.5 py-1 rounded-lg bg-sky-50 text-sky-800 text-xs font-semibold border border-sky-200 flex items-center gap-1">
+                            <Check className="w-3.5 h-3.5" /> &quot;SOC2 Type II&quot; (Detected 03:02)
+                          </span>
+                          <span className="px-2.5 py-1 rounded-lg bg-amber-50 text-amber-800 text-xs font-semibold border border-amber-200 flex items-center gap-1">
+                            <Sparkles className="w-3.5 h-3.5" /> &quot;Competitor: Avaya&quot; (Alert: Win Strategy)
+                          </span>
+                          <span className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200">
+                            &quot;Multi-Region SIP&quot;
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Live Supervisor Coaching Flag */}
+                      <div className="mt-4 p-3 rounded-lg bg-emerald-50/70 border border-emerald-200 flex items-start gap-2.5 text-xs text-emerald-900">
+                        <ThumbsUp className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                        <div>
+                          <strong className="text-emerald-950">AI Supervisor Evaluation:</strong> Agent handled multi-region capacity question with 100% technical accuracy. Deal win probability increased to 85%.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                      <span>ASR Engine: Deepgram Whisper Nova-2</span>
+                      <span className="font-mono text-emerald-700 font-semibold">Accuracy: 99.4%</span>
                     </div>
                   </div>
 
-                  {/* Real-Time Speech Transcription */}
-                  <div className="mt-4 space-y-2">
-                    <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 flex items-center justify-between">
-                      <span>Live Bi-directional Transcript</span>
-                      <span className="text-[10px] text-emerald-800 font-mono font-medium flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                        Deepgram Whisper ASR • 42ms
-                      </span>
-                    </div>
-                    <div className="text-xs leading-relaxed p-3 rounded-lg bg-slate-50 text-slate-900 border border-slate-200/60">
-                      <span className="font-semibold text-sky-800">Marcus (04:02):</span> &quot;We need to scale our agents in Dublin and Tokyo this Friday. Can we dynamically add 45 SIP seats without restarting the queue?&quot;
-                    </div>
-                    <div className="text-xs leading-relaxed p-3 rounded-lg bg-sky-50/40 text-slate-700 border border-sky-100">
-                      <span className="font-semibold text-slate-900">Agent Sarah (04:08):</span> &quot;Absolutely Marcus, seat provisioning is hot-swapped in real-time with zero downtime.&quot;
-                    </div>
-                  </div>
+                  {/* Right: Automated QA Scorecard & CSAT Predictor (5 Columns) */}
+                  <div className="lg:col-span-5 space-y-3.5">
+                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-3">
+                      <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-slate-700">
+                          Automated QA Scorecard
+                        </span>
+                        <span className="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-mono">
+                          Score: 96 / 100
+                        </span>
+                      </div>
 
-                  {/* Dynamic Agent Copilot Recommendation Inline */}
-                  <div className="mt-3.5 p-3 rounded-lg bg-sky-50/60 border border-sky-200/80 flex items-start gap-2.5">
-                    <div className="w-5 h-5 rounded-md bg-sky-700 text-white flex items-center justify-center shrink-0 mt-0.5">
-                      <Sparkles className="w-3 h-3" aria-hidden="true" />
-                    </div>
-                    <div className="text-xs text-slate-700 leading-relaxed">
-                      <span className="font-semibold text-slate-900">Copilot Live Suggestion:</span> Confirm multi-region pooled concurrency discount; suggest bundling APAC recording storage.
-                    </div>
-                  </div>
-
-                </div>
-
-                {/* Interactive Agent Whisper Action Bar & Softphone Controls */}
-                <div className="mt-5 space-y-2.5">
-                  {/* Action Tools */}
-                  <div className="flex flex-wrap items-center justify-between gap-2 px-3 py-2 rounded-lg bg-slate-50 border border-slate-200/80 text-xs">
-                    <div className="flex items-center gap-1.5">
-                      <button
-                        type="button"
-                        onClick={() => alert("Script template loaded: Tier 3 Renewal Agreement")}
-                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white text-sky-800 hover:bg-slate-100 font-medium border border-slate-200 shadow-2xs transition-colors cursor-pointer"
-                        title="Insert Pre-approved Contract Script"
-                      >
-                        <span>Insert Script</span>
-                        <kbd className="text-[9px] px-1 bg-slate-100 rounded border border-slate-200 text-slate-500 font-mono">⌘K</kbd>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => alert("Notes pushed to Salesforce & HubSpot in 94ms")}
-                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white text-slate-800 hover:text-sky-800 hover:bg-slate-100 font-medium border border-slate-200 shadow-2xs transition-colors cursor-pointer"
-                        title="Sync notes instantly to CRM"
-                      >
-                        <Zap className="w-3.5 h-3.5 text-blue-600" aria-hidden="true" />
-                        <span>CRM Push</span>
-                      </button>
+                      <div className="space-y-2 text-xs">
+                        <div className="flex items-center justify-between">
+                          <span className="text-slate-600">Recording Consent Disclosed</span>
+                          <span className="text-emerald-700 font-semibold flex items-center gap-1">
+                            <CheckCircle2 className="w-3.5 h-3.5" /> Verified
+                          </span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-slate-600">Identity &amp; Account Verified</span>
+                          <span className="text-emerald-700 font-semibold flex items-center gap-1">
+                            <CheckCircle2 className="w-3.5 h-3.5" /> Passed
+                          </span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-slate-600">Product Script Adherence</span>
+                          <span className="text-emerald-700 font-semibold font-mono">100%</span>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-slate-600">Sentiment Trajectory</span>
+                          <span className="text-emerald-700 font-semibold">Positive (+94%)</span>
+                        </div>
+                      </div>
                     </div>
 
-                    <div className="flex items-center gap-1.5">
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 text-[11px] font-medium border border-emerald-100">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                        Supervisor Listening (Silent)
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Softphone Dialpad / Telephony Control Bar */}
-                  <div className="pt-2 flex items-center justify-between bg-slate-100/80 px-4 py-3 rounded-xl border border-slate-200">
-                    <div className="flex items-center gap-2">
-                      <button
-                        type="button"
-                        onClick={() => setIsMuted(!isMuted)}
-                        className={`p-2.5 rounded-lg border transition-colors shadow-2xs cursor-pointer ${
-                          isMuted
-                            ? "bg-rose-50 text-rose-700 border-rose-300"
-                            : "bg-white text-slate-700 hover:text-sky-800 border-slate-200"
-                        }`}
-                        title={isMuted ? "Unmute Microphone" : "Mute Microphone"}
-                      >
-                        {isMuted ? <MicOff className="w-4 h-4 text-rose-600" /> : <Mic className="w-4 h-4" />}
-                      </button>
-
-                      <button
-                        type="button"
-                        onClick={() => setIsOnHold(!isOnHold)}
-                        className={`p-2.5 rounded-lg border transition-colors shadow-2xs cursor-pointer ${
-                          isOnHold
-                            ? "bg-amber-50 text-amber-700 border-amber-300"
-                            : "bg-white text-slate-700 hover:text-sky-800 border-slate-200"
-                        }`}
-                        title={isOnHold ? "Resume Call" : "Hold Call"}
-                      >
-                        {isOnHold ? <Play className="w-4 h-4 text-amber-600" /> : <Pause className="w-4 h-4" />}
-                      </button>
-
-                      <button
-                        type="button"
-                        onClick={() => alert("Initiating warm transfer to Tier 3 Account Director...")}
-                        className="p-2.5 rounded-lg bg-white text-slate-700 hover:text-sky-800 transition-colors border border-slate-200 shadow-2xs cursor-pointer"
-                        title="Warm Transfer"
-                      >
-                        <PhoneForwarded className="w-4 h-4" />
-                      </button>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={() => alert("Call ended. Call recording and transcript automatically synced to CRM.")}
-                      className="px-4 py-2 rounded-lg bg-rose-600 text-white text-xs font-semibold hover:bg-rose-700 transition-colors flex items-center gap-1.5 shadow-xs cursor-pointer"
-                    >
-                      <PhoneOff className="w-3.5 h-3.5" aria-hidden="true" />
-                      <span>End Call</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right: AI Whisper Suggestion & CRM Dossier (5 Columns) */}
-              <div className="lg:col-span-5 space-y-3.5">
-                
-                {/* AI Whisper Box */}
-                <div className="bg-gradient-to-br from-sky-50 via-slate-50 to-slate-50 p-4 rounded-xl border border-sky-200/70 shadow-xs">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 rounded-md bg-sky-700 text-white flex items-center justify-center">
-                      <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
-                    </div>
-                    <span className="text-xs font-semibold font-headline text-slate-900">AI Real-time Whisper Assist</span>
-                  </div>
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    Offer the <strong className="text-slate-900">Q3 Multi-Region Expansion Discount</strong> (Contract Tier IV). Marcus&apos;s organization renewed their SOC2 compliance last week.
-                  </p>
-                  <div className="mt-3 flex items-center gap-2">
-                    <button
-                      type="button"
-                      onClick={() => alert("Quote inserted into call summary: $4,200/mo")}
-                      className="text-[11px] font-semibold bg-white px-2.5 py-1 rounded text-sky-800 hover:bg-sky-50 border border-slate-200 shadow-2xs transition-colors cursor-pointer"
-                    >
-                      Insert Deal Quote ($4,200/mo)
-                    </button>
-                    <button
-                      type="button"
-                      className="text-[11px] text-slate-400 hover:text-slate-700 cursor-pointer"
-                    >
-                      Dismiss
-                    </button>
-                  </div>
-                </div>
-
-                {/* Instant CRM Screen-Pop (Salesforce & HubSpot Synced Dossier) */}
-                <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-2.5">
-                  <div className="flex items-center justify-between pb-1.5 border-b border-slate-100">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                      <Zap className="w-3.5 h-3.5 text-blue-600" aria-hidden="true" />
-                      Salesforce &amp; HubSpot Dossier
-                    </span>
-                    <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
-                      Live 94ms
-                    </span>
-                  </div>
-                  <div className="space-y-1.5 text-xs">
-                    <div className="flex justify-between py-0.5">
-                      <span className="text-slate-500">Contract Value</span>
-                      <span className="font-semibold text-slate-900">$148,000 / yr</span>
-                    </div>
-                    <div className="flex justify-between py-0.5">
-                      <span className="text-slate-500">Deal Stage</span>
-                      <span className="font-semibold text-sky-800 bg-sky-50 px-1.5 py-0.2 rounded text-[11px]">
-                        Negotiation · 85% Win
-                      </span>
-                    </div>
-                    <div className="flex justify-between py-0.5">
-                      <span className="text-slate-500">Open SLA Tickets</span>
-                      <span className="font-semibold text-emerald-700 flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                        0 open (SLA 100%)
-                      </span>
-                    </div>
-                    <div className="flex justify-between py-0.5">
-                      <span className="text-slate-500">Account Executive</span>
-                      <span className="text-slate-900">David Vance (SF HQ)</span>
-                    </div>
-                    <div className="flex justify-between py-0.5">
-                      <span className="text-slate-500">Satisfaction Index (CSAT)</span>
-                      <span className="font-semibold text-emerald-700">4.9 / 5.0 ★</span>
+                    <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs space-y-2">
+                      <span className="text-xs font-semibold text-slate-800 block">Predicted CSAT Outcome</span>
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-2xl font-bold font-headline text-emerald-700">4.9 / 5.0</span>
+                        <span className="text-xs text-slate-500 font-medium">★ High Promoter</span>
+                      </div>
+                      <p className="text-[11px] text-slate-500 leading-relaxed">
+                        Predicted customer satisfaction based on speech acoustics, sentiment arc, and first-contact resolution likelihood.
+                      </p>
                     </div>
                   </div>
                 </div>
+              )}
 
-                {/* Omnichannel Quick Timeline */}
-                <div className="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
-                  <div className="text-xs font-semibold text-slate-900 mb-2 flex items-center justify-between">
-                    <span>Recent Omnichannel Touchpoints</span>
-                    <span className="text-[11px] text-sky-700 cursor-pointer hover:underline font-medium">View 34 total</span>
-                  </div>
-                  <div className="space-y-1.5 text-[11px]">
-                    <div className="flex items-center gap-2 text-slate-500">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                      <span className="font-semibold text-slate-800">Inbound WhatsApp: &quot;Scale SIP trunks&quot;</span>
-                      <span className="ml-auto text-[10px]">Today, 09:14 AM</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-slate-500">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                      <span className="font-semibold text-slate-800">Stripe Invoice #884 Paid ($12.3k)</span>
-                      <span className="ml-auto text-[10px]">Yesterday</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-slate-500">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                      <span className="font-semibold text-slate-800">Zendesk CSAT Rated 5-Stars</span>
-                      <span className="ml-auto text-[10px]">May 12</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
             </div>
 
             {/* Integration Ribbon Bottom Strip */}
