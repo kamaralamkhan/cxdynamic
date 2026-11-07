@@ -4,12 +4,12 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import CalmHero from "@/components/CalmHero";
 import ProofAndMarquee from "@/components/ProofAndMarquee";
+import StitchBentoGrid from "@/components/StitchBentoGrid";
+import StitchInfrastructureSection from "@/components/StitchInfrastructureSection";
 import ModernVsLegacySection from "@/components/ModernVsLegacySection";
 import StitchPillarsSection from "@/components/StitchPillarsSection";
 import StitchTabsSection from "@/components/StitchTabsSection";
 import StitchCallFlowSection from "@/components/StitchCallFlowSection";
-import PlatformModesSection from "@/components/PlatformModesSection";
-import OmnichannelSection from "@/components/OmnichannelSection";
 import StitchIndustriesSection from "@/components/StitchIndustriesSection";
 import StitchTestimonialSection from "@/components/StitchTestimonialSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -75,29 +75,29 @@ export default function Home() {
 
       <div id="homepage-content" tabIndex={-1}>
 
-        {/* Section 1: Hero — Light-First Interactive Agent Workspace (Ticking Timer, Waveform, Screen-Pop, Mute/Hold, Copilot) */}
+        {/* Section 1: Hero — Exact Design from Stitch Zip (Centered Headline, Ambient Globe, macOS Agent Workspace v3.0) */}
         <CalmHero onOpenDemo={() => setDemoOpen(true)} />
 
         {/* Section 2: Core Proof Metrics Strip + Enterprise Ecosystem Marquee (Light Theme) */}
         <ProofAndMarquee />
 
-        {/* Section 3: Architecture Comparison — Modern Cloud Voice vs Yesterday's PBX */}
+        {/* Section 3: Feature Bento Grid — "Everything your modern revenue & support teams need to conquer call volume" */}
+        <StitchBentoGrid />
+
+        {/* Section 4: Global Voice Telephony Infrastructure — Sub-Millisecond Edge Network Canvas */}
+        <StitchInfrastructureSection />
+
+        {/* Section 5: Architecture Comparison — Modern Cloud Voice vs Yesterday's PBX */}
         <ModernVsLegacySection />
 
-        {/* Section 4: Four Product Pillars with Interactive UI Mockups (Stitch Design) */}
+        {/* Section 6: Four Product Pillars with Interactive UI Mockups (Stitch Design) */}
         <StitchPillarsSection />
 
-        {/* Section 5: Interactive Feature Story — "One system. Infinite control." (Stitch Tabbed Demo) */}
+        {/* Section 7: Interactive Feature Story — "One system. Infinite control." (Stitch Tabbed Demo) */}
         <StitchTabsSection />
 
-        {/* Section 6: End-to-End Orchestration — "How a call moves through CXDYNAMIQ" (4-Step Loop) */}
+        {/* Section 8: End-to-End Orchestration — "How a call moves through CXDYNAMIQ" (4-Step Loop) */}
         <StitchCallFlowSection />
-
-        {/* Section 7: Three Operating Modes — Team-Led, AI-Assisted, AI-Led */}
-        <PlatformModesSection />
-
-        {/* Section 8: Omnichannel Engagement & Cross-Channel Context Preservation */}
-        <OmnichannelSection />
 
         {/* Section 9: Purpose-Built For Demanding Sectors — Global Enterprise, BPO, Education, Growing Businesses */}
         <StitchIndustriesSection />
