@@ -4,13 +4,15 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import CalmHero from "@/components/CalmHero";
 import AnimatedServiceGrid from "@/components/AnimatedServiceGrid";
-import StitchIntegrationsSection from "@/components/StitchIntegrationsSection";
+import AgenticAISection from "@/components/AgenticAISection";
+import HumanAIJourneySection from "@/components/HumanAIJourneySection";
+import OmnichannelSection from "@/components/OmnichannelSection";
 import StitchBentoGrid from "@/components/StitchBentoGrid";
+import AIQASection from "@/components/AIQASection";
+import CXAnalyticsSection from "@/components/CXAnalyticsSection";
+import StitchIntegrationsSection from "@/components/StitchIntegrationsSection";
 import StitchInfrastructureSection from "@/components/StitchInfrastructureSection";
 import ModernVsLegacySection from "@/components/ModernVsLegacySection";
-import StitchPillarsSection from "@/components/StitchPillarsSection";
-import StitchTabsSection from "@/components/StitchTabsSection";
-import StitchCallFlowSection from "@/components/StitchCallFlowSection";
 import StitchIndustriesSection from "@/components/StitchIndustriesSection";
 import StitchTestimonialSection from "@/components/StitchTestimonialSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -76,55 +78,61 @@ export default function Home() {
 
       <div id="homepage-content" tabIndex={-1}>
 
-        {/* Section 1: Hero — Exact Design from Stitch Zip (Centered Headline, Ambient Globe, macOS Agent Workspace v3.0) */}
+        {/* Section 1: Hero — macOS Agent Workspace v3.0 with interactive tabs & real-time telemetry */}
         <CalmHero onOpenDemo={() => setDemoOpen(true)} />
 
         {/* Section 2: Animated Service Grid (4-Column Responsive Module Suite) */}
         <AnimatedServiceGrid />
 
-        {/* Section 3: Seamless Bi-directional Integration Across Your Entire Stack (Stitch Parabolic Drifting Nodes) */}
-        <StitchIntegrationsSection />
+        {/* Section 3 (PDF Section 5): Dedicated Agentic AI — Autonomous 5-Step Loop (Understand → Reason → Act → Resolve → Learn) */}
+        <AgenticAISection />
 
-        {/* Section 4: Feature Bento Grid — "Everything your modern revenue & support teams need to conquer call volume" */}
+        {/* Section 4 (PDF Section 6): Dedicated Human + AI Collaboration — The Complete 6-Stage Service Continuum */}
+        <HumanAIJourneySection />
+
+        {/* Section 5 (PDF Section 4): Unified Omnichannel Fabric across 7 Channels with Persistent Context */}
+        <OmnichannelSection />
+
+        {/* Section 6 (PDF Section 4): Intelligent Contact Center — ACD, IVR, Predictive/Progressive Dialers, CTI Screen Pops */}
         <StitchBentoGrid />
 
-        {/* Section 4: Global Voice Telephony Infrastructure — Sub-Millisecond Edge Network Canvas */}
+        {/* Section 7 (PDF Section 4 & 6): AI Quality & Conversation Intelligence — 100% Interaction Auditing vs 2% Legacy Sample */}
+        <AIQASection />
+
+        {/* Section 8 (PDF Section 4): Real-Time CX Analytics & Business Intelligence — Containment, FCR, AHT, CSAT & ROI Calculator */}
+        <CXAnalyticsSection />
+
+        {/* Section 9 (PDF Section 7): Seamless Bi-directional Enterprise Integrations (CRM, ERP, Helpdesk, APIs) */}
+        <StitchIntegrationsSection />
+
+        {/* Section 10: Global Voice Telephony Infrastructure — Sub-Millisecond Edge Network Canvas */}
         <StitchInfrastructureSection />
 
-        {/* Section 5: Architecture Comparison — Modern Cloud Voice vs Yesterday's PBX */}
+        {/* Section 11: Architecture Comparison — Modern Cloud Voice vs Yesterday's PBX */}
         <ModernVsLegacySection />
 
-        {/* Section 6: Four Product Pillars with Interactive UI Mockups (Stitch Design) */}
-        <StitchPillarsSection />
-
-        {/* Section 7: Interactive Feature Story — "One system. Infinite control." (Stitch Tabbed Demo) */}
-        <StitchTabsSection />
-
-        {/* Section 8: End-to-End Orchestration — "How a call moves through CXDYNAMIQ" (4-Step Loop) */}
-        <StitchCallFlowSection />
-
-        {/* Section 9: Purpose-Built For Demanding Sectors — Global Enterprise, BPO, Education, Growing Businesses */}
+        {/* Section 12 (PDF Section 8): Sector-Specific AI & Contact Center Blueprints (8 Major Industry Verticals) */}
         <StitchIndustriesSection />
 
-        {/* Section 10: Verified High-Credibility Testimonial — Sarah Jenkins (+34% Queue Throughput) */}
+        {/* Section 13: Verified Customer Credibility & Metric-Driven Social Proof */}
         <StitchTestimonialSection />
 
-        {/* Section 11: Why Leaders Migrate to CXDYNAMIQ — 30+ Yrs, Carrier SLA, Zero Downtime */}
+        {/* Section 14: Enterprise Heritage & Reliability SLA (30+ Years, Carrier Interconnects) */}
         <WhyChooseUs />
 
-        {/* Section 12: 5-Step CXQ360.ai Trial-to-License Journey */}
+        {/* Section 15 (PDF Section 3): 5-Step CXQ360.ai Trial-to-License Onboarding Journey */}
         <CXQ360TrialJourney />
 
-        {/* Section 13: Knowledge Centre / Technical Guides */}
+        {/* Section 16: Technical Knowledge Centre & Architecture Guides */}
         <KnowledgeCentre />
 
-        {/* Section 14: Pre-Footer Dual CTA — CXQ360.ai Sandbox vs Enterprise Consultation (Light Theme) */}
+        {/* Section 17 (PDF Section 3 & 11): Pre-Footer Dual CTA — CXQ360.ai Sandbox vs Enterprise Consultation */}
         <PreFooterDualCTA onOpenDemo={() => setDemoOpen(true)} />
 
-        {/* Section 15: Quick Callback & Custom Demo Quote Form (Light Theme) */}
+        {/* Section 18: Instant Enterprise Callback & Custom Demo Quote Form */}
         <CallbackSection />
 
-        {/* Section 16: Calm Footer with Full Sitemap, Security Badges & WhatsApp Float */}
+        {/* Section 19: Enterprise Footer with ISO 27001, SOC 2, HIPAA, GDPR Security Badges & WhatsApp Float */}
         <CalmFooter />
 
       </div>

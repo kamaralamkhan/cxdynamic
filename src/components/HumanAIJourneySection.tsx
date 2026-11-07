@@ -87,23 +87,23 @@ export default function HumanAIJourneySection() {
   const activeStage = LIFECYCLE_STAGES[activeStageIndex];
 
   return (
-    <section id="human-ai-collaboration" className="py-20 lg:py-28 bg-slate-900 text-white relative overflow-hidden border-b border-slate-800">
+    <section id="human-ai-collaboration" className="py-16 sm:py-20 lg:py-28 bg-white text-slate-900 relative overflow-hidden border-b border-slate-200">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Core Positioning Banner */}
         <div className="max-w-4xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-950/90 border border-sky-500/40 text-sky-300 text-xs font-semibold shadow-inner">
-            <Users className="w-3.5 h-3.5 text-sky-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-800 text-xs font-semibold shadow-inner">
+            <Users className="w-3.5 h-3.5 text-sky-700" />
             <span>Human and AI Collaboration Journey</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white tracking-tight leading-snug font-display">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-900 tracking-tight leading-snug font-display">
             AI handles automation and repetitive interactions,{" "}
-            <span className="text-sky-400">while human agents handle complex, sensitive and high-value conversations.</span>
+            <span className="text-sky-700">while human agents handle complex, sensitive and high-value conversations.</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Never force customers into cold robotic dead-ends. CXdynamIQ creates an integrated continuum where autonomous AI agents resolve routine volume and assist human specialists with real-time in-call intelligence.
           </p>
         </div>
@@ -119,18 +119,18 @@ export default function HumanAIJourneySection() {
                   onClick={() => setActiveStageIndex(idx)}
                   className={`p-4 rounded-xl text-left border transition-colors cursor-pointer relative focus-visible:outline-2 focus-visible:outline-sky-400 ${
                     isCurrent
-                      ? "bg-sky-950/80 border-sky-400 shadow-md ring-1 ring-sky-400/50"
-                      : "bg-slate-950/60 border-slate-800 hover:bg-slate-800/60 hover:border-slate-700"
+                      ? "bg-sky-50/80 border-sky-400 shadow-md ring-1 ring-sky-400/50"
+                      : "bg-white border-slate-200 hover:bg-slate-100/60 hover:border-slate-300"
                   }`}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold text-sky-400">{stage.step}</span>
+                    <span className="text-xs font-semibold text-sky-700">{stage.step}</span>
                     <span className="text-[10px] text-slate-400 font-medium">{stage.metric}</span>
                   </div>
-                  <h4 className="text-xs sm:text-sm font-semibold text-white line-clamp-2">
+                  <h4 className="text-xs sm:text-sm font-semibold text-slate-900 line-clamp-2">
                     {stage.title}
                   </h4>
-                  <p className="text-[11px] text-slate-300 line-clamp-2 mt-0.5">
+                  <p className="text-[11px] text-slate-600 line-clamp-2 mt-0.5">
                     {stage.role}
                   </p>
                 </button>
@@ -139,39 +139,39 @@ export default function HumanAIJourneySection() {
           </div>
 
           {/* Active Stage Detail Banner */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-slate-950/90 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div className="space-y-1">
-              <span className="text-xs font-semibold text-sky-400">
+              <span className="text-xs font-semibold text-sky-700">
                 Phase {activeStage.step}: {activeStage.title} ({activeStage.role})
               </span>
-              <p className="text-xs sm:text-sm text-slate-200 max-w-3xl leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-700 max-w-3xl leading-relaxed">
                 {activeStage.description}
               </p>
             </div>
-            <div className="shrink-0 bg-sky-950/90 border border-sky-500/40 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-sky-300">
+            <div className="shrink-0 bg-sky-50 border border-sky-300 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-sky-800">
               {activeStage.metric}
             </div>
           </div>
         </div>
 
         {/* Live Agent Experience & AI Copilot Desktop UI */}
-        <div className="bg-slate-950 rounded-3xl border border-slate-800 shadow-lg p-6 sm:p-8 lg:p-10 space-y-6">
+        <div className="bg-slate-50 rounded-3xl border border-slate-200 shadow-lg p-6 sm:p-8 lg:p-10 space-y-6">
           
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-200">
             <div className="space-y-1">
-              <div className="inline-flex items-center gap-2 text-xs font-semibold text-sky-400">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold text-sky-700">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 motion-safe:animate-pulse motion-reduce:animate-none" />
                 <span>Active Call · Agent Copilot Desktop</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold font-display text-white">
+              <h3 className="text-xl sm:text-2xl font-bold font-display text-slate-900">
                 Live In-Call Assistance, Knowledge Suggestions &amp; Auto-ACW
               </h3>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-xs text-slate-400 bg-slate-900 px-3 py-1.5 rounded-lg border border-slate-800">
+              <span className="text-xs text-slate-400 bg-white px-3 py-1.5 rounded-lg border border-slate-200">
                 Caller: Marcus Vance (+1 415 ••• ••89)
               </span>
-              <span className="text-xs font-semibold text-emerald-400 bg-emerald-950/80 px-3 py-1.5 rounded-lg border border-emerald-500/40">
+              <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200">
                 Sentiment: +0.86 Positive
               </span>
             </div>
@@ -184,46 +184,46 @@ export default function HumanAIJourneySection() {
             <div className="lg:col-span-6 space-y-4">
               
               {/* WhatsApp-to-Voice Context Preservation Card */}
-              <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
+              <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-2">
                 <div className="flex items-center justify-between text-xs">
-                  <span className="text-sky-400 font-semibold flex items-center gap-1.5">
+                  <span className="text-sky-700 font-semibold flex items-center gap-1.5">
                     <MessageSquare className="w-3.5 h-3.5" />
                     Prior WhatsApp Context Handed Off
                   </span>
                   <span className="text-slate-400 text-[11px]">Today, 14:18 (4m ago)</span>
                 </div>
-                <p className="text-xs text-slate-200 leading-relaxed">
+                <p className="text-xs text-slate-700 leading-relaxed">
                   Customer attempted automated address change on WhatsApp. Transit rule cutoff required voice confirmation. Identity verified via 2FA token (#9942).
                 </p>
-                <div className="flex items-center gap-2 text-[11px] text-slate-300">
-                  <span className="bg-slate-800 px-2 py-0.5 rounded">Tier: Enterprise Gold</span>
-                  <span className="bg-slate-800 px-2 py-0.5 rounded">Order #CX-88492</span>
-                  <span className="bg-emerald-950/70 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30">Verified</span>
+                <div className="flex items-center gap-2 text-[11px] text-slate-600">
+                  <span className="bg-slate-100 px-2 py-0.5 rounded">Tier: Enterprise Gold</span>
+                  <span className="bg-slate-100 px-2 py-0.5 rounded">Order #CX-88492</span>
+                  <span className="bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded border border-emerald-200">Verified</span>
                 </div>
               </div>
 
               {/* Live Audio Transcript with PII Masking */}
-              <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-3 text-xs">
-                <div className="flex items-center justify-between text-slate-400 border-b border-slate-800 pb-2">
+              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3 text-xs">
+                <div className="flex items-center justify-between text-slate-400 border-b border-slate-200 pb-2">
                   <span className="flex items-center gap-2">
-                    <Headphones className="w-3.5 h-3.5 text-sky-400" />
+                    <Headphones className="w-3.5 h-3.5 text-sky-700" />
                     Live Audio Stream (Opus HD · 12ms Latency)
                   </span>
-                  <span className="text-[10px] text-emerald-400 font-semibold">AUTOMATIC PII REDACTION ON</span>
+                  <span className="text-[10px] text-emerald-700 font-semibold">AUTOMATIC PII REDACTION ON</span>
                 </div>
 
-                <div className="space-y-2.5 text-xs text-slate-200 max-h-48 overflow-y-auto pr-1">
+                <div className="space-y-2.5 text-xs text-slate-700 max-h-48 overflow-y-auto pr-1">
                   <div>
                     <span className="text-slate-400 font-semibold">Caller (14:22:04): </span>
                     <span>&quot;Hi, I spoke to the WhatsApp bot earlier. I need my package sent to Suite 400 instead of the front lobby.&quot;</span>
                   </div>
                   <div>
-                    <span className="text-sky-400 font-semibold">Agent (14:22:10): </span>
+                    <span className="text-sky-700 font-semibold">Agent (14:22:10): </span>
                     <span>&quot;Hello Marcus! I see your WhatsApp ticket for Order #CX-88492 right here on my screen. Let me confirm that re-route immediately.&quot;</span>
                   </div>
                   <div>
                     <span className="text-slate-400 font-semibold">Caller (14:22:18): </span>
-                    <span>&quot;Perfect, thank you! My card ending in <span className="bg-slate-800 text-sky-300 px-1.5 py-0.5 rounded">•••• 4210</span> is on file for any delivery adjustment.&quot;</span>
+                    <span>&quot;Perfect, thank you! My card ending in <span className="bg-slate-100 text-sky-800 px-1.5 py-0.5 rounded">•••• 4210</span> is on file for any delivery adjustment.&quot;</span>
                   </div>
                 </div>
               </div>
@@ -234,48 +234,48 @@ export default function HumanAIJourneySection() {
             <div className="lg:col-span-6 space-y-4">
               
               {/* Keyword-Triggered Live Coach Card */}
-              <div className="p-4 rounded-xl bg-sky-950/70 border border-sky-500/40 space-y-2 shadow-inner">
+              <div className="p-4 rounded-xl bg-sky-50/70 border border-sky-300 space-y-2 shadow-inner">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold text-sky-300 flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-sky-400" />
+                  <span className="text-xs font-semibold text-sky-800 flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-sky-700" />
                     AI Live Coach Card: Logistics Address Update
                   </span>
-                  <span className="text-[10px] tabular-nums font-semibold text-emerald-300 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40">
+                  <span className="text-[10px] tabular-nums font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                     Confidence: 99.4%
                   </span>
                 </div>
-                <p className="text-xs text-slate-200 leading-relaxed">
+                <p className="text-xs text-slate-700 leading-relaxed">
                   Recommended response: <em>&quot;Marcus, I have updated the drop coordinates in our logistics dispatch portal. Courier slot confirmed for tomorrow between 9:00 AM and 12:00 PM.&quot;</em>
                 </p>
                 <div className="pt-1 flex items-center gap-3">
-                  <button className="text-[11px] font-semibold text-white bg-sky-700 hover:bg-sky-800 px-3 py-1 rounded-md transition-colors cursor-pointer">
+                  <button className="text-[11px] font-semibold text-slate-900 bg-sky-700 hover:bg-sky-800 px-3 py-1 rounded-md transition-colors cursor-pointer">
                     Apply to CRM (1-Click)
                   </button>
-                  <span className="text-[11px] text-slate-300">Triggers SAP API mutation #TX-9102</span>
+                  <span className="text-[11px] text-slate-600">Triggers SAP API mutation #TX-9102</span>
                 </div>
               </div>
 
               {/* Live Playbook Checklist */}
-              <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2.5">
-                <div className="flex items-center justify-between text-xs font-semibold text-white">
+              <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-2.5">
+                <div className="flex items-center justify-between text-xs font-semibold text-slate-900">
                   <span>Adherence Playbook: Tier-1 Logistics Inbound</span>
-                  <span className="text-xs tabular-nums font-semibold text-sky-400">3 of 4 Completed</span>
+                  <span className="text-xs tabular-nums font-semibold text-sky-700">3 of 4 Completed</span>
                 </div>
 
-                <div className="space-y-1.5 text-xs text-slate-200">
+                <div className="space-y-1.5 text-xs text-slate-700">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
                     <span className="line-through text-slate-400">Warm Greeting &amp; Customer Name Stated</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
                     <span className="line-through text-slate-400">Acknowledge Previous WhatsApp Intent</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
                     <span className="line-through text-slate-400">Confirm New Suite &amp; Delivery Window</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sky-300 font-medium">
+                  <div className="flex items-center gap-2 text-sky-800 font-medium">
                     <span className="w-3.5 h-3.5 rounded-full border border-sky-400 flex items-center justify-center shrink-0 text-[10px]">4</span>
                     <span>Offer WhatsApp Digital Confirmation Receipt</span>
                   </div>
@@ -283,17 +283,17 @@ export default function HumanAIJourneySection() {
               </div>
 
               {/* Zero-Touch Post-Call AutoSummary (ACW Slashed by 50%) */}
-              <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between gap-4">
+              <div className="p-4 rounded-xl bg-white border border-slate-200 flex items-center justify-between gap-4">
                 <div className="space-y-0.5">
-                  <div className="text-xs font-semibold text-white flex items-center gap-1.5">
-                    <FileText className="w-3.5 h-3.5 text-sky-400" />
+                  <div className="text-xs font-semibold text-slate-900 flex items-center gap-1.5">
+                    <FileText className="w-3.5 h-3.5 text-sky-700" />
                     Zero-Touch Post-Call AutoSummary
                   </div>
-                  <p className="text-[11px] text-slate-300">
+                  <p className="text-[11px] text-slate-600">
                     Pre-compiled structured summary &amp; CRM disposition synced in 0.4s.
                   </p>
                 </div>
-                <span className="text-xs tabular-nums font-semibold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-500/40 shrink-0">
+                <span className="text-xs tabular-nums font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded border border-emerald-200 shrink-0">
                   -50% ACW
                 </span>
               </div>
@@ -303,8 +303,8 @@ export default function HumanAIJourneySection() {
           </div>
 
           {/* Action CTAs */}
-          <div className="pt-6 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
-            <p className="text-xs text-slate-300">
+          <div className="pt-6 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
+            <p className="text-xs text-slate-600">
               Live in a day · Pre-integrated with Salesforce, Zoho, Zendesk &amp; HubSpot
             </p>
 
@@ -313,7 +313,7 @@ export default function HumanAIJourneySection() {
                 href="https://cxq360.ai/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-sky-700 hover:bg-sky-800 text-white shadow-sm transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold bg-sky-700 hover:bg-sky-800 text-slate-900 shadow-sm transition-colors cursor-pointer"
               >
                 <span>Experience Copilot in CXQ360.ai</span>
                 <ExternalLink className="w-3.5 h-3.5 shrink-0" />

@@ -342,3 +342,4 @@ export default function AnimatedServiceGrid() {
     </section>
   );
 }
+
