@@ -136,6 +136,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               width={180}
               height={36}
               priority
+              unoptimized
               className="h-8 w-auto object-contain transition-all"
             />
           </Link>
@@ -143,7 +144,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
           {/* Desktop Navigation with Smooth Transitions */}
           <nav className="hidden xl:flex items-center h-full gap-7 xl:gap-8">
 
-            {/* Level 1: Home */}
+            {/* Core wayfinding */}
             <Link
               href="/"
               className="whitespace-nowrap text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors"
@@ -151,15 +152,14 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               Home
             </Link>
 
-            {/* Level 1: About Us */}
             <Link
               href="/about-us"
               className="whitespace-nowrap text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors"
             >
-              About Us
+              About
             </Link>
 
-            {/* Level 2: Our Products Mega Menu (Sleek SaaS Layout) */}
+            {/* Platform + services mega menu */}
             <div
               className="group h-full flex items-center"
               onMouseEnter={() => handleMouseEnter("products")}
@@ -174,7 +174,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                     : "text-slate-600 hover:text-slate-900"
                   }`}
               >
-                <span>Our Products</span>
+                <span>Platform &amp; Services</span>
                 <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${openDropdown === "products" ? "rotate-180 text-sky-700" : "group-hover:rotate-180"
                   }`} />
               </button>
@@ -426,7 +426,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               </div>
             </div>
 
-            {/* Level 2: Why CXDYNAMIQ Mega Menu (Aircall Integrations Inspired Layout) */}
+            {/* Integrations + solutions mega menu */}
             <div
               className="group h-full flex items-center"
               onMouseEnter={() => handleMouseEnter("why")}
@@ -441,7 +441,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                     : "text-slate-600 hover:text-slate-900"
                   }`}
               >
-                <span>Why CXDYNAMIQ</span>
+                <span>Integrations &amp; Solutions</span>
                 <ChevronDown className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${openDropdown === "why" ? "rotate-180 text-sky-700" : "group-hover:rotate-180"
                   }`} />
               </button>
@@ -654,9 +654,9 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
                   <div className="bg-slate-50/90 border-t border-slate-100 px-6 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-600">
                     <div className="flex items-center gap-2">
                       <ShieldCheck className="w-4 h-4 text-emerald-500" />
-                      <span className="font-semibold text-slate-800">20+ NATIVE CRM &amp; MESSAGING INTEGRATIONS</span>
+                      <span className="font-semibold text-slate-800">CRM, helpdesk, messaging &amp; API connections</span>
                       <span className="hidden md:inline text-slate-400">•</span>
-                      <span className="hidden md:inline text-slate-600">Native screen-pop &amp; 2-way sync · Zero PBX required</span>
+                      <span className="hidden md:inline text-slate-600">Explore the full ecosystem in one place</span>
                     </div>
                     <div className="flex items-center gap-4">
                       <Link href="/contact-us" onClick={closeAll} className="font-semibold text-sky-700 hover:text-sky-800 flex items-center gap-1 group/btn">
@@ -670,12 +670,12 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               </div>
             </div>
 
-            {/* Level 1: Our Blog */}
+            {/* Resources */}
             <Link
               href="/blogs"
               className="whitespace-nowrap text-[15px] font-medium text-slate-600 hover:text-slate-900 transition-colors"
             >
-              Our Blog
+              Resources
             </Link>
 
             {/* Level 1: Contact Us */}
@@ -747,7 +747,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               onClick={() => toggleMobileAccordion("products")}
               className="flex items-center justify-between w-full px-3 py-2 text-left font-bold text-slate-900 hover:bg-slate-50 rounded-lg"
             >
-              <span>Our Products</span>
+              <span>Platform &amp; Services</span>
               <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${mobileAccordion === "products" ? "rotate-180" : ""}`} />
             </button>
 
@@ -846,7 +846,7 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
               onClick={() => toggleMobileAccordion("why")}
               className="flex items-center justify-between w-full px-3 py-2 text-left font-bold text-slate-900 hover:bg-slate-50 rounded-lg"
             >
-              <span>Why CXDYNAMIQ</span>
+              <span>Integrations &amp; Solutions</span>
               <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${mobileAccordion === "why" ? "rotate-180" : ""}`} />
             </button>
 
@@ -928,9 +928,9 @@ export default function Navbar({ onRequestQuote }: NavbarProps) {
             </div>
           </div>
 
-          {/* Level 1: Our Blog */}
+          {/* Resources */}
           <Link href="/blogs" onClick={closeAll} className="block px-3 py-2 text-slate-800 hover:bg-slate-50 rounded-lg">
-            Our Blog
+            Resources
           </Link>
 
           {/* Level 1: Contact Us */}
