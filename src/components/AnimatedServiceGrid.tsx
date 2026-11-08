@@ -87,7 +87,7 @@ export default function AnimatedServiceGrid() {
       category: "Unified Messaging",
       title: "WhatsApp & Omnichannel Cloud Inbox",
       description: "Connect Meta WhatsApp Business, SMS, live webchat, and email into one unified queue with sub-120ms CRM synchronization.",
-      href: "/omnichannel-contact-center",
+      href: "/omnichannel-routing",
       badge: "Meta Verified API",
       renderAnimation: () => (
         <div className="relative w-full h-full p-4 flex flex-col justify-between bg-gradient-to-br from-emerald-50/50 via-white to-slate-50 select-none overflow-hidden">

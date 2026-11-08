@@ -6,6 +6,106 @@ export interface ServiceOverride {
 }
 
 export const SERVICE_OVERRIDES: Record<string, ServiceOverride> = {
+  "/conversational-ai": {
+    whatIs: "Conversational AI from CXdynamIQ replaces rigid decision-tree phone menus with natural, multi-turn voicebots and intelligent chat agents. Powered by real-time speech synthesis (<200ms latency) and domain-trained RAG models, it resolves customer inquiries end-to-end without agent fatigue.",
+    whoItsFor: [
+      "Contact centers handling high-volume repetitive Tier-1 inquiries (order status, booking changes, balance lookups)",
+      "Financial services, healthcare, and retail enterprises needing 24/7 compliant autonomous resolution",
+      "Operations leaders looking to scale interaction volume without linear headcount growth",
+    ],
+    benefits: [
+      { title: "72% Autonomous Containment", desc: "Resolve three out of four routine inquiries instantly without escalating to human agents." },
+      { title: "Sub-200ms Turn-Taking Latency", desc: "Natural, interruptible human-sounding conversations with zero awkward conversational pauses." },
+      { title: "Context-Aware Warm Handoff", desc: "When complex judgment is needed, calls transfer with 100% transcript, intent, and sentiment intact." },
+      { title: "Native API and CRM Execution", desc: "Executes live account balance queries, order rescheduling, and ticket creation in real time." },
+    ],
+    faqs: [
+      { q: "How natural does the AI voice sound?", a: "CXdynamIQ utilizes ultra-low latency speech models (Deepgram Nova-2 and lossless Opus codecs) that allow natural turn-taking, barge-in, and expressive tone matching customer sentiment." },
+      { q: "How does Conversational AI integrate with our existing CRM?", a: "Out of the box, our bots connect via secure webhooks and REST APIs to Salesforce, HubSpot, Zendesk, and Zoho to retrieve caller context and update records automatically." },
+      { q: "What happens if the AI cannot understand the caller?", a: "If confidence scores drop below your configured threshold, the conversation instantly initiates a warm handoff to a human specialist with full context pre-populated." },
+      { q: "Can we test Conversational AI before deployment?", a: "Yes. You can test live pre-built voicebots and chat scenarios immediately inside our CXQ360.ai sandbox environment." },
+    ],
+  },
+  "/omnichannel-routing": {
+    whatIs: "Omnichannel Routing unifies voice calls, WhatsApp Business, SMS, live webchat, and email into a single intelligent queue. By tracking customer context, emotion, and intent across channels, it ensures customers never have to repeat their issue.",
+    whoItsFor: [
+      "Modern customer support organizations providing care across Meta WhatsApp, webchat, phone, and email",
+      "E-commerce, travel, and logistics companies with multi-touchpoint customer journeys",
+      "Enterprises looking to consolidate multiple disconnected channel tools into one workspace",
+    ],
+    benefits: [
+      { title: "Zero Repeat Conversations", desc: "Customer history, previous chats, and verified identity persist seamlessly when escalating from text to voice." },
+      { title: "Sub-120ms CRM Synchronization", desc: "Customer profiles, ticket tags, and transcripts update across Salesforce and HubSpot in real time." },
+      { title: "Unified Agent Workspace", desc: "Agents handle inbound voice calls, WhatsApp chats, and SMS threads from a single consolidated screen." },
+      { title: "Smart Skills-Based Dispatch", desc: "Deliver interactions to the best-suited agent based on proficiency, language, and customer VIP tier." },
+    ],
+    faqs: [
+      { q: "Can customers start on WhatsApp and continue on Voice?", a: "Yes. If a customer switches from WhatsApp to an inbound call, their full chat history and intent appear on the agent softphone screen-pop instantly." },
+      { q: "Is Meta WhatsApp Business officially verified?", a: "Yes. CXdynamIQ integrates with the official Meta Cloud API, supporting green verification badges, rich interactive buttons, and media templates." },
+      { q: "How does routing prioritize urgent calls over routine chats?", a: "Our intelligent ACD engine scores interaction priority dynamically, prioritizing high-value customers and urgent voice calls while balancing chat queues." },
+      { q: "How do I try Omnichannel Routing?", a: "You can register for a self-serve trial on CXQ360.ai to configure sample queues and test multi-channel routing in minutes." },
+    ],
+  },
+  "/omnichannel-contact-center": {
+    whatIs: "Omnichannel Contact Center software unifies voice telephony, Meta WhatsApp Business, two-way SMS, webchat, and email into one intelligent cloud communications platform with persistent conversation history.",
+    whoItsFor: [
+      "Enterprises transitioning from fragmented legacy PBX and standalone chat widgets to a unified CCaaS platform",
+      "Customer service desks demanding sub-second routing, supervisor monitoring, and automated CRM logging",
+      "Fast-growing support teams aiming to reduce repeat contacts and improve First Contact Resolution",
+    ],
+    benefits: [
+      { title: "Persistent Context Architecture", desc: "Maintain complete conversational history across voice and digital touchpoints without dropped context." },
+      { title: "Unified Agent Softphone", desc: "One clean WebRTC workspace for inbound voice, WhatsApp chats, and CRM record lookups." },
+      { title: "Live Supervisor Floor Monitoring", desc: "Real-time queue visibility, silent listen-in, whisper coaching, and one-click barge-in." },
+      { title: "Carrier-Grade 99.999% SLA", desc: "Built on global Anycast edge voice infrastructure with sub-15ms packet latency." },
+    ],
+    faqs: [
+      { q: "How quickly can our team go live?", a: "CXdynamIQ deploys within 24 hours. Our onboarding team provisions your phone numbers, users, and CRM connectors with zero downtime." },
+      { q: "Does it support international phone numbers?", a: "Yes. CXdynamIQ provides local, national, and toll-free virtual numbers in over 100 countries." },
+      { q: "Can agents work remotely?", a: "Yes. Agents only need Google Chrome and a headset. Softphones run on WebRTC with TLS and SRTP encryption." },
+      { q: "Where can I test the platform?", a: "Start a free self-serve sandbox account directly at https://cxq360.ai/ to test live softphone calls and WhatsApp messaging." },
+    ],
+  },
+  "/predictive-dialer": {
+    whatIs: "The CXdynamIQ Predictive Dialer utilizes a machine-learning pacing algorithm to predict agent availability and dial lead lists automatically. It filters out busy signals, voicemails, and disconnected numbers to connect agents only with live human prospects.",
+    whoItsFor: [
+      "High-velocity outbound sales teams and telemarketing desks seeking maximum talk time",
+      "Financial collections and debt recovery teams requiring strict compliance and high connect rates",
+      "Lead qualification operations managing large lead lists from CRM campaigns",
+    ],
+    benefits: [
+      { title: "Triple Agent Talk Time (46 min/hr)", desc: "Eliminate manual dialing, ring wait times, and disconnected lines to keep reps talking to qualified buyers." },
+      { title: "AI Answering Machine Detection (AMD)", desc: "Accurately identifies voicemails in under 400ms and drops pre-recorded audio messages automatically." },
+      { title: "Local Presence Caller ID Matching", desc: "Dynamically displays local area codes matching the prospect location to boost answer rates by +38%." },
+      { title: "Strict TCPA and DND Compliance", desc: "Automatic Do-Not-Call scrubbing, time-zone restrictions, and configurable abandon rate caps." },
+    ],
+    faqs: [
+      { q: "How does predictive pacing prevent abandoned calls?", a: "The pacing algorithm continually calculates average talk time, ring time, and live answer rates to adjust dialing volume, keeping drop rates below compliance thresholds." },
+      { q: "Can agents dial leads directly from Salesforce or HubSpot?", a: "Yes. Lists sync bi-directionally, and call outcomes, dispositions, and recordings automatically log back to each lead record." },
+      { q: "What happens when an answering machine is detected?", a: "The dialer can either skip the machine immediately or drop a pre-recorded personalized voicemail while routing the agent to the next live call." },
+      { q: "How can I evaluate the predictive dialer?", a: "You can test outbound pacing and list workflows in our CXQ360.ai interactive environment." },
+    ],
+  },
+  "/speech-analytics": {
+    whatIs: "Live Speech Analytics and 100% QA Scoring continuously analyzes every customer conversation across voice and digital channels. Using Deepgram Nova-2 speech intelligence, it scores script adherence, detects compliance risks, and grades customer sentiment automatically.",
+    whoItsFor: [
+      "Contact center QA managers tired of subjective, manual 2% sample audits",
+      "Compliance officers in banking, insurance, and healthcare requiring 100% regulatory auditing",
+      "Customer experience leaders monitoring real-time CSAT, churn risks, and competitor mentions",
+    ],
+    benefits: [
+      { title: "100% Interaction Auditing (vs 2% Sample)", desc: "Audit every single call and chat automatically instead of leaving 98% of interactions in a black box." },
+      { title: "Real-Time Compliance and Script Alerts", desc: "Instant supervisor alerts when required regulatory disclosures are omitted or prohibited language is spoken." },
+      { title: "Automated 7-Category Scorecards", desc: "Objective scoring for empathy, professionalism, product knowledge, resolution, and compliance." },
+      { title: "Continuous Sentiment Trajectory", desc: "Monitor voice pitch, tone, and spoken sentiment throughout each interaction to flag escalations before churn." },
+    ],
+    faqs: [
+      { q: "How does 100% QA compare to manual human audits?", a: "Manual QA teams can only sample 1-2% of calls, creating evaluator bias and missing 98% of compliance breaches. CXdynamIQ grades 100% of calls in 0.2s with standardized rubrics." },
+      { q: "Can agents review their scores and dispute ratings?", a: "Yes. Agents can access their personal scorecard, see highlighted audio timestamps, and submit review requests with pinned audio segments." },
+      { q: "Is sensitive PII data redacted?", a: "Yes. 11 categories of PII (including credit card numbers, Social Security/National IDs, and passwords) are masked from transcripts and recordings automatically." },
+      { q: "How can we trial Speech Analytics?", a: "Experience automated conversation scoring and sentiment analytics live inside the CXQ360.ai sandbox." },
+    ],
+  },
   "/inbound-calling": {
     whatIs: "Inbound calling software allows businesses to receive, route, and manage incoming phone calls from customers over the internet. Instead of maintaining physical PBX telephone hardware, calls are delivered seamlessly to agents' computers or mobile devices with automatic customer records on screen.",
     whoItsFor: [

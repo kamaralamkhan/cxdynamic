@@ -102,6 +102,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     h1: "CRM Integrations for Sales Teams",
     group: "Sales Dialer Solutions",
   },
+  "/omnichannel-contact-center": {
+    title: "Omnichannel Contact Center Software & WhatsApp Cloud Inbox | CXdynamIQ",
+    description: "Unify Voice, WhatsApp Business, SMS, Webchat, and Email in one cloud inbox with sub-120ms CRM synchronization.",
+    h1: "WhatsApp & Omnichannel Cloud Inbox",
+    group: "CX Hub",
+  },
   "/omnichannel-routing": {
     title: "Omnichannel Routing Software | CXDYNAMIQ",
     description: "Route voice, WhatsApp, chat and email interactions to the right agent with context preserved across channels.",
