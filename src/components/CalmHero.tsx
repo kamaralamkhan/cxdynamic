@@ -55,7 +55,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
               One AI customer experience layer.
               <span className="mt-2 block text-[#069bd8]">Every channel. Every conversation.</span>
             </h1>
-            <p className="mt-7 max-w-full [text-wrap:wrap] text-base leading-7 text-slate-600 sm:max-w-xl sm:text-lg">
+            <p style={{ width: "min(100%, 340px)", maxWidth: "100%", whiteSpace: "normal" }} className="mt-7 max-w-full [text-wrap:wrap] break-words text-base leading-7 text-slate-600 sm:w-auto sm:max-w-xl sm:text-lg">
               Keep customer context moving across AI agents, people, quality, and analytics—so every interaction can become the next best action.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">

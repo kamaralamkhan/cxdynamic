@@ -4,14 +4,9 @@ import Link from "next/link";
 import { 
   ArrowRight, 
   PhoneCall, 
-  MessageSquare, 
   Zap, 
   Activity, 
-  Sparkles, 
   CheckCircle2, 
-  ShieldCheck,
-  TrendingUp,
-  Headphones
 } from "lucide-react";
 
 interface ServiceItem {
@@ -267,12 +262,13 @@ export default function AnimatedServiceGrid() {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200/80 text-xs font-semibold text-sky-800 mb-3.5">
-            <Sparkles className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
-            <span>Modular Enterprise Communications Suite</span>
+          <div className="mb-4 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+            <span className="h-px w-8 bg-sky-300" aria-hidden="true" />
+            <span>One connected system</span>
+            <span className="h-px w-8 bg-sky-300" aria-hidden="true" />
           </div>
           <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
-            Engineered for reliability. <span className="text-sky-700">Powered by Agentic AI.</span>
+            Built for the way customer conversations move.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Replace legacy telephony fragments with four purpose-built modules designed to scale from 10 seats to 10,000 global agents with zero downtime.
@@ -342,4 +338,3 @@ export default function AnimatedServiceGrid() {
     </section>
   );
 }
-
