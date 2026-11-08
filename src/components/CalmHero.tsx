@@ -7,7 +7,6 @@ import {
   BarChart3,
   Bot,
   CheckCircle2,
-  ExternalLink,
   Headphones,
   MessageCircle,
   MessageSquare,
@@ -58,19 +57,19 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           <div className="min-w-0 max-w-2xl space-y-6">
             
             {/* Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200/60 text-xs font-semibold text-sky-800">
+            <div className="inline-flex w-fit max-w-[calc(100vw-2rem)] flex-wrap items-center gap-2 rounded-full bg-sky-50 px-3 py-1 text-xs font-semibold text-sky-800">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse" aria-hidden="true" />
-              <span>CXDYNAMIQ 3.0 • AI-POWERED OMNICHANNEL CX PLATFORM</span>
+              <span className="max-w-[calc(100vw-4rem)] whitespace-normal break-words">CXDYNAMIQ 3.0 • AI-POWERED OMNICHANNEL CX PLATFORM</span>
             </div>
 
             {/* Main Headline */}
             <h1 className="w-full max-w-[calc(100vw-2rem)] break-words [overflow-wrap:anywhere] [text-wrap:wrap] font-display text-[clamp(2.1rem,6vw,4.8rem)] font-extrabold leading-[1.04] tracking-[-.045em] text-[#071936] sm:max-w-full">
               Every conversation understood.{" "}
-              <span className="text-sky-700 block mt-1">Every resolution autonomous.</span>
+              <span className="mt-1 block max-w-full text-sky-700">Every resolution <span className="block sm:inline">autonomous.</span></span>
             </h1>
 
             {/* Authoritative Subheadline */}
-            <p className="max-w-xl text-base sm:text-lg leading-relaxed text-slate-600 font-normal">
+            <p style={{ maxWidth: "358px" }} className="w-full max-w-[calc(100vw-2rem)] text-sm leading-relaxed text-slate-600 font-normal sm:max-w-xl sm:text-lg">
               Unify Agentic Voice and WhatsApp bots, real-time human copilots, 100% conversation QA, and sub-15ms cloud telephony in one intelligent platform—live in a day.
             </p>
 
@@ -118,25 +117,25 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
           </div>
 
           {/* Right Column: Connected CX Signal Flow Interactive Showcase */}
-          <div className="relative min-w-0 min-h-[430px] lg:min-h-[520px]">
+          <div className="relative min-w-0 min-h-[430px] xl:min-h-[520px]">
             <div className="absolute left-0 top-1/2 hidden h-px w-full -translate-y-1/2 bg-sky-100 sm:block" aria-hidden="true" />
             
-            <div role="tablist" aria-label="Connected CX journey" className="relative grid gap-3 sm:grid-cols-2 lg:absolute lg:inset-0 lg:grid-cols-4 lg:gap-5">
+            <div role="tablist" aria-label="Connected CX journey" className="relative grid gap-3 sm:grid-cols-2 xl:absolute xl:inset-0 xl:grid-cols-4 xl:gap-5">
               {journey.map(({ id, label, Icon }, index) => {
                 const selected = activeId === id;
                 const position = index < 4
                   ? index === 0
-                    ? "lg:left-0 lg:top-[12%]"
+                    ? "xl:left-0 xl:top-[12%]"
                     : index === 1
-                      ? "lg:left-[24%] lg:top-[57%]"
+                      ? "xl:left-[24%] xl:top-[57%]"
                       : index === 2
-                        ? "lg:left-[48%] lg:top-[12%]"
-                        : "lg:left-[72%] lg:top-[57%]"
+                        ? "xl:left-[48%] xl:top-[12%]"
+                        : "xl:left-[72%] xl:top-[57%]"
                   : index === 4
-                    ? "lg:right-[2%] lg:top-[8%]"
+                    ? "xl:right-[2%] xl:top-[8%]"
                     : index === 5
-                      ? "lg:right-[2%] lg:top-[39%]"
-                      : "lg:right-[2%] lg:top-[70%]";
+                      ? "xl:right-[2%] xl:top-[39%]"
+                      : "xl:right-[2%] xl:top-[70%]";
                 return (
                   <button
                     key={id}
@@ -156,7 +155,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
                       }
                     }}
                     onClick={() => setActiveId(id)}
-                    className={`group relative flex min-h-24 items-center gap-3 rounded-2xl border bg-white/95 p-4 text-left shadow-[0_12px_36px_-28px_rgba(8,56,87,.55)] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-600 focus-visible:ring-offset-2 sm:min-h-28 lg:absolute lg:w-[190px] ${position} ${selected ? "border-sky-600 ring-4 ring-sky-600/10" : "border-slate-200 hover:border-sky-300"}`}
+                    className={`group relative flex min-h-24 items-center gap-3 rounded-2xl border bg-white/95 p-4 text-left shadow-[0_12px_36px_-28px_rgba(8,56,87,.55)] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-600 focus-visible:ring-offset-2 sm:min-h-28 xl:absolute xl:w-[190px] ${position} ${selected ? "border-sky-600 ring-4 ring-sky-600/10" : "border-slate-200 hover:border-sky-300"}`}
                   >
                     <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border ${selected ? "border-sky-300 bg-sky-50 text-sky-800" : "border-slate-200 bg-slate-50 text-sky-700"}`}>
                       <Icon className="h-5 w-5" aria-hidden="true" />
@@ -171,7 +170,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
             </div>
 
             {/* Light-First Focus Card (No dark block!) */}
-            <div className="relative mt-5 rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-sm p-5 text-slate-900 shadow-md sm:absolute sm:bottom-0 sm:left-0 sm:mt-0 sm:max-w-[420px]">
+            <div className="relative mt-5 rounded-2xl border border-slate-200/90 bg-white/95 p-5 text-slate-900 shadow-md xl:absolute xl:bottom-0 xl:left-0 xl:mt-0 xl:max-w-[420px]">
               <div className="flex items-center justify-between gap-4 pb-2 border-b border-slate-100">
                 <span className="text-xs font-bold uppercase tracking-wider text-sky-800 font-mono">
                   {active.label} Stage
@@ -197,7 +196,7 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
         </div>
 
         {/* Connected CX Channels Ribbon */}
-        <div className="mt-14 overflow-x-auto border-y border-slate-200/80 py-4.5 [scrollbar-width:thin]">
+        <div className="mt-14 overflow-x-auto border-y border-slate-200/80 py-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <div className="flex min-w-max items-center gap-8 text-xs font-semibold uppercase tracking-wider text-slate-500">
             <span className="text-slate-900 font-bold flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-sky-700" />

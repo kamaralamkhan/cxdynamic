@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -32,6 +32,11 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://chocolate-frog-774793.hostingersite.com";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "CXdynamIQ — AI-Powered Omnichannel Customer Experience Platform",
