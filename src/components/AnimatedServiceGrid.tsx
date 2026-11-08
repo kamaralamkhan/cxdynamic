@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { 
-  ArrowRight, 
-  PhoneCall, 
-  Zap, 
-  Activity, 
-  CheckCircle2, 
+import {
+  ArrowRight,
+  PhoneCall,
+  Zap,
+  Activity,
+  CheckCircle2,
 } from "lucide-react";
 
 interface ServiceItem {
@@ -52,7 +52,7 @@ export default function AnimatedServiceGrid() {
                 <PhoneCall className="w-5 h-5 text-white" />
               </span>
             </div>
-            
+
             {/* Audio Spectrum Frequency Bars */}
             <div className="flex items-center justify-center gap-1 mt-4 h-6">
               {[40, 75, 100, 60, 90, 45, 80, 65, 95, 50, 70].map((h, i) => (
@@ -259,7 +259,7 @@ export default function AnimatedServiceGrid() {
   return (
     <section className="w-full bg-white py-16 lg:py-24 border-b border-slate-200" id="services">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-12">
-        
+
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="mb-4 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
