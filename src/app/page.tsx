@@ -90,20 +90,20 @@ export default function Home() {
         {/* Section 4 (PDF Section 6): Dedicated Human + AI Collaboration — The Complete 6-Stage Service Continuum */}
         <HumanAIJourneySection />
 
-        {/* Section 5 (PDF Section 4): Unified Omnichannel Fabric across 7 Channels with Persistent Context */}
+        {/* Section 5 (PDF Section 7): Seamless Bi-directional Enterprise Integrations (100+ Live Connectors, CRM, ERP, Helpdesk, APIs) */}
+        <StitchIntegrationsSection />
+
+        {/* Section 6 (PDF Section 4): Unified Omnichannel Fabric across 7 Channels with Persistent Context */}
         <OmnichannelSection />
 
-        {/* Section 6 (PDF Section 4): Intelligent Contact Center — ACD, IVR, Predictive/Progressive Dialers, CTI Screen Pops */}
+        {/* Section 7 (PDF Section 4): Intelligent Contact Center — ACD, IVR, Predictive/Progressive Dialers, CTI Screen Pops */}
         <StitchBentoGrid />
 
-        {/* Section 7 (PDF Section 4 & 6): AI Quality & Conversation Intelligence — 100% Interaction Auditing vs 2% Legacy Sample */}
+        {/* Section 8 (PDF Section 4 & 6): AI Quality & Conversation Intelligence — 100% Interaction Auditing vs 2% Legacy Sample */}
         <AIQASection />
 
-        {/* Section 8 (PDF Section 4): Real-Time CX Analytics & Business Intelligence — Containment, FCR, AHT, CSAT & ROI Calculator */}
+        {/* Section 9 (PDF Section 4): Real-Time CX Analytics & Business Intelligence — Containment, FCR, AHT, CSAT & ROI Calculator */}
         <CXAnalyticsSection />
-
-        {/* Section 9 (PDF Section 7): Seamless Bi-directional Enterprise Integrations (CRM, ERP, Helpdesk, APIs) */}
-        <StitchIntegrationsSection />
 
         {/* Section 10: Global Voice Telephony Infrastructure — Sub-Millisecond Edge Network Canvas */}
         <StitchInfrastructureSection />
