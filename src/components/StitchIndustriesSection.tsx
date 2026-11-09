@@ -2,20 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { 
-  Building2, 
-  Network, 
-  GraduationCap, 
-  Store, 
-  ArrowRight,
-  ShieldAlert,
-  HeartPulse,
-  ShoppingBag,
-  Truck,
-  PhoneCall,
-  Sparkles,
-  CheckCircle2
-} from "lucide-react";
+import { Building2, Network, GraduationCap, ArrowRight, ShieldAlert, HeartPulse, ShoppingBag, Truck, PhoneCall, CheckCircle2 } from "lucide-react";
 
 export default function StitchIndustriesSection() {
   const [activeTab, setActiveTab] = useState<"all" | "bfsi" | "ecommerce" | "healthcare" | "telecom">("all");
@@ -113,10 +100,6 @@ export default function StitchIndustriesSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-sky-800 mb-3.5">
-            <Sparkles className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
-            <span>Vertical AI &amp; Omnichannel Blueprints</span>
-          </div>
           <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
             Purpose-built for demanding, high-volume sectors.
           </h2>
@@ -160,7 +143,7 @@ export default function StitchIndustriesSection() {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-100">
+                    <span className="text-sm font-medium text-slate-600">
                       {ind.tag}
                     </span>
                     <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-sky-700 border border-slate-100">

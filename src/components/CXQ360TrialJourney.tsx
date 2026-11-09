@@ -83,10 +83,6 @@ export default function CXQ360TrialJourney() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700">
-            <span className="w-2 h-2 rounded-full bg-sky-600" aria-hidden="true" />
-            <span>Onboarding &amp; commercial journey</span>
-          </div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-slate-900 tracking-tight font-display">
             The 5-step journey from{" "}

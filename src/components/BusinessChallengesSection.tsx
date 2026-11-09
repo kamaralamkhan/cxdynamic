@@ -2,21 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  AlertCircle, 
-  Zap, 
-  ShieldCheck, 
-  PhoneCall, 
-  Users, 
-  Bot, 
-  Activity, 
-  Sparkles,
-  PhoneForwarded,
-  DollarSign,
-  Headphones
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, Zap, Bot, Headphones } from "lucide-react";
 
 type PrimaryCategory = "sales" | "support" | "collection";
 
@@ -214,10 +200,6 @@ export default function BusinessChallengesSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-sky-800 border border-sky-100 text-xs font-semibold">
-            <Zap className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
-            <span>Solve real business challenges</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Built for High-Stakes Customer Conversations
           </h2>
@@ -434,4 +416,3 @@ export default function BusinessChallengesSection() {
     </section>
   );
 }
-

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import CalmFooter from "@/components/CalmFooter";
@@ -10,19 +10,7 @@ import { getSeo } from "@/content/seo";
 import { getRelatedServices } from "@/content/related";
 import { getServiceOverride } from "@/content/overrides/serviceData";
 import { PageData } from "@/lib/content";
-import { 
-  ArrowRight, 
-  CheckCircle2, 
-  ChevronRight, 
-  ChevronDown, 
-  ShieldCheck,
-  Zap,
-  Activity,
-  Layers,
-  Phone,
-  Mail,
-  Sparkles
-} from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronRight, ChevronDown, Phone, Mail } from "lucide-react";
 import { 
   ZendeskLogo, 
   SalesforceLogo, 
@@ -84,10 +72,6 @@ export default function ServicePage({ page }: ServicePageProps) {
           <div className="max-w-3xl space-y-5">
             
             {/* Category Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200/60 text-xs font-semibold text-sky-800">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse" aria-hidden="true" />
-              <span>{seo.group || "CXdynamIQ Platform Architecture"}</span>
-            </div>
 
             {/* Main Page H1 */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.14]">
@@ -148,9 +132,6 @@ export default function ServicePage({ page }: ServicePageProps) {
       <section className="py-14 sm:py-18 bg-slate-50 border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="max-w-2xl space-y-2">
-            <span className="text-xs font-semibold text-sky-800 uppercase tracking-wider font-mono">
-              Live Product Simulation
-            </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
               See How It Operates in Production
             </h2>
@@ -174,9 +155,6 @@ export default function ServicePage({ page }: ServicePageProps) {
             {/* Left Column: Plain-Language Overview & Ideal Use-Cases (5 Cols) */}
             <div className="lg:col-span-5 space-y-8">
               <div className="space-y-3">
-                <span className="text-xs font-semibold text-sky-800 uppercase tracking-wider font-mono">
-                  Enterprise Architecture
-                </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
                   What is {seo.h1}?
                 </h2>
@@ -204,9 +182,6 @@ export default function ServicePage({ page }: ServicePageProps) {
             {/* Right Column: 4 Concrete Business Advantages (7 Cols) */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <span className="text-xs font-semibold text-sky-800 uppercase tracking-wider font-mono">
-                  Quantified Impact
-                </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight mt-1">
                   Core Enterprise Advantages
                 </h2>
@@ -287,9 +262,6 @@ export default function ServicePage({ page }: ServicePageProps) {
       <section className="py-14 sm:py-18 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="text-center max-w-xl mx-auto space-y-2">
-            <span className="text-xs font-semibold text-sky-800 uppercase tracking-wider font-mono">
-              Ecosystem Compatibility
-            </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
               Works Natively With Your CRM Stack
             </h2>
@@ -324,9 +296,6 @@ export default function ServicePage({ page }: ServicePageProps) {
       <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200/80">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="text-center space-y-2">
-            <span className="text-xs font-semibold text-sky-800 uppercase tracking-wider font-mono">
-              Clear Answers
-            </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
               Frequently Asked Questions
             </h2>
@@ -366,9 +335,6 @@ export default function ServicePage({ page }: ServicePageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <div className="space-y-1">
-                <span className="text-xs font-semibold text-sky-800 uppercase tracking-wider font-mono">
-                  Connected Architecture
-                </span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
                   Related Platform Modules
                 </h2>
@@ -412,10 +378,6 @@ export default function ServicePage({ page }: ServicePageProps) {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-sm text-center space-y-6">
             
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200/60 text-xs font-semibold text-sky-800">
-              <Sparkles className="w-3.5 h-3.5 text-sky-700" aria-hidden="true" />
-              <span>Ready for Enterprise Evaluation</span>
-            </div>
 
             <div className="space-y-3 max-w-2xl mx-auto">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">

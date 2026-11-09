@@ -2,29 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import {
-  Users,
-  Headphones,
-  CheckCircle2,
-  ShieldCheck,
-  ArrowRight,
-  ExternalLink,
-  MessageSquare,
-  FileText,
-  Activity,
-  Zap,
-  Play,
-  Pause,
-  PhoneCall,
-  Bot,
-  Database,
-  BarChart3,
-  Check,
-  UserCheck,
-  Layers,
-  ArrowRightLeft,
-  SlidersHorizontal,
-} from "lucide-react";
+import { Headphones, CheckCircle2, ArrowRight, ExternalLink, MessageSquare, FileText, Zap, Play, Pause, Bot, Database, BarChart3, Check, UserCheck, Layers, ArrowRightLeft, SlidersHorizontal } from "lucide-react";
 
 interface JourneyStage {
   id: string;
@@ -162,10 +140,6 @@ export default function HumanAIJourneySection() {
         
         {/* Section Header: Enterprise Architectural Positioning */}
         <header className="mx-auto max-w-3xl text-center space-y-3.5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200/90 text-slate-800 text-xs font-semibold shadow-2xs">
-            <Users className="w-3.5 h-3.5 text-sky-700" />
-            <span>Enterprise Human + AI Operating Continuum</span>
-          </div>
 
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-[-0.03em] text-slate-900 leading-tight">
             AI handles high-velocity volume,{" "}

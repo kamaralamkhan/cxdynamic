@@ -13,10 +13,6 @@ export default function PreFooterDualCTA({ onOpenDemo }: PreFooterDualCTAProps) 
 
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-800 text-xs font-semibold">
-            <Zap className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
-            <span>Launch Your Transformation</span>
-          </div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-semibold text-slate-900 tracking-tight leading-snug">
             Ready to Modernize Your{" "}

@@ -1,18 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  ShieldCheck, 
-  CheckCircle2, 
-  AlertTriangle, 
-  TrendingUp, 
-  UserCheck, 
-  Sparkles, 
-  BarChart3, 
-  FileCheck2, 
-  MessageSquare,
-  Award
-} from "lucide-react";
+import { CheckCircle2, FileCheck2, Award } from "lucide-react";
 
 interface AuditMetric {
   title: string;
@@ -84,10 +73,6 @@ export default function AIQASection() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700">
-            <ShieldCheck className="w-3.5 h-3.5 text-sky-700" />
-            <span>100% Conversation Intelligence</span>
-          </div>
 
           <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
             Ditch the 2% Sample Audit.{" "}
@@ -126,10 +111,6 @@ export default function AIQASection() {
         <div className="rounded-3xl bg-slate-50/90 text-slate-900 p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-md">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-6 mb-8">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-sky-800 border border-sky-200/60 text-xs font-semibold mb-2">
-                <ShieldCheck className="w-3.5 h-3.5 text-sky-700" />
-                <span>Live Supervisor Audit Console</span>
-              </div>
               <h3 className="text-xl sm:text-2xl font-bold font-display text-slate-900">
                 Automated Scorecard &amp; Script Adherence Telemetry
               </h3>

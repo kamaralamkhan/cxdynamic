@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { Phone, Send, RefreshCw, ArrowRight, Activity, Zap, Check } from "lucide-react";
+
+import { Phone, Send, RefreshCw } from "lucide-react";
 
 export default function StitchTabsSection() {
   const [activeTab, setActiveTab] = useState<"tab-1" | "tab-2" | "tab-3">("tab-1");
@@ -13,9 +13,6 @@ export default function StitchTabsSection() {
         
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-semibold uppercase tracking-wider text-sky-800 font-headline">
-            Built For Everyday Mastery
-          </span>
           <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 mt-2 tracking-tight leading-snug">
             One system. <span className="text-sky-700">Infinite control.</span>
           </h2>
@@ -108,7 +105,6 @@ export default function StitchTabsSection() {
               <div className="space-y-6">
                 <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                   <div>
-                    <span className="text-xs font-semibold text-sky-700 uppercase tracking-wide">Frontline Agent View</span>
                     <h3 className="font-headline font-semibold text-xl text-slate-900 mt-0.5">Smart Inbound Queue Processing</h3>
                   </div>
                   <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 flex items-center gap-1.5 border border-emerald-200/60">
@@ -138,7 +134,6 @@ export default function StitchTabsSection() {
               <div className="space-y-6">
                 <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                   <div>
-                    <span className="text-xs font-semibold text-sky-700 uppercase tracking-wide">Outbound Campaign Accelerator</span>
                     <h3 className="font-headline font-semibold text-xl text-slate-900 mt-0.5">Predictive Dialing &amp; Cadence Automation</h3>
                   </div>
                   <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 flex items-center gap-1.5 border border-emerald-200/60">
@@ -168,7 +163,6 @@ export default function StitchTabsSection() {
               <div className="space-y-6">
                 <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                   <div>
-                    <span className="text-xs font-semibold text-sky-700 uppercase tracking-wide">Two-Way CRM Architecture</span>
                     <h3 className="font-headline font-semibold text-xl text-slate-900 mt-0.5">Native Bidirectional Integration</h3>
                   </div>
                   <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 flex items-center gap-1.5 border border-emerald-200/60">

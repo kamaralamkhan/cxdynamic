@@ -1,18 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { 
-  XCircle, 
-  CheckCircle2, 
-  PhoneOff, 
-  Cloud, 
-  Clock, 
-  Layers, 
-  Settings2, 
-  TrendingUp, 
-  ArrowRight,
-  ShieldCheck
-} from "lucide-react";
+import { XCircle, CheckCircle2, PhoneOff, Cloud, ArrowRight } from "lucide-react";
 
 export default function ModernVsLegacySection() {
   return (
@@ -21,10 +10,6 @@ export default function ModernVsLegacySection() {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-semibold text-sky-800">
-            <ShieldCheck className="w-3.5 h-3.5 text-sky-600" aria-hidden="true" />
-            <span>Architecture Comparison</span>
-          </div>
           <h2 className="mt-3 font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
             Modern Cloud Voice vs. <span className="text-sky-700">Yesterday&apos;s PBX</span>
           </h2>
@@ -180,4 +165,3 @@ export default function ModernVsLegacySection() {
     </section>
   );
 }
-

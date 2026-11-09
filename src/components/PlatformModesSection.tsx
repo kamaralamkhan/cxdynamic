@@ -2,24 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { 
-  Users, 
-  Bot, 
-  PhoneCall, 
-  Shuffle, 
-  Headphones, 
-  Zap, 
-  CheckCircle2, 
-  ArrowRight, 
-  ShieldCheck, 
-  Activity, 
-  Globe2, 
-  MessageSquare,
-  Mic,
-  BarChart3,
-  Check
-} from "lucide-react";
-import { SalesforceLogo, ZohoLogo, ZendeskLogo, WhatsAppLogo } from "@/components/IntegrationLogos";
+import { ArrowRight, Check } from "lucide-react";
+
 
 type ModeId = "team-led" | "ai-assisted" | "ai-led";
 
@@ -182,9 +166,6 @@ export default function PlatformModesSection() {
         
         {/* Header */}
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-xs font-semibold text-slate-700">
-            <span>Operating Continuum</span>
-          </div>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-[-0.03em] text-slate-900 leading-tight">
             Flexibility across the entire <span className="text-sky-700">human and AI spectrum.</span>
           </h2>

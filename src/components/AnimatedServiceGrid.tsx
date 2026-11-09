@@ -262,11 +262,6 @@ export default function AnimatedServiceGrid() {
 
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="mb-4 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
-            <span className="h-px w-8 bg-sky-300" aria-hidden="true" />
-            <span>One connected system</span>
-            <span className="h-px w-8 bg-sky-300" aria-hidden="true" />
-          </div>
           <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
             Built for the way customer conversations move.
           </h2>
@@ -280,7 +275,7 @@ export default function AnimatedServiceGrid() {
           {services.map((service) => (
             <article
               key={service.id}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-solid border-slate-200 bg-white p-5 sm:p-6 transition-all duration-300 hover:border-sky-500 hover:shadow-lg"
+              className="group relative flex min-w-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 sm:p-6 transition-colors hover:border-sky-500"
             >
               {/* Media Container: Aspect Square */}
               <div className="relative w-full aspect-square overflow-hidden rounded-xl bg-slate-50 mb-5 border border-slate-200/80 group-hover:border-sky-300 transition-colors">
@@ -304,18 +299,10 @@ export default function AnimatedServiceGrid() {
               {/* Service Content */}
               <div className="flex flex-col gap-4 grow">
                 <div className="flex flex-col gap-2">
-                  <div className="flex items-center justify-between">
-                    <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-mono">
-                      {service.category}
-                    </p>
-                    <span className="text-[10px] font-semibold text-sky-800 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">
-                      {service.badge}
-                    </span>
-                  </div>
                   <h3 className="text-lg font-headline font-bold leading-snug text-slate-900 group-hover:text-sky-800 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-base text-slate-600 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -323,7 +310,8 @@ export default function AnimatedServiceGrid() {
                 <div className="mt-auto pt-3 border-t border-slate-100">
                   <Link
                     href={service.href}
-                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-sky-700 hover:text-sky-800 group-hover:gap-2 transition-all cursor-pointer"
+                    aria-label={`Explore ${service.title}`}
+                    className="inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-sky-700 hover:text-sky-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-700"
                   >
                     <span>Explore Platform Details</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />

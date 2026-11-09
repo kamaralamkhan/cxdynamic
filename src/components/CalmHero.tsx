@@ -1,36 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { 
-  PhoneCall, 
-  Headphones, 
-  MessageSquare, 
-  Zap, 
-  ArrowRight, 
-  Calendar,
-  Mic, 
-  MicOff,
-  Pause,
-  Play,
-  PhoneOff,
-  Activity, 
-  Sparkles,
-  CheckCircle2,
-  PhoneForwarded,
-  Volume2,
-  Send,
-  Paperclip,
-  FileText,
-  Check,
-  BarChart3,
-  Clock,
-  Users,
-  ShieldCheck,
-  AlertCircle,
-  ThumbsUp,
-  ChevronRight
-} from "lucide-react";
+
+import { PhoneCall, Headphones, MessageSquare, Zap, ArrowRight, Calendar, Mic, MicOff, Pause, Play, PhoneOff, Activity, Sparkles, CheckCircle2, PhoneForwarded, Volume2, Send, Paperclip, FileText, Check, ThumbsUp } from "lucide-react";
 import { 
   SalesforceLogo, 
   ZohoLogo, 
@@ -219,24 +191,6 @@ export default function CalmHero({ onOpenDemo }: CalmHeroProps) {
       {/* 4. Main Hero Content Container */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         
-        {/* Announcement Pill Badge */}
-        <div className="flex justify-center mb-6">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-sm border border-slate-200 shadow-xs hover:border-sky-300 transition-colors">
-            <span className="relative flex h-2 w-2">
-              <span aria-hidden="true" className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-            </span>
-            <span className="text-xs font-semibold uppercase tracking-wider text-sky-800">CXDYNAMIQ 3.0 is live</span>
-            <span className="text-xs text-slate-300">•</span>
-            <Link 
-              href="/conversational-ai" 
-              className="text-xs font-medium text-slate-700 hover:text-sky-800 flex items-center gap-1 transition-colors"
-            >
-              <span>Next-Gen Voice &amp; Omnichannel AI</span>
-              <ArrowRight className="w-3.5 h-3.5 text-sky-700" aria-hidden="true" />
-            </Link>
-          </div>
-        </div>
 
         {/* Minimal Font-to-Text Ratio Headline & Subhead */}
         <div className="max-w-4xl mx-auto text-center">

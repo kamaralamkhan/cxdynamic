@@ -1,16 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { 
-  GitBranch, 
-  FileText, 
-  Zap, 
-  Sparkles, 
-  MessageSquare, 
-  BarChart3,
-  CheckCircle2,
-  ArrowRight
-} from "lucide-react";
+
+import { GitBranch, FileText, Zap, Sparkles, MessageSquare, BarChart3 } from "lucide-react";
 
 export default function StitchBentoGrid() {
   return (
@@ -19,9 +10,6 @@ export default function StitchBentoGrid() {
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12">
-          <span className="text-xs font-semibold uppercase tracking-wider text-sky-800 font-headline">
-            Orchestration &amp; Intelligence
-          </span>
           <h2 className="mt-2.5 font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
             Everything your modern revenue &amp; support teams need to conquer call volume.
           </h2>

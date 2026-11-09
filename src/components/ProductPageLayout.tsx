@@ -2,20 +2,7 @@ import { PageData, getPageCategory } from "@/lib/content";
 import Navbar from "@/components/Navbar";
 import CalmFooter from "@/components/CalmFooter";
 import Link from "next/link";
-import { 
-  CheckCircle2, 
-  ArrowRight, 
-  PhoneCall, 
-  ShieldCheck, 
-  Zap, 
-  Users, 
-  Clock, 
-  Sparkles,
-  Building2,
-  Cpu,
-  Flame,
-  Layers
-} from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
 interface ProductPageLayoutProps {
   page: PageData;
@@ -56,10 +43,6 @@ export default function ProductPageLayout({ page }: ProductPageLayoutProps) {
             
             {/* Left Hero Column */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-cyan-700 border border-sky-100 text-xs font-bold uppercase tracking-wider">
-                <Cpu className="w-3.5 h-3.5" />
-                <span>{category.replace("-", " ").toUpperCase()} SOLUTION</span>
-              </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
                 {title}
@@ -188,7 +171,6 @@ export default function ProductPageLayout({ page }: ProductPageLayoutProps) {
           {/* 21-Day Free Trial Banner */}
           <div className="calm-card p-8 sm:p-12 bg-white border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="space-y-3 max-w-2xl text-center md:text-left">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-600">Risk-Free Evaluation</span>
               <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
                 Start your 21-day free trial of {title}
               </h3>

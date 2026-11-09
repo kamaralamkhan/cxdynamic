@@ -38,9 +38,6 @@ export default function StitchCallFlowSection() {
     <section className="w-full py-20 lg:py-28 max-w-7xl mx-auto px-6 lg:px-12 relative overflow-hidden bg-white">
       {/* Section Header */}
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <span className="text-xs font-semibold uppercase tracking-wider text-sky-800 font-headline">
-          End-to-End Orchestration
-        </span>
         <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 mt-2 tracking-tight leading-snug">
           How a call moves through <span className="text-sky-700">CXDYNAMIQ</span>
         </h2>
@@ -84,4 +81,3 @@ export default function StitchCallFlowSection() {
     </section>
   );
 }
-

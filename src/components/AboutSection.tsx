@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Globe } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -10,9 +10,6 @@ export default function AboutSection() {
           {/* Left Column: Visual Card */}
           <div className="lg:col-span-5">
             <div className="p-8 rounded-2xl bg-slate-50 border border-slate-200 relative overflow-hidden shadow-sm">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-100 text-xs font-semibold mb-6">
-                <Globe className="w-3.5 h-3.5" aria-hidden="true" /> Global reach
-              </div>
 
               <div className="space-y-4">
                 <h3 className="font-display font-bold text-2xl text-slate-900 leading-tight">

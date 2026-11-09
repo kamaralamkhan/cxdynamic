@@ -1,24 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  RefreshCw, 
-  Terminal, 
-  ShieldCheck, 
-  Webhook, 
-  Layers,
-  CheckCircle2,
-  Cpu,
-  ArrowRight
-} from "lucide-react";
-import { 
-  SalesforceLogo, 
-  ZohoLogo, 
-  ZendeskLogo, 
-  WhatsAppLogo, 
-  FreshdeskLogo,
-  HubSpotLogo 
-} from "@/components/IntegrationLogos";
+import { RefreshCw, Terminal, ShieldCheck, Webhook, Layers } from "lucide-react";
+
 
 interface ConnectorNode {
   id: string;
@@ -166,15 +150,6 @@ export default function StitchIntegrationsSection() {
         
         {/* Section Header */}
         <header className="text-center max-w-3xl mx-auto space-y-3.5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-sky-800">
-            <span className="relative flex h-2 w-2">
-              <span aria-hidden="true" className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-            </span>
-            <span>Enterprise Ecosystem Connectivity</span>
-            <span className="text-slate-300">•</span>
-            <span className="text-emerald-700 font-semibold">100+ Live Connectors</span>
-          </div>
 
           <h2 className="font-display font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
             Seamless Bi-directional Integration Across Your Entire Stack

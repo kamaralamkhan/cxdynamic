@@ -1,19 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { 
-  Headphones, 
-  PhoneCall, 
-  Zap, 
-  Sparkles, 
-  CheckCircle2, 
-  ArrowRight,
-  ShieldCheck,
-  Activity,
-  Mic,
-  Clock,
-  Users
-} from "lucide-react";
+import { Headphones, PhoneCall, Zap, Sparkles, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function StitchPillarsSection() {
   return (
@@ -21,9 +9,6 @@ export default function StitchPillarsSection() {
       
       {/* Section Heading Intro */}
       <div className="max-w-2xl">
-        <span className="text-xs font-semibold text-sky-800 font-headline uppercase tracking-wider">
-          Enterprise Cloud Voice
-        </span>
         <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 mt-2 tracking-tight leading-snug">
           Engineered for speed, built for <span className="text-sky-700">flawless operations</span>.
         </h2>
@@ -39,7 +24,6 @@ export default function StitchPillarsSection() {
             <Headphones className="w-5 h-5" aria-hidden="true" />
           </div>
           <div>
-            <span className="text-xs font-semibold text-sky-700 uppercase tracking-wider">Pillar 01</span>
             <h3 className="font-headline font-semibold text-2xl sm:text-3xl text-slate-900 mt-1">
               Call Centre Solution
             </h3>
@@ -174,7 +158,6 @@ export default function StitchPillarsSection() {
             <PhoneCall className="w-5 h-5" aria-hidden="true" />
           </div>
           <div>
-            <span className="text-xs font-semibold text-sky-700 uppercase tracking-wider">Pillar 02</span>
             <h3 className="font-headline font-semibold text-2xl sm:text-3xl text-slate-900 mt-1">
               Business Phone System
             </h3>
@@ -215,7 +198,6 @@ export default function StitchPillarsSection() {
             <Zap className="w-5 h-5" aria-hidden="true" />
           </div>
           <div>
-            <span className="text-xs font-semibold text-sky-700 uppercase tracking-wider">Pillar 03</span>
             <h3 className="font-headline font-semibold text-2xl sm:text-3xl text-slate-900 mt-1">
               Sales Dialer
             </h3>
@@ -326,7 +308,6 @@ export default function StitchPillarsSection() {
             <Sparkles className="w-5 h-5" aria-hidden="true" />
           </div>
           <div>
-            <span className="text-xs font-semibold text-sky-700 uppercase tracking-wider">Pillar 04</span>
             <h3 className="font-headline font-semibold text-2xl sm:text-3xl text-slate-900 mt-1">
               CX Hub &amp; AI Intelligence
             </h3>

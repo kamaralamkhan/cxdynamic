@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import CalmFooter from "@/components/CalmFooter";
 import CallbackSection from "@/components/CallbackSection";
 import Link from "next/link";
-import { Calendar, Clock, ArrowLeft, ArrowRight, BookOpen, Sparkles } from "lucide-react";
+import { Clock, ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -210,7 +210,6 @@ export default async function BlogPostPage({
           {/* Call to action card */}
           <div className="calm-card p-8 bg-slate-900 text-white border border-slate-800 mt-12 flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="space-y-1 text-center sm:text-left">
-              <span className="text-xs font-bold uppercase tracking-wider text-cyan-300">Start Your Deployment</span>
               <h3 className="font-display font-bold text-xl text-white">
                 Ready to elevate your contact center?
               </h3>

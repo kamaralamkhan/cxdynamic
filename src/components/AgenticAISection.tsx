@@ -2,25 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import {
-  ArrowRight,
-  Brain,
-  CheckCircle2,
-  ChevronRight,
-  Cpu,
-  ExternalLink,
-  GraduationCap,
-  Pause,
-  Play,
-  ShieldCheck,
-  Workflow,
-  Zap,
-  Activity,
-  Terminal,
-  FileCode,
-  Clock,
-  Sparkles,
-} from "lucide-react";
+import { ArrowRight, Brain, CheckCircle2, Cpu, ExternalLink, GraduationCap, Pause, Play, ShieldCheck, Workflow, Zap, Terminal, FileCode } from "lucide-react";
 
 interface WorkflowStep {
   step: string;
@@ -331,10 +313,6 @@ export default function AgenticAISection() {
         {/* Section Header */}
         <header className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-800 text-xs font-semibold mb-3">
-              <Cpu className="w-3.5 h-3.5 text-sky-700" />
-              <span>Autonomous Agentic Architecture</span>
-            </div>
             <h2 className="mt-2 font-display text-3xl font-semibold leading-tight tracking-[-0.03em] text-slate-900 sm:text-4xl lg:text-5xl">
               Beyond static chatbots.{" "}
               <span className="text-sky-700">AI that finishes the job.</span>

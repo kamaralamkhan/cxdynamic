@@ -1,23 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  MessageSquare, 
-  Phone, 
-  Mail, 
-  Smartphone, 
-  Globe, 
-  Share2, 
-  Send, 
-  CheckCircle2, 
-  Clock, 
-  ArrowRight, 
-  History, 
-  Zap,
-  ShieldCheck,
-  Bot,
-  UserCheck
-} from "lucide-react";
+import { MessageSquare, Phone, Mail, Smartphone, Globe, Share2, Send, CheckCircle2, Zap, ShieldCheck } from "lucide-react";
 
 interface ChannelItem {
   id: string;
@@ -160,10 +144,6 @@ export default function OmnichannelSection() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-slate-700">
-            <span className="w-2 h-2 rounded-full bg-sky-600 motion-safe:animate-pulse motion-reduce:animate-none" />
-            <span>Unified Omnichannel Fabric</span>
-          </div>
 
           <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
             One Unified Context.{" "}
@@ -254,10 +234,6 @@ export default function OmnichannelSection() {
         {/* The Key Message: Context Preservation Journey (Interactive 3-Day Simulation) */}
         <div className="rounded-3xl bg-slate-900 text-white p-6 sm:p-10 lg:p-12 shadow-xl border border-slate-800">
           <div className="max-w-3xl mb-10 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-800/50 text-cyan-300 text-xs font-semibold">
-              <History className="w-3.5 h-3.5 text-cyan-400" />
-              <span className="mono-label">PERSISTENT CONVERSATION MEMORY</span>
-            </div>
             <h3 className="text-2xl sm:text-3xl font-bold font-display tracking-tight text-white">
               Watch Context Flow Across 3 Days and 3 Different Channels
             </h3>
@@ -378,4 +354,3 @@ export default function OmnichannelSection() {
     </section>
   );
 }
-

@@ -5,40 +5,8 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import CalmFooter from "@/components/CalmFooter";
 import InteractiveDemoModal from "@/components/InteractiveDemoModal";
-import { 
-  PhoneCall, 
-  PhoneForwarded, 
-  Shuffle, 
-  Share2, 
-  Flame, 
-  Zap, 
-  Sparkles, 
-  Bot, 
-  Headphones, 
-  MessageSquare, 
-  Activity, 
-  Layers, 
-  ShieldCheck, 
-  CheckCircle2, 
-  ArrowRight,
-  Search,
-  Building2,
-  GraduationCap,
-  Store,
-  CreditCard,
-  Check,
-  ChevronRight,
-  Filter
-} from "lucide-react";
-import { 
-  SalesforceLogo, 
-  ZohoLogo, 
-  ZendeskLogo, 
-  FreshdeskLogo, 
-  HubSpotLogo, 
-  WhatsAppLogo, 
-  IntercomLogo 
-} from "@/components/IntegrationLogos";
+import { PhoneCall, PhoneForwarded, Shuffle, Share2, Flame, Zap, Bot, Headphones, MessageSquare, Activity, Layers, CheckCircle2, ArrowRight, Search, Building2, GraduationCap, Store, CreditCard, Check, ChevronRight } from "lucide-react";
+import { SalesforceLogo, ZohoLogo, ZendeskLogo, FreshdeskLogo, HubSpotLogo } from "@/components/IntegrationLogos";
 
 interface ProductItem {
   id: string;
@@ -405,10 +373,6 @@ export default function ProductsClientView() {
           </nav>
 
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 border border-sky-100 text-xs font-semibold uppercase tracking-wider text-sky-800">
-              <Layers className="w-3.5 h-3.5 text-sky-600" />
-              <span>Complete Cloud Telephony &amp; AI Portfolio</span>
-            </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
               Enterprise Communication Platform,{" "}
@@ -611,9 +575,6 @@ export default function ProductsClientView() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-sky-700">
-              Architecture Matrix
-            </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
               One Cloud Engine. Unlimited Modularity.
             </h2>
@@ -677,10 +638,6 @@ export default function ProductsClientView() {
       {/* Bottom CTA Banner */}
       <section className="py-16 bg-slate-900 text-white relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-cyan-300 text-xs font-semibold uppercase tracking-wider">
-            <Zap className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Ready to Modernize Your Stack?</span>
-          </div>
 
           <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white max-w-2xl mx-auto">
             Get your custom platform configuration in 1 business day.
@@ -721,4 +678,3 @@ export default function ProductsClientView() {
     </div>
   );
 }
-

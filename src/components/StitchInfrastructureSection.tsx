@@ -1,18 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { 
-  Activity, 
-  ShieldCheck, 
-  Zap, 
-  Server, 
-  Globe2, 
-  CheckCircle2, 
-  Radio, 
-  Network,
-  Cpu,
-  Layers
-} from "lucide-react";
+import { Server } from "lucide-react";
 
 interface NodeDetail {
   id: string;
@@ -111,10 +100,6 @@ export default function StitchInfrastructureSection() {
         
         {/* Section Header with Minimal Font-to-Text Ratio */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-2xs mb-3 text-xs font-semibold text-sky-800">
-            <Radio className="w-3.5 h-3.5 text-sky-700 animate-pulse" />
-            <span>Sub-Millisecond Edge Telephony</span>
-          </div>
           <h2 className="font-headline font-semibold text-2xl sm:text-3xl lg:text-4xl text-slate-900 tracking-tight leading-snug">
             Global Voice Telephony Infrastructure
           </h2>

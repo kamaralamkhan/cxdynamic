@@ -2,20 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { 
-  BarChart3, 
-  TrendingUp, 
-  TrendingDown, 
-  Users, 
-  Bot, 
-  PhoneCall, 
-  MessageSquare, 
-  Clock, 
-  CheckCircle2, 
-  DollarSign, 
-  ArrowRight,
-  Zap
-} from "lucide-react";
+import { TrendingUp, TrendingDown, ArrowRight } from "lucide-react";
 
 export default function CXAnalyticsSection() {
   // Interactive ROI Calculator State
@@ -37,10 +24,6 @@ export default function CXAnalyticsSection() {
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-2xs text-xs font-semibold text-slate-700">
-            <BarChart3 className="w-3.5 h-3.5 text-sky-700" />
-            <span>Real-Time Business Telemetry</span>
-          </div>
 
           <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
             See the Metrics That{" "}
@@ -141,10 +124,6 @@ export default function CXAnalyticsSection() {
             {/* Left: Interactive Sliders */}
             <div className="space-y-6">
               <div className="space-y-2">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-sky-800 text-xs font-semibold">
-                  <Zap className="w-3.5 h-3.5 text-sky-600" />
-                  <span>Enterprise ROI Calculator</span>
-                </div>
                 <h3 className="text-2xl font-semibold text-slate-900">
                   Calculate Your Projected Savings with Agentic AI
                 </h3>
@@ -252,4 +231,3 @@ export default function CXAnalyticsSection() {
     </section>
   );
 }
-
