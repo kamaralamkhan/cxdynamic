@@ -1,0 +1,37 @@
+/* Server-rendered content is visible. Only the client observer adds these states. */
+.scope [data-reveal-state="pending"] {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.scope [data-reveal-state="entering"] {
+  animation: reveal 700ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms) backwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Focus must never wait for an observer callback or a stagger delay. */
+.scope [data-reveal-state]:focus-within {
+  opacity: 1;
+  transform: none;
+  animation: none;
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce), print {
+  .scope [data-reveal-state] {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+}
